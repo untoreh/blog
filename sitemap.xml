@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>//unto.re/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//unto.re/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//unto.re/</loc>
+    <loc>/</loc>
     <priority>0</priority>
   </url>
   
