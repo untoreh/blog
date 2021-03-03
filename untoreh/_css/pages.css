@@ -1,0 +1,10 @@
+.page-foot {
+  font-size: 0.7em;
+  line-height: 1.25em;
+  float: right;
+  text-align: left;
+}
+.franklin-content {
+  padding: 0 0 2rem 0;
+  z-index: 0;
+}

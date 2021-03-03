@@ -1,0 +1,22 @@
+footer > * {
+  float: left;
+}
+footer a {
+  text-decoration: underline dotted;
+}
+footer ul.author__wrap > li {
+  float: left;
+  padding: 0 0.2rem;
+}
+footer ul.author__wrap > li a {
+  line-height: 2rem;
+  height: inherit;
+  display: block;
+}
+footer ul.author__wrap {
+  float: right;
+  margin: 0;
+}
+footer .page__footer-copyright {
+  margin: 0;
+}
