@@ -27,3 +27,4 @@ For instance:
 -->
 \newcommand{\color}[2]{~~~<span style="color:#1">#2</span>~~~}
 \newcommand{\styletext}[2]{~~~<span style="#1">#2</span>~~~}
+\newcommand{\website}{{{website_url}}}

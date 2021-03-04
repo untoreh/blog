@@ -8,6 +8,7 @@ body.light {
   --alt2: #9e6c47;
   --alt3: #7f4200;
   --background-color: #ffebee;
+  --foreground-color: #1c0005;
 }
 
 @media (prefers-color-scheme: light) {
@@ -19,6 +20,7 @@ body.light {
     --alt2: #9e6c47;
     --alt3: #7f4200;
     --background-color: #ffebee;
+    --foreground-color: #1c0005;
   }
 }
 
@@ -30,6 +32,7 @@ body.dark {
   --alt2: #836bd1;
   --alt3: #a090de;
   --background-color: #001d49;
+  --foreground-color: #dae2ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +44,7 @@ body.dark {
     --alt2: #836bd1;
     --alt3: #a090de;
     --background-color: #001d49;
+    --foreground-color: #dae2ff;
   }
 }
 
@@ -113,4 +117,7 @@ footer .author__place > .author__bio {
 
 .franklin-content blockquote {
   border-left-color: var(--accent);
+}
+.franklin-content {
+  color: var(--foreground-color);
 }
