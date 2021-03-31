@@ -1,7 +1,7 @@
 +++
 date = "28/03/2021"
 title = "Chronicles of a cryptonote dropper"
-tags = ["crypto", "net", "shell"]
+tags = ["posts", "crypto", "net", "shell"]
 desc = "...How far are you willing to go for...pennies?"
 +++
 

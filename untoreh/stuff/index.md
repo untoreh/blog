@@ -1,2 +1,1 @@
-{{recent_posts 1 stuff/}}
-
+{{recent_posts 3 stuff/}}

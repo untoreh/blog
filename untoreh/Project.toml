@@ -1,3 +1,5 @@
 [deps]
 Franklin = "713c75ef-9fc9-4b05-94a9-213340da978e"
+Kroki = "b3565e16-c1f2-4fe9-b4ab-221c88942068"
 NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"

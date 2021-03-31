@@ -3,8 +3,15 @@
 #+STARTUP: fold
 
 #+NAME: start
-#+begin_src julia
+#+begin_src julia 
 using Franklin
 newsite("untoreh", template="pure-sm")
 serve()
 #+end_src
+
+#+begin_src julia
+
+#+end_src
+
+#+RESULTS:
+[[file:/tmp/chart]]

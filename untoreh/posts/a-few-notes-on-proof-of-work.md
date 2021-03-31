@@ -1,6 +1,7 @@
 +++
 date = "04/03/2021"
 title = "A few notes on (hashcash derived) proof of work"
+tags = ["posts", "crypto"]
 desc = "a short round up of the categories for generating proofs of work"
 +++
 

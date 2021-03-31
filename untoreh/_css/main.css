@@ -9,6 +9,7 @@ body.light {
   --alt3: #7f4200;
   --background-color: #ffebee;
   --foreground-color: #1c0005;
+  --block-background: #f8f8ff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -21,6 +22,7 @@ body.light {
     --alt3: #7f4200;
     --background-color: #ffebee;
     --foreground-color: #1c0005;
+    --block-background: #f8f8ff;
   }
 }
 
@@ -33,6 +35,7 @@ body.dark {
   --alt3: #a090de;
   --background-color: #001d49;
   --foreground-color: #dae2ff;
+  --block-background: #011627;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +48,7 @@ body.dark {
     --alt3: #a090de;
     --background-color: #001d49;
     --foreground-color: #dae2ff;
+    --block-background: #011627;
   }
 }
 
@@ -120,4 +124,29 @@ footer .author__place > .author__bio {
 }
 .franklin-content {
   color: var(--foreground-color);
+}
+.franklin-content #title a,
+.franklin-content .header-anchor {
+  padding: 0.5rem;
+  line-height: 100%;
+}
+.franklin-content a {
+  outline-style: outset;
+  outline-width: 1px;
+  padding: 0 0.1rem;
+  margin: 0 0.1rem;
+  outline-color: var(--alt2);
+  /* margin-left: 0.2rem; */
+  /* margin-right: 0.2rem; */
+  /* padding-left: 0.2rem; */
+  /* padding-right: 0.2rem; */
+}
+.franklin-content img {
+  width: auto;
+  text-align: center;
+  padding: 0;
+}
+body > div > h1 {
+  text-align: center;
+  color: var(--accent2);
 }

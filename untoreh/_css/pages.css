@@ -8,3 +8,16 @@
   padding: 0 0 2rem 0;
   z-index: 0;
 }
+
+#tag_title {
+  font-variant: small-caps;
+}
+
+#tag_title .wrap {
+  text-align: left;
+}
+
+#tag_title > .wrap > * {
+  display: inline-block;
+  text-align: left;
+}
