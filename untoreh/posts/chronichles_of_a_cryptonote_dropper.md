@@ -1,8 +1,8 @@
 +++
 date = "28/03/2021"
 title = "Chronicles of a cryptonote dropper"
-tags = ["posts", "crypto", "net", "shell"]
-desc = "...How far are you willing to go for...pennies?"
+tags = ["crypto", "net", "shell"]
+rss_description = "...How far are you willing to go for...pennies?"
 +++
 
 Assume you want to mine [cryptocurrencies] on remote _virtual_ hardware. You need to find something to mine. Remote servers means, no [ASICS] or GPU proof of work algorithms, basically only [CPU friendly coins].
@@ -863,7 +863,7 @@ Was it profitable? At its peak it was reaching something like `300$` per month, 
 
 [cryptocurrencies]: https://en.wikipedia.org/wiki/Cryptocurrency
 [ASICS]: https://en.wikipedia.org/wiki/Application-specific_integrated_circuit
-[CPU friendly coins]: \stuff/a-few-notes-on-proof-of-work
+[CPU friendly coins]: \posts/a-few-notes-on-proof-of-work
 [miner]: https://github.com/xmrig/xmrig
 [another miner]: https://github.com/Bendr0id/xmrigCC
 [proxy]: https://github.com/Bendr0id/xmrigcc-proxy
@@ -887,11 +887,11 @@ Was it profitable? At its peak it was reaching something like `300$` per month, 
 [cf cli]: https://web.archive.org/web/20210305071742/https://github.com/cloudflare/cloudflare-go/blob/master/cmd/flarectl/README.md
 [trampoline]: https://en.wikipedia.org/wiki/Trampoline_(computing)
 [container]: https://en.wikipedia.org/wiki/OS-level_virtualization
-[here]: \assets/stuff/bash_functions.txt
+[here]: \assets/posts/bash_functions.txt
 [IPC]: https://en.wikipedia.org/wiki/Inter-process_communication
 [ulimits]: https://web.archive.org/web/https://linux.die.net/man/5/limits.conf
 [ipinfo]: https://ipinfo.io/
-[geoip.json]: \assets/stuff/geoip.json
+[geoip.json]: \assets/posts/geoip.json
 [technical debt]: https://en.wikipedia.org/wiki/Technical_debt
 [state machine]: https://en.wikipedia.org/wiki/Finite-state_machine
 [proxychains]: https://web.archive.org/web/20210121093409/https://github.com/haad/proxychains

@@ -1,5 +1,7 @@
 using Franklin; const fr = Franklin;
 using Franklin: convert_md, convert_html, pagevar, path, globvar;
+using Base.Iterators:flatten
+using DataStructures:DefaultDict
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
@@ -48,6 +50,12 @@ function page_content(loc::String)
     convert_html(m)
 end
 
+function iter_posts()
+    posts_list = readdir(dirname("posts/"))
+    filter!(f -> endswith(f, ".md") && f != "index.md" && !startswith(f, "."), posts_list)
+    return posts_list
+end
+
 function hfun_recent_posts(m::Vector{String})
     @assert length(m) < 3 "only two arguments allowed for recent posts (the number of recent posts to pull and the path)"
     n = parse(Int64, m[1])
@@ -60,22 +68,23 @@ function hfun_recent_posts(m::Vector{String})
   for (k, post) in enumerate(list)
       fi = posts_path * splitext(post)[1]
       push!(posts, (title = pagevar(fi, :title), link = fi,
-                    date = pagevar(fi, :date), description = pagevar(fi, :desc),))
+                    date = pagevar(fi, :date), description = pagevar(fi, :rss_description),))
   end
   # pull all posts if n <= 0
 
 n = n >= 0 ? n : length(posts) + 1
   for ele in sort(posts, by=x -> x.date, rev=true)[1:min(length(posts), n)]
     markdown *= "* [($(ele.date)) $(ele.title)](../$(ele.link)) -- _$(ele.description)_ \n"
-    # markdown *= "* [($(ele.date)) $(ele.title)](../$(ele.link))\n"
   end
 
   return fd2html(markdown, internal=true)
 
 end
 
-function hfun_taglist_desc()::String
-    tag = locvar(:fd_tag)::String
+function hfun_taglist_desc(tag::Union{Nothing,String}=nothing)::String
+    if isnothing(tag)
+    tag = locvar(:fd_tag)
+    end
 
     c = IOBuffer()
     write(c, "<ul>")
@@ -96,11 +105,13 @@ function hfun_taglist_desc()::String
             title = "/$rpath/"
         end
         url = get_url(rpath)
-        desc = pagevar(rpath, "desc")
+        desc = pagevar(rpath, "rss_description")
         write(c, "<li><a href=\"$url\">$title</a> -- $desc </li>")
     end
     write(c, "</ul>")
-    return String(take!(c))
+    html = String(take!(c))
+    close(c)
+    return html
 end
 
 function hfun_tag_title()::String
@@ -115,12 +126,60 @@ function hfun_tag_title()::String
         write(c, "<a href=\"/$tag_page/bulbs/\"><h1>Ideas</h1></a>
  <i>commonly known as shower thoughts</i>")
     else
-        write(c, "ok")
+        write(c, "<a href=\"/$tag_page/$tag/\">$tag</a>")
     end
     write(c, "</div></div>")
     return String(take!(c))
 end
 
+@doc "the base font size for tags in the tags cloud (rem)"
+const tag_cloud_font_size = 1;
+
 function hfun_tags_cloud()
-    @show globvar("fd_tag_pages")
+    tags = DefaultDict{String,Int}(0)
+    # count all the tags
+    for p in iter_posts()
+        fi = "posts/" * splitext(p)[1]
+        for t in pagevar(fi, :tags)
+            tags[t] += 1
+        end
+    end
+    ordered_tags = [k for k in keys(tags)]
+    sort!(ordered_tags)
+    # normalize counts
+    counts = [tags[t] for t in ordered_tags]
+    min, max = extrema(counts)
+    sizes = @. ((counts - min) / (max - min)) + 1
+    # make html with inline size based on counts
+    c = IOBuffer()
+    write(c, "<div id=tag_cloud>")
+    for (n, (tag, count)) in enumerate(zip(ordered_tags, counts))
+        write(c, "<a href=\"$tag\" style=\"font-size: $(sizes[n] * tag_cloud_font_size)rem\"> $tag </a>")
+    end
+    write(c, "</div>")
+    String(take!(c))
+end
+
+@doc "check if page is an article "
+function hfun_post_title()
+    path = locvar(:fd_rpath)
+    if (!isnothing(match(r"posts/.+", path)) &&
+        path !== "posts/index.html")
+
+    link = locvar(:link)
+    title = locvar(:title)
+    desc = locvar(:rss_description)
+    "
+        <div>
+        <h1 id=\"title\"><a href=\"\">$title</a></h1>
+        <blockquote id=\"page-description\" style=\"font-style: italic;\">
+            $desc
+        </blockquote>
+        </div>
+      "
+    else
+        ""
+    end
+    # path = locvar(:fd_rpath)::String
+    # ispage("/posts")
 end

@@ -82,23 +82,27 @@ a:visited {
   padding: 0.5rem;
   opacity: 0.9;
   line-height: 1.1rem;
+  right: 0rem;
 }
 div.masthead .author__place:hover .author__bio {
-  height: 10rem;
+  height: 9rem;
 }
 footer .author__place:hover .author__bio {
-  height: 8rem;
+  height: 6.5rem;
 }
 footer .author__urls.social-icons {
   font-size: 1rem;
 }
 div.masthead .author__place > .author__bio {
   top: 3rem;
+  right: 0;
+  pointer-events: none;
 }
 
 footer .author__place > .author__bio {
   bottom: 3rem;
-  right: 0rem;
+  right: 0;
+  pointer-events: none;
 }
 .author__place > .author__bio {
   display: block;
@@ -149,4 +153,31 @@ footer .author__place > .author__bio {
 body > div > h1 {
   text-align: center;
   color: var(--accent2);
+}
+body > div #title,
+body > div #page-description {
+  text-align: center;
+}
+.page__footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.franklin-content .intro {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.franklin-content .intro ul {
+  list-style-type: none;
+}
+.franklin-content .intro a {
+  font-variant: small-caps;
+  padding-top: 0.2rem;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+
+.franklin-content .intro .icon {
+  padding: 0 0.2rem;
+  font-size: 1rem;
 }

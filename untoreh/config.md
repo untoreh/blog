@@ -31,3 +31,5 @@ For instance:
 \newcommand{\color}[2]{~~~<span style="color:#1">#2</span>~~~}
 \newcommand{\styletext}[2]{~~~<span style="#1">#2</span>~~~}
 \newcommand{\website}{{{website_url}}}
+\newcommand{\icon}[1]{~~~<i class="fas #1 icon"></i>~~~}
+\newcommand{\iconb}[1]{~~~<i class="fab #1 icon"></i>~~~}

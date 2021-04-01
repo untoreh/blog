@@ -132,3 +132,19 @@
     width: calc(100% - 2rem);
   }
 }
+
+@media (max-width: 680px) {
+  footer ul.author__wrap {
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  footer ul.author__wrap > li {
+    float: none;
+    display: inline-block;
+  }
+  .page__footer {
+    margin-top: 3.5rem;
+  }
+}

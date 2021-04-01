@@ -20,3 +20,15 @@ footer ul.author__wrap {
 footer .page__footer-copyright {
   margin: 0;
 }
+
+footer .page__footer-links {
+  margin: 0 0.2rem 0 0.4rem;
+}
+footer .page__footer-links ul {
+  display: inline;
+  margin: 0 0.4rem 0 0rem;
+  padding: 0;
+}
+footer .page__footer-links li {
+  display: inline;
+}
