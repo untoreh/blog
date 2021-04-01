@@ -1,1 +1,0 @@
-act_rgx='(accepted|speed|paused|algo:|-> update config|-> publish config|-> trigger restart|\[CC\-Client\] error|Error: \"\[Connect\]|POOL #1:      \(null\))|not enough memory|self-test failed|read error|cpu  disabled'
