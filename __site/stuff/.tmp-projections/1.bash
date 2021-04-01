@@ -1,0 +1,1 @@
+dig txt ${record}.${zone} +short +tcp +timeout=3 +retries=0 $dnsserver

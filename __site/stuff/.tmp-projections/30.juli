@@ -1,0 +1,17 @@
+
+Using git hosting services, github has been the one more thorough about bans, but they were only executed upon abuse reports by ci services admins, gitlab executed a ban wave once, when I tried to renew the CI trial (carelessly). I have never received a ban for a bitbucket account.
+To (force) push git commits, we have a long running loop that retags the git repository:
+
+```bash
+while :; do
+    repos_count=$(ls -ld ${repos}/* | grep -c ^d)
+    repos_ival=$(((RANDOM%variance+delay)/repos_count))
+    for r in $repos/*; do
+        cd "$r"
+        git fetch --all
+        tagger
+        echo -e "\e[32m""sleeping for $repos_ival since $(date +%H:%M:%S\ %b/%d)""\e[0m"
+        sleep $repos_ival
+    done
+    sleep 1
+done

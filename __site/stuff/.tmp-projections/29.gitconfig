@@ -1,0 +1,8 @@
+[http]
+        proxy = socks5://127.0.0.1:9050
+        sslverify = false
+[https]
+        proxy = socks5://127.0.0.1:9050
+        sslverify = false
+[url "https://"]
+    insteadOf = git://
