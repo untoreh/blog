@@ -1,0 +1,135 @@
+body.light .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #011627;
+  color: #d6deeb;
+}
+body.light .hljs-keyword {
+  color: #c792ea;
+  font-style: italic;
+}
+body.light .hljs-built_in {
+  color: #addb67;
+  font-style: italic;
+}
+body.light .hljs-type {
+  color: #82aaff;
+}
+body.light .hljs-literal {
+  color: #ff5874;
+}
+body.light .hljs-number {
+  color: #f78c6c;
+}
+body.light .hljs-regexp {
+  color: #5ca7e4;
+}
+body.light .hljs-string {
+  color: #ecc48d;
+}
+body.light .hljs-subst {
+  color: #d3423e;
+}
+body.light .hljs-symbol {
+  color: #82aaff;
+}
+body.light .hljs-class {
+  color: #ffcb8b;
+}
+body.light .hljs-function {
+  color: #82aaff;
+}
+body.light .hljs-title {
+  color: #dcdcaa;
+  font-style: italic;
+}
+body.light .hljs-params {
+  color: #7fdbca;
+}
+body.light .hljs-comment {
+  color: #637777;
+  font-style: italic;
+}
+body.light .hljs-doctag {
+  color: #7fdbca;
+}
+body.light .hljs-meta {
+  color: #82aaff;
+}
+body.light .hljs-meta-keyword {
+  color: #82aaff;
+}
+body.light .hljs-meta-string {
+  color: #ecc48d;
+}
+body.light .hljs-section {
+  color: #82b1ff;
+}
+body.light .hljs-builtin-name,
+body.light .hljs-name,
+body.light .hljs-tag {
+  color: #7fdbca;
+}
+body.light .hljs-attr {
+  color: #7fdbca;
+}
+body.light .hljs-attribute {
+  color: #80cbc4;
+}
+body.light .hljs-variable {
+  color: #addb67;
+}
+body.light .hljs-bullet {
+  color: #d9f5dd;
+}
+body.light .hljs-code {
+  color: #80cbc4;
+}
+body.light .hljs-emphasis {
+  color: #c792ea;
+  font-style: italic;
+}
+body.light .hljs-strong {
+  color: #addb67;
+  font-weight: 700;
+}
+body.light .hljs-formula {
+  color: #c792ea;
+}
+body.light .hljs-link {
+  color: #ff869a;
+}
+body.light .hljs-quote {
+  color: #697098;
+  font-style: italic;
+}
+body.light .hljs-selector-tag {
+  color: #ff6363;
+}
+body.light .hljs-selector-id {
+  color: #fad430;
+}
+body.light .hljs-selector-class {
+  color: #addb67;
+  font-style: italic;
+}
+body.light .hljs-selector-attr,
+body.light .hljs-selector-pseudo {
+  color: #c792ea;
+  font-style: italic;
+}
+body.light .hljs-template-tag {
+  color: #c792ea;
+}
+body.light .hljs-template-variable {
+  color: #addb67;
+}
+body.light .hljs-addition {
+  color: #addb67ff;
+  font-style: italic;
+}
+body.light .hljs-deletion {
+  color: #ef535090;
+  font-style: italic;
+}

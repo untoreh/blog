@@ -1,0 +1,110 @@
+<table>
+  <tr class = "header headerLastRow">
+    <th style = "text-align: center;">ci</th>
+    <th style = "text-align: center;">configuration</th>
+    <th style = "text-align: center;">performance</th>
+    <th style = "text-align: center;">ban-hammer</th>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Bitrise</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Travis</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: green; text-align: center;">good</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Codeship</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Gitlab</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: green; text-align: center;">good</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Circleci</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Semaphore</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Docker</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: green; text-align: center;">good</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Quay</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Codefresh</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Wercker</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: red; text-align: center;">bad</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Azure-pipelines</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: red; text-align: center;">bad</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Continuousphp</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Buddy</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: red; text-align: center;">bad</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Drone</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: red; text-align: center;">bad</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Appveyor</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+    <td style = "color: red; text-align: center;">bad</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Nevercode</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: yellow; text-align: center;">medium</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">Zeist/vercel</td>
+    <td style = "color: red; text-align: center;">bad</td>
+    <td style = "color: green; text-align: center;">good</td>
+    <td style = "color: red; text-align: center;">bad</td>
+  </tr>
+</table>
