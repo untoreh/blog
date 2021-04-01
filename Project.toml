@@ -1,4 +1,5 @@
 [deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Franklin = "713c75ef-9fc9-4b05-94a9-213340da978e"
 Kroki = "b3565e16-c1f2-4fe9-b4ab-221c88942068"
 NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"
