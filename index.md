@@ -6,7 +6,7 @@ _In this website you can find:_
 - possible \icon{fa-lightbulb}[future work].
 - \icon{fa-book}[resources] that I have read or reading.
 
-_You can contact me on \iconb{fa-github}[github] or \iconb{fa-twitter}[twitter], or \icon{fa-at}[send an email]._
+_You can contact me on \iconb{fa-github}[github] or \iconb{fa-twitter}[twitter], or through \icon{fa-at}[email]._
 
 [articles]: posts/
 [stuff]: about/
@@ -15,6 +15,6 @@ _You can contact me on \iconb{fa-github}[github] or \iconb{fa-twitter}[twitter],
 [resources]: reads/
 [github]: https://github.com/untoreh
 [twitter]: https://twitter.com/@untoreh
-[send an email]: mailto:contact@unto.re
+[email]: mailto:contact@unto.re
 
 @@
