@@ -1,1 +1,150 @@
-@charset "utf-8";@media (min-width:680px) and (max-width:1300px){body{max-width:640px;min-height:320px}#site-nav{position:relative;z-index:1}#site-nav .ham:hover{cursor:pointer}#site-nav .ham{outline:none}#site-nav .ham,#site-nav .ham-icon{display:block;height:3rem;line-height:3rem;position:absolute;right:0;top:0;text-align:right;background:transparent;border:0;font-size:3rem;color:var(--accent)}#site-nav .horiz{display:none}#site-nav .vert{display:block;float:none;position:absolute;right:0;top:3rem;width:8rem;padding-left:1rem;max-height:0;overflow:hidden;filter:blur(1rem);transition:max-height .33s ease-in,filter .33s ease-in}#site-nav .vert ul{margin:0;padding:10px 0 10px 0}#site-nav .vert ul>li{width:100%;text-align:center;border-radius:25% 50% 50% 25%;adding:.5rem 1rem;box-shadow:-0.25rem 0 .05rem var(--alt)}}@media (max-width:680px){.masthead,.masthead__inner-wrap,.masthead__menu{display:block}.site-title{float:none;width:100%;display:block;text-align:center}.author__wrap{float:none;display:block;width:100%;height:4.4rem;text-align:center}.author__wrap ul{width:auto;float:none;padding:0;display:inline-block}#site-nav{float:none;padding:10px 0}#site-nav ul li{float:none}.horiz{text-align:center}#site-nav ul{display:inline-block;padding:0}.masthead{height:14rem}.page__footer{width:100%;display:block}.page__footer{text-align:center}footer{display:inline-block;text-align:center}footer>*{display:inline-block;float:none}footer ul.author__wrap{float:none}footer .author__urls.social-icons{font-size:1rem}.page-foot .copyright{display:inline-block}}@media (max-width:480px){.masthead{height:26rem}#site-nav ul li{width:calc(100% - 2rem)}}@media (max-width:680px){footer ul.author__wrap{margin-top:1rem;text-align:center;margin-left:0;padding-left:0}footer ul.author__wrap>li{float:none;display:inline-block}.page__footer{margin-top:3.5rem}}
+@media (min-width: 680px) and (max-width: 1300px) {
+  body {
+    max-width: 640px;
+    min-height: 320px;
+  }
+  #site-nav {
+    position: relative;
+    z-index: 1;
+  }
+  #site-nav .ham:hover {
+    cursor: pointer;
+  }
+  #site-nav .ham {
+    outline: none;
+  }
+  #site-nav .ham,
+  #site-nav .ham-icon {
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    color: var(--accent);
+  }
+  #site-nav .horiz {
+    display: none;
+  }
+  #site-nav .vert {
+    display: block;
+    float: none;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    width: 8rem;
+    padding-left: 1rem;
+    max-height: 0rem;
+    overflow: hidden;
+    filter: blur(1rem);
+    transition: max-height 0.33s ease-in, filter 0.33s ease-in;
+  }
+  #site-nav .vert ul {
+    margin: 0;
+    padding: 10px 0 10px 0;
+  }
+  #site-nav .vert ul > li {
+    width: 100%;
+    text-align: center;
+    border-radius: 25% 50% 50% 25%;
+    adding: 0.5rem 1rem;
+    box-shadow: -0.25rem 0 0.05rem var(--alt);
+  }
+}
+
+@media (max-width: 680px) {
+  .masthead,
+  .masthead__inner-wrap,
+  .masthead__menu {
+    display: block;
+  }
+  .site-title {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .author__wrap {
+    float: none;
+    display: block;
+    width: 100%;
+    height: 4.4rem;
+    text-align: center;
+  }
+  .author__wrap ul {
+    width: auto;
+    float: none;
+    padding: 0;
+    display: inline-block;
+  }
+  #site-nav {
+    float: none;
+    padding: 10px 0;
+  }
+  #site-nav ul li {
+    float: none;
+  }
+  .horiz {
+    text-align: center;
+  }
+  #site-nav ul {
+    display: inline-block;
+    padding: 0;
+  }
+  .masthead {
+    height: 14rem;
+  }
+  .page__footer {
+    width: 100%;
+    display: block;
+  }
+  .page__footer {
+    text-align: center;
+  }
+  footer {
+    display: inline-block;
+    text-align: center;
+  }
+  footer > * {
+    display: inline-block;
+    float: none;
+  }
+  footer ul.author__wrap {
+    float: none;
+  }
+  footer .author__urls.social-icons {
+    font-size: 1rem;
+  }
+  .page-foot .copyright {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .masthead {
+    height: 26rem;
+  }
+  #site-nav ul li {
+    width: calc(100% - 2rem);
+  }
+}
+
+@media (max-width: 680px) {
+  footer ul.author__wrap {
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  footer ul.author__wrap > li {
+    float: none;
+    display: inline-block;
+  }
+  .page__footer {
+    margin-top: 3.5rem;
+  }
+}
