@@ -5,10 +5,6 @@ tags = ["crypto"]
 rss_description = "a short round up of the categories for generating proofs of work"
 +++
 
-# {{title}}
-
-> {{desc}}
-
 Proof of work historically started with CPU implementations, then with GPU and then with increasingly more efficient ASICS thanks to shrinking and optimizations, unless the algorithm is designed to be somewhat _resistant_ which means it can try to saturate something which functions as the bottleneck to prevent benefitting from further optimizations.
 
 Some notable bottlenecks ideas and applications:
