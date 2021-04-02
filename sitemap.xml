@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>https://unto.re/reads/index.html</loc>
+    <loc>https://unto.re/posts/tcsplitter/index.html</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -27,6 +27,12 @@
 </url>
 <url>
     <loc>https://unto.re/posts/tools/index.html</loc>
+    <lastmod>2021-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://unto.re/reads/index.html</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -6,6 +6,14 @@
   <link>https://unto.re/</link>
   <atom:link href="https://unto.re/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title><![CDATA[TCSplitter]]></title>
+    <link>https://unto.re/posts/tcsplitter/</link>
+    <description><![CDATA[A tunnel to split TCP or UDP connection across multiple TCP connections
+<br><a href="https://unto.re/posts/tcsplitter/">Read more</a>]]></description>
+    <guid>https://unto.re/posts/tcsplitter/</guid>
+    <pubDate>Fri, 2 Apr 2021 00:00:00 UT</pubDate>
+  </item>
+  <item>
     <title><![CDATA[A few notes on (hashcash derived) proof of work]]></title>
     <link>https://unto.re/posts/a-few-notes-on-proof-of-work/</link>
     <description><![CDATA[a short round up of the categories for generating proofs of work
