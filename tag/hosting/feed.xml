@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title><![CDATA[untoreh's site]]></title>
+  <description><![CDATA[you know...stuff
+]]></description>
+  <link>https://unto.re/</link>
+  <atom:link href="https://unto.re/tag/hosting/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Paroodise]]></title>
+    <link>https://unto.re/posts/paroodise/</link>
+    <description><![CDATA[A small utility for live modification of file systems
+<br><a href="https://unto.re/posts/paroodise/">Read more</a>]]></description>
+    <guid>https://unto.re/posts/paroodise/</guid>
+    <pubDate>Fri, 2 Apr 2021 00:00:00 UT</pubDate>
+  </item>
+</channel>
+</rss>
