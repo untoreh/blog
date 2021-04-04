@@ -1,0 +1,2 @@
+- search widget
+- automatic translation
