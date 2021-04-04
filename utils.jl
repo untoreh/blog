@@ -97,7 +97,7 @@ function hfun_taglist_desc(tag::Union{Nothing,String}=nothing)::String
     end
         return pvd
     end
-    sort!(rpaths, by=sorter, rev=true)
+    sort!(rpaths, by=sorter, rev=false)
 
     for rpath in rpaths
         title = pagevar(rpath, "title")
@@ -126,7 +126,7 @@ function hfun_tag_title()::String
         write(c, "<a href=\"/$tag_page/bulbs/\"><h1>Ideas</h1></a>
  <i>commonly known as shower thoughts</i>")
     else
-        write(c, "<a href=\"/$tag_page/$tag/\">$tag</a>")
+        write(c, "Articles tagged: <a href=\"/$tag_page/$tag/\">$tag</a>")
     end
     write(c, "</div></div>")
     return String(take!(c))
