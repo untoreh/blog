@@ -10,7 +10,7 @@ _You can contact me on \iconb{fa-github}[github] or \iconb{fa-twitter}[twitter],
 
 [articles]: posts/
 [stuff]: about/
-[topics]: tags/
+[topics]: tag/
 [future work]: lightbulbs/
 [resources]: reads/
 [github]: https://github.com/untoreh

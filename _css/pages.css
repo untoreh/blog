@@ -65,3 +65,9 @@
   padding: 0.2rem;
   font-variant: small-caps;
 }
+
+#tag_cloud_wrapper {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
