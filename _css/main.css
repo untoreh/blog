@@ -181,3 +181,7 @@ body > div #page-description {
   padding: 0 0.2rem;
   font-size: 1rem;
 }
+
+.franklin-content h3 {
+  font-size: 0.9rem;
+}

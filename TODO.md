@@ -1,2 +1,6 @@
 - search widget
 - automatic translation
+- comments
+- SE indexing
+- schemas metadata
+- a better landing page
