@@ -1,7 +1,7 @@
 +++
 date = "4/2/2021"
 title = "Minor tools"
-tags = ["tools"]
+tags = ["tools", "about"]
 rss_description = "Collection of small utilities done to scratch some itches..."
 +++
 

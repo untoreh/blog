@@ -1,7 +1,7 @@
 +++
 date = "4/4/2021"
 title = "MTR: multiple translations"
-tags = ["tools"]
+tags = ["tools", "about"]
 rss_description = "wrapping translation services for internal use"
 +++
 

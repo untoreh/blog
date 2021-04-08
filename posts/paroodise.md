@@ -1,7 +1,7 @@
 +++
 date = "4/2/2021"
 title = "Paroodise"
-tags = ["tools", "hosting"]
+tags = ["tools", "hosting", "about"]
 rss_description = "A small utility for live modification of file systems"
 +++
 
