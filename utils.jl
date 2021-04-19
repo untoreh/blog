@@ -2,6 +2,7 @@ using Franklin; const fr = Franklin;
 using Franklin: convert_md, convert_html, pagevar, path, globvar;
 using Base.Iterators:flatten
 using DataStructures:DefaultDict
+using Dates:DateFormat, Date
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
@@ -60,25 +61,24 @@ function hfun_recent_posts(m::Vector{String})
     @assert length(m) < 3 "only two arguments allowed for recent posts (the number of recent posts to pull and the path)"
     n = parse(Int64, m[1])
     posts_path = length(m) == 1 ? "posts/" : m[2]
-  list = readdir(dirname(posts_path))
-  filter!(f -> endswith(f, ".md") && f != "index.md" && !startswith(f, "."), list)
-  markdown = ""
-  posts = []
-  df = DateFormat("mm/dd/yyyy")
-  for (k, post) in enumerate(list)
-      fi = posts_path * splitext(post)[1]
-      push!(posts, (title = pagevar(fi, :title), link = fi,
-                    date = pagevar(fi, :date), description = pagevar(fi, :rss_description),))
-  end
-  # pull all posts if n <= 0
+    list = readdir(dirname(posts_path))
+    filter!(f -> endswith(f, ".md") && f != "index.md" && !startswith(f, "."), list)
+    markdown = ""
+    posts = []
+    df = DateFormat("mm/dd/yyyy")
+    for (k, post) in enumerate(list)
+        fi = posts_path * splitext(post)[1]
+        push!(posts, (title = pagevar(fi, :title), link = fi,
+                      date = pagevar(fi, :date), description = pagevar(fi, :rss_description),))
+    end
+    # pull all posts if n <= 0
 
-n = n >= 0 ? n : length(posts) + 1
-  for ele in sort(posts, by=x -> x.date, rev=true)[1:min(length(posts), n)]
-    markdown *= "* [($(ele.date)) $(ele.title)](../$(ele.link)) -- _$(ele.description)_ \n"
-  end
+    n = n >= 0 ? n : length(posts) + 1
+    for ele in view(sort(posts, by=x -> Date(x.date, df), rev=true), 1:min(length(posts), n))
+        markdown *= "* [($(ele.date)) $(ele.title)](../$(ele.link)) -- _$(ele.description)_ \n"
+    end
 
-  return fd2html(markdown, internal=true)
-
+    return fd2html(markdown, internal=true)
 end
 
 function hfun_taglist_desc(tag::Union{Nothing,String}=nothing)::String
@@ -141,7 +141,7 @@ function hfun_tags_cloud()
     for p in iter_posts()
         fi = "posts/" * splitext(p)[1]
         for t in pagevar(fi, :tags)
-            tags[t] += 1
+    tags[t] += 1
         end
     end
     ordered_tags = [k for k in keys(tags)]

@@ -1,0 +1,82 @@
+<table>
+  <tr class = "header headerLastRow">
+    <th style = "text-align: center;">FS</th>
+    <th style = "text-align: center;">seq</th>
+    <th style = "text-align: center;">rread</th>
+    <th style = "text-align: center;">rrw</th>
+    <th style = "text-align: center;">files</th>
+    <th style = "text-align: center;">create</th>
+    <th style = "text-align: center;">read</th>
+    <th style = "text-align: center;">append</th>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">raw</td>
+    <td style = "color: #CE1126; text-align: center;">76</td>
+    <td style = "color: #9AC525; text-align: center;">266440</td>
+    <td style = "color: #55BD30; text-align: center;">22489</td>
+    <td style = "color: #41BA33; text-align: center;">44870</td>
+    <td style = "color: #D4CC1C; text-align: center;">4430</td>
+    <td style = "color: #14B53A; text-align: center;">6028</td>
+    <td style = "color: #87C328; text-align: center;">3688</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">zfs</td>
+    <td style = "color: #CF1526; text-align: center;">99</td>
+    <td style = "color: #26B737; text-align: center;">358000</td>
+    <td style = "color: #48BB32; text-align: center;">23097</td>
+    <td style = "color: #14B53A; text-align: center;">49602</td>
+    <td style = "color: #14B53A; text-align: center;">7470</td>
+    <td style = "color: #DC4921; text-align: center;">1146</td>
+    <td style = "color: #14B53A; text-align: center;">4860</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">f2fs</td>
+    <td style = "color: #14B53A; text-align: center;">2064</td>
+    <td style = "color: #14B53A; text-align: center;">372524</td>
+    <td style = "color: #14B53A; text-align: center;">25418</td>
+    <td style = "color: #35B935; text-align: center;">46123</td>
+    <td style = "color: #22B738; text-align: center;">7250</td>
+    <td style = "color: #F6B918; text-align: center;">2803</td>
+    <td style = "color: #49BB32; text-align: center;">4325</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">xtreemefs</td>
+    <td style = "color: #D22025; text-align: center;">155</td>
+    <td style = "color: #CF1426; text-align: center;">7279</td>
+    <td style = "color: #DA4522; text-align: center;">7366</td>
+    <td style = "color: #CE1126; text-align: center;">422</td>
+    <td style = "color: #CE1126; text-align: center;">131</td>
+    <td style = "color: #CE1126; text-align: center;">306</td>
+    <td style = "color: #CE1126; text-align: center;">134</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">glusterfs</td>
+    <td style = "color: #D22424; text-align: center;">173</td>
+    <td style = "color: #CE1126; text-align: center;">4305</td>
+    <td style = "color: #CE1126; text-align: center;">4537</td>
+    <td style = "color: #D01925; text-align: center;">1420</td>
+    <td style = "color: #DA4522; text-align: center;">1123</td>
+    <td style = "color: #E87F1D; text-align: center;">1951</td>
+    <td style = "color: #DB4722; text-align: center;">798</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">beegfs</td>
+    <td style = "color: #CE1126; text-align: center;">78</td>
+    <td style = "color: #D32724; text-align: center;">25751</td>
+    <td style = "color: #6BC02C; text-align: center;">21495</td>
+    <td style = "color: #D93E22; text-align: center;">6216</td>
+    <td style = "color: #EC8E1C; text-align: center;">2518</td>
+    <td style = "color: #F6D017; text-align: center;">3242</td>
+    <td style = "color: #EACF19; text-align: center;">2682</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">orangefs</td>
+    <td style = "color: #D94122; text-align: center;">323</td>
+    <td style = "color: #D01B25; text-align: center;">13683</td>
+    <td style = "color: #E87D1D; text-align: center;">10402</td>
+    <td style = "color: #D01825; text-align: center;">1380</td>
+    <td style = "color: #DD4F21; text-align: center;">1310</td>
+    <td style = "color: #E9811D; text-align: center;">1979</td>
+    <td style = "color: #EA861C; text-align: center;">1571</td>
+  </tr>
+</table>
