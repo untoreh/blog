@@ -1,0 +1,290 @@
+###
+### SEQUENTIAL
+###
+
+writefile: (g=0): rw=write, bs=1M-1M/1M-1M/1M-1M, ioengine=libaio, iodepth=128
+fio-2.2.10
+Starting 1 process
+
+writefile: (groupid=0, jobs=1): err= 0: pid=20683: Sat Feb 25 15:21:10 2017
+  write: io=524288KB, bw=159310KB/s, iops=155, runt=  3291msec
+    slat (usec): min=515, max=748445, avg=5510.80, stdev=34040.83
+    clat (usec): min=3, max=1466.4K, avg=685961.22, stdev=303273.39
+     lat (usec): min=858, max=1471.9K, avg=691474.52, stdev=302980.06
+    clat percentiles (msec):
+     |  1.00th=[   26],  5.00th=[  297], 10.00th=[  383], 20.00th=[  490],
+     | 30.00th=[  562], 40.00th=[  578], 50.00th=[  586], 60.00th=[  701],
+     | 70.00th=[  734], 80.00th=[  914], 90.00th=[ 1139], 95.00th=[ 1401],
+     | 99.00th=[ 1450], 99.50th=[ 1467], 99.90th=[ 1467], 99.95th=[ 1467],
+     | 99.99th=[ 1467]
+    bw (KB  /s): min=29503, max=232079, per=92.29%, avg=147031.80, stdev=88863.49
+    lat (usec) : 4=0.20%
+    lat (msec) : 2=0.20%, 4=0.39%, 50=1.56%, 100=0.78%, 500=17.38%
+    lat (msec) : 750=54.69%, 1000=8.20%, 2000=16.60%
+  cpu          : usr=2.67%, sys=1.46%, ctx=4613, majf=0, minf=11
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=1.6%, 16=3.1%, 32=6.2%, >=64=87.7%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.7%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.3%
+     issued    : total=r=0/w=512/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: io=524288KB, aggrb=159309KB/s, minb=159309KB/s, maxb=159309KB/s, mint=3291msec, maxt=3291msec
+
+###
+### RANDOM READ
+###
+
+benchmark: (g=0): rw=randread, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+...
+fio-2.2.10
+Starting 4 processes
+
+benchmark: (groupid=0, jobs=4): err= 0: pid=20730: Sat Feb 25 15:23:51 2017
+  read : io=873536KB, bw=29117KB/s, iops=7279, runt= 30001msec
+    slat (usec): min=162, max=561597, avg=545.03, stdev=1383.06
+    clat (usec): min=2, max=611772, avg=17001.06, stdev=8877.47
+     lat (usec): min=189, max=614339, avg=17546.94, stdev=9050.79
+    clat percentiles (msec):
+     |  1.00th=[   10],  5.00th=[   12], 10.00th=[   13], 20.00th=[   14],
+     | 30.00th=[   15], 40.00th=[   16], 50.00th=[   16], 60.00th=[   17],
+     | 70.00th=[   19], 80.00th=[   20], 90.00th=[   23], 95.00th=[   26],
+     | 99.00th=[   40], 99.50th=[   48], 99.90th=[   62], 99.95th=[   68],
+     | 99.99th=[  603]
+    bw (KB  /s): min= 3113, max= 9432, per=25.05%, avg=7294.03, stdev=989.83
+    lat (usec) : 4=0.01%, 250=0.01%, 750=0.01%, 1000=0.01%
+    lat (msec) : 2=0.01%, 4=0.01%, 10=1.93%, 20=80.08%, 50=17.59%
+    lat (msec) : 100=0.35%, 250=0.01%, 750=0.01%
+  cpu          : usr=0.95%, sys=1.27%, ctx=218403, majf=0, minf=161
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=99.9%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=218384/w=0/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: io=873536KB, aggrb=29116KB/s, minb=29116KB/s, maxb=29116KB/s, mint=30001msec, maxt=30001msec
+
+###
+### RANDOM READWRITE
+###
+
+benchmark: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=32
+...
+fio-2.2.10
+Starting 4 processes
+
+benchmark: (groupid=0, jobs=4): err= 0: pid=20742: Sat Feb 25 15:24:21 2017
+  write: io=884116KB, bw=29468KB/s, iops=7366, runt= 30003msec
+    slat (usec): min=42, max=108009, avg=538.55, stdev=2208.77
+    clat (usec): min=3, max=164087, avg=16819.83, stdev=13754.91
+     lat (usec): min=352, max=164413, avg=17359.14, stdev=13993.24
+    clat percentiles (msec):
+     |  1.00th=[    4],  5.00th=[    7], 10.00th=[    8], 20.00th=[    9],
+     | 30.00th=[   10], 40.00th=[   11], 50.00th=[   13], 60.00th=[   16],
+     | 70.00th=[   19], 80.00th=[   23], 90.00th=[   30], 95.00th=[   40],
+     | 99.00th=[   80], 99.50th=[   95], 99.90th=[  118], 99.95th=[  133],
+     | 99.99th=[  163]
+    bw (KB  /s): min= 3672, max=13176, per=25.07%, avg=7387.78, stdev=1365.27
+    lat (usec) : 4=0.01%, 10=0.01%, 500=0.01%, 750=0.01%
+    lat (msec) : 2=0.01%, 4=1.39%, 10=34.72%, 20=38.82%, 50=21.88%
+    lat (msec) : 100=2.79%, 250=0.39%
+  cpu          : usr=0.94%, sys=1.62%, ctx=442073, majf=0, minf=42
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=99.9%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=221029/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+  WRITE: io=884116KB, aggrb=29467KB/s, minb=29467KB/s, maxb=29467KB/s, mint=30003msec, maxt=30003msec
+
+###
+### FILES
+###
+
+layfiles: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=2
+...
+fio-2.2.10
+Starting 512 processes
+
+layfiles: (groupid=0, jobs=512): err= 0: pid=20774: Sat Feb 25 15:25:05 2017
+  write: io=55112KB, bw=1690.8KB/s, iops=422, runt= 32596msec
+    slat (usec): min=54, max=239312, avg=9388.91, stdev=25883.35
+    clat (usec): min=1, max=95, avg= 2.63, stdev= 2.51
+     lat (usec): min=56, max=239322, avg=9393.04, stdev=25884.28
+    clat percentiles (usec):
+     |  1.00th=[    1],  5.00th=[    1], 10.00th=[    1], 20.00th=[    1],
+     | 30.00th=[    2], 40.00th=[    2], 50.00th=[    2], 60.00th=[    2],
+     | 70.00th=[    3], 80.00th=[    3], 90.00th=[    5], 95.00th=[    6],
+     | 99.00th=[   12], 99.50th=[   14], 99.90th=[   30], 99.95th=[   41],
+     | 99.99th=[   48]
+    bw (KB  /s): min=    1, max=    8, per=0.21%, avg= 3.48, stdev= 2.20
+    lat (usec) : 2=23.73%, 4=59.15%, 10=15.37%, 20=1.49%, 50=0.25%
+    lat (usec) : 100=0.01%
+  cpu          : usr=0.00%, sys=0.00%, ctx=95400, majf=0, minf=4941
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=13778/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+  WRITE: io=55112KB, aggrb=1690KB/s, minb=1690KB/s, maxb=1690KB/s, mint=32596msec, maxt=32596msec
+
+###
+### CREATE
+###
+
+host = localhost,thr = 00,elapsed = 61.756018,files = 1024,records = 1024,status = ok
+host = localhost,thr = 01,elapsed = 60.820835,files = 1024,records = 1024,status = ok
+host = localhost,thr = 02,elapsed = 60.938833,files = 1000,records = 1000,status = ok
+host = localhost,thr = 03,elapsed = 60.898575,files = 1000,records = 1000,status = ok
+host = localhost,thr = 04,elapsed = 61.751824,files = 1024,records = 1024,status = ok
+host = localhost,thr = 05,elapsed = 61.850013,files = 1024,records = 1024,status = ok
+host = localhost,thr = 06,elapsed = 61.856815,files = 1000,records = 1000,status = ok
+host = localhost,thr = 07,elapsed = 61.930669,files = 1024,records = 1024,status = ok
+total threads = 8
+total files = 8120
+total data =     0.031 GB
+ 99.12% of requested files processed, minimum is  70.00
+61.930669 sec elapsed time
+131.114360 files/sec
+131.114360 IOPS
+0.512165 MB/sec
+
+###
+### READ
+###
+
+host = localhost,thr = 00,elapsed = 26.655533,files = 1024,records = 1024,status = ok
+host = localhost,thr = 01,elapsed = 26.027105,files = 1024,records = 1024,status = ok
+host = localhost,thr = 02,elapsed = 26.690532,files = 1024,records = 1024,status = ok
+host = localhost,thr = 03,elapsed = 26.007410,files = 1024,records = 1024,status = ok
+host = localhost,thr = 04,elapsed = 26.710549,files = 1024,records = 1024,status = ok
+host = localhost,thr = 05,elapsed = 25.969520,files = 1024,records = 1024,status = ok
+host = localhost,thr = 06,elapsed = 26.016645,files = 1024,records = 1024,status = ok
+host = localhost,thr = 07,elapsed = 25.943604,files = 1024,records = 1024,status = ok
+total threads = 8
+total files = 8192
+total data =     0.031 GB
+100.00% of requested files processed, minimum is  70.00
+26.710549 sec elapsed time
+306.695305 files/sec
+306.695305 IOPS
+1.198029 MB/sec
+
+###
+### APPEND
+###
+
+host = localhost,thr = 00,elapsed = 60.875837,files = 1024,records = 1024,status = ok
+host = localhost,thr = 01,elapsed = 59.998915,files = 1024,records = 1024,status = ok
+host = localhost,thr = 02,elapsed = 60.830508,files = 1024,records = 1024,status = ok
+host = localhost,thr = 03,elapsed = 60.874920,files = 1024,records = 1024,status = ok
+host = localhost,thr = 04,elapsed = 60.070513,files = 1024,records = 1024,status = ok
+host = localhost,thr = 05,elapsed = 60.829564,files = 1024,records = 1024,status = ok
+host = localhost,thr = 06,elapsed = 60.051979,files = 1024,records = 1024,status = ok
+host = localhost,thr = 07,elapsed = 60.845839,files = 1024,records = 1024,status = ok
+total threads = 8
+total files = 8192
+total data =     0.031 GB
+100.00% of requested files processed, minimum is  70.00
+60.875837 sec elapsed time
+134.568991 files/sec
+134.568991 IOPS
+0.525660 MB/sec
+
+###
+### RENAME
+###
+
+host = localhost,thr = 00,elapsed = 29.801892,files = 1024,records = 0,status = ok
+host = localhost,thr = 01,elapsed = 29.818320,files = 1024,records = 0,status = ok
+host = localhost,thr = 02,elapsed = 29.799497,files = 1024,records = 0,status = ok
+host = localhost,thr = 03,elapsed = 29.796362,files = 1024,records = 0,status = ok
+host = localhost,thr = 04,elapsed = 29.807414,files = 1024,records = 0,status = ok
+host = localhost,thr = 05,elapsed = 29.831505,files = 1024,records = 0,status = ok
+host = localhost,thr = 06,elapsed = 29.803037,files = 1024,records = 0,status = ok
+host = localhost,thr = 07,elapsed = 29.818784,files = 1024,records = 0,status = ok
+total threads = 8
+total files = 8192
+100.00% of requested files processed, minimum is  70.00
+29.831505 sec elapsed time
+274.609008 files/sec
+
+###
+### DELETE
+###
+
+host = localhost,thr = 00,elapsed = 24.515962,files = 1024,records = 0,status = ok
+host = localhost,thr = 01,elapsed = 24.773052,files = 1024,records = 0,status = ok
+host = localhost,thr = 02,elapsed = 24.525784,files = 1024,records = 0,status = ok
+host = localhost,thr = 03,elapsed = 24.745227,files = 1024,records = 0,status = ok
+host = localhost,thr = 04,elapsed = 24.518516,files = 1024,records = 0,status = ok
+host = localhost,thr = 05,elapsed = 24.761381,files = 1024,records = 0,status = ok
+host = localhost,thr = 06,elapsed = 24.547175,files = 1024,records = 0,status = ok
+host = localhost,thr = 07,elapsed = 24.610262,files = 1024,records = 0,status = ok
+total threads = 8
+total files = 8192
+100.00% of requested files processed, minimum is  70.00
+24.773052 sec elapsed time
+330.681904 files/sec
+
+## sequential
+bw=159310KB/s
+iops=155
+80.00th=[  914]
+## randread
+bw=29117KB/s
+iops=7279
+80.00th=[   20]
+## randrw
+bw=29468KB/s
+iops=7366
+80.00th=[   23]
+## files
+bw=1690.8KB/s
+iops=422
+80.00th=[    3]
+## create
+0.02603478125s
+131.114360 files/sec
+131.114360 IOPS
+0.512165 MB/sec
+## read
+0.02039175s
+306.695305 files/sec
+306.695305 IOPS
+1.198029 MB/sec
+## append
+0.0213491875s
+134.568991 files/sec
+134.568991 IOPS
+0.525660 MB/sec
+## rename
+0.0277814375s
+274.609008 files/sec
+## delete
+0.01912640625s
+330.681904 files/sec
+
+###
+### RESOURCES
+###
+RAM: 118+112+70 110 171+30(client)
+CPU: 100% 0-50% 0-25%
+
+###
+### CONFIG
+###
+##  dir/mrc
+debug.level 3
+babudb.pseudoSyncWait 1024
+babudb.sync ASYNC
+babudb.worker.maxQueueLength 2048
+babudb.worker.numThreads 0 ## check
+## osd 
+max_client_queue 1024
+storage_threads 128 ## check
+mount.xtreemfs nomad/vol  --enable-async-writes --async-writes-max-reqs=1024 --metadata-cache-size=16777216 --metadata-cache-ttl-s=360 ~/mnt

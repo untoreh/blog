@@ -1,5 +1,5 @@
 +++
-date = "28/03/2021"
+date = "03/28/2021"
 title = "Chronicles of a cryptonote dropper"
 tags = ["crypto", "net", "shell"]
 rss_description = "...How far are you willing to go for...pennies?"

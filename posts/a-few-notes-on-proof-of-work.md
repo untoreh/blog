@@ -1,5 +1,5 @@
 +++
-date = "04/03/2021"
+date = "03/04/2021"
 title = "A few notes on (hashcash derived) proof of work"
 tags = ["crypto"]
 rss_description = "a short round up of the categories for generating proofs of work"

@@ -1,5 +1,5 @@
 +++
-date = "4/5/21"
+date = "4/5/2021"
 title = "Alpine"
 tags = ["tools", "about"]
 rss_description = "Pine, Alpine linux based on OSTree"

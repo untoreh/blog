@@ -9,7 +9,7 @@ body.light {
   --alt3: #7f4200;
   --background-color: #ffebee;
   --foreground-color: #1c0005;
-  --block-background: #f8f8ff;
+  --block-background: #423833;
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,7 +22,7 @@ body.light {
     --alt3: #7f4200;
     --background-color: #ffebee;
     --foreground-color: #1c0005;
-    --block-background: #f8f8ff;
+    --block-background: #423833;
   }
 }
 

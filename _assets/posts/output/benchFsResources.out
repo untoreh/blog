@@ -1,0 +1,37 @@
+<table>
+  <tr class = "header headerLastRow">
+    <th style = "text-align: center;">FS</th>
+    <th style = "text-align: center;">CPU (Server)</th>
+    <th style = "text-align: center;">CPU (Client)</th>
+    <th style = "text-align: center;">RAM (Server)</th>
+    <th style = "text-align: center;">RAM (Client)</th>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">xtreemefs</td>
+    <td style = "color: #CE1126; text-align: center;">100</td>
+    <td style = "color: #14B53A; text-align: center;">25</td>
+    <td style = "color: #CE1126; text-align: center;">300</td>
+    <td style = "color: #E9831D; text-align: center;">201</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">glusterfs</td>
+    <td style = "color: #CE1126; text-align: center;">100</td>
+    <td style = "color: #E7CE19; text-align: center;">50</td>
+    <td style = "color: #6EC02C; text-align: center;">92</td>
+    <td style = "color: #CE1126; text-align: center;">277</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">beegfs</td>
+    <td style = "color: #E46B1E; text-align: center;">80</td>
+    <td style = "color: #CE1126; text-align: center;">80</td>
+    <td style = "color: #14B53A; text-align: center;">42</td>
+    <td style = "color: #28B737; text-align: center;">31</td>
+  </tr>
+  <tr>
+    <td style = "text-align: center;">orangefs</td>
+    <td style = "color: #14B53A; text-align: center;">15</td>
+    <td style = "color: #D63423; text-align: center;">75</td>
+    <td style = "color: #34B935; text-align: center;">60</td>
+    <td style = "color: #14B53A; text-align: center;">20</td>
+  </tr>
+</table>
