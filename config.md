@@ -29,6 +29,9 @@ For instance:
 -->
 
 \newcommand{\color}[2]{~~~<span style="color:#1">#2</span>~~~}
+\newcommand{\red}[1]{~~~<span style="color:var(--red)"; font-weight: bold;>#1</span>~~~}
+\newcommand{\ylw}[1]{~~~<span style="color:var(--yellow); font-weight: bold;">#1</span>~~~}
+\newcommand{\grn}[1]{~~~<span style="color:var(--green); font-weight: bold;">#1</span>~~~}
 \newcommand{\styletext}[2]{~~~<span style="#1">#2</span>~~~}
 \newcommand{\website}{{{website_url}}}
 \newcommand{\icon}[1]{~~~<i class="fas #1 icon"></i>~~~}

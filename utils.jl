@@ -183,3 +183,9 @@ function hfun_post_title()
     # path = locvar(:fd_rpath)::String
     # ispage("/posts")
 end
+
+@doc "insert a colored star"
+function hfun_star(args)
+    color = args[1]
+    "<span style=\"color:var(--$color); margin-left: 0.2rem;\"><i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>"
+end

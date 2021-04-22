@@ -156,6 +156,10 @@ h6 {
   text-align: center;
 }
 
+.franklin-content table * {
+  line-height: 0.75rem;
+}
+
 .franklin-toc ol ol {
   list-style-type: lower-alpha;
 }
