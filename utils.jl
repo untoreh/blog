@@ -19,6 +19,7 @@ end
 #     txt = args[1]
 #     return "<span color=\"$color\">$txt</span>"
 # end
+#
 
 function lx_baz(com, _)
   # keep this first line
@@ -182,4 +183,25 @@ function hfun_post_title()
     end
     # path = locvar(:fd_rpath)::String
     # ispage("/posts")
+end
+
+@doc "insert a colored star"
+function hfun_star(args)
+    color = args[1]
+    "<span style=\"color:var(--$color); margin-left: 0.2rem;\"><i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>"
+end
+
+@doc "return the tag of the current page or none"
+function hfun_tag_title(prefix="Tag: ", default="Tags")
+    c = IOBuffer()
+    let tag = locvar(:fd_tag)
+        if tag != ""
+            write(c, prefix)
+            write(c, tag)
+        else
+            # write(c, locvar(:title))
+            write(c, default)
+        end
+    end
+    String(take!(c))
 end
