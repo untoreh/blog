@@ -190,7 +190,6 @@ function hfun_star(args)
     color = args[1]
     "<span style=\"color:var(--$color); margin-left: 0.2rem;\"><i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>"
 end
-<<<<<<< HEAD
 
 @doc "return the tag of the current page or none"
 function hfun_tag_title(prefix="Tag: ", default="Tags")
@@ -206,5 +205,3 @@ function hfun_tag_title(prefix="Tag: ", default="Tags")
     end
     String(take!(c))
 end
-=======
->>>>>>> 8536c1ebe1ced69ebdb25a4086daf47f385df2bc
