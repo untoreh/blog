@@ -23,6 +23,11 @@ jobs:
         uses: julia-actions/setup-julia@v1
         with:
           version: 1.6
+      # - name: Install Nix
+      #   uses: cachix/install-nix-action@v13
+      #   with:
+      #     nix_path: nixpkgs=channel:nixos-unstable
+      # - run: nix-env -iA plantuml
       # NOTE
       #   The steps below ensure that NodeJS and Franklin are loaded then it
       #   installs highlight.js which is needed for the prerendering step

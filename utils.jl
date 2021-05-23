@@ -20,6 +20,7 @@ end
 #     return "<span color=\"$color\">$txt</span>"
 # end
 #
+#m
 
 function lx_baz(com, _)
   # keep this first line
@@ -193,6 +194,7 @@ end
 
 @doc "return the tag of the current page or none"
 function hfun_tag_title(prefix="Tag: ", default="Tags")
+    # NOTE: franklin as {{if else}} and {{isdef}}
     c = IOBuffer()
     let tag = locvar(:fd_tag)
         if tag != ""
@@ -205,3 +207,4 @@ function hfun_tag_title(prefix="Tag: ", default="Tags")
     end
     String(take!(c))
 end
+
