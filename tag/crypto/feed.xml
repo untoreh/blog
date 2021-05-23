@@ -1,25 +1,61 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-  <title><![CDATA[untoreh's site]]></title>
-  <description><![CDATA[you know...stuff
-]]></description>
-  <link>https://unto.re/</link>
-  <atom:link href="https://unto.re/tag/crypto/feed.xml" rel="self" type="application/rss+xml" />
-  <item>
-    <title><![CDATA[Chronicles of a cryptonote dropper]]></title>
-    <link>https://unto.re/posts/chronichles_of_a_cryptonote_dropper/</link>
-    <description><![CDATA[...How far are you willing to go for...pennies?
-<br><a href="https://unto.re/posts/chronichles_of_a_cryptonote_dropper/">Read more</a>]]></description>
-    <guid>https://unto.re/posts/chronichles_of_a_cryptonote_dropper/</guid>
-    <pubDate>Wed, 19 May 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[A few notes on (hashcash derived) proof of work]]></title>
-    <link>https://unto.re/posts/a-few-notes-on-proof-of-work/</link>
-    <description><![CDATA[a short round up of the categories for generating proofs of work
-<br><a href="https://unto.re/posts/a-few-notes-on-proof-of-work/">Read more</a>]]></description>
-    <guid>https://unto.re/posts/a-few-notes-on-proof-of-work/</guid>
-    <pubDate>Wed, 19 May 2021 00:00:00 UT</pubDate>
-  </item>
-</channel>
-</rss>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  {{fd2rss website_title}}  ]]>
+    </title>
+    <link> {{website_url}} </link>
+    <description>
+      <![CDATA[  {{fd2rss website_description}}  ]]>
+    </description>
+    <atom:link
+      href="{{fd_rss_feed_url}}"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  Chronicles of a cryptonote dropper  ]]>
+  </title>
+  <link> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </link>
+  <guid> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </guid>
+  <description>
+    <![CDATA[  ...How far are you willing to go for...pennies?  ]]>
+  </description>  
+    
+  <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  A few notes on &#40;hashcash derived&#41; proof of work  ]]>
+  </title>
+  <link> https://unto.re/posts/a-few-notes-on-proof-of-work/index.html </link>
+  <guid> https://unto.re/posts/a-few-notes-on-proof-of-work/index.html </guid>
+  <description>
+    <![CDATA[  a short round up of the categories for generating proofs of work  ]]>
+  </description>  
+    
+  <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>

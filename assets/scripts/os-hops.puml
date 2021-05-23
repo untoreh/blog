@@ -1,0 +1,32 @@
+#!/usr/bin/env plantuml
+
+@startuml
+skinparam defaultTextAlignment center
+skinparam backgroundcolor transparent
+skinparam ArrowColor #72E200
+
+!include ./puml-sprites/common.puml
+!include ./puml-sprites/font-awesome-5/windows.puml
+!include ./puml-sprites/font-awesome-5/linux.puml
+!include ./puml-sprites/font-awesome-5/ubuntu.puml
+
+scale 640 height
+
+FA5_WINDOWS(wxp, "XP")
+FA5_LINUX(pclo, "PCLinuxOs")
+FA5_LINUX(arch, "Arch Linux")
+FA5_WINDOWS(wafter, "Vista, 7, 8.1")
+FA5_LINUX(alpine, "Alpine Linux")
+FA5_LINUX(void, "Void Linux")
+FA5_UBUNTU(ubu, "Ubuntu")
+FA5_WINDOWS(wnow, "W10+WSL")
+
+wxp ===> pclo
+pclo => arch
+arch ==> wafter
+wafter ====> alpine
+alpine => void
+void => ubu
+ubu ====> wnow
+
+@enduml
