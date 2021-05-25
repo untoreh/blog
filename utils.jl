@@ -162,6 +162,7 @@ function hfun_tags_cloud()
     String(take!(c))
 end
 
+
 @doc "check if page is an article "
 function hfun_post_title()
     path = locvar(:fd_rpath)
@@ -208,3 +209,25 @@ function hfun_tag_title(prefix="Tag: ", default="Tags")
     String(take!(c))
 end
 
+@doc "check if page is a post"
+function is_post()
+    path = locvar(:fd_rpath)
+    (!isnothing(match(r"posts/.+", path)) &&
+            path !== "posts/index.html")
+end
+
+@doc "insert the utteranc.es comments widget if the page is a post"
+function hfun_addcomments()
+    if is_post()
+        html_str = """
+        <script src="https://utteranc.es/client.js"
+            repo="untoreh/untoreh.github.io"
+            issue-term="pathname"
+            label="Comment"
+            crossorigin="anonymous"
+            async>
+        </script>
+    """
+        return html_str
+    end
+end
