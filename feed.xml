@@ -31,7 +31,7 @@
     <![CDATA[  My view on USD tether in reply to a post..  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -50,7 +50,26 @@
     <![CDATA[  Pine, Alpine linux based on OSTree  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  grapes for winetricks  ]]>
+  </title>
+  <link> https://unto.re/posts/grapes-for-winetricks/index.html </link>
+  <guid> https://unto.re/posts/grapes-for-winetricks/index.html </guid>
+  <description>
+    <![CDATA[  A layer based setup for winetricks recipes  ]]>
+  </description>  
+    
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -69,7 +88,7 @@
     <![CDATA[  A small utility for live modification of file systems  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -88,7 +107,7 @@
     <![CDATA[  ...How far are you willing to go for...pennies?  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -107,7 +126,7 @@
     <![CDATA[  Collection of small utilities done to scratch some itches...  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -126,7 +145,26 @@
     <![CDATA[  wrapping translation services for internal use  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  tribes  ]]>
+  </title>
+  <link> https://unto.re/posts/tribes/index.html </link>
+  <guid> https://unto.re/posts/tribes/index.html </guid>
+  <description>
+    <![CDATA[  Ponds to share news  ]]>
+  </description>  
+    
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -145,7 +183,7 @@
     <![CDATA[  A list of tools to make Windows feel more like Linux  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -164,7 +202,7 @@
     <![CDATA[  Using containers, what and why  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -183,7 +221,7 @@
     <![CDATA[  A brief summary of operative systems that I have used  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -202,7 +240,7 @@
     <![CDATA[  A round-up of distributed file systems  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -221,7 +259,7 @@
     <![CDATA[  A tunnel to split TCP or UDP connection across multiple TCP connections  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -240,7 +278,7 @@
     <![CDATA[  a short round up of the categories for generating proofs of work  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -259,7 +297,7 @@
     <![CDATA[  A list of correlation metrics  ]]>
   </description>  
     
-  <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
