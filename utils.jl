@@ -197,6 +197,7 @@ end
 function hfun_tag_title(prefix="Tag: ", default="Tags")
     # NOTE: franklin as {{if else}} and {{isdef}}
     c = IOBuffer()
+    write(c, "<div id=\"tag-name\">")
     let tag = locvar(:fd_tag)
         if tag != ""
             write(c, prefix)
@@ -206,14 +207,26 @@ function hfun_tag_title(prefix="Tag: ", default="Tags")
             write(c, default)
         end
     end
+    write(c, "</div>")
     String(take!(c))
+end
+
+@doc "check if page is an index page"
+function is_index(path)
+    !isnothing(match(r".*/index\.(html|md)", path))
 end
 
 @doc "check if page is a post"
 function is_post()
     path = locvar(:fd_rpath)
     (!isnothing(match(r"posts/.+", path)) &&
-            path !== "posts/index.html")
+            !is_index(path))
+end
+
+@doc "check if page is a tags page"
+function is_tag(tag)
+    path = locvar(:fd_rpath)
+    !isnothing(match(r"$tag/index.(html|md)", path))
 end
 
 @doc "insert the utteranc.es comments widget if the page is a post"
@@ -229,5 +242,16 @@ function hfun_addcomments()
         </script>
     """
         return html_str
+    else
+        ""
+    end
+end
+
+# @doc "add edited date at appropriate pages"
+function hfun_editedpage()
+    if is_post() || is_tag("lightbulbs")
+        locvar(:fd_mtime)
+    else
+        ""
     end
 end

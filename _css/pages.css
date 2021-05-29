@@ -10,6 +10,14 @@
   z-index: 0;
 }
 
+#tag-name {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
 #tag_title {
   font-variant: small-caps;
 }

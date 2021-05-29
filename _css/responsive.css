@@ -57,6 +57,9 @@
 }
 
 @media (max-width: 680px) {
+  .masthead {
+    margin-bottom: 1rem;
+  }
   .masthead,
   .masthead__inner-wrap,
   .masthead__menu {
@@ -134,6 +137,9 @@
 }
 
 @media (max-width: 680px) {
+  .masthead {
+    margin-bottom: 1rem;
+  }
   footer ul.author__wrap {
     margin-top: 1rem;
     text-align: center;
