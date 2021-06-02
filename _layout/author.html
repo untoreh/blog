@@ -1,13 +1,8 @@
-<div itemscope class="author__wrap" itemtype=
-"https://schema.org/Person">
+<div class="author__wrap">
+    {{ldj_author}}
     <ul>
-        <li onclick="toggle_theme()" class="author__avatar"><img class="flip-front" src=
-        "/assets/appa.png" alt="untoreh-light" itemprop="image">
-        </li>
-        <li class="author__content">
-            <h3 class="author__name" itemprop="name">untoreh</h3>
-            <p class="author__bio .hvr-bubble-float-top" itemprop="description">I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget.
-Located in south italy. Born in the early nineties.</p>
-        </li>{{insert contacts.html}}
+        <li onclick="toggle_theme()" class="author__avatar">
+        <img class="flip-front" src="{{fill author_image}}" alt=
+        "untoreh-light"></li>{{insert contacts.html}}
     </ul>
 </div>

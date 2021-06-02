@@ -3,6 +3,7 @@ using Franklin: convert_md, convert_html, pagevar, path, globvar;
 using Base.Iterators:flatten
 using DataStructures:DefaultDict
 using Dates:DateFormat, Date
+using JSON
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
@@ -254,4 +255,52 @@ function hfun_editedpage()
     else
         ""
     end
+end
+
+### LD+JSON functions
+
+function wrap_ldj(data::IdDict)
+    "<script type=\"application/ld+json\">$(JSON.json(data))</script>"
+end
+
+function hfun_ldj_website()
+    IdDict(
+         "@context" => "https://schema.org/",
+         "@type" => "WebSite",
+        "@id" => "https://unto.re",
+         "url" => locvar(:website_url),
+         "copyrightHolder" => locvar(:author),
+         "copyrightYear" => Dates.year(now())
+    ) |> wrap_ldj
+end
+
+function hfun_ldj_search()
+    IdDict(
+        "potentialAction" => IdDict(
+            "@type" => "SearchAction",
+            "target" => locvar(:website_url) * "/search?&q={query}",
+            "query" => "required",
+            "query-input" => "required maxlength=100 name=query",
+            "actionStatus" => "https://schema.org/PotentialActionStatus"
+        )
+    ) |> wrap_ldj
+end
+
+function hfun_ldj_place()
+    IdDict(
+        "homeLocation" => IdDict(
+            "@type" => "https://schema.org/Place",
+            "addressCountry" => locvar(:country),
+            "addressRegion" => locvar(:region)
+        )
+    ) |> wrap_ldj
+end
+
+function hfun_ldj_author()
+    IdDict(
+    "@type" => "https://schema.org/Person",
+        "image" => locvar(:author_image),
+        "name" =>  locvar(:author),
+        "description" => locvar(:bio)
+    ) |> wrap_ldj
 end

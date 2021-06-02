@@ -8,6 +8,13 @@ The website_* must be defined for the RSS to work
 @def website_title = "untoreh's site"
 @def website_descr = "you know...stuff"
 @def website_url = "https://unto.re"
+@def country = "IT"
+@def country_name = "italy"
+@def author_image = "/assets/appa.png"
+
+@def region = "Apulia"
+@def bio = "I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties."
+@def geo_link = "https://goo.gl/maps/E3Si7WzG4LX7wpNJ6"
 
 @def author = "untoreh"
 

@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {{ldj_website}}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{if hasmath}} {{insert head_katex.html }}     {{end}}
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
   {{insert style.html}}
   <title>{{fill title}}</title>
+  {{insert lunr_head.html}}
   <!-- end custom head snippets -->
 </head>
 {{insert body_layout.html}}
 
 <!-- Content appended here -->
+
