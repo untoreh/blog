@@ -301,6 +301,8 @@ function hfun_ldj_author()
     "@type" => "https://schema.org/Person",
         "image" => locvar(:author_image),
         "name" =>  locvar(:author),
-        "description" => locvar(:bio)
+        "description" => locvar(:bio),
+        "email" => locvar(:email),
+        "sameAs" => [locvar(:github), locvar(:twitter)],
     ) |> wrap_ldj
 end
