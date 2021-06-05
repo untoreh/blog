@@ -193,7 +193,7 @@ td {
 }
 
 .franklin-content a {
-  color: #004de6;
+  color: var(--alt2);
   text-decoration: none;
 }
 
