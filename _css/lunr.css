@@ -1,0 +1,109 @@
+.result-title a {
+  text-decoration: none;
+}
+.result-title a:hover {
+  text-decoration: underline;
+}
+.result-preview {
+  color: #808080;
+}
+.resultCount {
+  color: #808080;
+}
+.result-query {
+  font-weight: bold;
+}
+#lunrSearchForm {
+  margin-right: -0.4rem;
+  font-size: 0;
+  overflow: hidden;
+}
+#lunrSearchForm .search-input {
+  background: var(--background-color);
+  color: var(--alt);
+  border-width: 0.2rem;
+  padding: 0.5rem 0 0.5rem 0;
+  border: none;
+  outline: none;
+  border-radius: 50% 25% 25% 50%;
+  line-height: 1.75rem;
+  padding-left: 2.25rem;
+  width: 7rem;
+  position: relative;
+  top: 0.5rem;
+  font-family: "Courier New";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#lunrSearchForm .search-input:focus {
+  background: var(--block-background);
+}
+#lunrSearchForm .search-button {
+  color: var(--alt);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.2rem 0.2rem 0;
+  position: absolute;
+  top: 1rem;
+  left: 0.75rem;
+  z-index: 1;
+  cursor: pointer;
+}
+#lunrSearchForm .search-button:focus {
+  color: var(--accent);
+}
+
+@media (min-width: 680px) and (max-width: 1300px) {
+  #lunrSearchForm .search-input {
+    font-size: 1rem;
+    padding-left: 2.75rem;
+    width: 4.5rem;
+    border-radius: 50% 100% 100% 50%;
+  }
+}
+
+@media (max-width: 680px) {
+  #lunrSearchForm {
+    display: block;
+    width: 28rem;
+  }
+  #lunrSearch {
+    position: absolute;
+    top: -4rem;
+    display: block;
+  }
+  #lunrSearch {
+    position: absolute;
+    top: -4rem;
+    display: block;
+  }
+  #lunrSearch .search-input {
+    width: 26rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #lunrSearchForm .search-input {
+    width: 24rem;
+  }
+}
+
+.result-title a {
+  text-decoration: none;
+}
+.result-title a:hover {
+  text-decoration: underline;
+}
+.result-preview {
+  color: #808080;
+}
+.resultCount {
+  color: #808080;
+}
+.result-query {
+  font-weight: bold;
+}
+#lunrSearchForm {
+  margin-top: 1em;
+}

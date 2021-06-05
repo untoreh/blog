@@ -10,7 +10,7 @@ function update_utterances_theme(toggle = false) {
   utterances.postMessage(message, "https://utteranc.es");
 }
 
-function toggle_theme() {
+function toggleTheme() {
   let el = document.body;
   if (el.classList.contains("dark")) {
     utterances_theme = "boxy-light";

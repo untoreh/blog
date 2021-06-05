@@ -58,7 +58,7 @@
 
 @media (max-width: 680px) {
   .masthead {
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
   }
   .masthead,
   .masthead__inner-wrap,
@@ -87,6 +87,8 @@
   #site-nav {
     float: none;
     padding: 10px 0;
+    position: relative;
+    top: 4rem;
   }
   #site-nav ul li {
     float: none;
@@ -128,8 +130,14 @@
 }
 
 @media (max-width: 480px) {
+  #site-nav {
+    top: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
   .masthead {
-    height: 26rem;
+    height: 30rem;
   }
   #site-nav ul li {
     width: calc(100% - 2rem);
@@ -138,7 +146,7 @@
 
 @media (max-width: 680px) {
   .masthead {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
   }
   footer ul.author__wrap {
     margin-top: 1rem;

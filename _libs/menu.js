@@ -9,7 +9,9 @@ $("#site-nav .ham").onclick = function (e) {
 };
 $("body,html").onclick = function (e) {
   e.stopPropagation();
-  let sty = $("#site-nav .vert").style;
-  sty["max-height"] = "0rem";
-  sty["filter"] = "blur(1rem)";
+  if (e.target.className !== "search-input") {
+    let sty = $("#site-nav .vert").style;
+    sty["max-height"] = "0rem";
+    sty["filter"] = "blur(1rem)";
+  }
 };
