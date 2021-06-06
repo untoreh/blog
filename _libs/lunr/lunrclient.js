@@ -26,14 +26,17 @@ function parseLunrResults(results) {
     var id = results[i]["ref"];
     var item = PREVIEW_LOOKUP[id];
     var title = item["t"];
-    var preview = item["p"];
+    var preview = item["b"];
     var link = item["l"].replace("__site/", "");
     var result =
       '<li><span class="result-title"><a href="' +
       link +
       '">' +
       title +
-      "</a></span>";
+      "</a>" +
+      '<span class="result-preview">' +
+      preview +
+      "</span></span>";
     html.push(result);
   }
   if (html.length) {
