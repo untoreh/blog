@@ -2,6 +2,7 @@ var path = require("path");
 var fs = require("fs");
 var lunr = require("lunr");
 var cheerio = require("cheerio");
+var SummarizerManager = require("node-summarizer").SummarizerManager;
 
 // don't modify this, it'll be modified on the fly by lunr() in Franklin
 const PATH_PREPEND = "..";
@@ -32,7 +33,6 @@ function findHtml(folder) {
       continue;
     }
     if (stat.isDirectory()) {
-      console.log(filename);
       if (stat == "assets" || stat == "css" || stat == "libs") {
         continue;
       }
@@ -54,14 +54,17 @@ function readHtml(root, file, fileId) {
   var $ = cheerio.load(txt);
   var title = $("title").text();
   if (typeof title == "undefined") title = file;
-  var body = $("body").text();
+  $("code").remove();
+  var body = $(".franklin-content").text();
   if (typeof body == "undefined") body = "";
-
+  console.log(body);
+  // generate summary
+  let summ = new SummarizerManager(body, 3).getSummaryByFrequency().summary;
   var data = {
     id: fileId,
     l: filename,
     t: title,
-    b: body,
+    b: summ,
   };
   return data;
 }
@@ -85,6 +88,7 @@ function buildPreviews(docs) {
     result[doc["id"]] = {
       t: doc["t"],
       l: doc["l"].replace(/^\.\.\/\.\.\/__site/gi, "/" + PATH_PREPEND),
+      b: doc["b"],
     };
   }
   return result;
