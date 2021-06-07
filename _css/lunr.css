@@ -13,6 +13,9 @@
 .result-query {
   font-weight: bold;
 }
+#searchResults ul li {
+  margin-bottom: 1rem;
+}
 #lunrSearchForm {
   margin-right: -0.4rem;
   font-size: 0;
