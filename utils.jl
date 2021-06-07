@@ -1,13 +1,14 @@
-using Franklin; const fr = Franklin;
+using Franklin;
+const fr = Franklin;
 using Franklin: convert_md, convert_html, pagevar, path, globvar;
-using Base.Iterators:flatten
-using DataStructures:DefaultDict
-using Dates:DateFormat, Date
+using Base.Iterators: flatten
+using DataStructures: DefaultDict
+using Dates: DateFormat, Date
 using JSON
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
-    return round(sqrt(val), digits=2)
+    return round(sqrt(val), digits = 2)
 end
 
 function hfun_m1fill(vname)
@@ -24,9 +25,9 @@ end
 #m
 
 function lx_baz(com, _)
-  # keep this first line
+    # keep this first line
     brace_content = Franklin.content(com.braces[1]) # input string
-  # do whatever you want here
+    # do whatever you want here
     return uppercase(brace_content)
 end
 
@@ -34,7 +35,7 @@ function hfun_recentblogposts()
     list = readdir("blog")
     filter!(f -> endswith(f, ".md"), list)
     dates = [stat(joinpath("blog", f)).mtime for f in list]
-    perm = sortperm(dates, rev=true)
+    perm = sortperm(dates, rev = true)
     idxs = perm[1:min(3, length(perm))]
     io = IOBuffer()
     write(io, "<ul>")
@@ -48,7 +49,7 @@ end
 
 function page_content(loc::String)
     raw = read((path(:folder) * "/" * loc * ".md"), String)
-    m = convert_md(raw; isinternal=true)
+    m = convert_md(raw; isinternal = true)
     # remove all `{{}}` functions
     m = replace(m, r"{{.*?}}" => "")
     convert_html(m)
@@ -71,22 +72,30 @@ function hfun_recent_posts(m::Vector{String})
     df = DateFormat("mm/dd/yyyy")
     for (k, post) in enumerate(list)
         fi = posts_path * splitext(post)[1]
-        push!(posts, (title = pagevar(fi, :title), link = fi,
-                      date = pagevar(fi, :date), description = pagevar(fi, :rss_description),))
+        push!(
+            posts,
+            (
+                title = pagevar(fi, :title),
+                link = fi,
+                date = pagevar(fi, :date),
+                description = pagevar(fi, :rss_description),
+            ),
+        )
     end
     # pull all posts if n <= 0
 
     n = n >= 0 ? n : length(posts) + 1
-    for ele in view(sort(posts, by=x -> Date(x.date, df), rev=true), 1:min(length(posts), n))
+    for ele in
+        view(sort(posts, by = x -> Date(x.date, df), rev = true), 1:min(length(posts), n))
         markdown *= "* [($(ele.date)) $(ele.title)](../$(ele.link)) -- _$(ele.description)_ \n"
     end
 
-    return fd2html(markdown, internal=true)
+    return fd2html(markdown, internal = true)
 end
 
-function hfun_taglist_desc(tag::Union{Nothing,String}=nothing)::String
+function hfun_taglist_desc(tag::Union{Nothing,String} = nothing)::String
     if isnothing(tag)
-    tag = locvar(:fd_tag)
+        tag = locvar(:fd_tag)
     end
 
     c = IOBuffer()
@@ -97,10 +106,10 @@ function hfun_taglist_desc(tag::Union{Nothing,String}=nothing)::String
         pvd = pagevar(p, "date")
         if isnothing(pvd)
             return Date(Dates.unix2datetime(stat(p * ".md").ctime))
-    end
+        end
         return pvd
     end
-    sort!(rpaths, by=sorter, rev=false)
+    sort!(rpaths, by = sorter, rev = false)
 
     for rpath in rpaths
         title = pagevar(rpath, "title")
@@ -123,11 +132,17 @@ function hfun_tag_title()::String
     c = IOBuffer()
     write(c, "<div id=\"tag_title\"><div class=\"wrap\">")
     if tag === "posts"
-        write(c, "<a href=\"/$tag_page/posts/\"><h1>Posts</h1></a>
- <i>that\"s the stuff</i>")
+        write(
+            c,
+            "<a href=\"/$tag_page/posts/\"><h1>Posts</h1></a>
+<i>that\"s the stuff</i>",
+        )
     elseif tag === "bulbs"
-        write(c, "<a href=\"/$tag_page/bulbs/\"><h1>Ideas</h1></a>
- <i>commonly known as shower thoughts</i>")
+        write(
+            c,
+            "<a href=\"/$tag_page/bulbs/\"><h1>Ideas</h1></a>
+<i>commonly known as shower thoughts</i>",
+        )
     else
         write(c, "Articles tagged: <a href=\"/$tag_page/$tag/\">$tag</a>")
     end
@@ -144,7 +159,7 @@ function hfun_tags_cloud()
     for p in iter_posts()
         fi = "posts/" * splitext(p)[1]
         for t in pagevar(fi, :tags)
-    tags[t] += 1
+            tags[t] += 1
         end
     end
     ordered_tags = [k for k in keys(tags)]
@@ -157,7 +172,10 @@ function hfun_tags_cloud()
     c = IOBuffer()
     write(c, "<div id=tag_cloud>")
     for (n, (tag, count)) in enumerate(zip(ordered_tags, counts))
-        write(c, "<a href=\"$tag\" style=\"font-size: $(sizes[n] * tag_cloud_font_size)rem\"> $tag </a>")
+        write(
+            c,
+            "<a href=\"$tag\" style=\"font-size: $(sizes[n] * tag_cloud_font_size)rem\"> $tag </a>",
+        )
     end
     write(c, "</div>")
     String(take!(c))
@@ -167,20 +185,19 @@ end
 @doc "check if page is an article "
 function hfun_post_title()
     path = locvar(:fd_rpath)
-    if (!isnothing(match(r"posts/.+", path)) &&
-        path !== "posts/index.html")
+    if (!isnothing(match(r"posts/.+", path)) && path !== "posts/index.html")
 
-    link = locvar(:link)
-    title = locvar(:title)
-    desc = locvar(:rss_description)
-    "
-        <div>
-        <h1 id=\"title\"><a href=\"\">$title</a></h1>
-        <blockquote id=\"page-description\" style=\"font-style: italic;\">
-            $desc
-        </blockquote>
-        </div>
-      "
+        link = locvar(:link)
+        title = locvar(:title)
+        desc = locvar(:rss_description)
+        "
+            <div>
+            <h1 id=\"title\"><a href=\"\">$title</a></h1>
+            <blockquote id=\"page-description\" style=\"font-style: italic;\">
+                $desc
+            </blockquote>
+            </div>
+          "
     else
         ""
     end
@@ -195,7 +212,7 @@ function hfun_star(args)
 end
 
 @doc "return the tag of the current page or none"
-function hfun_tag_title(prefix="Tag: ", default="Tags")
+function hfun_tag_title(prefix = "Tag: ", default = "Tags")
     # NOTE: franklin as {{if else}} and {{isdef}}
     c = IOBuffer()
     write(c, "<div id=\"tag-name\">")
@@ -220,8 +237,7 @@ end
 @doc "check if page is a post"
 function is_post()
     path = locvar(:fd_rpath)
-    (!isnothing(match(r"posts/.+", path)) &&
-            !is_index(path))
+    (!isnothing(match(r"posts/.+", path)) && !is_index(path))
 end
 
 @doc "check if page is a tags page"
@@ -265,12 +281,12 @@ end
 
 function hfun_ldj_website()
     IdDict(
-         "@context" => "https://schema.org/",
-         "@type" => "WebSite",
+        "@context" => "https://schema.org/",
+        "@type" => "WebSite",
         "@id" => "https://unto.re",
-         "url" => locvar(:website_url),
-         "copyrightHolder" => locvar(:author),
-         "copyrightYear" => Dates.year(now())
+        "url" => locvar(:website_url),
+        "copyrightHolder" => locvar(:author),
+        "copyrightYear" => Dates.year(now()),
     ) |> wrap_ldj
 end
 
@@ -281,8 +297,8 @@ function hfun_ldj_search()
             "target" => locvar(:website_url) * "/search?&q={query}",
             "query" => "required",
             "query-input" => "required maxlength=100 name=query",
-            "actionStatus" => "https://schema.org/PotentialActionStatus"
-        )
+            "actionStatus" => "https://schema.org/PotentialActionStatus",
+        ),
     ) |> wrap_ldj
 end
 
@@ -291,18 +307,56 @@ function hfun_ldj_place()
         "homeLocation" => IdDict(
             "@type" => "https://schema.org/Place",
             "addressCountry" => locvar(:country),
-            "addressRegion" => locvar(:region)
-        )
+            "addressRegion" => locvar(:region),
+        ),
     ) |> wrap_ldj
 end
 
 function hfun_ldj_author()
     IdDict(
-    "@type" => "https://schema.org/Person",
+        "@type" => "https://schema.org/Person",
         "image" => locvar(:author_image),
-        "name" =>  locvar(:author),
+        "name" => locvar(:author),
         "description" => locvar(:bio),
         "email" => locvar(:email),
         "sameAs" => [locvar(:github), locvar(:twitter)],
     ) |> wrap_ldj
+end
+
+function hfun_ldj_webpage()
+    IdDict(
+        "@type" => "https://schema.org/WebPage",
+        "@id" => locvar(:fd_full_url),
+        "identifier" => locvar(:fd_full_url),
+        "url" => locvar(:fd_full_url),
+        "lastReviewed" => locvar(:fd_mtime),
+        "mainContentOfPage" =>
+            IdDict("@type" => "WebPageElement", "cssSelector" => ".franklin-content"),
+        "accessMode" => locvar(:accessMode),
+        "accessModeSufficient" => IdDict(
+            "@type" => "itemList",
+            "itemListElement" => locvar(:accessModeSufficient),
+            "description" => "text and images",
+        ),
+        "accessibilitySummary" => "Visual elements are tentatively described.",
+        "audience" => "cool people",
+        "author" => locvar(:author),
+        "creativeWorkStatus" => "Published",
+        "dateModified" => locvar(:fd_mtime),
+        "dateCreated" => locvar(:fd_ctime),
+        "datePublished" => locvar(:fd_ctime),
+        "headline" => locvar(:title),
+        "name" => locvar(:title),
+        "abstract" => locvar(:rss_description),
+        "description" => locvar(:rss_description),
+        "availableLanguage" =>
+            [IdDict("@type" => "Language", "name" => lang) for lang in locvar(:languages)],
+        "keywords" => locvar(:tags),
+        "mentions" => locvar(:mentions),
+        "text" => locvar(:rss_full_content)
+    ) |> wrap_ldj
+end
+
+function hfun_ldj_trans()
+    IdDict("translator" => locvar(:translator), "translationOfWork" => "") |> wrap_ldj
 end

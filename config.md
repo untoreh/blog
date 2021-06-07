@@ -22,6 +22,12 @@ The website_* must be defined for the RSS to work
 @def author = "untoreh"
 
 @def mintoclevel = 2
+<!-- https://schema.org/accessMode -->
+@def accessMode = ["textual", "visual"]
+@def accessModeSufficient = ["textual", "visual"]
+@def languages = ["English", "German", "Italian", "Mandarin Chinese", "Spanish", "Hindi", "Arabic", "Portuguese", "Bengali", "Russian", "Japanese", "Punjabi", "Javanese", "Wu", "Vietnamese", "French", "Urdu", "Turkish", "Polish", "Ukranian", "Dutch", "Greek", "Swedish", "Zulu", "Kurdish", "Romanian", "Malay"]
+@def mentions = []
+@def translator = "Google Translate"
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise
