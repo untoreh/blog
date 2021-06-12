@@ -6,7 +6,7 @@ function update_utterances_theme(toggle = false) {
     type: "set-theme",
     theme: utterances_theme,
   };
-  const utterances = document.querySelector("iframe").contentWindow; // try event.source instead
+  const utterances = document.querySelector(".utterances iframe").contentWindow; // try event.source instead
   utterances.postMessage(message, "https://utteranc.es");
 }
 
