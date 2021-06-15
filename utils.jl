@@ -360,3 +360,75 @@ end
 function hfun_ldj_trans()
     IdDict("translator" => locvar(:translator), "translationOfWork" => "") |> wrap_ldj
 end
+
+const excluded_translate_dirs = ["_libs", "_assets", "_css", "_layout", "_"]
+# using EzXML
+using Gumbo
+using AbstractTrees
+include("translate.jl")
+if isnothing(Translate.deep.mod)
+    Translate.init(:deep)
+end
+using JSON
+
+function translate_website(opt=true)
+    if opt
+        optimize()
+    end
+    @assert isdir("__site/")
+    rx = r"\.html$"
+    for d in walkdir("__site")
+        let dir = d[1]
+            for file in d[3]
+                let file_path = joinpath(dir, file)
+                    if ! isnothing(match(rx, file_path))
+                        # this is an html file
+                        # @show file_path
+                        # let html_str = read!(file_path, [""])[1]
+                        return traverse_html(Gumbo.parsehtml(read(file_path, String)))
+                        # end
+                    end
+                end
+            end
+        end
+    end
+end
+
+function translate(str::String; src="auto", target="it")
+    let tr = Translate.deep.mod[:GoogleTranslator](source=src, target=target)
+        Translate.translate(str, tr.translate)
+    end
+end
+
+function traverse_html(data)
+    prev_type = Nothing
+    script_type = HTMLElement{:script}
+    # use PreOrder to ensure we know if some text belong to a <script> tag
+    for (n, el) in enumerate(PreOrderDFS(data.root))
+        let tp = typeof(el)
+            if tp === HTMLText
+                # skip scripts
+                if prev_type !== script_type
+                    let trans = translate(el.text)
+                        # only replace if translation is successful
+                        if ! isnothing(trans)
+                            el.text = trans
+                        end
+                    end
+                end
+            elseif hasfield(tp, :attributes)
+                # also translate "alt" attributes which should hold descriptions
+                if haskey(el.attributes, "alt")
+                    let trans = translate(el.attributes["alt"])
+                        if ! isnothing(trans)
+                            el.attributes["alt"] = trans
+                        end
+                    end
+                end
+            end
+            prev_type  = tp
+        end
+    end
+    Translate.update_translations()
+    data
+end

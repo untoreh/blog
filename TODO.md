@@ -1,4 +1,3 @@
-- search widget
 - automatic translation
 - SE indexing
 - schemas metadata
