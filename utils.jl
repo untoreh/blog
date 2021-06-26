@@ -4,6 +4,7 @@ using Franklin: convert_md, convert_html, pagevar, path, globvar;
 using Base.Iterators: flatten
 using DataStructures: DefaultDict
 using Dates: DateFormat, Date
+using ResumableFunctions
 using JSON
 
 function hfun_bar(vname)
@@ -338,6 +339,7 @@ function hfun_ldj_webpage()
             "itemListElement" => locvar(:accessModeSufficient),
             "description" => "text and images",
         ),
+        "inLanguage" => locvar(:lang),
         "accessibilitySummary" => "Visual elements are tentatively described.",
         "audience" => "cool people",
         "author" => locvar(:author),
@@ -350,66 +352,116 @@ function hfun_ldj_webpage()
         "abstract" => locvar(:rss_description),
         "description" => locvar(:rss_description),
         "availableLanguage" =>
-            [IdDict("@type" => "Language", "name" => lang) for lang in locvar(:languages)],
+            [IdDict("@type" => "Language", "name" => lang) for (lang, code) in locvar(:languages)],
         "keywords" => locvar(:tags),
         "mentions" => locvar(:mentions),
-        "text" => locvar(:rss_full_content)
     ) |> wrap_ldj
 end
 
-function hfun_ldj_trans()
-    IdDict("translator" => locvar(:translator), "translationOfWork" => "") |> wrap_ldj
+function ldj_trans(file_path, lang)
+    let url = replace(file_path, "__site" => joinpath(fr.locvar(:website_url), lang))
+    IdDict(
+        "@type" => "https://schema.org/WebPage",
+        "@id" => url,
+        "url" => url,
+        "name" => fr.pagevar(file_path, :title),
+        "abstract" => fr.pagevar(file_path, :rss_description),
+        "description" => fr.pagevar(file_path, :rss_description),
+        "headline" => fr.pagevar(file_path, :title),
+        "keywords" => fr.pagevar(file_path, :tags),
+        "mentions" => fr.pagevar(file_path, :mentions),
+        "inLanguage" => lang,
+        "translator" => IdDict("@type" => "https://schema.org/Organization",
+                               "name" => "Google",
+                               "url" => "https://translate.google.com/"),
+        "translationOfWork" => IdDict("@id" => replace(file_path, "__site" => fr.locvar(:website_url)),
+                                      )) |> wrap_ldj
+    end
 end
 
-const excluded_translate_dirs = ["_libs", "_assets", "_css", "_layout", "_"]
-# using EzXML
+
+included_translate_dirs = Set(("posts", "tag", "reads", "_rss"))
+using EzXML
 using Gumbo
 using AbstractTrees
 include("translate.jl")
 if isnothing(Translate.deep.mod)
     Translate.init(:deep)
 end
-using JSON
+
+extension(url::String) = try
+    match(r"\.[A-Za-z0-9]+$", url).match
+catch
+    ""
+end
+
+@resumable function walkfiles(root; exts=Set((".md", ".html")),
+                        dirs::Union{Set{String}, Nothing}=included_translate_dirs)
+    """
+iterate over files in a directory, recursively and selectively by extension name and dir name
+"""
+    for p in readdir(root)
+        # directory, not excluded
+        if isdir(p) && in(splitpath(f)[end], dirs)
+            walkdir(p; exts, dirs)
+            # file, only included
+        elseif in(extension(splitpath(p)[end]), exts)
+                @yield p
+        end
+    end
+end
 
 function translate_website(opt=true)
     if opt
         optimize()
     end
-    @assert isdir("__site/")
-    rx = r"\.html$"
-    for d in walkdir("__site")
-        let dir = d[1]
-            for file in d[3]
-                let file_path = joinpath(dir, file)
-                    if ! isnothing(match(rx, file_path))
-                        # this is an html file
-                        # @show file_path
-                        # let html_str = read!(file_path, [""])[1]
-                        return traverse_html(Gumbo.parsehtml(read(file_path, String)))
-                        # end
-                    end
-                end
+    rx = r"\.(html|md)$"
+    for file in walkdir(".")
+        let file_path = joinpath(dir, file)
+            @show file_path
+            continue
+            if ! isnothing(match(rx, file_path))
+                # for (lang, code) in fr.locvar(:languages)
+                #     html = traverse_html(Gumbo.parsehtml(read(file_path, String)), file_path)
+                #     mkdir(dirname(joinpath(file_path, code)))
+                # end
+                return traverse_html(Gumbo.parsehtml(read(file_path, String)), file_path, "it")
+                # return html
+                # end
             end
         end
     end
 end
 
-function translate(str::String; src="auto", target="it")
+@doc """convert a "<script..." string to an `HTMLElement` """
+function convert(T::Type{HTMLElement{:script}}, v::String)
+    parsehtml(v).root[1][1]
+end
+
+function translate(str::String; src="en", target="it")
     let tr = Translate.deep.mod[:GoogleTranslator](source=src, target=target)
         Translate.translate(str, tr.translate)
     end
 end
 
-function traverse_html(data)
+@doc """traverses a Gumbo HTMLDoc structure translating text nodes and "alt" attributes """
+function traverse_html(data, path, lang)
     prev_type = Nothing
     script_type = HTMLElement{:script}
+    head_type = HTMLElement{:head}
+    insert_json = true
+    ldj = convert(script_type, ldj_trans(path, lang))
     # use PreOrder to ensure we know if some text belong to a <script> tag
     for (n, el) in enumerate(PreOrderDFS(data.root))
         let tp = typeof(el)
+            if insert_json && tp === head_type
+                push!(el, ldj)
+                insert_json = false
+            end
             if tp === HTMLText
                 # skip scripts
                 if prev_type !== script_type
-                    let trans = translate(el.text)
+                    let trans = translate(el.text; target=lang)
                         # only replace if translation is successful
                         if ! isnothing(trans)
                             el.text = trans
@@ -419,7 +471,7 @@ function traverse_html(data)
             elseif hasfield(tp, :attributes)
                 # also translate "alt" attributes which should hold descriptions
                 if haskey(el.attributes, "alt")
-                    let trans = translate(el.attributes["alt"])
+                    let trans = translate(el.attributes["alt"]; target=lang)
                         if ! isnothing(trans)
                             el.attributes["alt"] = trans
                         end

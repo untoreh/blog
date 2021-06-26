@@ -14,6 +14,7 @@ The website_* must be defined for the RSS to work
 @def email = "contact@unto.re"
 @def github = "https://github.com/untoreh"
 @def twitter = "https://twitter.com/untoreh"
+@def lang = "English"
 
 @def region = "Apulia"
 @def bio = "I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties."
@@ -25,7 +26,7 @@ The website_* must be defined for the RSS to work
 <!-- https://schema.org/accessMode -->
 @def accessMode = ["textual", "visual"]
 @def accessModeSufficient = ["textual", "visual"]
-@def languages = ["English", "German", "Italian", "Mandarin Chinese", "Spanish", "Hindi", "Arabic", "Portuguese", "Bengali", "Russian", "Japanese", "Punjabi", "Javanese", "Wu", "Vietnamese", "French", "Urdu", "Turkish", "Polish", "Ukranian", "Dutch", "Greek", "Swedish", "Zulu", "Kurdish", "Romanian", "Malay"]
+@def languages = [("English", "en"), ("German", "de"), ("Italian", "it"), ("Mandarin Chinese", "zh"), ("Spanish", "es"), ("Hindi", "hi"), ("Arabic", "ar"), ("Portuguese", "pt"), ("Bengali", "bn"), ("Russian", "ru"), ("Japanese", "ja"), ("Punjabi", "pa"), ("Javanese", "jv"), ("Vietnamese", "vi"), ("French", "fr"), ("Urdu", "ur"), ("Turkish", "tr"), ("Polish", "pl"), ("Ukranian", "uk"), ("Dutch", "nl"), ("Greek", "el"), ("Swedish", "sv"), ("Zulu", "zu"), ("Kurdish", "ku"), ("Romanian", "ro"), ("Malay", "ms")]
 @def mentions = []
 @def translator = "Google Translate"
 

@@ -157,14 +157,19 @@ end
 cache_path = joinpath(@__DIR__, "translations.json")
 cache_path_bak = cache_path * ".bak"
 cache_dict_type = IdDict{UInt64, String}
+translated_text = cache_dict_type()
 
-if ! isdefined(Main, :translated_text)
+import JSON
+# json keys are strings, but we use hashes which are UInt
+JSON.convert(T::Type{UInt64}, v::String) = parse(UInt64, v)
+
+if length(translated_text) === 0
     if isfile(cache_path)
-        translated_text = JSON.parsefile(cache_path; dicttype=cache_dict_type)
+        merge!(translated_text, JSON.parsefile(cache_path; dicttype=cache_dict_type))
         display("loaded translations from $cache_path")
         cp(cache_path, cache_path_bak; force=true)
     elseif isfile(cache_path_bak)
-        translated_text = JSON.parsefile(cache_path_bak; dicttype=cache_dict_type)
+        merge!(translated_text, JSON.parsefile(cache_path_bak; dicttype=cache_dict_type))
         display("loaded translations from $cache_path_bak")
     else
         translated_text = IdDict{UInt64, String}()
