@@ -21,3 +21,4 @@ Population density, as seen by human eye. Useful if you want to track how crowde
 
 # point of view
 A pseudo critical/satyrical website/database/dictionary were things are defined in different ways, as they would be seen by a particular stereotypical personality/characther.
+
