@@ -88,7 +88,7 @@ function init(srv = :deep)
     _init_env()
     # NOTE: Conda will install in ~/.local/lib on unix, because conda site-packages is not writeable
     if srv == :deep
-        Conda.pip("install --user", "deep_translator")
+        Conda.pip("install --user", ["requests", "deep_translator"])
         deep.mod = pyimport("deep_translator")
         for cls in deep.apis
             deep.tr[cls] = deep.mod[cls]
