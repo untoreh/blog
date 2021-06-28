@@ -61,6 +61,7 @@ function _add_python_user_path()
     py_v = pysys.version_info
     py_path = "python$(py_v[1]).$(py_v[2])"
     py_sys_path = PyVector(pysys."path")
+    @show py_path
     let home = ENV["HOME"]
         pushfirst!(py_sys_path, "$home/.local" * "/lib/$py_path/site-packages")
         pushfirst!(py_sys_path, "")
