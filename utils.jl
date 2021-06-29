@@ -1,3 +1,11 @@
+using Conda
+
+# These must be set before initializing Franklin
+py_v = chomp(String(read(`$(joinpath(Conda.BINDIR, "python")) -c "import sys; print(str(sys.version_info.major) + '.' + str(sys.version_info.minor))"`)))
+ENV["PYTHON3"] = joinpath(Conda.BINDIR, "python")
+ENV["PIP3"] = joinpath(Conda.BINDIR, "pip")
+ENV["PYTHONPATH"] = "$(Conda.LIBDIR)/python$(py_v)"
+
 using Franklin;
 const fr = Franklin;
 using Franklin: convert_md, convert_html, pagevar, path, globvar;
@@ -6,6 +14,7 @@ using DataStructures: DefaultDict
 using Dates: DateFormat, Date
 using ResumableFunctions
 using JSON
+
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
@@ -154,6 +163,26 @@ end
 @doc "the base font size for tags in the tags cloud (rem)"
 const tag_cloud_font_size = 1;
 
+@doc "tag list to display in post footer"
+function hfun_addtags()
+    c = IOBuffer()
+    for tag in locvar(:tags)
+        println(c, "<span class=\"post-tag\">", tag, ", </span>")
+    end
+    # remove comma at the end
+    chop(String(take!(c)); tail=10) * "</span>"
+end
+
+function tag_link(tag, font_size::Union{Float64, Nothing}=nothing)
+    style=""
+    if !isnothing(font_size)
+        style="font-size: $(font_size)rem"
+    end
+    link = "/posts/" * tag
+    "<a href=\"$link\" style=\"$style\"> $tag </a>"
+end
+
+@doc "Tag cloud, tags with font size dependent on the number of posts that use it"
 function hfun_tags_cloud()
     tags = DefaultDict{String,Int}(0)
     # count all the tags

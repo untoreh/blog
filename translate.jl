@@ -88,27 +88,42 @@ function init(srv = :deep)
     _init_env()
     # NOTE: Conda will install in ~/.local/lib on unix, because conda site-packages is not writeable
     if srv == :deep
-        Conda.pip("install --user", "requests")
-        Conda.pip("install --user", "deep_translator")
-        deep.mod = pyimport("deep_translator")
+        try
+            deep.mod = pyimport("deep_translator")
+        catch
+            Conda.pip("install", "deep_translator")
+            deep.mod = pyimport("deep_translator")
+        end
         for cls in deep.apis
             deep.tr[cls] = deep.mod[cls]
         end
     elseif srv == :trans
-        Conda.pip("install --user", "git+git://github.com/terryyin/translate-python")
-        trans.mod = pyimport("translate")
+        try
+            trans.mod = pyimport("translate")
+        catch
+            Conda.pip("install --user", "git+git://github.com/terryyin/translate-python")
+            trans.mod = pyimport("translate")
+        end
     elseif srv == :gtrans
-        Conda.pip("install --user --pre", "googletrans")
-        googletrans.mod = pyimport("googletrans")
-        googletrans.tr = googletrans.mod.Translator(
-            service_urls = [
-                "translate.google.com",
-                "translate.google.de",
-                "translate.google.es",
-                "translate.google.fr",
-                "translate.google.it",
-            ],
-        )
+        let f = begin
+            googletrans.mod = pyimport("googletrans")
+            googletrans.tr = googletrans.mod.Translator(
+                service_urls = [
+                    "translate.google.com",
+                    "translate.google.de",
+                    "translate.google.es",
+                    "translate.google.fr",
+                    "translate.google.it",
+                ],
+            )
+        end
+            try
+                f()
+            catch
+                Conda.pip("install --user --pre", "googletrans")
+                f()
+            end
+        end
     elseif srv == :translators
         Conda.pip("install --user", "translators")
         translators.mod = pyimport("translators")
