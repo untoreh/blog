@@ -642,7 +642,7 @@ Circumventing this can only mean that we have to keep the sessions open, some sc
 
 This is mainly [openshift] (when it used to have a free tier) [^openshift] and [heroku]. Openshift, being kubernetes was somewhat straightforward to deploy, but full of configuration churn, here is an excerpt:
 
-```zsh
+```sh
 export PATH=.:$PATH
 
 [ -z "$OC_PRJ" ] && { echo "no account data provided"; exit 1; }
@@ -719,7 +719,7 @@ spec:
 
 But the whole process involved quite a lot of steps!
 
-```zsh
+```sh
 ## init
 [ -z "$OC_APP" ] && export $(<$(tfi))
 [ -z "$OC_APP" ] && { . ./choose-creds || exit 1; }
@@ -803,7 +803,7 @@ My favorite services not because of profitability but for ease and convenience (
 
 The builds were triggered either by cron jobs offered by web services or by git commits. So you had to keep track of a littering of access tokens or ssh keys to manage all the git commits. It was also important to not over-spam commits, and use proxies when pushing to the repositories configuring git:
 
-```gitconfig
+```toml
 [http]
         proxy = socks5://127.0.0.1:9050
         sslverify = false
