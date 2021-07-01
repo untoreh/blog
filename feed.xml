@@ -23,72 +23,15 @@
 
 <item>
   <title>
-    <![CDATA[  USD Tether  ]]>
+    <![CDATA[  Shades of Colors  ]]>
   </title>
-  <link> https://unto.re/posts/USD-Tether/index.html </link>
-  <guid> https://unto.re/posts/USD-Tether/index.html </guid>
+  <link> https://unto.re/posts/shades-of-colors/index.html </link>
+  <guid> https://unto.re/posts/shades-of-colors/index.html </guid>
   <description>
-    <![CDATA[  My view on USD tether in reply to a post..  ]]>
+    <![CDATA[  Take a from black-white to colored gradient  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Alpine  ]]>
-  </title>
-  <link> https://unto.re/posts/alpine/index.html </link>
-  <guid> https://unto.re/posts/alpine/index.html </guid>
-  <description>
-    <![CDATA[  Pine, Alpine linux based on OSTree  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  grapes for winetricks  ]]>
-  </title>
-  <link> https://unto.re/posts/grapes-for-winetricks/index.html </link>
-  <guid> https://unto.re/posts/grapes-for-winetricks/index.html </guid>
-  <description>
-    <![CDATA[  A layer based setup for winetricks recipes  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Paroodise  ]]>
-  </title>
-  <link> https://unto.re/posts/paroodise/index.html </link>
-  <guid> https://unto.re/posts/paroodise/index.html </guid>
-  <description>
-    <![CDATA[  A small utility for live modification of file systems  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -107,7 +50,7 @@
     <![CDATA[  ...How far are you willing to go for...pennies?  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -118,15 +61,15 @@
 
 <item>
   <title>
-    <![CDATA[  Minor tools  ]]>
+    <![CDATA[  a jar to strain yogurt  ]]>
   </title>
-  <link> https://unto.re/posts/tools/index.html </link>
-  <guid> https://unto.re/posts/tools/index.html </guid>
+  <link> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </link>
+  <guid> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </guid>
   <description>
-    <![CDATA[  Collection of small utilities done to scratch some itches...  ]]>
+    <![CDATA[  A jar that separates whey from yogurt, for thickening  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -137,15 +80,15 @@
 
 <item>
   <title>
-    <![CDATA[  MTR: multiple translations  ]]>
+    <![CDATA[  Steps to setup a new phone  ]]>
   </title>
-  <link> https://unto.re/posts/mtr-translations/index.html </link>
-  <guid> https://unto.re/posts/mtr-translations/index.html </guid>
+  <link> https://unto.re/posts/steps-to-setup-a-new-phone/index.html </link>
+  <guid> https://unto.re/posts/steps-to-setup-a-new-phone/index.html </guid>
   <description>
-    <![CDATA[  wrapping translation services for internal use  ]]>
+    <![CDATA[  Follow the steps to de-bloat a stock android phone  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -164,7 +107,330 @@
     <![CDATA[  Ponds to share news  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Hero-graph  ]]>
+  </title>
+  <link> https://unto.re/posts/herograph/index.html </link>
+  <guid> https://unto.re/posts/herograph/index.html </guid>
+  <description>
+    <![CDATA[  Visualize characther uniqueness in games  ]]>
+  </description>  
+    
+  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  copypaste on dns  ]]>
+  </title>
+  <link> https://unto.re/posts/copypaste-on-dns/index.html </link>
+  <guid> https://unto.re/posts/copypaste-on-dns/index.html </guid>
+  <description>
+    <![CDATA[  Sharing text throught TXT records  ]]>
+  </description>  
+    
+  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  spectator mode  ]]>
+  </title>
+  <link> https://unto.re/posts/spectator-mode/index.html </link>
+  <guid> https://unto.re/posts/spectator-mode/index.html </guid>
+  <description>
+    <![CDATA[  Notes on how a spectator mode should be implemented  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  pickup games fast...or PUF  ]]>
+  </title>
+  <link> https://unto.re/posts/pickup-games-fast/index.html </link>
+  <guid> https://unto.re/posts/pickup-games-fast/index.html </guid>
+  <description>
+    <![CDATA[  How to learn games quickly?  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  ways of living  ]]>
+  </title>
+  <link> https://unto.re/posts/ways-of-living/index.html </link>
+  <guid> https://unto.re/posts/ways-of-living/index.html </guid>
+  <description>
+    <![CDATA[  A classification of ways of life  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  lyrics lolwat  ]]>
+  </title>
+  <link> https://unto.re/posts/lyrics-lolwat/index.html </link>
+  <guid> https://unto.re/posts/lyrics-lolwat/index.html </guid>
+  <description>
+    <![CDATA[  My attempts at songs lyrics  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  sharing ideas  ]]>
+  </title>
+  <link> https://unto.re/posts/sharing-ideas/index.html </link>
+  <guid> https://unto.re/posts/sharing-ideas/index.html </guid>
+  <description>
+    <![CDATA[  What if there was a way to give legs to ideas?  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Store your web activity  ]]>
+  </title>
+  <link> https://unto.re/posts/user-data/index.html </link>
+  <guid> https://unto.re/posts/user-data/index.html </guid>
+  <description>
+    <![CDATA[  Don&#39;t leave your thoughts on platforms you don&#39;t own  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  the slope  ]]>
+  </title>
+  <link> https://unto.re/posts/the-slope/index.html </link>
+  <guid> https://unto.re/posts/the-slope/index.html </guid>
+  <description>
+    <![CDATA[  How much is too much?  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  hosting network  ]]>
+  </title>
+  <link> https://unto.re/posts/hosting-network/index.html </link>
+  <guid> https://unto.re/posts/hosting-network/index.html </guid>
+  <description>
+    <![CDATA[  A social network for hosting services  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  swiping with thumbs  ]]>
+  </title>
+  <link> https://unto.re/posts/swiping-with-thumbs/index.html </link>
+  <guid> https://unto.re/posts/swiping-with-thumbs/index.html </guid>
+  <description>
+    <![CDATA[  An smartphone keyboard interface for swiping with thumbs  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Is progress blind?  ]]>
+  </title>
+  <link> https://unto.re/posts/progress/index.html </link>
+  <guid> https://unto.re/posts/progress/index.html </guid>
+  <description>
+    <![CDATA[  What can we do to steer progress in the right direction?  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  A database about dreams  ]]>
+  </title>
+  <link> https://unto.re/posts/a-database-about-dreams/index.html </link>
+  <guid> https://unto.re/posts/a-database-about-dreams/index.html </guid>
+  <description>
+    <![CDATA[  A place to share and log dreams  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  power of the crowd  ]]>
+  </title>
+  <link> https://unto.re/posts/power-of-the-crowd/index.html </link>
+  <guid> https://unto.re/posts/power-of-the-crowd/index.html </guid>
+  <description>
+    <![CDATA[  Apps powered by crowd sourcing  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  grapes for winetricks  ]]>
+  </title>
+  <link> https://unto.re/posts/grapes-for-winetricks/index.html </link>
+  <guid> https://unto.re/posts/grapes-for-winetricks/index.html </guid>
+  <description>
+    <![CDATA[  A layer based setup for winetricks recipes  ]]>
+  </description>  
+    
+  <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Game Over  ]]>
+  </title>
+  <link> https://unto.re/posts/game-over/index.html </link>
+  <guid> https://unto.re/posts/game-over/index.html </guid>
+  <description>
+    <![CDATA[  Games that I liked, that have closed doors  ]]>
+  </description>  
+    
+  <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  USD Tether  ]]>
+  </title>
+  <link> https://unto.re/posts/USD-Tether/index.html </link>
+  <guid> https://unto.re/posts/USD-Tether/index.html </guid>
+  <description>
+    <![CDATA[  My view on USD tether in reply to a post..  ]]>
+  </description>  
+    
+  <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -183,26 +449,7 @@
     <![CDATA[  A list of tools to make Windows feel more like Linux  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  On Containers  ]]>
-  </title>
-  <link> https://unto.re/posts/On-Containers/index.html </link>
-  <guid> https://unto.re/posts/On-Containers/index.html </guid>
-  <description>
-    <![CDATA[  Using containers, what and why  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -221,7 +468,7 @@
     <![CDATA[  A brief summary of operative systems that I have used  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -240,7 +487,7 @@
     <![CDATA[  A round-up of distributed file systems  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -251,15 +498,34 @@
 
 <item>
   <title>
-    <![CDATA[  TCSplitter  ]]>
+    <![CDATA[  Alpine  ]]>
   </title>
-  <link> https://unto.re/posts/tcsplitter/index.html </link>
-  <guid> https://unto.re/posts/tcsplitter/index.html </guid>
+  <link> https://unto.re/posts/alpine/index.html </link>
+  <guid> https://unto.re/posts/alpine/index.html </guid>
   <description>
-    <![CDATA[  A tunnel to split TCP or UDP connection across multiple TCP connections  ]]>
+    <![CDATA[  Pine, Alpine linux based on OSTree  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  On Containers  ]]>
+  </title>
+  <link> https://unto.re/posts/On-Containers/index.html </link>
+  <guid> https://unto.re/posts/On-Containers/index.html </guid>
+  <description>
+    <![CDATA[  Using containers, what and why  ]]>
+  </description>  
+    
+  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -278,7 +544,83 @@
     <![CDATA[  a short round up of the categories for generating proofs of work  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  MTR: multiple translations  ]]>
+  </title>
+  <link> https://unto.re/posts/mtr-translations/index.html </link>
+  <guid> https://unto.re/posts/mtr-translations/index.html </guid>
+  <description>
+    <![CDATA[  wrapping translation services for internal use  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Minor tools  ]]>
+  </title>
+  <link> https://unto.re/posts/tools/index.html </link>
+  <guid> https://unto.re/posts/tools/index.html </guid>
+  <description>
+    <![CDATA[  Collection of small utilities done to scratch some itches...  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  TCSplitter  ]]>
+  </title>
+  <link> https://unto.re/posts/tcsplitter/index.html </link>
+  <guid> https://unto.re/posts/tcsplitter/index.html </guid>
+  <description>
+    <![CDATA[  A tunnel to split TCP or UDP connection across multiple TCP connections  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Paroodise  ]]>
+  </title>
+  <link> https://unto.re/posts/paroodise/index.html </link>
+  <guid> https://unto.re/posts/paroodise/index.html </guid>
+  <description>
+    <![CDATA[  A small utility for live modification of file systems  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -297,7 +639,7 @@
     <![CDATA[  A list of correlation metrics  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

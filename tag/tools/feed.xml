@@ -23,82 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  Alpine  ]]>
-  </title>
-  <link> https://unto.re/posts/alpine/index.html </link>
-  <guid> https://unto.re/posts/alpine/index.html </guid>
-  <description>
-    <![CDATA[  Pine, Alpine linux based on OSTree  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Paroodise  ]]>
-  </title>
-  <link> https://unto.re/posts/paroodise/index.html </link>
-  <guid> https://unto.re/posts/paroodise/index.html </guid>
-  <description>
-    <![CDATA[  A small utility for live modification of file systems  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Minor tools  ]]>
-  </title>
-  <link> https://unto.re/posts/tools/index.html </link>
-  <guid> https://unto.re/posts/tools/index.html </guid>
-  <description>
-    <![CDATA[  Collection of small utilities done to scratch some itches...  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  MTR: multiple translations  ]]>
-  </title>
-  <link> https://unto.re/posts/mtr-translations/index.html </link>
-  <guid> https://unto.re/posts/mtr-translations/index.html </guid>
-  <description>
-    <![CDATA[  wrapping translation services for internal use  ]]>
-  </description>  
-    
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Make Windows Bearable  ]]>
   </title>
   <link> https://unto.re/posts/Make-Windows-Bearable/index.html </link>
@@ -107,7 +31,7 @@
     <![CDATA[  A list of tools to make Windows feel more like Linux  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -126,7 +50,83 @@
     <![CDATA[  A round-up of distributed file systems  ]]>
   </description>  
     
-  <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Alpine  ]]>
+  </title>
+  <link> https://unto.re/posts/alpine/index.html </link>
+  <guid> https://unto.re/posts/alpine/index.html </guid>
+  <description>
+    <![CDATA[  Pine, Alpine linux based on OSTree  ]]>
+  </description>  
+    
+  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  MTR: multiple translations  ]]>
+  </title>
+  <link> https://unto.re/posts/mtr-translations/index.html </link>
+  <guid> https://unto.re/posts/mtr-translations/index.html </guid>
+  <description>
+    <![CDATA[  wrapping translation services for internal use  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Minor tools  ]]>
+  </title>
+  <link> https://unto.re/posts/tools/index.html </link>
+  <guid> https://unto.re/posts/tools/index.html </guid>
+  <description>
+    <![CDATA[  Collection of small utilities done to scratch some itches...  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Paroodise  ]]>
+  </title>
+  <link> https://unto.re/posts/paroodise/index.html </link>
+  <guid> https://unto.re/posts/paroodise/index.html </guid>
+  <description>
+    <![CDATA[  A small utility for live modification of file systems  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

@@ -1,1 +1,227 @@
-<!doctype html> <html lang=en > <script type="application/ld+json">{"copyrightHolder":"untoreh","@id":"https://unto.re","url":"https://unto.re","copyrightYear":2021,"@context":"https://schema.org/","@type":"WebSite"}</script> <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/main.css"> <link rel=stylesheet  href="/css/menu.css"> <link rel=stylesheet  href="/css/pages.css"> <link rel=stylesheet  href="/css/lunr.css"> <link rel=stylesheet  href="/css/footer.css"> <link rel=stylesheet  href="/css/responsive.css"> <link rel=stylesheet  href="/css/animations.css"> <link rel=icon  href="/assets/favicon.png"> <!--[if IE ]> <![endif]--> <title>Minor tools</title> <script src="/libs/lunr/lunr.min.js"></script> <script src="/libs/lunr/lunr_index.js"></script> <script src="/libs/lunr/lunrclient.js"></script> <script src="/libs/load.js"></script> <body class=""> <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <a class=site-title  href="/"></a> <div class=author__wrap > <script type="application/ld+json">{"sameAs":["https://github.com/untoreh","https://twitter.com/untoreh"],"description":"I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties.","image":"/assets/appa.png","name":"untoreh","@type":"https://schema.org/Person","email":"contact@unto.re"}</script> <ul> <li onclick="toggleTheme()" class=author__avatar > <img class=flip-front  src="/assets/appa.png" alt= "untoreh-light"><li class="author__urls social-icons"> <a href="https://twitter.com/untoreh" rel= "nofollow noopener noreferrer"><i class= "fab fa-fw fa-twitter-square" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="https://github.com/untoreh" rel= "nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="mailto:contact@unto.re"><i class= "fas fa-envelope"></i></a> <li class="author__place hvr-buzz-out"><script type="application/ld+json">{"homeLocation":{"addressCountry":"IT","addressRegion":"Apulia","@type":"https://schema.org/Place"}}</script> <div class="author__bio .hvr-bubble-float-top"> I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties. </div><a rel="nofollow noopener noreferrer" href= "https://goo.gl/maps/E3Si7WzG4LX7wpNJ6" target=_blank ><i class= "fas fa-fw fa-map-marker-alt" aria-hidden=true ></i>italy</a> <li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script> </ul> </div> <nav id=site-nav > <div class=horiz > <ul> <li id=lunrSearch  class="masthead__menu-item hvr-outline-in"><form id=lunrSearchForm  name=lunrSearchForm > <button class=search-button  type=submit  value=Search  formaction="/search/index.html"> <i class= "fas fa-search menu-icons"></i></button> <input class=search-input  name=q  placeholder="Search&#8230;" type=text > </form> <li class="masthead__menu-item hvr-outline-in"> <a href="/posts/"><i class="fas fa-pen menu-icons"></i>posts</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/tag/lightbulbs/"><i class="fas fa-lightbulb menu-icons"></i>bulbs</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/reads/"><i class="fas fa-book menu-icons"></i>reads</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/tag/about/"><i class="fas fa-wrench menu-icons"></i>about</a> </ul> </div><button class=ham ><i class= "fas fa-bars ham-icon"></i></button> <div class=vert > <ul> <li id=lunrSearch  class="masthead__menu-item hvr-outline-in"><form id=lunrSearchForm  name=lunrSearchForm > <button class=search-button  type=submit  value=Search  formaction="/search/index.html"> <i class= "fas fa-search menu-icons"></i></button> <input class=search-input  name=q  placeholder="Search&#8230;" type=text > </form> <li class="masthead__menu-item hvr-outline-in"> <a href="/posts/"><i class="fas fa-pen menu-icons"></i>posts</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/tag/lightbulbs/"><i class="fas fa-lightbulb menu-icons"></i>bulbs</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/reads/"><i class="fas fa-book menu-icons"></i>reads</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/tag/about/"><i class="fas fa-wrench menu-icons"></i>about</a> </ul> </div> </nav> </div> </div> </div> <div> <h1 id=title ><a href="">Minor tools</a></h1> <blockquote id=page-description  style="font-style: italic;"> Collection of small utilities done to scratch some itches... </blockquote> </div> <div class=franklin-content > <h2 id=action5 ><a href="#action5" class=header-anchor >action5</a></h2> <p>&#91;Action5&#93; is a bare-bone tool to spot modified files through checksums in a directory. There are a gazillion tools that do this, so I am not sure &#40;remember&#41; why I wrote it.</p> <ul> <li><p>recurse over a folder, dump a tree of checksums &#40;the index&#41;..</p> <li><p>..repeat to see what changed</p> </ul> <p>A key point of this tools is that it is just shell commands, so you can plug in any check-summing command that you prefer, by default it uses <code>md5</code>.</p> <h2 id=bash-utils ><a href="#bash-utils" class=header-anchor >bash-utils</a></h2> <p>The purpose of <a href="https://github.com/untoreh/bashutils">bashutils</a> is to mostly rely on bash to do some operations on processes.</p> <ul> <li><p>Reading a file inside a variable &#40;<code>gobbler</code>&#41;, requires making sure that the file does not contain nulls, so it must be stored with an null free encoding format. Note: carefree usage of quotes in bash, &#40;in places where not required&#41; can cause a lot of memory to be wasted.</p> <li><p>Monitoring cpu in a linux system, requires to read <code>/proc</code>, pause without forking, and calculate statistics with just shell operations &#40;<code>&#36;&#40;&#40;&#41;&#41;</code>&#41;</p> <li><p>Limiting a process requires continuously sending <code>SIGSTOP</code> and <code>SIGSTOP</code> signals, this is very slow in bash :&#41; since it is a loop, and software might behave unexpectedly when constantly paused and resumed, since programmers don&#39;t usually expect their software to work intermittently&#33;</p> </ul> <h2 id=dist-haproxy ><a href="#dist-haproxy" class=header-anchor >dist-haproxy</a></h2> <p>A <a href="https://github.com/untoreh/dist-haproxy">build script</a> for <a href="http://www.haproxy.org/">haproxy</a>, the best tool to forward connections, it is lightweight, and having a statically linked version is very useful.</p> <p></p> <div class=page-foot > <div class=copyright > June 06, 2021 </div> <script src="https://utteranc.es/client.js" repo="untoreh/untoreh.github.io" issue-term=pathname  label=Comment  crossorigin=anonymous  async> </script> </div> </div><div class=page__footer > <footer> <div class=page__footer-copyright > © untoreh - Powered by <a href= "https://github.com/tlienart/Franklin.jl">Franklin</a> </div> <div class=page__footer-links > - <ul> <li> <a href="/sitemap.xml">Sitemap</a> | <li> <a href="/tag">Tags</a> | <li> <a href="/feed.xml">RSS</a> </ul> </div> <ul class=author__wrap > <li class="author__urls social-icons"> <a href="https://twitter.com/untoreh" rel= "nofollow noopener noreferrer"><i class= "fab fa-fw fa-twitter-square" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="https://github.com/untoreh" rel= "nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="mailto:contact@unto.re"><i class= "fas fa-envelope"></i></a> <li class="author__place hvr-buzz-out"><script type="application/ld+json">{"homeLocation":{"addressCountry":"IT","addressRegion":"Apulia","@type":"https://schema.org/Place"}}</script> <div class="author__bio .hvr-bubble-float-top"> I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties. </div><a rel="nofollow noopener noreferrer" href= "https://goo.gl/maps/E3Si7WzG4LX7wpNJ6" target=_blank ><i class= "fas fa-fw fa-map-marker-alt" aria-hidden=true ></i>italy</a> <li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script> </ul> </footer> </div> <script defer src= "https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity= "sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin=anonymous ></script> <script src="/libs/colors.js"></script> <script src="/libs/menu.js"></script> <script defer src="/libs/lunr/lunr.min.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+    <script type="application/ld+json">{"copyrightHolder":"untoreh","@id":"https://unto.re","url":"https://unto.re","copyrightYear":2021,"@context":"https://schema.org/","@type":"WebSite"}</script>
+    <script type="application/ld+json">{"audience":"cool people","url":"https://unto.re/posts/tools/index.html","mainContentOfPage":{"@type":"WebPageElement","cssSelector":".franklin-content"},"accessMode":["textual","visual"],"accessibilitySummary":"Visual elements are tentatively described.","author":"untoreh","description":"Collection of small utilities done to scratch some itches...","mentions":[],"accessModeSufficient":{"itemListElement":["textual","visual"],"description":"text and images","@type":"itemList"},"lastReviewed":"April 08, 2021","@type":"https://schema.org/WebPage","dateCreated":"April 24, 2021","@id":"https://unto.re/posts/tools/index.html","dateModified":"April 08, 2021","abstract":"Collection of small utilities done to scratch some itches...","headline":"Minor tools","creativeWorkStatus":"Published","availableLanguage":[{"name":"English","@type":"Language"},{"name":"German","@type":"Language"},{"name":"Italian","@type":"Language"},{"name":"Mandarin Chinese","@type":"Language"},{"name":"Spanish","@type":"Language"},{"name":"Hindi","@type":"Language"},{"name":"Arabic","@type":"Language"},{"name":"Portuguese","@type":"Language"},{"name":"Bengali","@type":"Language"},{"name":"Russian","@type":"Language"},{"name":"Japanese","@type":"Language"},{"name":"Punjabi","@type":"Language"},{"name":"Javanese","@type":"Language"},{"name":"Vietnamese","@type":"Language"},{"name":"French","@type":"Language"},{"name":"Urdu","@type":"Language"},{"name":"Turkish","@type":"Language"},{"name":"Polish","@type":"Language"},{"name":"Ukranian","@type":"Language"},{"name":"Dutch","@type":"Language"},{"name":"Greek","@type":"Language"},{"name":"Swedish","@type":"Language"},{"name":"Zulu","@type":"Language"},{"name":"Kurdish","@type":"Language"},{"name":"Romanian","@type":"Language"},{"name":"Malay","@type":"Language"}],"keywords":["tools","about"],"datePublished":"April 24, 2021","inLanguage":"English","name":"Minor tools","identifier":"https://unto.re/posts/tools/index.html"}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/menu.css">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="stylesheet" href="/css/lunr.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/animations.css">
+<link rel="stylesheet" href="/css/docco.css">
+<link rel="icon" href="/assets/favicon.png">
+<!--[if IE ]>
+<![endif]-->
+
+  <title>Minor tools</title>
+  <script src="/libs/lunr/lunr.min.js"></script>
+<script src="/libs/lunr/lunr_index.js"></script>
+<script src="/libs/lunr/lunrclient.min.js"></script>
+<!-- <script src="/libs/lunr/lunrclient.js"></script> -->
+
+  <script src="/libs/load.js"></script>
+  <!-- end custom head snippets -->
+</head>
+<body class="">
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <a class="site-title" href="/"></a> <div class="author__wrap">
+    <script type="application/ld+json">{"sameAs":["https://github.com/untoreh","https://twitter.com/untoreh"],"description":"I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties.","image":"/assets/appa.png","name":"untoreh","@type":"https://schema.org/Person","email":"contact@unto.re"}</script>
+    <ul>
+        <li onclick="toggleTheme()" class="author__avatar">
+        <img class="flip-front" src="/assets/appa.png" alt=
+        "untoreh-light"></li><li class="author__urls social-icons">
+    <a href="https://twitter.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class=
+    "fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a href="https://github.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+    aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a href="mailto:contact@unto.re"><i class=
+    "fas fa-envelope"></i></a>
+</li>
+<li class="author__place hvr-buzz-out"><script type="application/ld+json">{"homeLocation":{"addressCountry":"IT","addressRegion":"Apulia","@type":"https://schema.org/Place"}}</script>
+    <div class="author__bio .hvr-bubble-float-top">
+        I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties.
+    </div><a rel="nofollow noopener noreferrer" href=
+    "https://goo.gl/maps/E3Si7WzG4LX7wpNJ6" target="_blank"><i class=
+    "fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>italy</a>
+</li>
+<li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script></li>
+
+    </ul>
+</div>
+
+      <nav id="site-nav">
+        <div class="horiz">
+          <ul>
+    <li id="lunrSearch" class="masthead__menu-item hvr-outline-in"><form id="lunrSearchForm" name="lunrSearchForm">
+<button class="search-button" type="submit" value="Search" formaction="/search/index.html">
+    <i class= "fas fa-search menu-icons"></i></button>
+<input class="search-input" name="q" placeholder="Search&#8230;" type="text">
+</form>
+</li>
+    <li class="masthead__menu-item hvr-outline-in">
+      <a href="/posts/"><i class="fas fa-pen menu-icons"></i>posts</a>
+  </li>
+  <li class="masthead__menu-item hvr-outline-in">
+    <a href="/tag/lightbulbs/"><i class="fas fa-lightbulb menu-icons"></i>bulbs</a>
+  </li>
+  <li class="masthead__menu-item hvr-outline-in">
+    <a href="/reads/"><i class="fas fa-book menu-icons"></i>reads</a>
+  </li>
+  <li class="masthead__menu-item hvr-outline-in">
+    <a href="/tag/about/"><i class="fas fa-wrench menu-icons"></i>about</a>
+  </li>
+</ul>
+
+        </div><button class="ham"><i class=
+        "fas fa-bars ham-icon"></i></button>
+        <div class="vert">
+          <ul>
+    <li id="lunrSearch" class="masthead__menu-item hvr-outline-in"><form id="lunrSearchForm" name="lunrSearchForm">
+<button class="search-button" type="submit" value="Search" formaction="/search/index.html">
+    <i class= "fas fa-search menu-icons"></i></button>
+<input class="search-input" name="q" placeholder="Search&#8230;" type="text">
+</form>
+</li>
+    <li class="masthead__menu-item hvr-outline-in">
+      <a href="/posts/"><i class="fas fa-pen menu-icons"></i>posts</a>
+  </li>
+  <li class="masthead__menu-item hvr-outline-in">
+    <a href="/tag/lightbulbs/"><i class="fas fa-lightbulb menu-icons"></i>bulbs</a>
+  </li>
+  <li class="masthead__menu-item hvr-outline-in">
+    <a href="/reads/"><i class="fas fa-book menu-icons"></i>reads</a>
+  </li>
+  <li class="masthead__menu-item hvr-outline-in">
+    <a href="/tag/about/"><i class="fas fa-wrench menu-icons"></i>about</a>
+  </li>
+</ul>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+            <div>
+            <h1 id="title"><a href="">Minor tools</a></h1>
+            <blockquote id="page-description" style="font-style: italic;">
+                Collection of small utilities done to scratch some itches...
+            </blockquote>
+            </div>
+          
+
+
+<!-- Content appended here -->
+
+<div class="franklin-content">
+<h2 id="action5"><a href="#action5" class="header-anchor">action5</a></h2>
+<p>&#91;Action5&#93; is a bare-bone tool to spot modified files through checksums in a directory. There are a gazillion tools that do this, so I am not sure &#40;remember&#41; why I wrote it.</p>
+<ul>
+<li><p>recurse over a folder, dump a tree of checksums &#40;the index&#41;..</p>
+</li>
+<li><p>..repeat to see what changed</p>
+</li>
+</ul>
+<p>A key point of this tools is that it is just shell commands, so you can plug in any check-summing command that you prefer, by default it uses <code>md5</code>.</p>
+
+<h2 id="bash-utils"><a href="#bash-utils" class="header-anchor">bash-utils</a></h2>
+<p>The purpose of <a href="https://github.com/untoreh/bashutils">bashutils</a> is to mostly rely on bash to do some operations on processes.</p>
+<ul>
+<li><p>Reading a file inside a variable &#40;<code>gobbler</code>&#41;, requires making sure that the file does not contain nulls, so it must be stored with an null free encoding format. Note: carefree usage of quotes in bash, &#40;in places where not required&#41; can cause a lot of memory to be wasted.</p>
+</li>
+<li><p>Monitoring cpu in a linux system, requires to read <code>/proc</code>, pause without forking, and calculate statistics with just shell operations &#40;<code>&#36;&#40;&#40;&#41;&#41;</code>&#41;</p>
+</li>
+<li><p>Limiting a process requires continuously sending <code>SIGSTOP</code> and <code>SIGSTOP</code> signals, this is very slow in bash :&#41; since it is a loop, and software might behave unexpectedly when constantly paused and resumed, since programmers don&#39;t usually expect their software to work intermittently&#33;</p>
+</li>
+</ul>
+
+<h2 id="dist-haproxy"><a href="#dist-haproxy" class="header-anchor">dist-haproxy</a></h2>
+<p>A <a href="https://github.com/untoreh/dist-haproxy">build script</a> for <a href="http://www.haproxy.org/">haproxy</a>, the best tool to forward connections, it is lightweight, and having a statically linked version is very useful.</p>
+<p></p>
+<div id="post-tags-list">
+Post Tags:
+<span class="post-tag"><a href="/posts/tag/tools" style=""> tools </a>, </span>
+<span class="post-tag"><a href="/posts/tag/about" style=""> about </a></span></div>
+<div class="page-foot">
+    <div class="copyright">
+        April 08, 2021
+    </div>
+        <script src="https://utteranc.es/client.js"
+        repo="untoreh/untoreh.github.io"
+        issue-term="pathname"
+        label="Comment"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+</div>
+</div><div class="page__footer">
+  <footer>
+    <!-- start custom footer snippets -->
+    <!-- end custom footer snippets -->
+    <div class="page__footer-copyright">
+      © untoreh - Powered by <a href=
+      "https://github.com/tlienart/Franklin.jl">Franklin</a>
+    </div>
+    <div class="page__footer-links">
+      -
+      <ul>
+        <li> <a href="/sitemap.xml">Sitemap</a> </li>
+        |
+        <li> <a href="/tag">Tags</a> </li>
+        |
+        <li> <a href="/feed.xml">RSS</a> </li>
+      </ul>
+    </div>
+    <ul class="author__wrap">
+      <li class="author__urls social-icons">
+    <a href="https://twitter.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class=
+    "fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a href="https://github.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+    aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a href="mailto:contact@unto.re"><i class=
+    "fas fa-envelope"></i></a>
+</li>
+<li class="author__place hvr-buzz-out"><script type="application/ld+json">{"homeLocation":{"addressCountry":"IT","addressRegion":"Apulia","@type":"https://schema.org/Place"}}</script>
+    <div class="author__bio .hvr-bubble-float-top">
+        I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties.
+    </div><a rel="nofollow noopener noreferrer" href=
+    "https://goo.gl/maps/E3Si7WzG4LX7wpNJ6" target="_blank"><i class=
+    "fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>italy</a>
+</li>
+<li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script></li>
+
+    </ul>
+  </footer>
+</div>
+<script defer src=
+"https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
+"sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+crossorigin="anonymous"></script>  
+<script src="/libs/colors.js"></script>
+<script src="/libs/menu.js"></script>
+<script defer src="/libs/lunr/lunr.min.js"></script>
+</body>
+</html>
