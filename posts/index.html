@@ -17,6 +17,11 @@
 <![endif]-->
 
         <title>Published Posts</title>
+        <style>
+         .posts_list h3 {
+             font-variant: small-caps;
+         }
+        </style>
     </head>
     <body class="">
     <div class="masthead">
@@ -108,12 +113,22 @@
 
     
 
-        <div class="posts_list">
-            <span class="title">
+
+    <div class="posts_list">
+        <span class="title">
             <a href="/posts/"><h1> Posts </h1></a>
             <h2> That's the stuff... </h2>
-            </span>
-            <ul>
+        </span>
+        <div id="tag_cloud_wrapper">
+            <h3>By Tags</h3>
+            <div id=tag_cloud><a href="/tag/about" style="font-size: 1.4166666666666667rem"> <i class="fa fas fa-wrench icon"></i> about </a><a href="/tag/apps" style="font-size: 1.0833333333333333rem"> <i class="fa fab fa-android icon"></i> apps </a><a href="/tag/cooking" style="font-size: 1.0rem"> <i class="fa fas fa-utensils icon"></i> cooking </a><a href="/tag/crypto" style="font-size: 1.1666666666666667rem"> <i class="fa fab fa-bitcoin icon"></i> crypto </a><a href="/tag/games" style="font-size: 1.1666666666666667rem"> <i class="fa fas fa-gamepad icon"></i> games </a><a href="/tag/guides" style="font-size: 1.0833333333333333rem"> <i class="fa fas fa-directions icon"></i> guides </a><a href="/tag/hosting" style="font-size: 1.0rem"> <i class="fa fas fa-server icon"></i> hosting </a><a href="/tag/lightbulbs" style="font-size: 2.0rem"> <i class="fa fas fa-lightbulb icon"></i> lightbulbs </a><a href="/tag/linux" style="font-size: 1.0rem"> <i class="fa fab fa-linux icon"></i> linux </a><a href="/tag/mobile" style="font-size: 1.0rem"> <i class="fa fas fa-mobile-alt icon"></i> mobile </a><a href="/tag/net" style="font-size: 1.0833333333333333rem"> <i class="fa fas fa-network-wired icon"></i> net </a><a href="/tag/nice-to-haves" style="font-size: 1.0rem"> <i class="fa fas fa-candy-cane icon"></i> nice-to-haves </a><a href="/tag/opinions" style="font-size: 1.0rem"> <i class="fa fas fa-blog icon"></i> opinions </a><a href="/tag/philosophy" style="font-size: 1.0rem"> <i class="fa fas fa-pen-alt icon"></i> philosophy </a><a href="/tag/programming" style="font-size: 1.0rem"> <i class="fa fas fa-code icon"></i> programming </a><a href="/tag/shell" style="font-size: 1.0rem"> <i class="fa fas fa-user-ninja icon"></i> shell </a><a href="/tag/software" style="font-size: 1.0833333333333333rem"> <i class="fa fas fa-code-branch icon"></i> software </a><a href="/tag/stats" style="font-size: 1.0rem"> <i class="fa fas fa-chart-bar icon"></i> stats </a><a href="/tag/tech" style="font-size: 1.0rem"> <i class="fa fas fa-pager icon"></i> tech </a><a href="/tag/things-that-should-not-be published" style="font-size: 1.0rem"> <i class="fa fas fa-comment-dots icon"></i> things-that-should-not-be published </a><a href="/tag/tools" style="font-size: 1.5rem"> <i class="fa fas fa-tools icon"></i> tools </a><a href="/tag/trading" style="font-size: 1.0rem"> <i class="fa fas fa-chart-line icon"></i> trading </a></div>
+        </div>
+        <h3>By Date </h3>
+        <ul>
+<li><p><a href="../posts/apps-for-traveling">&#40;7/2/2021&#41; Apps for traveling</a> – <em>A list of android application useful when traveling</em> </p>
+</li>
+<li><p><a href="../posts/the-easiest-cooking-guide-ever">&#40;7/2/2021&#41; The Easiest cooking guide ever</a> – <em>The best bang for reading-time guide for cooking</em> </p>
+</li>
 <li><p><a href="../posts/shades-of-colors">&#40;6/29/2021&#41; Shades of Colors</a> – <em>Take a from black-white to colored gradient</em> </p>
 </li>
 <li><p><a href="../posts/a-jar-to-strain-yogurt">&#40;6/27/2021&#41; a jar to strain yogurt</a> – <em>A jar that separates whey from yogurt, for thickening</em> </p>
@@ -182,35 +197,37 @@
 </li>
 </ul>
 
-            nothing
+        
 <div class="page-foot">
+    
     <div class="copyright">
         
     </div>
     
+    
 </div>
 
+    </div>
+    <div class="page__footer">
+    <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-copyright">
+            © untoreh - Powered by <a href=
+                                                     "https://github.com/tlienart/Franklin.jl">Franklin</a>
         </div>
-        <div class="page__footer">
-  <footer>
-    <!-- start custom footer snippets -->
-    <!-- end custom footer snippets -->
-    <div class="page__footer-copyright">
-      © untoreh - Powered by <a href=
-      "https://github.com/tlienart/Franklin.jl">Franklin</a>
-    </div>
-    <div class="page__footer-links">
-      -
-      <ul>
-        <li> <a href="/sitemap.xml">Sitemap</a> </li>
-        |
-        <li> <a href="/tag">Tags</a> </li>
-        |
-        <li> <a href="/feed.xml">RSS</a> </li>
-      </ul>
-    </div>
-    <ul class="author__wrap">
-      <li class="author__urls social-icons">
+        <div class="page__footer-links">
+            -
+            <ul>
+                <li> <a href="/sitemap.xml">Sitemap</a> </li>
+                |
+                <li> <a href="/tag">Tags</a> </li>
+                |
+                <li> <a href="/feed.xml">RSS</a> </li>
+            </ul>
+        </div>
+        <ul class="author__wrap">
+            <li class="author__urls social-icons">
     <a href="https://twitter.com/untoreh" rel=
     "nofollow noopener noreferrer"><i class=
     "fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
@@ -233,13 +250,16 @@
 </li>
 <li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script></li>
 
-    </ul>
-  </footer>
+        </ul>
+    </footer>
 </div>
-<script defer src=
-"https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
-"sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
-crossorigin="anonymous"></script>  
+<!-- ensure font-awesome script has "fa" id for parsing purposes -->
+<script id="fa" defer src=
+            "https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
+            "sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+        crossorigin="anonymous"></script>
+
+
 <script src="/libs/colors.js"></script>
 <script src="/libs/menu.js"></script>
 <script defer src="/libs/lunr/lunr.min.js"></script>
