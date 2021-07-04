@@ -65,8 +65,8 @@ function showResultCount(total) {
 
 function searchLunr(query) {
   var idx = lunr.Index.load(LUNR_DATA);
-  // Write results to page
-  var results = idx.search(query);
+  // Write results to page, always use wildcards to increase matches
+  var results = idx.search("*" + query + "*");
   var resultHtml = parseLunrResults(results);
   var elementId = LUNR_CONFIG["resultsElementId"];
   document.getElementById(elementId).innerHTML = resultHtml;
@@ -84,5 +84,4 @@ function queryLunr() {
     // empty query: show 0 results (no query)
     showResultCount("0 (empty query)");
   }
-  document.getElementById("focus").focus();
 }
