@@ -7,6 +7,7 @@ body.light {
   --alt: #ae6600;
   --alt2: #9e6c47;
   --alt3: #7f4200;
+  --alt4: #ffbebe;
   --background-color: #ffebee;
   --foreground-color: #1c0005;
   --block-background: #423833;
@@ -144,7 +145,7 @@ footer .author__place > .author__bio {
 }
 .franklin-content #title a,
 .franklin-content .header-anchor {
-  padding: 0.5rem;
+  padding: 0.5rem !important;
   line-height: 100%;
 }
 .franklin-content a {
@@ -178,14 +179,14 @@ body > div #page-description {
 
 .franklin-content .intro {
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
 }
 .franklin-content .intro ul {
   list-style-type: none;
 }
 .franklin-content .intro a {
   font-variant: small-caps;
-  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   font-size: 1.4rem;
   font-style: normal;
 }
@@ -197,4 +198,12 @@ body > div #page-description {
 
 .franklin-content h3 {
   font-size: 0.9rem;
+}
+
+.posts_list h3 {
+  text-align: center;
+}
+/* align fa icons */
+.svg-inline--fa.icon {
+  width: 1rem;
 }

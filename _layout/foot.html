@@ -1,32 +1,33 @@
 <div class="page__footer">
-  <footer>
-    <!-- start custom footer snippets -->
-    <!-- end custom footer snippets -->
-    <div class="page__footer-copyright">
-      © {{ fill author }} - Powered by <a href=
-      "https://github.com/tlienart/Franklin.jl">Franklin</a>
-    </div>
-    <div class="page__footer-links">
-      -
-      <ul>
-        <li> <a href="/sitemap.xml">Sitemap</a> </li>
-        |
-        <li> <a href="/tag">Tags</a> </li>
-        |
-        <li> <a href="/feed.xml">RSS</a> </li>
-      </ul>
-    </div>
-    <ul class="author__wrap">
-      {{ insert contacts.html }}
-    </ul>
-  </footer>
+    <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-copyright">
+            © {{ fill author }} - Powered by <a href=
+                                                     "https://github.com/tlienart/Franklin.jl">Franklin</a>
+        </div>
+        <div class="page__footer-links">
+            -
+            <ul>
+                <li> <a href="/sitemap.xml">Sitemap</a> </li>
+                |
+                <li> <a href="/tag">Tags</a> </li>
+                |
+                <li> <a href="/feed.xml">RSS</a> </li>
+            </ul>
+        </div>
+        <ul class="author__wrap">
+            {{ insert contacts.html }}
+        </ul>
+    </footer>
 </div>
-<script defer src=
-"https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
-"sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
-crossorigin="anonymous"></script> {{ if hasmath }} {{ insert
-foot_katex.html }} {{ end }} {{ if hascode }} {{ insert
-foot_highlight.html }} {{ end }}
+<!-- ensure font-awesome script has "fa" id for parsing purposes -->
+<script id="fa" defer src=
+            "https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
+            "sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+        crossorigin="anonymous"></script>
+{{ if hasmath }} {{ insert foot_katex.html }} {{ end }}
+{{ if hascode }} {{ insert foot_highlight.html }} {{ end }}
 <script src="/libs/colors.js"></script>
 <script src="/libs/menu.js"></script>
 <script defer src="/libs/lunr/lunr.min.js"></script>

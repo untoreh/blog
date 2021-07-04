@@ -1,20 +1,28 @@
 @@intro
-_In this website you can find:_
+
+#### Contents
 
 - \icon{fa-pen} [articles] about different \icon{fa-tag}[topics].
 - \icon{fa-wrench} [stuff] that I have done or doing.
-- possible \icon{fa-lightbulb}[future work].
-- \icon{fa-book}[resources] that I have read or reading.
+- \icon{fa-images} [photos], no interesting shots really.
+- \icon{fa-book} [resources] that I have read or reading.
 
-_You can contact me on \iconb{fa-github}[github] or \iconb{fa-twitter}[twitter], or through \icon{fa-at}[email]._
+#### Contacts:
+- \iconb{fa-github} [github]
+- \iconb{fa-twitch} [twitch]
+- \iconb{fa-twitter} [twitter]
+- \iconb{fa-instagram} [instagram]
+- \icon{fa-at} [email]
 
 [articles]: posts/
 [stuff]: about/
 [topics]: tag/
-[future work]: lightbulbs/
+[photos]: photos/
 [resources]: reads/
 [github]: https://github.com/untoreh
+[twitch]: https://twitch.tv/untoreh
 [twitter]: https://twitter.com/@untoreh
+[instagram]: https://instagram.com/untoreh
 [email]: mailto:contact@unto.re
 
 @@

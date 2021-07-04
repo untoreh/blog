@@ -1,7 +1,7 @@
 +++
 date = "7/2/2021"
 title = "The Easiest cooking guide ever"
-tags = ["cooking"]
+tags = ["cooking", "guides"]
 rss_description = "The best bang for reading-time guide for cooking"
 +++
 
@@ -67,9 +67,71 @@ Total water contents are important to avoid a dough from becoming a batter and v
   - **Salt** can _slow down_ fermentation, and too much salt can kill yeasts altogether.
   - The fermentation process converts sugars into proteins, carbon dioxide and acids. Too much fermentation and the dough will spoil. As a rule of thumb, **2 days** for doughs kept at _room temperature_, **2 weeks** for doughs kept in the _fridge_.
 - Mechanical leavening: _beated eggs_, _creamed butter_, _blended fruit_. These ingredients are able to _trap air_ and therefore give rise when mixed within the dough during baking as the air tries to _escape_ from the bubbles.
+- Mother yeast is a moderately fermented dough, kept constanly fresh (by periodically adding water and flour, and removing the old surface), used to _kickstart_ fermentation on new doughes, it's ratio is around 1/4..1/3 of the new dough. Large black spots are bad (means spoiling), very small dark dots are fine, usually the outcome of oxidation.
+- Fermented produce:
+  - Wine: fermentation of _fruits_ (although legally only fermentation of fruits from _vitis vinifera_ can be called wine, I think it is fair to generalize fermentation of fruits as wine.)
+  - Beer: fermentation of _cereals_ 
+  - Yogurt: fermentation of _milk_
+  - Cheese (Not all): Fermentation of _coagulated milk_ after straining
+  - Others:
+    - Kombucha: Fermented _tea_
+    - Mead: fermented _honey_
+  - Vinegar: fermented _wine_ (wine yeasts converts sugar into alchool, vinegar yeasts convert alchool into acetic acid)
+There are chemical compounds that can be added in fermented drinks to control acidity, color, flavor..:
+- ascorbic acid (vitamin C) (prevents _oxidation_)
+- potassium bicarbonate (reduces _acidity_)
+- sulphurous anhydride (slows _fermentation_)
+- tartaric acidc (prevents _crystallization_ in wine)
+- Bentonite (prevents cloudiness)
+- Arabic Gum (stabilizes flavors)
+- Diatomaceous earth (it's bad, don't use)
+- potassium metabisolphite (can be avoided)
+The list is of course not exhaustive, always research any added chemical you want to use in your fermented products.
+
+#### Doughes ratios
+Different preps require different ratios of these ingredients:
+- Flour (cereals, nuts, seeds, legumes, etc.)
+- Eggs (fruits or yogurt, etc.)
+- Water (Milk, sauces, diluted wine, etc.)
+- Sugar (clear, raw, cocunut, etc.)
+- Fats (Oils, butter, lard, etc.)
+You can find cheat sheets on the web that sum up in a nice _table_ the ratios for the most common types of bakery.
+Not everything is interchangeable; non cereal flour doesn't contain enough gluten and the resulting dough will always be more crumbly, requiring more binding agents.
+There are sugar alternatives such as _xilithol_, _erytrithol_, etc. but sugar is also important for its crystalline structure, which adds texture, and helps the formation of air bubbles. The crystalline structure is not always replicated in sugar alternatives, so you might have to at least balance out with more leavening agents.
 
 # Heating
 - **Maillard reaction**: Proteins, fats and sugars combining among themselves into more complex molecules. This is what gives flavors when cooking. It increases with higher temperatures and lower water contents (up until to burn out), so it is much more prominent on the _surface_ of the cooked thing. It follows that if you _cut_ things in smaller pieces, therefore _increasing the surface area_ you will end up with more flavor (there might exist a thing as too much flavor though). Its releveant when baking, toasting, roasting and frying, all cooking methods with low or no water contents.
 - **Caramelization**: when sugar mixes with water at high temperature, as the reaction continues, water evaporates and sugars burns away becoming more bitter. Caramelization helps giving food a more rigid, crunchy crust.
-- 
+- **Rising**: To achieve rising it is common to pre-heat the hoven in order create an high enough temperature difference to _harden_ the exterior of the dough, such that vapor trapped inside _boosts_ the dough upward. But you must be careful balancing temperatures with overall prep [^prep] humidity levels. If the prep is too dry, pre-heating will result in a **burnt out crust** and uncooked interior.
+- **Smoking-point**: Different fats **evaporate** at different temperatures, roughly:
+  - butter: ~180C
+  - olive oil: ~200C
+  - oils from nuts: ~210C
+  - oils from seeds: ~220C
+  Don't go beyond this temperatures depending on which fats you use. This can't be avoided when using _stoves_, in which cases water contents of the food can balance out too high temperatures. (_Induction_ cooktops allow you to control temperatures). Frying or browning procedures might require higher temperatures, but keeping below smoking point can still give acceptable results nonetheless.
+- **Ventilation**: Using the fan when baking gives a more even temperature inside the oven, but also dries the prep faster, can cause un-even cooking. Don't put the prep too close to the fan itself, air pressure is bad.
+- **Stickiness**: Use non-stick pans and skillets, unless the prep is mostly water, like soups or boiled veggies. For baking, non-stick sheets allow you to _customize_ the shape of the dough, and by leaving some sheets border, it allows for _easier extraction_ of the baked prep from the pan (which can then be put on a dish to rest). Both non-stick pans and sheets are made of **teflon**, and teflon doesn't play nice with temperatures _above 280C_.
+- **Jams**: When making jams, heat is the _catalyst_ that allows sugar to bind to pectine molecules (from water). Acidity balances this transformation, not enough and it will take harder for sugar move out of water, too much and the pectine-sugar chains that trap water will be too loose, never allowing jelly to take shape (leaving you with a syrup like liquid). You can increase jellyness by artificially adding more (store bought) pectine, or be careful about fruits, as different fruits have different pectine contents, and pectine decreases as fruits ripen.
+- **Water Reduction**: When you boil preps like soups, jams, chutneys, sauces, creams, etc. the more you keep them on the stove, the more water evaporates from the mixture...(obviously). Thicker mixture will _splash_ out bubbles harder (making a mess in the kitchen), therefore tune the cooking temperature accordingly to the density of the prep, the denser, the slower the boiling process should be.
+  Less water means more _concentrated_ flavors, always check out dosages of spices, and plan in advance how much water you expect to exclude, as a rule of thumb, spices take 1-3% of the total weight of the solid ingredients.
+  When we use vapor, it means that the pot has to have a **lid** on it (to not let vapor escape), you don't need a pressure cooker, to cook with vapor, pressure cookers only speed up the process. You can avoid boiling veggies by using just a little water to kickstart evaporation; Most vegetables release a good part of their water contents when exposed to high temperatures, the water released also end up evaporating completing the vegetables cooking process (vegetables _cook in their own water_).
+  Poking holes (for example with potatoes) speeds up the cooking process, as heat is able to reach the inner parts sooner.
+  When using wine or vinegar for sauces/soups be aware that both alcohol (from wine), and acetic acid (from vinegar) are _toxic_ when they turn into gas, (they are bad for your lungs). Most alchol contents evaporates during the boiling process (**almost 3/4** in half an hour). Don't reduce vinegar too much, as concentrated acetic acid can _corrode metallic pans_ (terracotta handles it better). Boiling wine/vinegar will smell bad either way, but the added flavors to the prep will be worth it, (but don't over do it).
+  Water and vapor slow down the Maillard reaction. Altitude affects the boiling temperature because of atmospheric pressure, the higher the altitude the lower is the boling temperature.
 
+# Resting 
+Some preps are supposed to be consumed right away, like _souffles_ others might require a few moments of relaxation:
+- Cookies should be allowed to rest until they reach room temperature, to expel residual vapors. Never put the cookies from the oven right into a closed box.
+- Sponge cakes, and stuffing heavy preparations (like _tiramisu_) need fridge time to absorb garnishments.
+- Pies need cool off time to allow the crust to solidify; (if you try to cut a piece while steel hot from the oven, it will crumble in your hands)
+- Ice Creams need freezer after the blending process, to recoupe the right viscosity with low temperatures.
+- Wines keps on a shelf for a long time might develop (harmless) crystals on the bottom. Wine and Vinegar develops dregs overtime as yeasts inside of them dies. (Dregs is indeed made up of dead bacteria, it is edible, even if bitter).
+- Puff Pastry uses mechanical leavening from the stratification of different layers of dough, and it requires resting after each additional layer is worked on.
+- Salads require resting in the fridge, to absorb spices, oil and vinegar.
+- For pizza, focaccia and calzone recipes, resting the dough (at least half an hour) after having laid it out on the pan, allows for additional leavening to occur before placing the toppings.
+- Emulsion of oils and water don't last long (without helpers like _lecithin_), resting sauces made up of yogurt too long will give unwanted results.
+- When drying vegetables or fruits out in the open, beware of birds, alternatively use a drying machine or the oven at low temp.
+
+[^prep]: preparation, a general term when no dough is involved during cooking.
+
+Send feedback, corrections and suggestions at cooking __at__ unto.re

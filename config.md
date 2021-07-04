@@ -16,6 +16,8 @@ The website_* must be defined for the RSS to work
 @def twitter = "https://twitter.com/untoreh"
 @def lang = "English"
 
+<!-- tag_page_path = "tags" -->
+
 @def region = "Apulia"
 @def bio = "I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties."
 @def geo_link = "https://goo.gl/maps/E3Si7WzG4LX7wpNJ6"
@@ -53,3 +55,6 @@ For instance:
 \newcommand{\website}{{{website_url}}}
 \newcommand{\icon}[1]{~~~<i class="fas #1 icon"></i>~~~}
 \newcommand{\iconb}[1]{~~~<i class="fab #1 icon"></i>~~~}
+\newcommand{\panorama}[2]{~~~<a href="#2" target="_blank">#1 (Panorama)</a>~~~}
+\newcommand{\album}[1]{~~~<a href="#1" target="_blank">Go To Album</a>~~~}
+\newcommand{\insert}[1]{~~~{{insert_path #1}}~~~}

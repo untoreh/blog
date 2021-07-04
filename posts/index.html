@@ -5,15 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{insert style.html}}
         <title>Published Posts</title>
+        <style>
+         .posts_list h3 {
+             font-variant: small-caps;
+         }
+        </style>
     </head>
     {{insert body_layout.html}}
-        <div class="posts_list">
-            <span class="title">
+
+    <div class="posts_list">
+        <span class="title">
             <a href="/posts/"><h1> Posts </h1></a>
             <h2> That's the stuff... </h2>
-            </span>
-            {{recent_posts -1}}
-            {{insert page_foot.html}}
+        </span>
+        <div id="tag_cloud_wrapper">
+            <h3>By Tags</h3>
+            {{tags_cloud}}
         </div>
-        {{insert foot.html}}
+        <h3>By Date </h3>
+        {{recent_posts -1}}
+        {{insert page_foot.html}}
+    </div>
+    {{insert foot.html}}
 </html>
