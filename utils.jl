@@ -165,12 +165,17 @@ const tag_cloud_font_size = 1;
 
 @doc "tag list to display in post footer"
 function hfun_addtags()
-    c = IOBuffer()
-    for tag in locvar(:tags)
-        println(c, "<span class=\"post-tag\">", tag, ", </span>")
+    if is_post()
+        c = IOBuffer()
+        write(c, "<div id=\"post-tags-list\">\nPost Tags:\n")
+        for tag in locvar(:tags)
+            println(c, "<span class=\"post-tag\">", tag_link(tag), ", </span>")
+        end
+        # remove comma at the end
+        chop(String(take!(c)); tail=10) * "</span></div>"
+    else
+        ""
     end
-    # remove comma at the end
-    chop(String(take!(c)); tail=10) * "</span>"
 end
 
 function tag_link(tag, font_size::Union{Float64, Nothing}=nothing)
@@ -178,10 +183,11 @@ function tag_link(tag, font_size::Union{Float64, Nothing}=nothing)
     if !isnothing(font_size)
         style="font-size: $(font_size)rem"
     end
-    link = "/posts/" * tag
+    link = join(["/posts", globvar(:tag_page_path), tag], "/")
     "<a href=\"$link\" style=\"$style\"> $tag </a>"
 end
 
+# include("icons.jl")
 @doc "Tag cloud, tags with font size dependent on the number of posts that use it"
 function hfun_tags_cloud()
     tags = DefaultDict{String,Int}(0)
@@ -201,10 +207,18 @@ function hfun_tags_cloud()
     # make html with inline size based on counts
     c = IOBuffer()
     write(c, "<div id=tag_cloud>")
+    icon = ""
+    tag_path = globvar(:tag_page_path)
     for (n, (tag, count)) in enumerate(zip(ordered_tags, counts))
+        icon_name = icons_tags[tag]
+        if icon_name !== ""
+            icon="<i class=\"fa $icon_name icon\"></i>"
+        else
+            icon = ""
+        end
         write(
             c,
-            "<a href=\"$tag\" style=\"font-size: $(sizes[n] * tag_cloud_font_size)rem\"> $tag </a>",
+            "<a href=\"$(joinpath("/", tag_path, tag))\" style=\"font-size: $(sizes[n] * tag_cloud_font_size)rem\"> $icon $tag </a>",
         )
     end
     write(c, "</div>")
@@ -512,4 +526,41 @@ function traverse_html(data, path, lang)
     end
     Translate.update_translations()
     data
+end
+
+function hfun_insert_path(args)
+    (pwd(), dirname(locvar(:fd_rpath)), args[1]) |> (x) -> joinpath(x...) |> readlines |> join
+end
+
+icons_tags =
+    DefaultDict("",
+                Dict(
+                    "programming" => "fas fa-code",
+                    "about" => "fas fa-wrench",
+                    "lightbulbs" => "fas fa-lightbulb",
+                    "apps" => "fab fa-android",
+                    "crypto" => "fab fa-bitcoin",
+                    "guides" => "fas fa-directions",
+                    "hosting" => "fas fa-server",
+                    "linux" => "fab fa-linux",
+                    "mobile" => "fas fa-mobile-alt",
+                    "net" => "fas fa-network-wired",
+                    "nice-to-haves" => "fas fa-candy-cane",
+                    "opinions" => "fas fa-blog",
+                    "philosophy" => "fas fa-pen-alt",
+                    "poetry" => "fas fa-feather",
+                    "shell" => "fas fa-user-ninja",
+                    "cooking" => "fas fa-utensils",
+                    "games" => "fas fa-gamepad",
+                    "software" => "fas fa-code-branch",
+                    "stats" => "fas fa-chart-bar",
+                    "tech" => "fas fa-pager",
+                    "agri" => "fas fa-tree",
+                    "things-that-should-not-be published" => "fas fa-comment-dots",
+                    "tools" => "fas fa-tools",
+                    "trading" => "fas fa-chart-line"
+                ))
+
+function hfun_icon_tag(tag)
+    icons_tags[tag]
 end
