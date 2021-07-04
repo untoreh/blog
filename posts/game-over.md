@@ -1,7 +1,7 @@
 +++
 date = "6/24/2021"
 title = "Game Over"
-tags = ["gaming"]
+tags = ["games"]
 rss_description = "Games that I liked, that have closed doors"
 +++
 
