@@ -1,4 +1,4 @@
-# Food
+> Food
 
 ## Baking
 My attemps at using the oven \album{https://photos.app.goo.gl/iNg9V1cxwa7zsTtJ7}
@@ -9,7 +9,7 @@ When hunger calls for a picture \album{https://photos.app.goo.gl/UrVgpYxSesdAmPV
 ## Processing
 - Pitting Cherries \album{https://photos.app.goo.gl/iNg9V1cxwa7zsTtJ7}
 
-# Lands
+> Lands
 
 ## Country
 Random photos collected in a year or so \album{https://photos.app.goo.gl/5PPKH3uGXHar976J7}
