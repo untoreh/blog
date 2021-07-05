@@ -787,7 +787,7 @@ If a service allows you to abuse their system for a long time, does it mean that
 
 Here's a table showing some services that I deployed to:
 
-\output{./../ciServicesTable.jl}
+\insert{./../_assets/posts/output/ciServicesTable.out}
 
 In this context, a \color{green}{good} configuration means that it didn't take much time to configure a `ci` job for the mining process (like all services relying on a web dashboard instead of a repository dot-file were a chore), a \color{red}{bad} `ban-hammer` means that it was hard to register to the service, or that accounts would get banned more aggressively.
 
