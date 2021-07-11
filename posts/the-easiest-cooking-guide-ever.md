@@ -134,4 +134,4 @@ Some preps are supposed to be consumed right away, like _souffles_ others might 
 
 [^prep]: preparation, a general term when no dough is involved during cooking.
 
-Send feedback, corrections and suggestions at cooking __at__ unto.re
+_Send feedback, corrections and suggestions to: cooking ~*at*~ unto.re_
