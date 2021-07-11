@@ -61,25 +61,6 @@
 
 <item>
   <title>
-    <![CDATA[  Distributed Filesystems  ]]>
-  </title>
-  <link> https://unto.re/posts/distributed-filesystems/index.html </link>
-  <guid> https://unto.re/posts/distributed-filesystems/index.html </guid>
-  <description>
-    <![CDATA[  A round-up of distributed file systems  ]]>
-  </description>  
-    
-  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Alpine  ]]>
   </title>
   <link> https://unto.re/posts/alpine/index.html </link>
@@ -99,15 +80,15 @@
 
 <item>
   <title>
-    <![CDATA[  MTR: multiple translations  ]]>
+    <![CDATA[  Distributed Filesystems  ]]>
   </title>
-  <link> https://unto.re/posts/mtr-translations/index.html </link>
-  <guid> https://unto.re/posts/mtr-translations/index.html </guid>
+  <link> https://unto.re/posts/distributed-filesystems/index.html </link>
+  <guid> https://unto.re/posts/distributed-filesystems/index.html </guid>
   <description>
-    <![CDATA[  wrapping translation services for internal use  ]]>
+    <![CDATA[  A round-up of distributed file systems  ]]>
   </description>  
     
-  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -143,6 +124,25 @@
   <guid> https://unto.re/posts/paroodise/index.html </guid>
   <description>
     <![CDATA[  A small utility for live modification of file systems  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  MTR: multiple translations  ]]>
+  </title>
+  <link> https://unto.re/posts/mtr-translations/index.html </link>
+  <guid> https://unto.re/posts/mtr-translations/index.html </guid>
+  <description>
+    <![CDATA[  wrapping translation services for internal use  ]]>
   </description>  
     
   <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  

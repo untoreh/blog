@@ -42,6 +42,25 @@
 
 <item>
   <title>
+    <![CDATA[  copypaste on dns  ]]>
+  </title>
+  <link> https://unto.re/posts/copypaste-on-dns/index.html </link>
+  <guid> https://unto.re/posts/copypaste-on-dns/index.html </guid>
+  <description>
+    <![CDATA[  Sharing text throught TXT records  ]]>
+  </description>  
+    
+  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  tribes  ]]>
   </title>
   <link> https://unto.re/posts/tribes/index.html </link>
@@ -61,15 +80,15 @@
 
 <item>
   <title>
-    <![CDATA[  copypaste on dns  ]]>
+    <![CDATA[  hosting network  ]]>
   </title>
-  <link> https://unto.re/posts/copypaste-on-dns/index.html </link>
-  <guid> https://unto.re/posts/copypaste-on-dns/index.html </guid>
+  <link> https://unto.re/posts/hosting-network/index.html </link>
+  <guid> https://unto.re/posts/hosting-network/index.html </guid>
   <description>
-    <![CDATA[  Sharing text throught TXT records  ]]>
+    <![CDATA[  A social network for hosting services  ]]>
   </description>  
     
-  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -105,6 +124,63 @@
   <guid> https://unto.re/posts/sharing-ideas/index.html </guid>
   <description>
     <![CDATA[  What if there was a way to give legs to ideas?  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  swiping with thumbs  ]]>
+  </title>
+  <link> https://unto.re/posts/swiping-with-thumbs/index.html </link>
+  <guid> https://unto.re/posts/swiping-with-thumbs/index.html </guid>
+  <description>
+    <![CDATA[  An smartphone keyboard interface for swiping with thumbs  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  A database about dreams  ]]>
+  </title>
+  <link> https://unto.re/posts/a-database-about-dreams/index.html </link>
+  <guid> https://unto.re/posts/a-database-about-dreams/index.html </guid>
+  <description>
+    <![CDATA[  A place to share and log dreams  ]]>
+  </description>  
+    
+  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  power of the crowd  ]]>
+  </title>
+  <link> https://unto.re/posts/power-of-the-crowd/index.html </link>
+  <guid> https://unto.re/posts/power-of-the-crowd/index.html </guid>
+  <description>
+    <![CDATA[  Apps powered by crowd sourcing  ]]>
   </description>  
     
   <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
@@ -156,88 +232,12 @@
 
 <item>
   <title>
-    <![CDATA[  hosting network  ]]>
-  </title>
-  <link> https://unto.re/posts/hosting-network/index.html </link>
-  <guid> https://unto.re/posts/hosting-network/index.html </guid>
-  <description>
-    <![CDATA[  A social network for hosting services  ]]>
-  </description>  
-    
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  swiping with thumbs  ]]>
-  </title>
-  <link> https://unto.re/posts/swiping-with-thumbs/index.html </link>
-  <guid> https://unto.re/posts/swiping-with-thumbs/index.html </guid>
-  <description>
-    <![CDATA[  An smartphone keyboard interface for swiping with thumbs  ]]>
-  </description>  
-    
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Is progress blind?  ]]>
   </title>
   <link> https://unto.re/posts/progress/index.html </link>
   <guid> https://unto.re/posts/progress/index.html </guid>
   <description>
     <![CDATA[  What can we do to steer progress in the right direction?  ]]>
-  </description>  
-    
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  A database about dreams  ]]>
-  </title>
-  <link> https://unto.re/posts/a-database-about-dreams/index.html </link>
-  <guid> https://unto.re/posts/a-database-about-dreams/index.html </guid>
-  <description>
-    <![CDATA[  A place to share and log dreams  ]]>
-  </description>  
-    
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  power of the crowd  ]]>
-  </title>
-  <link> https://unto.re/posts/power-of-the-crowd/index.html </link>
-  <guid> https://unto.re/posts/power-of-the-crowd/index.html </guid>
-  <description>
-    <![CDATA[  Apps powered by crowd sourcing  ]]>
   </description>  
     
   <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
