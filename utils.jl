@@ -532,6 +532,19 @@ function hfun_insert_path(args)
     (pwd(), dirname(locvar(:fd_rpath)), args[1]) |> (x) -> joinpath(x...) |> readlines |> join
 end
 
+function hfun_insert_img(args)
+    if args[2] === "none"
+        "<img alt=\"$(splitext(args[1])[1])\" " *
+            " src=\"/assets/posts/img/$(args[1])\"" *
+            " style=\"float: none; padding: 0.5rem; " *
+            " margin-left:auto; margin-right: auto; display: block; \">"
+    else
+        "<img alt=\"$(splitext(args[1])[1])\" " *
+            " src=\"/assets/posts/img/$(args[1])\" " *
+            " style=\"float: $(args[2]); padding: 0.5rem;\">"
+    end
+end
+
 icons_tags =
     DefaultDict("",
                 Dict(

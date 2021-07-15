@@ -58,4 +58,8 @@ For instance:
 \newcommand{\panorama}[2]{~~~<a href="#2" target="_blank">#1 (Panorama)</a>~~~}
 \newcommand{\album}[1]{~~~<a href="#1" target="_blank">Go To Album</a>~~~}
 \newcommand{\insert}[1]{~~~{{insert_path #1}}~~~}
-\newcommand{\img}[1]{~~~<img src="/assets/posts/img/#1" style="float: right;">~~~}
+\newcommand{\imgl}[1]{~~~{{insert_img #1 left}}~~~}
+\newcommand{\imgr}[1]{~~~{{insert_img #1 right}}~~~}
+\newcommand{\imgc}[1]{~~~{{insert_img #1 none}}~~~}
+
+

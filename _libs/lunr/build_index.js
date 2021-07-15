@@ -57,7 +57,7 @@ function readHtml(root, file, fileId) {
   $("code").remove();
   var body = $(".franklin-content").text();
   if (typeof body == "undefined") body = "";
-  console.log(body);
+  // console.log(body);
   // generate summary
   let summ = new SummarizerManager(body, 3).getSummaryByFrequency().summary;
   var data = {
