@@ -23,25 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  Android apps lists  ]]>
-  </title>
-  <link> https://unto.re/posts/android-apps-lists/index.html </link>
-  <guid> https://unto.re/posts/android-apps-lists/index.html </guid>
-  <description>
-    <![CDATA[  A list of android application useful when traveling  ]]>
-  </description>  
-    
-  <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  power of the crowd  ]]>
   </title>
   <link> https://unto.re/posts/power-of-the-crowd/index.html </link>
@@ -50,7 +31,7 @@
     <![CDATA[  Apps powered by crowd sourcing  ]]>
   </description>  
     
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -69,7 +50,26 @@
     <![CDATA[  Don&#39;t leave your thoughts on platforms you don&#39;t own  ]]>
   </description>  
     
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Android apps lists  ]]>
+  </title>
+  <link> https://unto.re/posts/android-apps-lists/index.html </link>
+  <guid> https://unto.re/posts/android-apps-lists/index.html </guid>
+  <description>
+    <![CDATA[  A list of android application useful when traveling  ]]>
+  </description>  
+    
+  <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
