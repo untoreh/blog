@@ -8,10 +8,10 @@ rss_description = "An smartphone keyboard interface for swiping with thumbs"
 There are different keyboard input methods for smartphones:
 - Normal typing
 - Thumb typing
-- Normal swyping
+- Normal swiping
 - Compact (T9) typing
 
-Double input swyping has been explored very little. The only keyboard that I have found to implement a good working solution is [keyboard69].
+Double input swiping has been explored very little. The only keyboard that I have found to implement a good working solution is [keyboard69].
 
 Why is it so uncommon?
 - Implementation is hard. Multiple input means there are async processes filling an input buffer that has to be queried for completion candidates on each new event.

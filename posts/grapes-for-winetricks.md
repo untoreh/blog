@@ -5,7 +5,7 @@ tags = ["lightbulbs", "linux"]
 rss_description = "A layer based setup for winetricks recipes"
 +++
 
-[Wine] is used to run windows programs on linux. The runtime works by reimplementing [dlls](https://en.wikipedia.org/wiki/Dynamic-link_library) to be linux compatible. However software doesn't just need the base libraries, there are dependencies that need to be installed for every piece of software.
+[Wine] is used to run windows programs on linux. The runtime works by re-implementing [dlls](https://en.wikipedia.org/wiki/Dynamic-link_library) to be linux compatible. However software doesn't just need the base libraries, there are dependencies that need to be installed for every piece of software.
 
 Wine supports different windows versions...(all of them?), therefore it is necessary to use different environments to ensure compatibility between software and windows versions.
 
