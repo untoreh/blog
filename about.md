@@ -1,3 +1,25 @@
-@def title = "about untoreh"
+@def title = "About page"
 
-> This is a list (with description) of things I have worked or am still working on.
+~~~
+{{insert_bio}}
+~~~
+
+[«https://unto.re»]: https://unto.re
+
+---
+
+@@media
+- [What I am reading or have read](/reads)
+- [Photos of (very few) trips or places](/photos)
+@@
+
+## Projects I have worked on so far
+~~~
+{{taglist_desc about}}
+~~~
+
+## (possibly weird) Ideas for new projects
+~~~
+{{taglist_desc lightbulbs}}
+~~~
+

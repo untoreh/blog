@@ -6,7 +6,7 @@ The website_* must be defined for the RSS to work
 
 @def title = "untoreh's site"
 @def website_title = "untoreh's site"
-@def website_descr = "you know...stuff"
+@def website_descr = "An archive of _WILD_ interests..."
 @def website_url = "https://unto.re"
 @def country = "IT"
 @def country_name = "italy"
@@ -15,20 +15,24 @@ The website_* must be defined for the RSS to work
 @def github = "https://github.com/untoreh"
 @def twitter = "https://twitter.com/untoreh"
 @def lang = "English"
+@def lang_code = "en"
 
 <!-- tag_page_path = "tags" -->
 
 @def region = "Apulia"
-@def bio = "I am Francesco Giannelli. The website «unto.re» is the place where I put stuff I should remember...or forget. Located in south italy. Born in the early nineties."
 @def geo_link = "https://goo.gl/maps/E3Si7WzG4LX7wpNJ6"
 
 @def author = "untoreh"
 
 @def mintoclevel = 2
+@def div_content = "franklin-content"
+
 <!-- https://schema.org/accessMode -->
+
 @def accessMode = ["textual", "visual"]
 @def accessModeSufficient = ["textual", "visual"]
-@def languages = [("English", "en"), ("German", "de"), ("Italian", "it"), ("Mandarin Chinese", "zh"), ("Spanish", "es"), ("Hindi", "hi"), ("Arabic", "ar"), ("Portuguese", "pt"), ("Bengali", "bn"), ("Russian", "ru"), ("Japanese", "ja"), ("Punjabi", "pa"), ("Javanese", "jv"), ("Vietnamese", "vi"), ("French", "fr"), ("Urdu", "ur"), ("Turkish", "tr"), ("Polish", "pl"), ("Ukranian", "uk"), ("Dutch", "nl"), ("Greek", "el"), ("Swedish", "sv"), ("Zulu", "zu"), ("Kurdish", "ku"), ("Romanian", "ro"), ("Malay", "ms")]
+<!-- @def languages = [("English", "en"), ("Italian", "it")] -->
+@def languages = [("English", "en"), ("German", "de"), ("Italian", "it"), ("Mandarin Chinese", "zh"), ("Spanish", "es"), ("Hindi", "hi"), ("Arabic", "ar"), ("Portuguese", "pt"), ("Bengali", "bn"), ("Russian", "ru"), ("Japanese", "ja"), ("Punjabi", "pa"), ("Javanese", "jw"), ("Vietnamese", "vi"), ("French", "fr"), ("Urdu", "ur"), ("Turkish", "tr"), ("Polish", "pl"), ("Ukranian", "uk"), ("Dutch", "nl"), ("Greek", "el"), ("Swedish", "sv"), ("Zulu", "zu"), ("Kurdish", "ku"), ("Romanian", "ro"), ("Malay", "ms")]
 @def mentions = []
 @def translator = "Google Translate"
 
@@ -38,7 +42,7 @@ these files might be copied and, if markdown, processed by Franklin which
 you might not want. Indicate directories by ending the name with a `/`.
 -->
 
-@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md"]
+@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/"]
 
 <!--
 Add here global latex commands to use throughout your
@@ -61,5 +65,3 @@ For instance:
 \newcommand{\imgl}[1]{~~~{{insert_img #1 left}}~~~}
 \newcommand{\imgr}[1]{~~~{{insert_img #1 right}}~~~}
 \newcommand{\imgc}[1]{~~~{{insert_img #1 none}}~~~}
-
-
