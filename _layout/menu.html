@@ -1,15 +1,17 @@
 <ul>
     <li id="lunrSearch" class="masthead__menu-item hvr-outline-in">{{insert lunr_search.html}}</li>
     <li class="masthead__menu-item hvr-outline-in">
-      <a href="/posts/"><i class="fas fa-pen menu-icons"></i>posts</a>
-  </li>
-  <li class="masthead__menu-item hvr-outline-in">
-    <a href="/tag/lightbulbs/"><i class="fas fa-lightbulb menu-icons"></i>bulbs</a>
-  </li>
-  <li class="masthead__menu-item hvr-outline-in">
-    <a href="/reads/"><i class="fas fa-book menu-icons"></i>reads</a>
-  </li>
-  <li class="masthead__menu-item hvr-outline-in">
-    <a href="/tag/about/"><i class="fas fa-wrench menu-icons"></i>about</a>
-  </li>
+        <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a>
+    </li>
+    <li class="masthead__menu-item hvr-outline-in">
+        <a href="/about/" title="Things about me, what I have read, past projects and ideas for future ones"><i class="fas fa-user-alt menu-icons"></i>about</a>
+    </li>
+    <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language">
+        <div class="langs-dropdown-wrapper">
+            <i class="fas fa-language menu-icons"></i> Lang
+            <div id="langs-dropdown-menu" class="langs-dropdown-content">
+                {{langs_list}}
+            </div>
+        </div>
+    </li>
 </ul>

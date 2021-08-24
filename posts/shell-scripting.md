@@ -1,6 +1,6 @@
 +++
 date = "7/15/2021"
-title = "shell scriping"
+title = "shell scripting"
 tags = ["programming", "shell"]
 rss_description = "Thoughts on shell scripting"
 +++

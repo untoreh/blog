@@ -6,3 +6,5 @@ node_modules/
 package-lock.json
 /test.jl
 /translations.json.bak
+/.vscode/
+/__site.bak/

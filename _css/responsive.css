@@ -1,3 +1,9 @@
+@media (min-width: 680px) {
+  #tag-name, .tag-desc {
+    text-align: left;
+  }
+}
+
 @media (min-width: 680px) and (max-width: 1300px) {
   body {
     max-width: 640px;
@@ -83,6 +89,9 @@
     float: none;
     padding: 0;
     display: inline-block;
+  }
+  #tag-name, .tag-desc {
+    text-align: center;
   }
   #site-nav {
     float: none;

@@ -1,7 +1,7 @@
 +++
 date = "6/27/2021"
 title = "a jar to strain yogurt"
-tags = ["lightbulbs", "nice-to-haves"]
+tags = ["nice-to-haves"]
 rss_description = "A jar that separates whey from yogurt, for thickening"
 +++
 

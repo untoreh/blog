@@ -10,6 +10,19 @@
   z-index: 0;
 }
 
+.franklin-content, .tag-content {
+  padding-top: 1rem;
+}
+
+.author__bio li {
+  list-style: none;
+}
+
+.author__bio li p {
+  margin: 0;
+  padding: 0;
+}
+
 #tag-name {
   font-size: 1.5rem;
   padding: 0.5rem;
@@ -94,4 +107,9 @@
 #post-tags-list {
   font-variant: small-caps;
   font-weight: bold;
+}
+
+.media {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }

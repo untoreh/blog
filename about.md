@@ -13,7 +13,7 @@
 - [Photos of (very few) trips or places](/photos)
 @@
 
-## Projects I have worked on so far
+## Previous projects
 ~~~
 {{taglist_desc about}}
 ~~~

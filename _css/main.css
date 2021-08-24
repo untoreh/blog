@@ -85,57 +85,57 @@ a:visited {
   color: var(--accent2);
 }
 .author__place .author__bio {
-  display: none;
-}
-.author__place:hover {
-  z-index: 1;
-}
-.author__place:hover .author__bio {
-  filter: blur(0);
-  width: 10rem;
-  padding: 0.5rem;
-  opacity: 0.9;
-  line-height: 1.1rem;
-  right: 0rem;
-}
-div.masthead .author__place:hover .author__bio {
-  height: 9rem;
-}
-footer .author__place:hover .author__bio {
-  height: 6.5rem;
-}
-footer .author__urls.social-icons {
   font-size: 1rem;
 }
-div.masthead .author__place > .author__bio {
-  top: 3rem;
-  right: 0;
-  pointer-events: none;
-}
+/* .author__place:hover { */
+/*   z-index: 1; */
+/* } */
+/* .author__place:hover .author__bio { */
+/*   filter: blur(0); */
+/*   width: 10rem; */
+/*   padding: 0.5rem; */
+/*   opacity: 0.9; */
+/*   line-height: 1.1rem; */
+/*   right: 0rem; */
+/* } */
+/* div.masthead .author__place:hover .author__bio { */
+/*   height: 9rem; */
+/* } */
+/* footer .author__place:hover .author__bio { */
+/*   height: 6.5rem; */
+/* } */
+/* footer .author__urls.social-icons { */
+/*   font-size: 1rem; */
+/* } */
+/* div.masthead .author__place > .author__bio { */
+/*   top: 3rem; */
+/*   right: 0; */
+/*   pointer-events: none; */
+/* } */
 
-footer .author__place > .author__bio {
-  bottom: 3rem;
-  right: 0;
-  pointer-events: none;
-}
-.author__place > .author__bio {
-  display: block;
-  height: 0;
-  width: 0;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  line-height: 0;
-  text-align: justify;
-  border: solid var(--accent3);
-  border-radius: 10px;
-  color: var(--alt3);
-  filter: blur(1rem);
-  transition: ease-in filter 0.33s, opacity 0.33s, width 0.33s, height 0.33s;
-  background-color: var(--background-color);
-  position: absolute;
-  z-index: -1;
-}
+/* footer .author__place > .author__bio { */
+/*   bottom: 3rem; */
+/*   right: 0; */
+/*   pointer-events: none; */
+/* } */
+/* .author__place > .author__bio { */
+/*   display: block; */
+/*   height: 0; */
+/*   width: 0; */
+/*   padding: 0; */
+/*   margin: 0; */
+/*   opacity: 0; */
+/*   line-height: 0; */
+/*   text-align: justify; */
+/*   border: solid var(--accent3); */
+/*   border-radius: 10px; */
+/*   color: var(--alt3); */
+/*   filter: blur(1rem); */
+/*   transition: ease-in filter 0.33s, opacity 0.33s, width 0.33s, height 0.33s; */
+/*   background-color: var(--background-color); */
+/*   position: absolute; */
+/*   z-index: -1; */
+/* } */
 
 .franklin-content blockquote {
   border-left-color: var(--accent);

@@ -5,7 +5,6 @@
 > This is my list of reading and reference materials, some papers have a
 > ~~~<span style="color: var(--green)">co</span><span style="color: var(--yellow)">lo</span><span style="color: var(--red)">red</span>~~~
 > star to tell if I found them useful...
-> Books have amazon assoc links
 ~~~ <style> .light blockquote {color: var(--alt4);} </style> ~~~
 <!-- prettier-ignore-end -->
 
