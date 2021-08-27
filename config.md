@@ -32,9 +32,10 @@ The website_* must be defined for the RSS to work
 @def accessMode = ["textual", "visual"]
 @def accessModeSufficient = ["textual", "visual"]
 <!-- @def languages = [("English", "en"), ("Italian", "it")] -->
-@def languages = [("English", "en"), ("German", "de"), ("Italian", "it"), ("Mandarin Chinese", "zh"), ("Spanish", "es"), ("Hindi", "hi"), ("Arabic", "ar"), ("Portuguese", "pt"), ("Bengali", "bn"), ("Russian", "ru"), ("Japanese", "ja"), ("Punjabi", "pa"), ("Javanese", "jw"), ("Vietnamese", "vi"), ("French", "fr"), ("Urdu", "ur"), ("Turkish", "tr"), ("Polish", "pl"), ("Ukranian", "uk"), ("Dutch", "nl"), ("Greek", "el"), ("Swedish", "sv"), ("Zulu", "zu"), ("Kurdish", "ku"), ("Romanian", "ro"), ("Malay", "ms")]
+@def languages = [("English", "en"), ("German", "de"), ("Italian", "it"), ("Mandarin Chinese", "zh"), ("Spanish", "es"), ("Hindi", "hi"), ("Arabic", "ar"), ("Portuguese", "pt"), ("Bengali", "bn"), ("Russian", "ru"), ("Japanese", "ja"), ("Punjabi", "pa"), ("Javanese", "jw"), ("Vietnamese", "vi"), ("French", "fr"), ("Urdu", "ur"), ("Turkish", "tr"), ("Polish", "pl"), ("Ukranian", "uk"), ("Dutch", "nl"), ("Greek", "el"), ("Swedish", "sv"), ("Zulu", "zu"), ("Romanian", "ro"), ("Malay", "ms"), ("Korean", "ko"), ("Thai", "th"), ("Filipino", "tl")]
 @def mentions = []
 @def translator = "Google Translate"
+
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise
@@ -42,7 +43,8 @@ these files might be copied and, if markdown, processed by Franklin which
 you might not want. Indicate directories by ending the name with a `/`.
 -->
 
-@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/"]
+
+@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/", "translations.db/", "translations.json", "translations.json.bak", "build/"]
 
 <!--
 Add here global latex commands to use throughout your
@@ -65,3 +67,4 @@ For instance:
 \newcommand{\imgl}[1]{~~~{{insert_img #1 left}}~~~}
 \newcommand{\imgr}[1]{~~~{{insert_img #1 right}}~~~}
 \newcommand{\imgc}[1]{~~~{{insert_img #1 none}}~~~}
+

@@ -40,7 +40,7 @@
   border-left: 0;
   border-radius: 50% 25% 25% 50%;
 }
-#site-nav ul > li > a {
+#site-nav ul > li > a, #site-nav ul > li > button {
   color: var(--alt);
   display: block;
 }
@@ -139,6 +139,7 @@ ul > li.author__place a {
 
 .langs-dropdown-content {
   display: none;
+  text-align: left;
 }
 
 .langs-dropdown-content.show {
@@ -151,6 +152,12 @@ ul > li.author__place a {
 
 .menu-lang-btn::before {
     border-radius: 25% 25% 25% 50%!important;
+}
+
+.lang-link .flag-icon {
+  position: absolute;
+  left: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 #langs-dropdown-menu {
@@ -180,4 +187,17 @@ ul > li.author__place a {
 
 #lang-list {
   background-color: var(--background-color);
+}
+
+#site-nav ul > li > button {
+    background: inherit;
+    border: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    padding: inherit;
+    margin: inherit;
+    list-style-type: inherit;
+    line-height: inherit;
+    height: inherit;
 }
