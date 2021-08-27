@@ -237,8 +237,12 @@ function hfun_tags_cloud()
     str
 end
 
-@memoize function post_link(file_path, code="")
-    joinpath(globvar(:website_url), code, splitext(file_path)[1])
+@memoize function post_link(file_path, code=""; rel=true)
+    let name = splitext(file_path)[1]
+        joinpath(rel ? "/" : globvar(:website_url),
+                 code,
+                 name === "index" ? "" : name)
+    end
 end
 
 @doc " write the post title "
@@ -296,9 +300,6 @@ function hfun_insert_bio()
 target="_blank"><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i></a>
 """)
     end
-end
-
-function hfun_recent_posts()
 end
 
 function hfun_about_place()
@@ -405,24 +406,25 @@ end
     sort(globvar(:languages))
 end
 
+include("build/css-flags.jl")
+using .cssFlags: lang_to_country
+
+@memoize ltc(code) = lang_to_country(code)
+
 function hfun_langs_list()
     c = IOBuffer()
     write(c, "<ul id=\"lang-list\">")
-    src = globvar(:lang)
     for (lang, code) in get_languages()
-        if lang === src continue end
         write(c, "<a class=\"lang-link\" id=\"lang-", code, "\" href=\"",
-                post_link(locvar(:fd_rpath), code), "\">", lang, "</a>")
+                post_link(locvar(:fd_rpath), code), "\">",
+              "<span class=\"flag-icon flag-icon-", ltc(code), "\"></span>",
+              lang, "</a>")
     end
     write(c, "</ul>")
     str = String(take!(c))
     close(c)
     str
 end
-
-# function lx_taglist(com, _)
-# 	"~~~" * hfun_taglist_desc("about") * "~~~"
-# end
 
 function lx_hfun(com::Franklin.LxCom, _)
     args = lxproc(com) |> split

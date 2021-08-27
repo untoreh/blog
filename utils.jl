@@ -18,10 +18,9 @@ include("Content.jl"); using .Content;
 include("LDJ.jl"); using .LDJ
 
 using Translator
-tr_task = nothing
 
 @doc "insert additional html into a target html file by html node"
-function set_inclusions()
+function set_transforms()
     empty!(Translator.tforms)
     Translator.tforms[HTMLElement{:head}] =
         (el, file_path, url_path,pair) ->
@@ -35,28 +34,39 @@ function config_translator()
     setlangs!((fr.globvar(:lang), fr.globvar(:lang_code)),
               fr.globvar(:languages))
     sethostname!(fr.globvar(:website_url))
-    set_inclusions()
+    push!(Translator.skip_class, "langs-dropdown-wrapper")
+    set_transforms()
+    push!(Translator.excluded_translate_dirs, :langs)
     Translator.load_db()
 end
 
-function translate_website()
-    global tr_task
+function translate_website(;dir=joinpath(@__DIR__, "__site/"), method=trav_langs)
     if isnothing(Translator.SLang.code)
         config_translator()
     end
-    website_dir = joinpath(@__DIR__, "__site/")
-    set_inclusions()
-    tr_task = @task Translator.translate_dir(website_dir)
-    schedule(tr_task)
+    set_transforms()
+    try
+        Translator.translate_dir(dir;method)
+    catch e
+        if e isa InterruptException
+            display("interrupted")
+        else
+            rethrow(e)
+        end
+    end
 end
 
-function test(reset=false, srv_sym=:deep; get_html = false, get_tree = false, TR=nothing)
+function test(reset=false, srv_sym=:deep; get_html = false, get_tree = false, TR=nothing, one_lang=("German", "de"))
     try
         dir = "__site"
-        file = "/home/fra/dev/blog/__site/posts/chronichles_of_a_cryptonote_dropper/index.html"
+        file = "/home/fra/dev/blog/__site/index.html"
         srv_val = Val(srv_sym)
 
         config_translator()
+        if length(one_lang) > 0
+            setlangs!(Translator.Lang("English", "en"),
+                      [Translator.Lang(one_lang...)])
+        end
         rx = Regex("(.*$(dir)/)(.*\$)")
         langpairs = [(src=Translator.SLang.code, trg=lang.code) for lang in Translator.TLangs]
 
@@ -64,7 +74,8 @@ function test(reset=false, srv_sym=:deep; get_html = false, get_tree = false, TR
         if isnothing(TR)
             TR = Translator.init_translator(srv_val)
         end
-        Translator.translate_file(file, rx, langpairs, TR; t_path="wow.html")
+        Translator.translate_file(file, rx, langpairs, TR)
+        Translator.save_to_db(;force=true)
         return TR
     catch e
         if isa(e, InterruptException)

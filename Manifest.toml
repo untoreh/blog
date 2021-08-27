@@ -32,6 +32,12 @@ git-tree-sha1 = "1289b57e8cf019aede076edab0587eb9644175bd"
 uuid = "9e28174c-4ba2-5203-b857-d8d62c4213ee"
 version = "1.0.2"
 
+[[BinaryProvider]]
+deps = ["Libdl", "Logging", "SHA"]
+git-tree-sha1 = "ecdec412a9abc8db54c0efc5548c64dfce072058"
+uuid = "b99e7846-7c00-51b0-8f62-c81ae34c0232"
+version = "0.5.10"
+
 [[BitConverter]]
 git-tree-sha1 = "5274a781a2e71cfb9a2083dfcd2ca5318716a660"
 uuid = "3a3ce9e8-98e7-11e9-0fa0-055639f146d3"
@@ -105,6 +111,12 @@ git-tree-sha1 = "299304989a5e6473d985212c28928899c74e9421"
 uuid = "8f4d0f93-b110-5947-807f-2305c1781a2d"
 version = "1.5.2"
 
+[[Countries]]
+deps = ["Compat", "DelimitedFiles"]
+git-tree-sha1 = "e5c6453a5e87d86f133b96ef71d3d6913d2df425"
+uuid = "5bf49175-83fb-4b6d-82b5-d6ded85154ae"
+version = "0.1.0"
+
 [[Crayons]]
 git-tree-sha1 = "3f71217b538d7aaee0b69ab47d9b7724ca8afa0d"
 uuid = "a8cc5b0e-0ffa-5ad4-8c14-923d3ee1735f"
@@ -114,6 +126,12 @@ version = "4.0.4"
 git-tree-sha1 = "ee400abb2298bd13bfc3df1c412ed228061a2385"
 uuid = "9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a"
 version = "1.7.0"
+
+[[DataDeps]]
+deps = ["BinaryProvider", "HTTP", "Libdl", "Reexport", "SHA", "p7zip_jll"]
+git-tree-sha1 = "4f0e41ff461d42cfc62ff0de4f1cd44c6e6b3771"
+uuid = "124859b0-ceae-595e-8997-d05f6a7a8dfe"
+version = "0.7.7"
 
 [[DataStructures]]
 deps = ["Compat", "InteractiveUtils", "OrderedCollections"]
@@ -232,6 +250,12 @@ deps = ["Libdl", "Pkg"]
 git-tree-sha1 = "86111f5523d7c42da0edd85ef7999c663881ac1e"
 uuid = "528830af-5a63-567c-a44a-034ed33b8444"
 version = "0.10.1+1"
+
+[[HTML_Entities]]
+deps = ["StrTables"]
+git-tree-sha1 = "c4144ed3bc5f67f595622ad03c0e39fa6c70ccc7"
+uuid = "7693890a-d069-55fe-a829-b4a6d304f0ee"
+version = "1.0.1"
 
 [[HTTP]]
 deps = ["Base64", "Dates", "IniFile", "MbedTLS", "Sockets"]
@@ -525,6 +549,12 @@ git-tree-sha1 = "1958272568dc176a1d881acb797beb909c785510"
 uuid = "82ae8749-77ed-4fe6-ae5f-f523153014b0"
 version = "1.0.0"
 
+[[StrTables]]
+deps = ["Dates"]
+git-tree-sha1 = "5998faae8c6308acc25c25896562a1e66a3bb038"
+uuid = "9700d1a9-a7c8-5760-9816-a99fda30bb8f"
+version = "1.0.1"
+
 [[StringDistances]]
 deps = ["Distances"]
 git-tree-sha1 = "a4c05337dfe6c4963253939d2acbdfa5946e8e31"
@@ -567,7 +597,7 @@ uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
 version = "0.9.6"
 
 [[Translator]]
-deps = ["AbstractTrees", "BitConverter", "CodecZstd", "Conda", "DataStructures", "EzXML", "FilePathsBase", "Gumbo", "HTTP", "JSON", "MacroTools", "PyCall", "ResumableFunctions", "Revise", "Serialization", "StringViews", "TranscodingStreams", "URIs"]
+deps = ["AbstractTrees", "BitConverter", "CodecZstd", "Conda", "DataStructures", "EzXML", "FilePathsBase", "Gumbo", "HTTP", "JSON", "MacroTools", "Memoization", "PyCall", "ResumableFunctions", "Revise", "Serialization", "StringViews", "TranscodingStreams", "URIs", "WordTokenizers"]
 path = "/home/fra/dev/Translator.jl"
 uuid = "7b12ad4c-248e-49d0-9ce0-1140dfa8bd03"
 version = "0.1.0"
@@ -594,6 +624,12 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 git-tree-sha1 = "80229be1f670524750d905f8fc8148e5a8c4537f"
 uuid = "81def892-9a0e-5fdd-b105-ffc91e053289"
 version = "1.2.0"
+
+[[WordTokenizers]]
+deps = ["DataDeps", "HTML_Entities", "StrTables", "Unicode"]
+git-tree-sha1 = "01dd4068c638da2431269f49a5964bf42ff6c9d2"
+uuid = "796a5d58-b03d-544a-977e-18100b691f6e"
+version = "0.5.6"
 
 [[XML2_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Libiconv_jll", "Pkg", "Zlib_jll"]
