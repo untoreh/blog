@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  hosting network  ]]>
+  </title>
+  <link> https://unto.re/posts/hosting-network/index.html </link>
+  <guid> https://unto.re/posts/hosting-network/index.html </guid>
+  <description>
+    <![CDATA[  A social network for hosting services  ]]>
+  </description>  
+    
+  <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  grapes for winetricks  ]]>
   </title>
   <link> https://unto.re/posts/grapes-for-winetricks/index.html </link>
@@ -48,25 +67,6 @@
   <guid> https://unto.re/posts/tribes/index.html </guid>
   <description>
     <![CDATA[  Ponds to share news  ]]>
-  </description>  
-    
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  hosting network  ]]>
-  </title>
-  <link> https://unto.re/posts/hosting-network/index.html </link>
-  <guid> https://unto.re/posts/hosting-network/index.html </guid>
-  <description>
-    <![CDATA[  A social network for hosting services  ]]>
   </description>  
     
   <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
@@ -184,25 +184,6 @@
   </description>  
     
   <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  a jar to strain yogurt  ]]>
-  </title>
-  <link> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </link>
-  <guid> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </guid>
-  <description>
-    <![CDATA[  A jar that separates whey from yogurt, for thickening  ]]>
-  </description>  
-    
-  <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

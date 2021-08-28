@@ -13,13 +13,108 @@
     </title>
     <link> https://unto.re </link>
     <description>
-      <![CDATA[  you know...stuff  ]]>
+      <![CDATA[  An archive of <em>WILD</em> interests...  ]]>
     </description>
     <atom:link
       href="https://unto.re/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
+
+<item>
+  <title>
+    <![CDATA[  shell scripting  ]]>
+  </title>
+  <link> https://unto.re/posts/shell-scripting/index.html </link>
+  <guid> https://unto.re/posts/shell-scripting/index.html </guid>
+  <description>
+    <![CDATA[  Thoughts on shell scripting  ]]>
+  </description>  
+    
+  <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  hosting network  ]]>
+  </title>
+  <link> https://unto.re/posts/hosting-network/index.html </link>
+  <guid> https://unto.re/posts/hosting-network/index.html </guid>
+  <description>
+    <![CDATA[  A social network for hosting services  ]]>
+  </description>  
+    
+  <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  a jar to strain yogurt  ]]>
+  </title>
+  <link> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </link>
+  <guid> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </guid>
+  <description>
+    <![CDATA[  A jar that separates whey from yogurt, for thickening  ]]>
+  </description>  
+    
+  <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Chronicles of a cryptonote dropper  ]]>
+  </title>
+  <link> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </link>
+  <guid> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </guid>
+  <description>
+    <![CDATA[  ...How far are you willing to go for...pennies?  ]]>
+  </description>  
+    
+  <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  types of 3D platformers  ]]>
+  </title>
+  <link> https://unto.re/posts/types-of-3D-platformers/index.html </link>
+  <guid> https://unto.re/posts/types-of-3D-platformers/index.html </guid>
+  <description>
+    <![CDATA[  what kind of games can be called platformers?  ]]>
+  </description>  
+    
+  <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
 
 <item>
   <title>
@@ -143,25 +238,6 @@
   <guid> https://unto.re/posts/tribes/index.html </guid>
   <description>
     <![CDATA[  Ponds to share news  ]]>
-  </description>  
-    
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  hosting network  ]]>
-  </title>
-  <link> https://unto.re/posts/hosting-network/index.html </link>
-  <guid> https://unto.re/posts/hosting-network/index.html </guid>
-  <description>
-    <![CDATA[  A social network for hosting services  ]]>
   </description>  
     
   <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
@@ -365,44 +441,6 @@
 
 <item>
   <title>
-    <![CDATA[  shell scriping  ]]>
-  </title>
-  <link> https://unto.re/posts/shell-scriping/index.html </link>
-  <guid> https://unto.re/posts/shell-scriping/index.html </guid>
-  <description>
-    <![CDATA[  Thoughts on shell scripting  ]]>
-  </description>  
-    
-  <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Chronicles of a cryptonote dropper  ]]>
-  </title>
-  <link> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </link>
-  <guid> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </guid>
-  <description>
-    <![CDATA[  ...How far are you willing to go for...pennies?  ]]>
-  </description>  
-    
-  <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Android apps lists  ]]>
   </title>
   <link> https://unto.re/posts/android-apps-lists/index.html </link>
@@ -447,25 +485,6 @@
   <guid> https://unto.re/posts/shades-of-colors/index.html </guid>
   <description>
     <![CDATA[  Take a from black-white to colored gradient  ]]>
-  </description>  
-    
-  <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  a jar to strain yogurt  ]]>
-  </title>
-  <link> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </link>
-  <guid> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </guid>
-  <description>
-    <![CDATA[  A jar that separates whey from yogurt, for thickening  ]]>
   </description>  
     
   <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>  
