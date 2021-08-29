@@ -44,7 +44,7 @@ you might not want. Indicate directories by ending the name with a `/`.
 -->
 
 
-@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/", "translations.db/", "translations.json", "translations.json.bak", "build/"]
+@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/", "translations.db/", "translations.json", "translations.json.bak", "build/", "TODO.md"]
 
 <!--
 Add here global latex commands to use throughout your
@@ -67,4 +67,5 @@ For instance:
 \newcommand{\imgl}[1]{~~~{{insert_img #1 left}}~~~}
 \newcommand{\imgr}[1]{~~~{{insert_img #1 right}}~~~}
 \newcommand{\imgc}[1]{~~~{{insert_img #1 none}}~~~}
+
 

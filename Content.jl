@@ -411,13 +411,14 @@ using .cssFlags: lang_to_country
 
 @memoize ltc(code) = lang_to_country(code)
 
-function hfun_langs_list()
+function hfun_langs_list(usesvg=false)
     c = IOBuffer()
     write(c, "<ul id=\"lang-list\">")
+    css_classes = usesvg ? "flag-icon flag-icon-" : "flag flag-"
     for (lang, code) in get_languages()
         write(c, "<a class=\"lang-link\" id=\"lang-", code, "\" href=\"",
                 post_link(locvar(:fd_rpath), code), "\">",
-              "<span class=\"flag-icon flag-icon-", ltc(code), "\"></span>",
+              "<span class=\"", css_classes, ltc(code), "\"></span>",
               lang, "</a>")
     end
     write(c, "</ul>")

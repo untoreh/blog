@@ -154,10 +154,13 @@ ul > li.author__place a {
     border-radius: 25% 25% 25% 50%!important;
 }
 
-.lang-link .flag-icon {
+.lang-link .flag-icon, .lang-link .flag {
   position: absolute;
-  left: 0.75rem;
-  margin-top: 0.5rem;
+  /* for svg */
+  /* left: 0.75rem; */
+  /* margin-top: 0.5rem; */
+  left: 1rem;
+  margin-top: 0.65rem;
 }
 
 #langs-dropdown-menu {
