@@ -8,6 +8,7 @@ using DataStructures:DefaultDict
 using Franklin: convert_md, convert_html, pagevar, globvar, locvar, path;
 using Dates: DateFormat, Date
 using Memoization: @memoize
+using Gumbo: HTMLElement
 # include("exporter.jl")
 
 
@@ -25,6 +26,10 @@ function hfun_color(args)
     color = args[1]
     txt = args[1]
     return "<span color=\"$color\">$txt</span>"
+end
+
+@memoize function website_url(path)
+    joinpath(globvar(:website_url), path)
 end
 
 function hfun_recentblogposts()
@@ -241,7 +246,7 @@ end
     let name = splitext(file_path)[1]
         joinpath(rel ? "/" : globvar(:website_url),
                  code,
-                 name === "index" ? "" : name)
+                 replace(name, r"(index|404)$" => ""))
     end
 end
 
@@ -429,9 +434,39 @@ end
 
 function lx_hfun(com::Franklin.LxCom, _)
     args = lxproc(com) |> split
-    let f = getfield(@__MODULE__, Symbol("hfun_" * args[1]))
+    let f = getfield(Main, Symbol("hfun_" * args[1]))
         length(args) > 1 ? f(args[2:end]...) : f()
     end
+end
+
+function canonical_link_el(url::AbstractString="")
+    ln = HTMLElement(:link)
+    ln.attributes["rel"] = "canonical"
+    ln.attributes["href"] = url
+    ln
+end
+
+@inline function canonical_url(code="")
+    locvar(:fd_rpath) |> x -> post_link(x, code; rel=false)
+end
+
+function hfun_canonical_link()
+	"<link rel=\"canonical\" href=\"" *
+        canonical_url() *
+        "\">"
+end
+
+@memoize function base_crumbs()
+	[("Home", locvar(:website_url)),
+     ("Posts List", joinpath(locvar(:website_url),
+                             globvar(:posts_path))),
+     ("", "")]
+end
+
+function post_crumbs()
+    crumbs = base_crumbs()
+    crumbs[end] = (locvar(:title), canonical_url())
+    crumbs
 end
 
 # exportall()

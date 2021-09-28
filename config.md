@@ -26,6 +26,9 @@ The website_* must be defined for the RSS to work
 
 @def mintoclevel = 2
 @def div_content = "franklin-content"
+@def posts_path = "/posts/"
+@def calibre_server = "http://localhost:8099"
+@def calibre_library = "books"
 
 <!-- https://schema.org/accessMode -->
 
@@ -67,5 +70,4 @@ For instance:
 \newcommand{\imgl}[1]{~~~{{insert_img #1 left}}~~~}
 \newcommand{\imgr}[1]{~~~{{insert_img #1 right}}~~~}
 \newcommand{\imgc}[1]{~~~{{insert_img #1 none}}~~~}
-
 

@@ -13,20 +13,42 @@ using Franklin; const fr = Franklin;
 # to avoid clobbering global vars
 using Franklin: convert_md, convert_html, pagevar, globvar, locvar, path;
 
-include("misc.jl");
-include("Content.jl"); using .Content;
-include("LDJ.jl"); using .LDJ
+# include("misc.jl");
+# include("LDJ.jl"); using .LDJ; using .LDJ.Content;
+using Gumbo: HTMLElement, hasattr, setattr!, getattr
+include("LDJFranklin.jl"); using .LDJFranklin; using .LDJFranklin.LDJ; using .LDJFranklin.LDJ.Content
 
 using Translator
 
+function add_ld_data(el, file_path, url_path, pair)
+    src_url = Content.canonical_url()
+    trg_url = Content.post_link(url_path, pair.trg)
+
+    LDJ.ldj_trans(file_path, src_url, trg_url, pair.trg) |>
+        x -> Translator.convert(HTMLElement{:script}, x) |>
+        x -> push!(el, x)
+
+    # find canonical link and apply translation
+    for el in el.children
+        if el isa HTMLElement{:link} &&
+            hasattr(el, "rel") &&
+            getattr(el, "rel") === "canonical"
+            setattr!(el, "href", Content.canonical_url(pair.trg))
+            break
+        end
+    end
+    # push!(el, canonical_url() |> canonical_link_el)
+    # push!(el, breadcrumbs([("Home", locvar(:website_url)),
+    #                        ("Posts List", joinpath(locvar(:website_url), globvar(:posts_path))),
+    #                        (locvar(:title), locvar(trg_url))]))
+end
+
 @doc "insert additional html into a target html file by html node"
 function set_transforms()
-    empty!(Translator.tforms)
-    Translator.tforms[HTMLElement{:head}] =
-        (el, file_path, url_path,pair) ->
-        push!(el,
-              Translator.convert(HTMLElement{:script},
-                                 LDJ.ldj_trans(file_path, url_path, pair.trg)))
+    let tf = Translator.tforms
+        empty!(tf)
+        tf[HTMLElement{:head}] = add_ld_data
+    end
 end
 
 function config_translator()
@@ -34,29 +56,28 @@ function config_translator()
     setlangs!((fr.globvar(:lang), fr.globvar(:lang_code)),
               fr.globvar(:languages))
     sethostname!(fr.globvar(:website_url))
-    push!(Translator.skip_class, "langs-dropdown-wrapper")
+    push!(Translator.skip_class, "menu-lang-btn")
     set_transforms()
     push!(Translator.excluded_translate_dirs, :langs)
     Translator.load_db()
 end
 
-function translate_website(;dir=joinpath(@__DIR__, "__site/"), method=trav_langs)
+function translate_website(;dir=joinpath(@__DIR__, "__site/"), method=Translator.trav_langs)
     if isnothing(Translator.SLang.code)
         config_translator()
     end
-    set_transforms()
     try
         Translator.translate_dir(dir;method)
     catch e
         if e isa InterruptException
-            display("interrupted")
+            display("Interrupted")
         else
             rethrow(e)
         end
     end
 end
 
-function test(reset=false, srv_sym=:deep; get_html = false, get_tree = false, TR=nothing, one_lang=("German", "de"))
+function test(reset=false, srv_sym=:deep; get_html=false, get_tree=false, TR=nothing, one_lang=("German", "de"))
     try
         dir = "__site"
         file = "/home/fra/dev/blog/__site/index.html"
@@ -68,7 +89,7 @@ function test(reset=false, srv_sym=:deep; get_html = false, get_tree = false, TR
                       [Translator.Lang(one_lang...)])
         end
         rx = Regex("(.*$(dir)/)(.*\$)")
-        langpairs = [(src=Translator.SLang.code, trg=lang.code) for lang in Translator.TLangs]
+        langpairs = [(src = Translator.SLang.code, trg = lang.code) for lang in Translator.TLangs]
 
         if reset reset() end
         if isnothing(TR)
@@ -97,7 +118,7 @@ reset() = begin
 end
 
 clear_db() = begin
-    empty!(Translator.db.db)
+empty!(Translator.db.db)
     empty!(Translator.tr_cache_tmp)
 end
 

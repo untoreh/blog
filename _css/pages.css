@@ -113,3 +113,9 @@
   font-size: 1.5rem;
   line-height: 2rem;
 }
+
+#library .book-author {
+    color: var(--accent2);
+    font-size: 0.9rem;
+    display: inline;
+}
