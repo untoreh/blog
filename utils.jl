@@ -14,9 +14,10 @@ using Franklin; const fr = Franklin;
 using Franklin: convert_md, convert_html, pagevar, globvar, locvar, path;
 
 # include("misc.jl");
-# include("LDJ.jl"); using .LDJ; using .LDJ.Content;
+include("Content.jl")
+using .Content
 using Gumbo: HTMLElement, hasattr, setattr!, getattr
-include("LDJFranklin.jl"); using .LDJFranklin; using .LDJFranklin.LDJ; using .LDJFranklin.LDJ.Content
+using LDJ.LDJFranklin
 
 using Translator
 
@@ -24,7 +25,7 @@ function add_ld_data(el, file_path, url_path, pair)
     src_url = Content.canonical_url()
     trg_url = Content.post_link(url_path, pair.trg)
 
-    LDJ.ldj_trans(file_path, src_url, trg_url, pair.trg) |>
+    LDJFranklin.ldj_trans(file_path, src_url, trg_url, pair.trg) |>
         x -> Translator.convert(HTMLElement{:script}, x) |>
         x -> push!(el, x)
 
@@ -33,14 +34,10 @@ function add_ld_data(el, file_path, url_path, pair)
         if el isa HTMLElement{:link} &&
             hasattr(el, "rel") &&
             getattr(el, "rel") === "canonical"
-            setattr!(el, "href", Content.canonical_url(pair.trg))
+            setattr!(el, "href", Content.canonical_url(;code=pair.trg))
             break
         end
     end
-    # push!(el, canonical_url() |> canonical_link_el)
-    # push!(el, breadcrumbs([("Home", locvar(:website_url)),
-    #                        ("Posts List", joinpath(locvar(:website_url), globvar(:posts_path))),
-    #                        (locvar(:title), locvar(trg_url))]))
 end
 
 @doc "insert additional html into a target html file by html node"
@@ -52,12 +49,21 @@ function set_transforms()
 end
 
 function config_translator()
+    # process franklin config config; see `serve` function
+    prepath = get(fr.GLOBAL_VARS, "prepath", nothing)
+    fr.def_GLOBAL_VARS!()
+    isnothing(prepath) || fr.set_var!(fr.GLOBAL_VARS, "prepath", prepath.first)
     fr.process_config()
+    @assert !isnothing(fr.globvar(:website_url))
+
+    # languages
     setlangs!((fr.globvar(:lang), fr.globvar(:lang_code)),
               fr.globvar(:languages))
+    # html config
     sethostname!(fr.globvar(:website_url))
     push!(Translator.skip_class, "menu-lang-btn")
     set_transforms()
+    # files
     push!(Translator.excluded_translate_dirs, :langs)
     Translator.load_db()
 end
@@ -118,7 +124,6 @@ reset() = begin
 end
 
 clear_db() = begin
-empty!(Translator.db.db)
+    empty!(Translator.db.db)
     empty!(Translator.tr_cache_tmp)
 end
-

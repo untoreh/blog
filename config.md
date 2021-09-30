@@ -37,7 +37,8 @@ The website_* must be defined for the RSS to work
 <!-- @def languages = [("English", "en"), ("Italian", "it")] -->
 @def languages = [("English", "en"), ("German", "de"), ("Italian", "it"), ("Mandarin Chinese", "zh"), ("Spanish", "es"), ("Hindi", "hi"), ("Arabic", "ar"), ("Portuguese", "pt"), ("Bengali", "bn"), ("Russian", "ru"), ("Japanese", "ja"), ("Punjabi", "pa"), ("Javanese", "jw"), ("Vietnamese", "vi"), ("French", "fr"), ("Urdu", "ur"), ("Turkish", "tr"), ("Polish", "pl"), ("Ukranian", "uk"), ("Dutch", "nl"), ("Greek", "el"), ("Swedish", "sv"), ("Zulu", "zu"), ("Romanian", "ro"), ("Malay", "ms"), ("Korean", "ko"), ("Thai", "th"), ("Filipino", "tl")]
 @def mentions = []
-@def translator = "Google Translate"
+@def translator_name = "Google Translate"
+@def translator_url = "http://google.translate.com"
 
 
 <!--
@@ -70,4 +71,3 @@ For instance:
 \newcommand{\imgl}[1]{~~~{{insert_img #1 left}}~~~}
 \newcommand{\imgr}[1]{~~~{{insert_img #1 right}}~~~}
 \newcommand{\imgc}[1]{~~~{{insert_img #1 none}}~~~}
-

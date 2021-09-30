@@ -1,9 +1,13 @@
++++
+title = "Reading materials"
+tags = ["library", "books", "readings", "resources", "docs"]
++++
+
 # Reads
 
 <!-- prettier-ignore-start -->
 
 > Interesting stuff, reference materials, docs, etc...
-> star to tell if I found them useful...
 ~~~ <style> .light blockquote {color: var(--alt4);} </style> ~~~
 <!-- prettier-ignore-end -->
 

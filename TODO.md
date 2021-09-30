@@ -1,3 +1,4 @@
 - SE indexing
 - schemas metadata
-- a better landing page
+  - AMP pages?
+- a better landing page ??
