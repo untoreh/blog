@@ -7,19 +7,11 @@
 - [Pine](https://github.com/untoreh/pine)
 
 #### Contact \icon{fa-address-book} Links:
-- \iconb{fa-github} [github]
-- \iconb{fa-twitch} [twitch]
-- \iconb{fa-twitter} [twitter]
-- \iconb{fa-instagram} [instagram]
-- \icon{fa-at} [email]
 
-[articles]: posts/
-[stuff]: about/
-[topics]: tag/
-[github]: https://github.com/untoreh
-[twitch]: https://twitch.tv/untoreh
-[twitter]: https://twitter.com/@untoreh
-[instagram]: https://instagram.com/untoreh
-[email]: mailto:contact@unto.re
+- \iconb{fa-github} [github](https://github.com/untoreh)
+- \iconb{fa-twitch} [twitch](https://twitch.tv/untoreh)
+- \iconb{fa-twitter} [twitter](https://twitter.com/@untoreh)
+- \iconb{fa-instagram} [instagram](https://instagram.com/untoreh)
+- \icon{fa-at} [email](mailto:contact@unto.re)
 
 @@
