@@ -17,6 +17,12 @@ git-tree-sha1 = "84918055d15b3114ede17ac6a7182f68870c16f7"
 uuid = "79e6a3ab-5dfb-504d-930d-738a2a938a0e"
 version = "3.3.1"
 
+[[Aqua]]
+deps = ["Compat", "Pkg", "Test"]
+git-tree-sha1 = "a6025af01eb605dc0ec02923fb8f3ba62b34b66e"
+uuid = "4c88cf16-eb10-579e-8560-4a9242c79595"
+version = "0.5.1"
+
 [[ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"
 
@@ -80,12 +86,12 @@ uuid = "6b39b394-51ab-5f42-8807-6242bab2b4c2"
 version = "0.7.0"
 
 [[ColorSchemes]]
-deps = ["ColorTypes", "Colors", "FixedPointNumbers", "Random", "StaticArrays"]
-git-tree-sha1 = "b9142c520a5cf851df70714561b4e16666447daa"
+deps = ["ColorTypes", "Colors", "FixedPointNumbers", "Random"]
+git-tree-sha1 = "a851fec56cb73cfdf43762999ec72eff5b86882a"
 repo-rev = "master"
 repo-url = "https://github.com/JuliaGraphics/ColorSchemes.jl.git"
 uuid = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
-version = "3.13.0"
+version = "3.15.0"
 
 [[ColorTypes]]
 deps = ["FixedPointNumbers", "Random"]
@@ -101,9 +107,9 @@ version = "0.12.8"
 
 [[Compat]]
 deps = ["Base64", "Dates", "DelimitedFiles", "Distributed", "InteractiveUtils", "LibGit2", "Libdl", "LinearAlgebra", "Markdown", "Mmap", "Pkg", "Printf", "REPL", "Random", "SHA", "Serialization", "SharedArrays", "Sockets", "SparseArrays", "Statistics", "Test", "UUIDs", "Unicode"]
-git-tree-sha1 = "344f143fa0ec67e47917848795ab19c6a455f32c"
+git-tree-sha1 = "31d0151f5716b655421d9d75b7fa74cc4e744df2"
 uuid = "34da2185-b29b-5c13-b0c7-acf172513d20"
-version = "3.32.0"
+version = "3.39.0"
 
 [[Conda]]
 deps = ["JSON", "VersionParsing"]
@@ -123,9 +129,9 @@ uuid = "a8cc5b0e-0ffa-5ad4-8c14-923d3ee1735f"
 version = "4.0.4"
 
 [[DataAPI]]
-git-tree-sha1 = "ee400abb2298bd13bfc3df1c412ed228061a2385"
+git-tree-sha1 = "cc70b17275652eb47bc9e5f81635981f13cea5c8"
 uuid = "9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a"
-version = "1.7.0"
+version = "1.9.0"
 
 [[DataDeps]]
 deps = ["BinaryProvider", "HTTP", "Libdl", "Reexport", "SHA", "p7zip_jll"]
@@ -135,9 +141,9 @@ version = "0.7.7"
 
 [[DataStructures]]
 deps = ["Compat", "InteractiveUtils", "OrderedCollections"]
-git-tree-sha1 = "4437b64df1e0adccc3e5d1adbc3ac741095e4677"
+git-tree-sha1 = "7d9d316f04214f7efdbb6398d545446e246eff02"
 uuid = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
-version = "0.18.9"
+version = "0.18.10"
 
 [[DataValueInterfaces]]
 git-tree-sha1 = "bfc1187b79289637fa0ef6d4436ebdfe6905cbd6"
@@ -153,15 +159,15 @@ deps = ["Mmap"]
 uuid = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 
 [[DiskArrays]]
-git-tree-sha1 = "599dc32bae654fa78056b15fed9b2af36f04ee44"
+git-tree-sha1 = "6a50d800025a1664c99a8e819e0568c75e3ac0c7"
 uuid = "3c3547ce-8d99-4f5e-a174-61eb10b00ae3"
-version = "0.2.11"
+version = "0.2.12"
 
 [[Distances]]
 deps = ["LinearAlgebra", "Statistics", "StatsAPI"]
-git-tree-sha1 = "abe4ad222b26af3337262b8afb28fab8d215e9f8"
+git-tree-sha1 = "9f46deb4d4ee4494ffb5a40a27a2aced67bdd838"
 uuid = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
-version = "0.10.3"
+version = "0.10.4"
 
 [[Distributed]]
 deps = ["Random", "Serialization", "Sockets"]
@@ -194,12 +200,6 @@ git-tree-sha1 = "0fa3b52a04a4e210aeb1626def9c90df3ae65268"
 uuid = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
 version = "1.1.0"
 
-[[FilePathsBase]]
-deps = ["Dates", "Mmap", "Printf", "Test", "UUIDs"]
-git-tree-sha1 = "0f5e8d0cb91a6386ba47bd1527b240bd5725fbae"
-uuid = "48062228-2e41-5def-b9a4-89aafe57970f"
-version = "0.9.10"
-
 [[FileWatching]]
 uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
 
@@ -217,9 +217,9 @@ version = "0.4.2"
 
 [[Franklin]]
 deps = ["Dates", "DelimitedFiles", "DocStringExtensions", "ExprTools", "FranklinTemplates", "HTTP", "Literate", "LiveServer", "Logging", "Markdown", "NodeJS", "OrderedCollections", "Pkg", "REPL", "Random"]
-git-tree-sha1 = "20def07659343b706773ed91ad099f04c0a64e2f"
+git-tree-sha1 = "85c3934124729aabc03c0cca76cacbc33f0609ab"
 uuid = "713c75ef-9fc9-4b05-94a9-213340da978e"
-version = "0.10.45"
+version = "0.10.58"
 
 [[FranklinTemplates]]
 deps = ["LiveServer"]
@@ -235,9 +235,9 @@ version = "0.3.4"
 
 [[GitHub]]
 deps = ["Base64", "Dates", "HTTP", "JSON", "MbedTLS", "Sockets", "SodiumSeal"]
-git-tree-sha1 = "9e62f3eae4a2514d1de65cc2ac9d1669032a4595"
+git-tree-sha1 = "c8594dff1ed76e232d8063b2a2555335900af6f3"
 uuid = "bc5e4493-9b4d-5f90-b8aa-2b2bcaad7a26"
-version = "5.6.0"
+version = "5.7.0"
 
 [[Gumbo]]
 deps = ["AbstractTrees", "Gumbo_jll", "Libdl"]
@@ -297,20 +297,28 @@ version = "1.3.0"
 
 [[JSON]]
 deps = ["Dates", "Mmap", "Parsers", "Unicode"]
-git-tree-sha1 = "81690084b6198a2e1da36fcfda16eeca9f9f24e4"
+git-tree-sha1 = "8076680b162ada2a031f707ac7b4953e30667a37"
 uuid = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
-version = "0.21.1"
+version = "0.21.2"
 
 [[JuliaInterpreter]]
 deps = ["CodeTracking", "InteractiveUtils", "Random", "UUIDs"]
-git-tree-sha1 = "76112882a210564b616dbdf371fc0fbbae28d31f"
+git-tree-sha1 = "e273807f38074f033d94207a201e6e827d8417db"
 uuid = "aa1ae85d-cabe-5617-a682-6adf51b2e16a"
-version = "0.8.19"
+version = "0.8.21"
 
 [[Kroki]]
 deps = ["Base64", "CodecZlib", "DocStringExtensions", "HTTP"]
 git-tree-sha1 = "1f0c3d257c94012f79d0381914460b2339fe1be9"
 uuid = "b3565e16-c1f2-4fe9-b4ab-221c88942068"
+version = "0.1.0"
+
+[[LDJ]]
+deps = ["Dates", "FranklinUtils", "HTTP", "JSON", "Memoization"]
+git-tree-sha1 = "58258f66828769d40a3064cd0d891c7b94b16e24"
+repo-rev = "main"
+repo-url = "https://github.com/untoreh/LDJ.jl"
+uuid = "d31b9dc2-a037-4e1a-9a29-34f8080d388f"
 version = "0.1.0"
 
 [[LevelDB]]
@@ -350,9 +358,9 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Literate]]
 deps = ["Base64", "IOCapture", "JSON", "REPL"]
-git-tree-sha1 = "04a71882b041c0d896e4b379bb333a2e2d04054e"
+git-tree-sha1 = "bbebc3c14dbfbe76bfcbabf0937481ac84dc86ef"
 uuid = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
-version = "2.9.1"
+version = "2.9.3"
 
 [[LiveServer]]
 deps = ["Crayons", "FileWatching", "HTTP", "Pkg", "Sockets", "Test"]
@@ -377,9 +385,9 @@ version = "1.9.3+0"
 
 [[MacroTools]]
 deps = ["Markdown", "Random"]
-git-tree-sha1 = "0fb723cd8c45858c22169b2e42269e53271a6df7"
+git-tree-sha1 = "5a5bc6bf062f0f95e62d0fe0a2d99699fed82dd9"
 uuid = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
-version = "0.5.7"
+version = "0.5.8"
 
 [[Markdown]]
 deps = ["Base64"]
@@ -430,9 +438,9 @@ version = "1.3.0"
 
 [[OffsetArrays]]
 deps = ["Adapt"]
-git-tree-sha1 = "c0f4a4836e5f3e0763243b8324200af6d0e0f90c"
+git-tree-sha1 = "c0e9e582987d36d5a61e650e6e543b9e44d9914b"
 uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
-version = "1.10.5"
+version = "1.10.7"
 
 [[OrderedCollections]]
 git-tree-sha1 = "85f8e6578bf1f9ee0d11e7bb1b1456435479d47c"
@@ -441,9 +449,9 @@ version = "1.4.1"
 
 [[Parsers]]
 deps = ["Dates"]
-git-tree-sha1 = "bfd7d8c7fd87f04543810d9cbd3995972236ba1b"
+git-tree-sha1 = "9d8c00ef7a8d110787ff6f170579846f776133a9"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "1.1.2"
+version = "2.0.4"
 
 [[Pkg]]
 deps = ["Artifacts", "Dates", "Downloads", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
@@ -480,9 +488,9 @@ deps = ["Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[Reexport]]
-git-tree-sha1 = "5f6c21241f0f655da3952fd60aa18477cf96c220"
+git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
-version = "1.1.0"
+version = "1.2.2"
 
 [[Requires]]
 deps = ["UUIDs"]
@@ -492,11 +500,11 @@ version = "1.1.3"
 
 [[ResumableFunctions]]
 deps = ["MacroTools"]
-git-tree-sha1 = "a618fdcd4a550f5a353a8b1edac88ad93908a04a"
+git-tree-sha1 = "b198ee5bb6762423d3c61caacbdd43e640be265a"
 repo-rev = "master"
 repo-url = "https://github.com/BenLauwens/ResumableFunctions.jl.git"
 uuid = "c5292f4c-5179-55e1-98c5-05642aab7184"
-version = "0.6.0"
+version = "0.6.1"
 
 [[Retry]]
 git-tree-sha1 = "41ac127cd281bb33e42aba46a9d3b25cd35fc6d5"
@@ -505,11 +513,11 @@ version = "0.4.1"
 
 [[Revise]]
 deps = ["CodeTracking", "Distributed", "FileWatching", "JuliaInterpreter", "LibGit2", "LoweredCodeUtils", "OrderedCollections", "Pkg", "REPL", "Requires", "UUIDs", "Unicode"]
-git-tree-sha1 = "da7773b8c8c51f325347c9ea3e1ddbf88c973bf5"
+git-tree-sha1 = "19aaf6e94387970392996b0dc97c5a2999a377a6"
 repo-rev = "master"
 repo-url = "https://github.com/timholy/Revise.jl.git"
 uuid = "295af30f-e4ad-537b-8983-00126c2a3abe"
-version = "3.1.17"
+version = "3.1.20"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
@@ -534,12 +542,6 @@ version = "0.1.1"
 deps = ["LinearAlgebra", "Random"]
 uuid = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 
-[[StaticArrays]]
-deps = ["LinearAlgebra", "Random", "Statistics"]
-git-tree-sha1 = "3240808c6d463ac46f1c1cd7638375cd22abbccb"
-uuid = "90137ffa-7385-5640-81b9-e52037218182"
-version = "1.2.12"
-
 [[Statistics]]
 deps = ["LinearAlgebra", "SparseArrays"]
 uuid = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
@@ -556,10 +558,10 @@ uuid = "9700d1a9-a7c8-5760-9816-a99fda30bb8f"
 version = "1.0.1"
 
 [[StringDistances]]
-deps = ["Distances"]
-git-tree-sha1 = "a4c05337dfe6c4963253939d2acbdfa5946e8e31"
+deps = ["Distances", "StatsAPI"]
+git-tree-sha1 = "00e86048552d34bb486cad935754dd9516bdb46e"
 uuid = "88034a9c-02f8-509d-84a9-84ec65e18404"
-version = "0.10.0"
+version = "0.11.1"
 
 [[StringViews]]
 git-tree-sha1 = "71fa43afeea22654042ce9b809d32e223d015a5d"
@@ -578,9 +580,9 @@ version = "1.0.1"
 
 [[Tables]]
 deps = ["DataAPI", "DataValueInterfaces", "IteratorInterfaceExtensions", "LinearAlgebra", "TableTraits", "Test"]
-git-tree-sha1 = "d0c690d37c73aeb5ca063056283fde5585a41710"
+git-tree-sha1 = "1162ce4a6c4b7e31e0e6b14486a6986951c73be9"
 uuid = "bd369af6-aec1-5ad0-b16a-f7cc5008161c"
-version = "1.5.0"
+version = "1.5.2"
 
 [[Tar]]
 deps = ["ArgTools", "SHA"]
@@ -597,7 +599,7 @@ uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
 version = "0.9.6"
 
 [[Translator]]
-deps = ["AbstractTrees", "BitConverter", "CodecZstd", "Conda", "DataStructures", "EzXML", "FilePathsBase", "Gumbo", "HTTP", "JSON", "MacroTools", "Memoization", "PyCall", "ResumableFunctions", "Revise", "Serialization", "StringViews", "TranscodingStreams", "URIs", "WordTokenizers"]
+deps = ["AbstractTrees", "Aqua", "BitConverter", "CodecZstd", "Conda", "Gumbo", "HTTP", "JSON", "LevelDB", "MacroTools", "Memoization", "PyCall", "ResumableFunctions", "Serialization", "StringViews", "TranscodingStreams", "URIs", "WordTokenizers"]
 path = "/home/fra/dev/Translator.jl"
 uuid = "7b12ad4c-248e-49d0-9ce0-1140dfa8bd03"
 version = "0.1.0"
