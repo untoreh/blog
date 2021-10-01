@@ -314,8 +314,8 @@ uuid = "b3565e16-c1f2-4fe9-b4ab-221c88942068"
 version = "0.1.0"
 
 [[LDJ]]
-deps = ["Dates", "FranklinUtils", "HTTP", "JSON", "Memoization"]
-git-tree-sha1 = "58258f66828769d40a3064cd0d891c7b94b16e24"
+deps = ["Dates", "FranklinUtils", "HTTP", "JSON", "Memoization", "URIs"]
+git-tree-sha1 = "c16e78b1f8842948e98727105c00973a81a716f1"
 repo-rev = "main"
 repo-url = "https://github.com/untoreh/LDJ.jl"
 uuid = "d31b9dc2-a037-4e1a-9a29-34f8080d388f"

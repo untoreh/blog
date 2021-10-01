@@ -242,7 +242,7 @@ function hfun_tags_cloud()
     str
 end
 
-@memoize function post_link(file_path, code=""; rel=true)
+function post_link(file_path, code=""; rel=true)
     let name = splitext(file_path)[1]
         joinpath(rel ? "/" : globvar(:website_url),
                  code,
@@ -407,8 +407,9 @@ function hfun_icon_tag(tag)
     icons_tags[tag]
 end
 
+@doc "Return the list of translated languages and the source language code"
 @memoize function get_languages()
-    sort(globvar(:languages))
+    (sort(globvar(:languages)), globvar(:lang_code))
 end
 
 include("build/css-flags.jl")
@@ -420,9 +421,12 @@ function hfun_langs_list(usesvg=false)
     c = IOBuffer()
     write(c, "<ul id=\"lang-list\">")
     css_classes = usesvg ? "flag-icon flag-icon-" : "flag flag-"
-    for (lang, code) in get_languages()
+    (tlangs, slang_code) = get_languages()
+    for (lang, code) in tlangs
+        # redirect source lang to default
         write(c, "<a class=\"lang-link\" id=\"lang-", code, "\" href=\"",
-                post_link(locvar(:fd_rpath; default=""), code), "\">",
+                post_link(locvar(:fd_rpath; default=""),
+                          code === slang_code ? "" : code), "\">",
               "<span class=\"", css_classes, ltc(code), "\"></span>",
               lang, "</a>")
     end
@@ -446,8 +450,12 @@ function canonical_link_el(url::AbstractString="")
     ln
 end
 
-@inline function canonical_url(code="")
+@inline function canonical_url(;code="")
     locvar(:fd_rpath; default="") |> x -> post_link(x, code; rel=false)
+end
+
+@inline function canonical_url(path; code="")
+    post_link(path, code; rel=false)
 end
 
 function hfun_canonical_link()
