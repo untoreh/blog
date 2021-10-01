@@ -2,3 +2,4 @@
 /__cache/
 /assets/scripts/puml-sprites/
 /.vscode/
+.dir-locals.el
