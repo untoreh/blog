@@ -183,6 +183,8 @@ body > div #page-description {
 }
 .franklin-content .intro ul {
   list-style-type: none;
+  font-size: 1.1rem;
+  font-style: italic;
 }
 .franklin-content .intro a {
   font-variant: small-caps;
@@ -194,6 +196,13 @@ body > div #page-description {
 .franklin-content .intro .icon {
   padding: 0 0.2rem;
   font-size: 1rem;
+}
+
+.franklin-content .active-projects ul h4 {
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    font-style: normal;
+    margin: 0.2rem;
 }
 
 .franklin-content h3 {

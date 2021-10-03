@@ -75,11 +75,8 @@
     position: absolute;
     top: -4rem;
     display: block;
-  }
-  #lunrSearch {
-    position: absolute;
-    top: -4rem;
-    display: block;
+    left: 0;
+    width: calc(2rem + 90%);
   }
   #lunrSearch .search-input {
     width: 26rem;
