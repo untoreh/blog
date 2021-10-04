@@ -7,7 +7,7 @@ The website_* must be defined for the RSS to work
 @def title = "untoreh's site"
 @def website_title = "untoreh's site"
 @def website_descr = "An archive of _WILD_ interests..."
-@def website_url = "https://unto.re"
+@def website_url = "https://www.unto.re"
 @def country = "IT"
 @def country_name = "italy"
 @def author_image = "/assets/appa.png"
@@ -48,7 +48,7 @@ you might not want. Indicate directories by ending the name with a `/`.
 -->
 
 
-@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/", "translations.db/", "translations.json", "translations.json.bak", "build/", "TODO.md"]
+@def ignore = ["unused", "node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/", "translations.db/", "translations.json", "translations.json.bak", "build/", "TODO.md"]
 
 <!--
 Add here global latex commands to use throughout your
