@@ -1,6 +1,8 @@
 +++
 title = "Reading materials"
 tags = ["library", "books", "readings", "resources", "docs"]
+sitemap_changefreq = "monthly"
+sitemap_priority = 0.7
 +++
 
 # Reads

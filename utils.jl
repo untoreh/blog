@@ -17,5 +17,18 @@ using Translator: franklinlangs; franklinlangs(); using Translator.FranklinLangs
 using FranklinContent; FranklinContent.franklincontent_hfuncs()
 
 # using Gumbo: HTMLElement, hasattr, setattr!, getattr
-# using LDJ.LDJFranklin
+# using Gumbo: parsehtml, setattr!, HTMLElement
+# using AbstractTrees: PreOrderDFS
+# using URIs
 
+function pubup(;opt=true, search=true, trans=true)
+	opt && fr.optimize(prerender=true, minify=true)
+    search && lunr()
+    # workaround for pagevars
+    fr.def_GLOBAL_VARS!()
+    fr.process_config()
+    trans && begin
+        translate_website()
+        sitemap_add_translations()
+    end
+end

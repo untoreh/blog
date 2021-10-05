@@ -1,12 +1,13 @@
 - SE indexing
-  - google amp
+  - add translations to sitemap
   - yandex / turbo pages
-- schemas metadata
   - AMP pages?
   
 # articles
 - emacs
 - prog languages round up
+- identify / philo
+- irrigation systems
 
 # backlog
 - add support for gemini protocol, but needs a self hosted server

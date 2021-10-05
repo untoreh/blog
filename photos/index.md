@@ -1,3 +1,8 @@
++++
+sitemap_changefreq = "yearly"
+sitemap_priority = 0.4
++++
+
 > Food
 
 ## Baking
