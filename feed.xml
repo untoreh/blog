@@ -11,12 +11,12 @@
     <title>
       <![CDATA[  untoreh&#39;s site  ]]>
     </title>
-    <link> https://unto.re </link>
+    <link> https://www.unto.re </link>
     <description>
       <![CDATA[  An archive of <em>WILD</em> interests...  ]]>
     </description>
     <atom:link
-      href="https://unto.re/feed.xml"
+      href="https://www.unto.re/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
@@ -25,8 +25,8 @@
   <title>
     <![CDATA[  shell scripting  ]]>
   </title>
-  <link> https://unto.re/posts/shell-scripting/index.html </link>
-  <guid> https://unto.re/posts/shell-scripting/index.html </guid>
+  <link> https://www.unto.re/posts/shell-scripting/index.html </link>
+  <guid> https://www.unto.re/posts/shell-scripting/index.html </guid>
   <description>
     <![CDATA[  Thoughts on shell scripting  ]]>
   </description>  
@@ -44,8 +44,8 @@
   <title>
     <![CDATA[  hosting network  ]]>
   </title>
-  <link> https://unto.re/posts/hosting-network/index.html </link>
-  <guid> https://unto.re/posts/hosting-network/index.html </guid>
+  <link> https://www.unto.re/posts/hosting-network/index.html </link>
+  <guid> https://www.unto.re/posts/hosting-network/index.html </guid>
   <description>
     <![CDATA[  A social network for hosting services  ]]>
   </description>  
@@ -63,8 +63,8 @@
   <title>
     <![CDATA[  a jar to strain yogurt  ]]>
   </title>
-  <link> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </link>
-  <guid> https://unto.re/posts/a-jar-to-strain-yogurt/index.html </guid>
+  <link> https://www.unto.re/posts/a-jar-to-strain-yogurt/index.html </link>
+  <guid> https://www.unto.re/posts/a-jar-to-strain-yogurt/index.html </guid>
   <description>
     <![CDATA[  A jar that separates whey from yogurt, for thickening  ]]>
   </description>  
@@ -82,8 +82,8 @@
   <title>
     <![CDATA[  Chronicles of a cryptonote dropper  ]]>
   </title>
-  <link> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </link>
-  <guid> https://unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </guid>
+  <link> https://www.unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </link>
+  <guid> https://www.unto.re/posts/chronichles_of_a_cryptonote_dropper/index.html </guid>
   <description>
     <![CDATA[  ...How far are you willing to go for...pennies?  ]]>
   </description>  
@@ -101,8 +101,8 @@
   <title>
     <![CDATA[  types of 3D platformers  ]]>
   </title>
-  <link> https://unto.re/posts/types-of-3D-platformers/index.html </link>
-  <guid> https://unto.re/posts/types-of-3D-platformers/index.html </guid>
+  <link> https://www.unto.re/posts/types-of-3D-platformers/index.html </link>
+  <guid> https://www.unto.re/posts/types-of-3D-platformers/index.html </guid>
   <description>
     <![CDATA[  what kind of games can be called platformers?  ]]>
   </description>  
@@ -120,8 +120,8 @@
   <title>
     <![CDATA[  USD Tether  ]]>
   </title>
-  <link> https://unto.re/posts/USD-Tether/index.html </link>
-  <guid> https://unto.re/posts/USD-Tether/index.html </guid>
+  <link> https://www.unto.re/posts/USD-Tether/index.html </link>
+  <guid> https://www.unto.re/posts/USD-Tether/index.html </guid>
   <description>
     <![CDATA[  My view on USD tether in reply to a post..  ]]>
   </description>  
@@ -139,8 +139,8 @@
   <title>
     <![CDATA[  Make Windows Bearable  ]]>
   </title>
-  <link> https://unto.re/posts/Make-Windows-Bearable/index.html </link>
-  <guid> https://unto.re/posts/Make-Windows-Bearable/index.html </guid>
+  <link> https://www.unto.re/posts/Make-Windows-Bearable/index.html </link>
+  <guid> https://www.unto.re/posts/Make-Windows-Bearable/index.html </guid>
   <description>
     <![CDATA[  A list of tools to make Windows feel more like Linux  ]]>
   </description>  
@@ -158,8 +158,8 @@
   <title>
     <![CDATA[  The Easiest cooking guide ever  ]]>
   </title>
-  <link> https://unto.re/posts/the-easiest-cooking-guide-ever/index.html </link>
-  <guid> https://unto.re/posts/the-easiest-cooking-guide-ever/index.html </guid>
+  <link> https://www.unto.re/posts/the-easiest-cooking-guide-ever/index.html </link>
+  <guid> https://www.unto.re/posts/the-easiest-cooking-guide-ever/index.html </guid>
   <description>
     <![CDATA[  The best bang for reading-time guide for cooking  ]]>
   </description>  
@@ -177,8 +177,8 @@
   <title>
     <![CDATA[  Hero-graph  ]]>
   </title>
-  <link> https://unto.re/posts/herograph/index.html </link>
-  <guid> https://unto.re/posts/herograph/index.html </guid>
+  <link> https://www.unto.re/posts/herograph/index.html </link>
+  <guid> https://www.unto.re/posts/herograph/index.html </guid>
   <description>
     <![CDATA[  Visualize character uniqueness in games  ]]>
   </description>  
@@ -196,8 +196,8 @@
   <title>
     <![CDATA[  grapes for winetricks  ]]>
   </title>
-  <link> https://unto.re/posts/grapes-for-winetricks/index.html </link>
-  <guid> https://unto.re/posts/grapes-for-winetricks/index.html </guid>
+  <link> https://www.unto.re/posts/grapes-for-winetricks/index.html </link>
+  <guid> https://www.unto.re/posts/grapes-for-winetricks/index.html </guid>
   <description>
     <![CDATA[  A layer based setup for winetricks recipes  ]]>
   </description>  
@@ -215,8 +215,8 @@
   <title>
     <![CDATA[  Wine and olive oil markets  ]]>
   </title>
-  <link> https://unto.re/posts/wine-oil-markets/index.html </link>
-  <guid> https://unto.re/posts/wine-oil-markets/index.html </guid>
+  <link> https://www.unto.re/posts/wine-oil-markets/index.html </link>
+  <guid> https://www.unto.re/posts/wine-oil-markets/index.html </guid>
   <description>
     <![CDATA[  EU Wine markets suck, olive oil markets..kind of  ]]>
   </description>  
@@ -234,8 +234,8 @@
   <title>
     <![CDATA[  tribes  ]]>
   </title>
-  <link> https://unto.re/posts/tribes/index.html </link>
-  <guid> https://unto.re/posts/tribes/index.html </guid>
+  <link> https://www.unto.re/posts/tribes/index.html </link>
+  <guid> https://www.unto.re/posts/tribes/index.html </guid>
   <description>
     <![CDATA[  Ponds to share news  ]]>
   </description>  
@@ -253,8 +253,8 @@
   <title>
     <![CDATA[  pickup games fast...or PUF  ]]>
   </title>
-  <link> https://unto.re/posts/pickup-games-fast/index.html </link>
-  <guid> https://unto.re/posts/pickup-games-fast/index.html </guid>
+  <link> https://www.unto.re/posts/pickup-games-fast/index.html </link>
+  <guid> https://www.unto.re/posts/pickup-games-fast/index.html </guid>
   <description>
     <![CDATA[  How to learn games quickly?  ]]>
   </description>  
@@ -272,8 +272,8 @@
   <title>
     <![CDATA[  Game Over  ]]>
   </title>
-  <link> https://unto.re/posts/game-over/index.html </link>
-  <guid> https://unto.re/posts/game-over/index.html </guid>
+  <link> https://www.unto.re/posts/game-over/index.html </link>
+  <guid> https://www.unto.re/posts/game-over/index.html </guid>
   <description>
     <![CDATA[  Games that I liked, that have closed doors  ]]>
   </description>  
@@ -291,8 +291,8 @@
   <title>
     <![CDATA[  sharing ideas  ]]>
   </title>
-  <link> https://unto.re/posts/sharing-ideas/index.html </link>
-  <guid> https://unto.re/posts/sharing-ideas/index.html </guid>
+  <link> https://www.unto.re/posts/sharing-ideas/index.html </link>
+  <guid> https://www.unto.re/posts/sharing-ideas/index.html </guid>
   <description>
     <![CDATA[  What if there was a way to give legs to ideas?  ]]>
   </description>  
@@ -310,8 +310,8 @@
   <title>
     <![CDATA[  swiping with thumbs  ]]>
   </title>
-  <link> https://unto.re/posts/swiping-with-thumbs/index.html </link>
-  <guid> https://unto.re/posts/swiping-with-thumbs/index.html </guid>
+  <link> https://www.unto.re/posts/swiping-with-thumbs/index.html </link>
+  <guid> https://www.unto.re/posts/swiping-with-thumbs/index.html </guid>
   <description>
     <![CDATA[  An smartphone keyboard interface for swiping with thumbs  ]]>
   </description>  
@@ -329,8 +329,8 @@
   <title>
     <![CDATA[  power of the crowd  ]]>
   </title>
-  <link> https://unto.re/posts/power-of-the-crowd/index.html </link>
-  <guid> https://unto.re/posts/power-of-the-crowd/index.html </guid>
+  <link> https://www.unto.re/posts/power-of-the-crowd/index.html </link>
+  <guid> https://www.unto.re/posts/power-of-the-crowd/index.html </guid>
   <description>
     <![CDATA[  Apps powered by crowd sourcing  ]]>
   </description>  
@@ -348,8 +348,8 @@
   <title>
     <![CDATA[  on GPU prices  ]]>
   </title>
-  <link> https://unto.re/posts/on-GPU-prices/index.html </link>
-  <guid> https://unto.re/posts/on-GPU-prices/index.html </guid>
+  <link> https://www.unto.re/posts/on-GPU-prices/index.html </link>
+  <guid> https://www.unto.re/posts/on-GPU-prices/index.html </guid>
   <description>
     <![CDATA[  What does MSRP even mean?  ]]>
   </description>  
@@ -367,8 +367,8 @@
   <title>
     <![CDATA[  Store your web activity  ]]>
   </title>
-  <link> https://unto.re/posts/user-data/index.html </link>
-  <guid> https://unto.re/posts/user-data/index.html </guid>
+  <link> https://www.unto.re/posts/user-data/index.html </link>
+  <guid> https://www.unto.re/posts/user-data/index.html </guid>
   <description>
     <![CDATA[  Don&#39;t leave your thoughts on platforms you don&#39;t own  ]]>
   </description>  
@@ -386,8 +386,8 @@
   <title>
     <![CDATA[  How to grow olive trees  ]]>
   </title>
-  <link> https://unto.re/posts/olive-trees/index.html </link>
-  <guid> https://unto.re/posts/olive-trees/index.html </guid>
+  <link> https://www.unto.re/posts/olive-trees/index.html </link>
+  <guid> https://www.unto.re/posts/olive-trees/index.html </guid>
   <description>
     <![CDATA[  How to grow olive trees, concise and complete guide   ]]>
   </description>  
@@ -405,8 +405,8 @@
   <title>
     <![CDATA[  Is progress blind?  ]]>
   </title>
-  <link> https://unto.re/posts/progress/index.html </link>
-  <guid> https://unto.re/posts/progress/index.html </guid>
+  <link> https://www.unto.re/posts/progress/index.html </link>
+  <guid> https://www.unto.re/posts/progress/index.html </guid>
   <description>
     <![CDATA[  What can we do to steer progress in the right direction?  ]]>
   </description>  
@@ -424,8 +424,8 @@
   <title>
     <![CDATA[  A few notes on &#40;hashcash derived&#41; proof of work  ]]>
   </title>
-  <link> https://unto.re/posts/a-few-notes-on-proof-of-work/index.html </link>
-  <guid> https://unto.re/posts/a-few-notes-on-proof-of-work/index.html </guid>
+  <link> https://www.unto.re/posts/a-few-notes-on-proof-of-work/index.html </link>
+  <guid> https://www.unto.re/posts/a-few-notes-on-proof-of-work/index.html </guid>
   <description>
     <![CDATA[  a short round up of the categories for generating proofs of work  ]]>
   </description>  
@@ -443,8 +443,8 @@
   <title>
     <![CDATA[  Android apps lists  ]]>
   </title>
-  <link> https://unto.re/posts/android-apps-lists/index.html </link>
-  <guid> https://unto.re/posts/android-apps-lists/index.html </guid>
+  <link> https://www.unto.re/posts/android-apps-lists/index.html </link>
+  <guid> https://www.unto.re/posts/android-apps-lists/index.html </guid>
   <description>
     <![CDATA[  A list of android application useful when traveling  ]]>
   </description>  
@@ -462,8 +462,8 @@
   <title>
     <![CDATA[  lyrics lolwat  ]]>
   </title>
-  <link> https://unto.re/posts/lyrics-lolwat/index.html </link>
-  <guid> https://unto.re/posts/lyrics-lolwat/index.html </guid>
+  <link> https://www.unto.re/posts/lyrics-lolwat/index.html </link>
+  <guid> https://www.unto.re/posts/lyrics-lolwat/index.html </guid>
   <description>
     <![CDATA[  My attempts at songs lyrics  ]]>
   </description>  
@@ -481,8 +481,8 @@
   <title>
     <![CDATA[  Shades of Colors  ]]>
   </title>
-  <link> https://unto.re/posts/shades-of-colors/index.html </link>
-  <guid> https://unto.re/posts/shades-of-colors/index.html </guid>
+  <link> https://www.unto.re/posts/shades-of-colors/index.html </link>
+  <guid> https://www.unto.re/posts/shades-of-colors/index.html </guid>
   <description>
     <![CDATA[  Take a from black-white to colored gradient  ]]>
   </description>  
@@ -500,8 +500,8 @@
   <title>
     <![CDATA[  copypaste on dns  ]]>
   </title>
-  <link> https://unto.re/posts/copypaste-on-dns/index.html </link>
-  <guid> https://unto.re/posts/copypaste-on-dns/index.html </guid>
+  <link> https://www.unto.re/posts/copypaste-on-dns/index.html </link>
+  <guid> https://www.unto.re/posts/copypaste-on-dns/index.html </guid>
   <description>
     <![CDATA[  Sharing text throught TXT records  ]]>
   </description>  
@@ -519,8 +519,8 @@
   <title>
     <![CDATA[  Steps to setup a new phone  ]]>
   </title>
-  <link> https://unto.re/posts/steps-to-setup-a-new-phone/index.html </link>
-  <guid> https://unto.re/posts/steps-to-setup-a-new-phone/index.html </guid>
+  <link> https://www.unto.re/posts/steps-to-setup-a-new-phone/index.html </link>
+  <guid> https://www.unto.re/posts/steps-to-setup-a-new-phone/index.html </guid>
   <description>
     <![CDATA[  Follow the steps to de-bloat a stock android phone  ]]>
   </description>  
@@ -538,8 +538,8 @@
   <title>
     <![CDATA[  spectator mode  ]]>
   </title>
-  <link> https://unto.re/posts/spectator-mode/index.html </link>
-  <guid> https://unto.re/posts/spectator-mode/index.html </guid>
+  <link> https://www.unto.re/posts/spectator-mode/index.html </link>
+  <guid> https://www.unto.re/posts/spectator-mode/index.html </guid>
   <description>
     <![CDATA[  Notes on how a spectator mode should be implemented  ]]>
   </description>  
@@ -557,8 +557,8 @@
   <title>
     <![CDATA[  ways of living  ]]>
   </title>
-  <link> https://unto.re/posts/ways-of-living/index.html </link>
-  <guid> https://unto.re/posts/ways-of-living/index.html </guid>
+  <link> https://www.unto.re/posts/ways-of-living/index.html </link>
+  <guid> https://www.unto.re/posts/ways-of-living/index.html </guid>
   <description>
     <![CDATA[  A classification of ways of life  ]]>
   </description>  
@@ -576,8 +576,8 @@
   <title>
     <![CDATA[  A database about dreams  ]]>
   </title>
-  <link> https://unto.re/posts/a-database-about-dreams/index.html </link>
-  <guid> https://unto.re/posts/a-database-about-dreams/index.html </guid>
+  <link> https://www.unto.re/posts/a-database-about-dreams/index.html </link>
+  <guid> https://www.unto.re/posts/a-database-about-dreams/index.html </guid>
   <description>
     <![CDATA[  A place to share and log dreams  ]]>
   </description>  
@@ -595,8 +595,8 @@
   <title>
     <![CDATA[  the slope  ]]>
   </title>
-  <link> https://unto.re/posts/the-slope/index.html </link>
-  <guid> https://unto.re/posts/the-slope/index.html </guid>
+  <link> https://www.unto.re/posts/the-slope/index.html </link>
+  <guid> https://www.unto.re/posts/the-slope/index.html </guid>
   <description>
     <![CDATA[  How much is too much?  ]]>
   </description>  
@@ -614,8 +614,8 @@
   <title>
     <![CDATA[  OS Hopping  ]]>
   </title>
-  <link> https://unto.re/posts/OS-Hopping/index.html </link>
-  <guid> https://unto.re/posts/OS-Hopping/index.html </guid>
+  <link> https://www.unto.re/posts/OS-Hopping/index.html </link>
+  <guid> https://www.unto.re/posts/OS-Hopping/index.html </guid>
   <description>
     <![CDATA[  A brief summary of operative systems that I have used  ]]>
   </description>  
@@ -633,8 +633,8 @@
   <title>
     <![CDATA[  On Containers  ]]>
   </title>
-  <link> https://unto.re/posts/On-Containers/index.html </link>
-  <guid> https://unto.re/posts/On-Containers/index.html </guid>
+  <link> https://www.unto.re/posts/On-Containers/index.html </link>
+  <guid> https://www.unto.re/posts/On-Containers/index.html </guid>
   <description>
     <![CDATA[  Using containers, what and why  ]]>
   </description>  
@@ -652,8 +652,8 @@
   <title>
     <![CDATA[  Alpine  ]]>
   </title>
-  <link> https://unto.re/posts/alpine/index.html </link>
-  <guid> https://unto.re/posts/alpine/index.html </guid>
+  <link> https://www.unto.re/posts/alpine/index.html </link>
+  <guid> https://www.unto.re/posts/alpine/index.html </guid>
   <description>
     <![CDATA[  Pine, Alpine linux based on OSTree  ]]>
   </description>  
@@ -671,8 +671,8 @@
   <title>
     <![CDATA[  Distributed Filesystems  ]]>
   </title>
-  <link> https://unto.re/posts/distributed-filesystems/index.html </link>
-  <guid> https://unto.re/posts/distributed-filesystems/index.html </guid>
+  <link> https://www.unto.re/posts/distributed-filesystems/index.html </link>
+  <guid> https://www.unto.re/posts/distributed-filesystems/index.html </guid>
   <description>
     <![CDATA[  A round-up of distributed file systems  ]]>
   </description>  
@@ -690,8 +690,8 @@
   <title>
     <![CDATA[  TCSplitter  ]]>
   </title>
-  <link> https://unto.re/posts/tcsplitter/index.html </link>
-  <guid> https://unto.re/posts/tcsplitter/index.html </guid>
+  <link> https://www.unto.re/posts/tcsplitter/index.html </link>
+  <guid> https://www.unto.re/posts/tcsplitter/index.html </guid>
   <description>
     <![CDATA[  A tunnel to split TCP or UDP connection across multiple TCP connections  ]]>
   </description>  
@@ -709,8 +709,8 @@
   <title>
     <![CDATA[  Minor tools  ]]>
   </title>
-  <link> https://unto.re/posts/tools/index.html </link>
-  <guid> https://unto.re/posts/tools/index.html </guid>
+  <link> https://www.unto.re/posts/tools/index.html </link>
+  <guid> https://www.unto.re/posts/tools/index.html </guid>
   <description>
     <![CDATA[  Collection of small utilities done to scratch some itches...  ]]>
   </description>  
@@ -728,8 +728,8 @@
   <title>
     <![CDATA[  Paroodise  ]]>
   </title>
-  <link> https://unto.re/posts/paroodise/index.html </link>
-  <guid> https://unto.re/posts/paroodise/index.html </guid>
+  <link> https://www.unto.re/posts/paroodise/index.html </link>
+  <guid> https://www.unto.re/posts/paroodise/index.html </guid>
   <description>
     <![CDATA[  A small utility for live modification of file systems  ]]>
   </description>  
@@ -747,8 +747,8 @@
   <title>
     <![CDATA[  MTR: multiple translations  ]]>
   </title>
-  <link> https://unto.re/posts/mtr-translations/index.html </link>
-  <guid> https://unto.re/posts/mtr-translations/index.html </guid>
+  <link> https://www.unto.re/posts/mtr-translations/index.html </link>
+  <guid> https://www.unto.re/posts/mtr-translations/index.html </guid>
   <description>
     <![CDATA[  wrapping translation services for internal use  ]]>
   </description>  
@@ -766,8 +766,8 @@
   <title>
     <![CDATA[  Correlations  ]]>
   </title>
-  <link> https://unto.re/posts/correlations/index.html </link>
-  <guid> https://unto.re/posts/correlations/index.html </guid>
+  <link> https://www.unto.re/posts/correlations/index.html </link>
+  <guid> https://www.unto.re/posts/correlations/index.html </guid>
   <description>
     <![CDATA[  A list of correlation metrics  ]]>
   </description>  
