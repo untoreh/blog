@@ -13,13 +13,32 @@
     </title>
     <link> https://www.unto.re </link>
     <description>
-      <![CDATA[  An archive of <em>WILD</em> interests...  ]]>
+      <![CDATA[  Articles, logs, infos, status and live updates are published here.  ]]>
     </description>
     <atom:link
       href="https://www.unto.re/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
+
+<item>
+  <title>
+    <![CDATA[  Emacs  ]]>
+  </title>
+  <link> https://www.unto.re/posts/emacs/index.html </link>
+  <guid> https://www.unto.re/posts/emacs/index.html </guid>
+  <description>
+    <![CDATA[  Why emacs, and my personal emacs wishlist.  ]]>
+  </description>  
+    
+  <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
 
 <item>
   <title>
