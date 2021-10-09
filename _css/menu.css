@@ -42,7 +42,7 @@
 }
 #site-nav ul > li > a, #site-nav ul > li > button {
   color: var(--alt);
-  display: block;
+  display: inline-block;
 }
 #site-nav .menu-icons {
   position: relative;
@@ -182,6 +182,7 @@ ul > li.author__place a {
     border-radius: 25%;
     border-width: 0 0 0 0.25rem;
     transition: height;
+    padding-left: 3rem;
 }
 
 #langs-dropdown-menu .lang-link:hover {

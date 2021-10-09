@@ -6,7 +6,7 @@ The website_* must be defined for the RSS to work
 
 @def title = "untoreh's site"
 @def website_title = "untoreh's site"
-@def website_descr = "An archive of _WILD_ interests..."
+@def website_descr = "Articles, logs, infos, status and live updates are published here."
 @def website_url = "https://www.unto.re"
 @def country = "IT"
 @def country_name = "italy"

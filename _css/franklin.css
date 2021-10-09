@@ -218,6 +218,13 @@ td {
   line-height: 0;
 }
 
+.franklin-content sup a.fnref, .franklin-content td.fndef-backref a {
+  overflow: visible;
+  display: initial;
+  padding-bottom: 0.3rem;
+  padding-top: 0.2rem;
+}
+
 .franklin-content table.fndef {
   margin: 0;
   margin-bottom: 10px;

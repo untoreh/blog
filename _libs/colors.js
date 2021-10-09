@@ -37,5 +37,8 @@ function toggleTheme() {
       }
     }
   }
-  update_utterances_theme();
+  // NOTE: Only include commonets inside posts pages
+  if (String(window.location.pathname).startsWith("/posts/")) {
+    update_utterances_theme();
+  }
 }
