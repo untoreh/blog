@@ -154,6 +154,13 @@ ul > li.author__place a {
     border-radius: 25% 25% 25% 50%!important;
 }
 
+
+@media (max-width: 680px) {
+  .lang-link {
+    height: 3rem;
+}
+}
+
 .lang-link .flag-icon, .lang-link .flag {
   position: absolute;
   /* for svg */

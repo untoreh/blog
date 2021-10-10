@@ -1,5 +1,6 @@
 @media (min-width: 680px) {
-  #tag-name, .tag-desc {
+  #tag-name,
+  .tag-desc {
     text-align: left;
   }
 }
@@ -63,9 +64,6 @@
 }
 
 @media (max-width: 680px) {
-  .masthead {
-    margin-bottom: 4rem;
-  }
   .masthead,
   .masthead__inner-wrap,
   .masthead__menu {
@@ -90,7 +88,8 @@
     padding: 0;
     display: inline-block;
   }
-  #tag-name, .tag-desc {
+  #tag-name,
+  .tag-desc {
     text-align: center;
   }
   #site-nav {
@@ -155,7 +154,10 @@
 
 @media (max-width: 680px) {
   .masthead {
-    margin-bottom: 5rem;
+    height: 26rem;
+  }
+  #site-nav {
+    z-index: 1;
   }
   footer ul.author__wrap {
     margin-top: 1rem;
