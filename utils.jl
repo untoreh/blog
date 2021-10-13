@@ -14,21 +14,34 @@ using Franklin; const fr = Franklin;
 
 using LDJ: ldjfranklin; ldjfranklin(); using LDJ.LDJFranklin
 using Translator: franklinlangs; franklinlangs(); using Translator.FranklinLangs
-using FranklinContent; FranklinContent.franklincontent_hfuncs()
+using FranklinContent; FranklinContent.franklincontent_hfuncs(); FranklinContent.load_amp(); using .AMP
 
 # using Gumbo: HTMLElement, hasattr, setattr!, getattr
 # using Gumbo: parsehtml, setattr!, HTMLElement
 # using AbstractTrees: PreOrderDFS
 # using URIs
 
-function pubup(;opt=true, search=true, trans=true)
-	opt && fr.optimize(prerender=true, minify=true)
-    search && lunr()
+function pubup(;opt=true, search=true, trans=true, amp=true)
     # workaround for pagevars
     fr.def_GLOBAL_VARS!()
     fr.process_config()
+	opt && begin
+        fr.optimize(prerender=true, minify=true)
+        fr.def_GLOBAL_VARS!()
+        fr.process_config()
+    end
+    search && lunr()
     trans && begin
         translate_website()
         sitemap_add_translations()
     end
+    if amp
+        trg, src = get_languages()
+        dirs = [code for (_, code) in trg if code !== src]
+        append!(dirs, ["posts", "tag", "reads", "_rss"])
+        AMP.ampdir(fr.path(:site); dirs)
+    end
 end
+
+
+# load_vars(fr.path(:assets) * "/amp.html")
