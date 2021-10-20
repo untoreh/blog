@@ -1,14 +1,20 @@
 <!doctype html>
+{{sitemap_opts weekly 0.5}}
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{canonical_link_tag}}
+        {{amp_link_tag}}
+        {{ldj_website}}
+        {{ldj_webpage_tag}}
+        {{ldj_crumbs tags_crumbs}}
         {{insert style.html}}
         <title>{{fill fd_tag}}</title>
     </head>
 
     {{insert body_layout.html}}
-    <div class="tag-content">
+    <div class="tag-content franklin-content">
         {{tag_title}}
         {{taglist_desc}}
         {{insert page_foot.html}}

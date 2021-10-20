@@ -47,30 +47,30 @@
   font-weight: bold;
 }
 
-.posts_list > ul {
+.posts_list.franklin-content > ul {
   list-style-type: "> ";
 }
-.posts_list > .title {
+.posts_list.franklin-content > .title {
   font-variant: small-caps;
 }
-.posts_list > .title > h2 {
+.posts_list.franklin-content > .title > h2 {
   font-size: 1rem;
   font-style: italic;
 }
-.posts_list > .title > h2,
-.posts_list > .title > a > h1 {
+.posts_list.franklin-content > .title > h2,
+.posts_list.franklin-content > .title > a > h1 {
   display: inline;
 }
-.posts_list > ul > li {
+.posts_list.franklin-content > ul > li {
   line-height: 1.2rem;
   padding: 0.1rem;
 }
-.posts_list > ul > li > p {
+.posts_list.franklin-content > ul > li > p {
   padding: 0.1rem;
   margin: 0.1rem;
 }
-.posts_list > .title > h2,
-.posts_list > .title {
+.posts_list.franklin-content > .title > h2,
+.posts_list.franklin-content > .title {
   text-align: center;
   display: block;
   margin: 1rem;

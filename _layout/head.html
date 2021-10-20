@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
     <head>
-        {{canonical_link}}
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{canonical_link}}
+        {{amp_link}}
         {{ldj_website}}
         {{ldj_webpage}}
         {{ldj_crumbs post_crumbs}}
         {{ldj_library}}
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         {{if hasmath}} {{insert head_katex.html }}     {{end}}
         {{if hascode}} {{insert head_highlight.html }}   {{end}}
         {{insert style.html}}
