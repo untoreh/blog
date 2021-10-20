@@ -1,4 +1,6 @@
 window.onload = function () {
   toggleTheme();
-  queryLunr();
+  if (typeof queryLunr === "function") {
+    queryLunr();
+  }
 };
