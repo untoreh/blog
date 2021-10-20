@@ -1,1 +1,1 @@
-window.onload=function(){toggleTheme(),typeof queryLunr=="function"&&queryLunr()};</script><script></script><script>
+window.onload=function(){toggleTheme(),typeof queryLunr=="function"&&queryLunr()};
