@@ -3,9 +3,11 @@
 The website can be divided in four parts
 
 - Posts
-- a list of "ideas" or _bucket list_
-- a list of resources or _literature_
 - round up of previous projects
+
+# Notes
+- Translation doesn't edit LDJ data, it just addes the ldj markup mentioning that the page is translated.
+- AMP pages are generated for main website and for the translations.
 
 ## Writing a blog post
 Offline scripts used to generate content should be placed in the toplevel `/scripts` folder.

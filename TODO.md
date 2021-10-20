@@ -1,7 +1,6 @@
+- social publishing/omp graph
 - SE indexing
-  - add translations to sitemap
   - yandex / turbo pages
-  - AMP pages?
   
 # articles
 - emacs
