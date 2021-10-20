@@ -17,6 +17,7 @@ The website_* must be defined for the RSS to work
 @def twitter = "https://twitter.com/untoreh"
 @def lang = "English"
 @def lang_code = "en"
+@dev menu = ["/posts", "/media", "/reads", "/tag"]
 
 <!-- tag_page_path = "tags" -->
 
@@ -49,7 +50,7 @@ you might not want. Indicate directories by ending the name with a `/`.
 -->
 
 
-@def ignore = ["unused", "node_modules/", "franklin", "franklin.pub", "README.md", "__site.bak/", "translations.db/", "translations.json", "translations.json.bak", "build/", "TODO.md"]
+@def ignore = ["translations.db/", "build/", "unused/", "node_modules/",  "__site.bak/", "franklin/", "franklin.pub/", "README.md",  "translations.json", "translations.json.bak", "TODO.md", "pyrightconfig.json", ".vscode", "*.jl"]
 
 <!--
 Add here global latex commands to use throughout your
