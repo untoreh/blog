@@ -8,3 +8,4 @@ package-lock.json
 /translations.json.bak
 /.vscode/
 /__site.bak/
+/pyrightconfig.json
