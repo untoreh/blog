@@ -9,15 +9,14 @@ version="2.0">
     <link>https://www.unto.re</link>
     <description>Articles, logs, infos, status and live updates are published here.</description>
     <language>en</language>
-    <turbo:analytics></turbo:analytics>
-    <turbo:adNetwork></turbo:adNetwork>
+    <!-- <turbo:analytics></turbo:analytics> <turbo:adNetwork></turbo:adNetwork> -->
 <item turbo="true">
             <!-- Page information -->
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/sharing-ideas/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -27,7 +26,7 @@ version="2.0">
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ukwabelana ngemibono</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/sharing-ideas"></a></div></header>
@@ -55,8 +54,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/shell-scripting/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -66,7 +65,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ukubhala igobolondo</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/shell-scripting"></a></div></header>
@@ -94,8 +93,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/spectator-mode/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -105,7 +104,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>imodi yesibukeli</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/spectator-mode"></a></div></header>
@@ -133,8 +132,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/steps-to-setup-a-new-phone/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -144,7 +143,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>Izinyathelo zokusetha ifoni entsha</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/steps-to-setup-a-new-phone"></a></div></header>
@@ -172,8 +171,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/swiping-with-thumbs/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -183,7 +182,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ukuswayipha ngezithupha</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/swiping-with-thumbs"></a></div></header>
@@ -211,8 +210,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/tcsplitter/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -222,7 +221,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>TCSplitter</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/tcsplitter"></a></div></header>
@@ -250,8 +249,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/the-easiest-cooking-guide-ever/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -261,7 +260,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>Umhlahlandlela wokupheka olula kunayo yonke</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/the-easiest-cooking-guide-ever"></a></div></header>
@@ -289,8 +288,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/the-slope/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -300,7 +299,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>emthambekeni</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/the-slope"></a></div></header>
@@ -328,8 +327,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/tools/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -339,7 +338,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>Amathuluzi amancane</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/tools"></a></div></header>
@@ -366,8 +365,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/tribes/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -377,7 +376,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izizwe</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/tribes"></a></div></header>
@@ -405,8 +404,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/types-of-3D-platformers/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -416,7 +415,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izinhlobo ze-3D platformers</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/types-of-3D-platformers"></a></div></header>
@@ -444,8 +443,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/user-data/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -455,7 +454,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>Gcina umsebenzi wakho wewebhu</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/user-data"></a></div></header>
@@ -482,8 +481,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/ways-of-living/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -493,7 +492,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izindlela zokuphila</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/ways-of-living"></a></div></header>
@@ -521,8 +520,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/posts/wine-oil-markets/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -532,7 +531,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>Izimakethe zewayini namafutha omnqumo</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/posts/wine-oil-markets"></a></div></header>
@@ -560,8 +559,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/reads/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -571,7 +570,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>Izinto zokufunda</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="/posts/"></a><a src="https://www.unto.re/reads/"></a></div></header>
@@ -593,8 +592,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/about/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.391</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -604,7 +603,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>mayelana</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/about"></a></div></header>
@@ -626,8 +625,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/agri/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.451</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -637,7 +636,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>i-agri</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/agri"></a></div></header>
@@ -659,8 +658,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/apps/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.421</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -670,7 +669,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izinhlelo zokusebenza</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/apps"></a></div></header>
@@ -692,8 +691,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/books/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.491</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -703,7 +702,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izincwadi</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/books"></a></div></header>
@@ -725,8 +724,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/cooking/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.471</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -736,7 +735,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ukupheka</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/cooking"></a></div></header>
@@ -758,8 +757,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/crypto/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.371</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -769,7 +768,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>i-crypto</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/crypto"></a></div></header>
@@ -791,8 +790,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/docs/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.501</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -802,7 +801,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>amadokhumenti</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/docs"></a></div></header>
@@ -824,8 +823,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/games/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.441</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -835,7 +834,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>imidlalo</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/games"></a></div></header>
@@ -857,8 +856,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/guides/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.451</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -868,7 +867,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>Imihlahlandlela</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/guides"></a></div></header>
@@ -890,8 +889,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/hosting/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.461</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -901,7 +900,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ukusingathwa</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/hosting"></a></div></header>
@@ -923,8 +922,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.311</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -934,7 +933,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>&lt;div id = "tag-name"&gt; Amathegi &lt;/div&gt;</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"></div></header>
@@ -956,8 +955,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/library/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.491</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -967,7 +966,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>umtapo wezincwadi</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/library"></a></div></header>
@@ -989,8 +988,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/lightbulbs/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.401</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1000,7 +999,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izibani ezikhanyayo</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/lightbulbs"></a></div></header>
@@ -1022,8 +1021,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/linux/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.441</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1033,7 +1032,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>i-linux</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/linux"></a></div></header>
@@ -1055,8 +1054,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/mobile/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.411</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1066,7 +1065,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>iselula</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/mobile"></a></div></header>
@@ -1088,8 +1087,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/net/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.431</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1099,7 +1098,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>inetha</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/net"></a></div></header>
@@ -1121,8 +1120,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/nice-to-haves/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.411</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1132,7 +1131,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>abanethezekile</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/nice-to-haves"></a></div></header>
@@ -1154,8 +1153,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/opinions/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.391</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1165,7 +1164,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>imibono</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/opinions"></a></div></header>
@@ -1187,8 +1186,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/philosophy/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.471</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1198,7 +1197,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ifilosofi</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/philosophy"></a></div></header>
@@ -1220,8 +1219,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/programming/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.431</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1231,7 +1230,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izinhlelo</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/programming"></a></div></header>
@@ -1253,8 +1252,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/readings/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.481</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1264,7 +1263,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ukufundwa</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/readings"></a></div></header>
@@ -1286,8 +1285,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/resources/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.501</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1297,7 +1296,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izinsiza</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/resources"></a></div></header>
@@ -1319,8 +1318,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/shell/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.421</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1330,7 +1329,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>igobolondo</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/shell"></a></div></header>
@@ -1352,8 +1351,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/software/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.381</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1363,7 +1362,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>isoftware</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/software"></a></div></header>
@@ -1385,8 +1384,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/stats/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1396,7 +1395,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izibalo</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/stats"></a></div></header>
@@ -1418,8 +1417,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/tech/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.461</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1429,7 +1428,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ubuchwepheshe</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/tech"></a></div></header>
@@ -1451,8 +1450,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/things-that-should-not-be_published/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.371</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1462,7 +1461,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>izinto-okumele-zingashicilelwa</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/things-that-should-not-be_published"></a></div></header>
@@ -1484,8 +1483,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/tools/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.381</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1495,7 +1494,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>amathuluzi</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/tools"></a></div></header>
@@ -1517,8 +1516,8 @@ Thumela Amathegi:
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://www.unto.re/zu/tag/trading/</link>
             <language>zu</language>
-            <turbo:source></turbo:source>
-            <turbo:topic></turbo:topic>
+            <!-- <turbo:source></turbo:source> -->
+            <!-- <turbo:topic></turbo:topic> ->>
             <pubDate>2021-10-22T13:54:15.361</pubDate>
             <author>untoreh</author>
             <metrics>
@@ -1528,7 +1527,7 @@ Thumela Amathegi:
                     </breadcrumblist>
                 </yandex>
             </metrics>
-            <yandex:related></yandex:related>
+            <!-- <yandex:related></yandex:related> -->
             <turbo:content>
                 <![CDATA[
                     <header><h1>ukuhweba</h1><h2></h2><figure><image src="/assets/appa.png"/></figure><menu></menu><div data-block="breadcrumblist"><a src="https://www.unto.re"></a><a src="https://www.unto.re/tag"></a><a src="https://www.unto.re/tag/trading"></a></div></header>
