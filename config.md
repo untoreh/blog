@@ -11,10 +11,12 @@ The website_* must be defined for the RSS to work
 @def country = "IT"
 @def country_name = "italy"
 @def author_image = "/assets/appa.png"
+@def logo = "/assets/appa-60px.png"
 @def avatar = "/assets/appa.png"
 @def email = "contact@unto.re"
 @def github = "https://github.com/untoreh"
 @def twitter = "https://twitter.com/untoreh"
+@def twitter_user = "@untoreh"
 @def lang = "English"
 @def lang_code = "en"
 @dev menu = ["/posts", "/media", "/reads", "/tag"]
