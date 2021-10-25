@@ -43,7 +43,7 @@
     position: absolute;
     right: 0;
     top: 3rem;
-    width: 8rem;
+    width: 9rem;                /* needs enough wiggle to support all langs glyps widths */
     padding-left: 1rem;
     max-height: 0rem;
     overflow: hidden;
@@ -138,26 +138,40 @@
 }
 
 @media (max-width: 480px) {
-  #site-nav {
-    top: 5rem;
-  }
-}
-
-@media (max-width: 480px) {
   .masthead {
     height: 30rem;
   }
-  #site-nav ul li {
+  #site-nav {
+    top: 5rem;
+  }
+  #site-nav .horiz ul {
+    width: 100%;
+  }
+  #site-nav .horiz ul > li {
     width: calc(100% - 2rem);
+    float: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 680px) {
+  .masthead {
+    height: 20rem;
   }
 }
 
 @media (max-width: 680px) {
-  .masthead {
-    height: 26rem;
+  body {
+    overflow-x: hidden;
   }
   #site-nav {
     z-index: 1;
+  }
+  #site-nav .horiz ul > li {
+    float: none;
+    top: -4rem;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
   footer ul.author__wrap {
     margin-top: 1rem;

@@ -170,13 +170,13 @@ ul > li.author__place a {
   margin-top: 0.65rem;
 }
 
-#langs-dropdown-menu {
+#site-nav .langs-dropdown-menu {
   left: 1.5rem;
   position: relative;
   top: 1rem;
 }
 
-#langs-dropdown-menu #lang-list {
+#site-nav .langs-dropdown-menu .lang-list {
     font-size: 1rem;
     line-height: 2rem;
     overflow-x: hidden;
@@ -192,11 +192,11 @@ ul > li.author__place a {
     padding-left: 3rem;
 }
 
-#langs-dropdown-menu .lang-link:hover {
+#site-nav .langs-dropdown-menu .lang-link:hover {
     color: var(--foreground-color);
 }
 
-#lang-list {
+.lang-list {
   background-color: var(--background-color);
 }
 
