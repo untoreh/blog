@@ -1,5 +1,5 @@
 <ul>
-    <li id="lunrSearch" class="masthead__menu-item hvr-outline-in">{{insert lunr_search.html}}</li>
+    <li class="lunrSearch masthead__menu-item hvr-outline-in">{{insert lunr_search.html}}</li>
     <li class="masthead__menu-item hvr-outline-in">
         <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a>
     </li>
@@ -7,9 +7,9 @@
         <a href="/media/" title="Video and audio content from streaming websites."><i class="fas fa-tv menu-icons"></i>media</a>
     </li>
     <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language">
-        <button name="Languages Menu" class="langs-dropdown-wrapper">
+        <button type="button" title="Languages Menu" class="langs-dropdown-wrapper">
             <i class="fas fa-language menu-icons"></i> Lang
-            <div id="langs-dropdown-menu" class="langs-dropdown-content">
+            <div class="langs-dropdown-content langs-dropdown-menu">
                 {{langs_list}}
             </div>
         </button>
