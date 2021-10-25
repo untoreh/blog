@@ -9,3 +9,4 @@ package-lock.json
 /.vscode/
 /__site.bak/
 /pyrightconfig.json
+/_libs/lunr/lunr_index.js

@@ -35,7 +35,7 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     append!(target_dirs, ["posts", "tag", "reads", "_rss"])
 
     # clear at the beginning
-    clear && begin
+    (all || clear) && begin
         @assert site !== pwd() && islink(site)
         display("Cleaning site directory $site...")
         run(`bash -c "rm -r $(joinpath(site, "*"))"`)
@@ -48,8 +48,8 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     end
     (all || what === :trans) && begin
         display("Translating...")
-        FranklinLangs.translate_website()
-        FranklinLangs.sitemap_add_translations(;amp=true)
+        @time (FranklinLangs.translate_website();
+               FranklinLangs.sitemap_add_translations(;amp=true))
     end
     # the search index also includes translations
     (all || what === :search) && begin
@@ -62,17 +62,17 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     # seo pages
     (all || what === :amp) && begin
         display("AMP pages...")
-        AMP.ampdir(fr.path(:site); dirs=target_dirs)
+        @time AMP.ampdir(fr.path(:site); dirs=target_dirs)
     end
     (all || what === :yandex) && begin
         display("Turbo pages...")
-        Yandex.turbodir(fr.path(:site); dirs=target_dirs)
+        @time Yandex.turbodir(fr.path(:site); dirs=target_dirs)
     end
 
     # minification at the end to minify every html page and asset
     (all || what === :minify) && begin
         display("Minification...")
-        FranklinMinify.minify_website()
+        @time FranklinMinify.minify_website()
     end
     if publish
         trg_dir = "/tmp/__site"
