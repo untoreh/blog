@@ -11,44 +11,93 @@ ENV["PIP3"] = joinpath(Conda.BINDIR, "pip")
 ENV["PYTHONPATH"] = "$(Conda.LIBDIR)/python$(py_v)"
 
 using Franklin; const fr = Franklin;
+fr.FOLDER_PATH[] = dirname(@__FILE__)
+fr.set_paths!()
+fr.def_GLOBAL_VARS!()
+fr.process_config()
+# fr.fd_setup()
 
 using LDJ: ldjfranklin; ldjfranklin(); using LDJ.LDJFranklin
-using Translator: franklinlangs; franklinlangs(); using Translator.FranklinLangs;
+using Translator; Translator.franklinlangs(); using .FranklinLangs;
 using FranklinContent; FranklinContent.franklincontent_hfuncs();
 FranklinContent.load_amp(); using .AMP
 FranklinContent.load_yandex(); using .Yandex
 FranklinContent.load_minify(); using .FranklinMinify
+FranklinContent.load_opg(); using .OPG
 
 
-function pubup(what=nothing; all=false, clear=false)
+function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     # set the global path
-    fr.FOLDER_PATH[] = pwd()
-    fr.def_GLOBAL_VARS!()
-    fr.set_paths!()
-    fr.process_config()
+    site = fr.path(:site)
+
     trg, src = FranklinLangs.get_languages()
     target_dirs = [code for (_, code) in trg if code !== src]
     append!(target_dirs, ["posts", "tag", "reads", "_rss"])
 
+    # clear at the beginning
     clear && begin
-        site = fr.path(:site)
         @assert site !== pwd() && islink(site)
+        display("Cleaning site directory $site...")
         run(`bash -c "rm -r $(joinpath(site, "*"))"`)
     end
 
     (all || what === :opt) && begin
-        fr.optimize(prerender=true, minify=false)
+        fr.optimize(prerender=true, minify=false, fail_on_warning=fail)
         fr.def_GLOBAL_VARS!()
         fr.process_config()
     end
-    (all || what === :search) && lunr()
     (all || what === :trans) && begin
+        display("Translating...")
         FranklinLangs.translate_website()
-        FranklinLangs.sitemap_add_translations(;amp=all)
+        FranklinLangs.sitemap_add_translations(;amp=true)
     end
-    (all || what === :amp) && AMP.ampdir(fr.path(:site); dirs=target_dirs)
-    (all || what === :yandex) && Yandex.turbodir(fr.path(:site); dirs=target_dirs)
-    (all || what === :minify) && FranklinMinify.minify_website()
+    # the search index also includes translations
+    (all || what === :search) && begin
+        lunr()
+        # copy the index to the site folder
+        cp(joinpath(fr.path(:libs), "lunr", "lunr_index.js"),
+           joinpath(site, "libs", "lunr", "lunr_index.js"); force=true)
+    end
+
+    # seo pages
+    (all || what === :amp) && begin
+        display("AMP pages...")
+        AMP.ampdir(fr.path(:site); dirs=target_dirs)
+    end
+    (all || what === :yandex) && begin
+        display("Turbo pages...")
+        Yandex.turbodir(fr.path(:site); dirs=target_dirs)
+    end
+
+    # minification at the end to minify every html page and asset
+    (all || what === :minify) && begin
+        display("Minification...")
+        FranklinMinify.minify_website()
+    end
+    if publish
+        trg_dir = "/tmp/__site"
+        bak_dir = joinpath(fr.path(:folder), "__site.bak")
+        @assert !isnothing(Sys.which("git")) &&
+            !isnothing(Sys.which("fd")) &&
+            !isnothing(Sys.which("rsync"))
+        display("Publishing website...")
+        cd(fr.path(:folder))
+        cma = read(`git rev-parse --short HEAD`, String) |> chomp
+
+        cd(bak_dir)
+        run(`rsync -a $trg_dir/ $bak_dir/`)
+	    run(pipeline(`fd "\.((?:css)|(?:html)|(?:js)|(?:xml))\$" ./`,
+                     `xargs git add -A`))
+        # occursin("branch is up to date", read(`git status`, String)) ||
+        try
+            run(`git commit -m "$cma"`)
+            run(`git push github-pages gh-pages`)
+        catch
+            throw("Branch clean?")
+        end
+    else
+        srv_dir()
+    end
     nothing
 end
 
