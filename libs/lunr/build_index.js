@@ -1,2 +1,119 @@
-var path=require("path"),fs=require("fs"),lunr=require("lunr"),cheerio=require("cheerio"),SummarizerManager=require("node-summarizer").SummarizerManager;const PATH_PREPEND="..",HTML_FOLDER="../../__site",OUTPUT_INDEX="lunr_index.js";function isHtml(r){return lower=r.toLowerCase(),lower.endsWith(".htm")||lower.endsWith(".html")}function findHtml(r){if(!fs.existsSync(r)){console.log("Could not find folder: ",r);return}for(var e=fs.readdirSync(r),n=[],t=0;t<e.length;t++){var a=path.join(r,e[t]),i=fs.lstatSync(a);if(!(a.endsWith("posts/index.html")||a.endsWith("tag/index.html")))if(i.isDirectory()){if(i=="assets"||i=="css"||i=="libs")continue;for(var s=findHtml(a),o=0;o<s.length;o++)s[o]=path.join(e[t],s[o]).replace(/\\/g,"/");n.push.apply(n,s)}else isHtml(a)&&n.push(e[t])}return n}function readHtml(r,e,n){var t=path.join(r,e),a=fs.readFileSync(t).toString(),i=cheerio.load(a),s=i("title").text();typeof s=="undefined"&&(s=e),i("code").remove();var o=i(".franklin-content").text();typeof o=="undefined"&&(o="");let l=new SummarizerManager(o,3).getSummaryByFrequency().summary;var u={id:n,l:t,t:s,b:l};return u}function buildIndex(r){var e=lunr(function(){this.ref("id"),this.field("t"),this.field("b"),r.forEach(function(n){this.add(n)},this)});return e}function buildPreviews(r){for(var e={},n=0;n<r.length;n++){var t=r[n];e[t.id]={t:t.t,l:t.l.replace(/^\.\.\/\.\.\/__site/gi,"/"+PATH_PREPEND),b:t.b}}return e}function main(){files=findHtml(HTML_FOLDER);for(var r=[],e=0;e<files.length;e++)r.push(readHtml(HTML_FOLDER,files[e],e));var n=buildIndex(r),t=buildPreviews(r),a="const LUNR_DATA = "+JSON.stringify(n)+`;
-const PREVIEW_LOOKUP = `+JSON.stringify(t)+";";fs.writeFile(OUTPUT_INDEX,a,function(i){if(i)return console.log(i)})}main();
+var path = require("path");
+var fs = require("fs");
+var lunr = require("lunr");
+var cheerio = require("cheerio");
+var SummarizerManager = require("node-summarizer").SummarizerManager;
+
+// don't modify this, it'll be modified on the fly by lunr() in Franklin
+const PATH_PREPEND = "..";
+
+const HTML_FOLDER = "../../__site";
+const OUTPUT_INDEX = "lunr_index.js";
+
+function isHtml(filename) {
+  lower = filename.toLowerCase();
+  return lower.endsWith(".htm") || lower.endsWith(".html");
+}
+
+function findHtml(folder) {
+  if (!fs.existsSync(folder)) {
+    console.log("Could not find folder: ", folder);
+    return;
+  }
+  var files = fs.readdirSync(folder);
+  var htmls = [];
+  for (var i = 0; i < files.length; i++) {
+    var filename = path.join(folder, files[i]);
+    var stat = fs.lstatSync(filename);
+    // ignore indexes
+    if (
+      filename.endsWith("posts/index.html") ||
+      filename.endsWith("tag/index.html")
+    ) {
+      continue;
+    }
+    if (stat.isDirectory()) {
+      if (stat == "assets" || stat == "css" || stat == "libs") {
+        continue;
+      }
+      var recursed = findHtml(filename);
+      for (var j = 0; j < recursed.length; j++) {
+        recursed[j] = path.join(files[i], recursed[j]).replace(/\\/g, "/");
+      }
+      htmls.push.apply(htmls, recursed);
+    } else if (isHtml(filename)) {
+      htmls.push(files[i]);
+    }
+  }
+  return htmls;
+}
+
+function readHtml(root, file, fileId) {
+  var filename = path.join(root, file);
+  var txt = fs.readFileSync(filename).toString();
+  var $ = cheerio.load(txt);
+  var title = $("title").text();
+  if (typeof title == "undefined") title = file;
+  $("code").remove();
+  var body = $(".franklin-content").text();
+  if (typeof body == "undefined") body = "";
+  // console.log(body);
+  // generate summary
+  let summ = new SummarizerManager(body, 3).getSummaryByFrequency().summary;
+  var data = {
+    id: fileId,
+    l: filename,
+    t: title,
+    b: summ,
+  };
+  return data;
+}
+
+function buildIndex(docs) {
+  var idx = lunr(function () {
+    this.ref("id");
+    this.field("t"); // title
+    this.field("b"); // body
+    docs.forEach(function (doc) {
+      this.add(doc);
+    }, this);
+  });
+  return idx;
+}
+
+function buildPreviews(docs) {
+  var result = {};
+  for (var i = 0; i < docs.length; i++) {
+    var doc = docs[i];
+    result[doc["id"]] = {
+      t: doc["t"],
+      l: doc["l"].replace(/^\.\.\/\.\.\/__site/gi, "/" + PATH_PREPEND),
+      b: doc["b"],
+    };
+  }
+  return result;
+}
+
+function main() {
+  files = findHtml(HTML_FOLDER);
+  var docs = [];
+  for (var i = 0; i < files.length; i++) {
+    docs.push(readHtml(HTML_FOLDER, files[i], i));
+  }
+  var idx = buildIndex(docs);
+  var prev = buildPreviews(docs);
+  var js =
+    "const LUNR_DATA = " +
+    JSON.stringify(idx) +
+    ";\n" +
+    "const PREVIEW_LOOKUP = " +
+    JSON.stringify(prev) +
+    ";";
+  fs.writeFile(OUTPUT_INDEX, js, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+  });
+}
+
+main();

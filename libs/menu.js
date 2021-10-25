@@ -1,1 +1,59 @@
-function $(e,n=window.document){return n.querySelector(e)}function $$(e,n=window.document){return n.querySelectorAll(e)}$("#site-nav .ham").onclick=function(e){e.stopPropagation(),toggle_menu()},$("body,html").onclick=function(e){cls=e.target.classList,e.stopPropagation(),cls.contains("langs-dropdown-wrapper")?toggle_langs():cls.contains("search-input")||toggle_menu(hide=!0)},menu_visible=!1;function toggle_menu(e=!1){nav=$("#site-nav");let n=$(".vert",nav).style;menu_visible?(menu_visible=!1,n["max-height"]="0rem",n.filter="blur(1rem)",n.overflow="hidden"):e||(menu_visible=!0,n["max-height"]="30rem",n.filter="none",n.overflow="visible"),toggle_langs(e=!0)}function toggle_langs(e=!1){langs=$$(".langs-dropdown-content");for(k in Object.keys(langs))e?langs[k].classList.remove("show"):langs[k].classList.toggle("show")}$(".langs-dropdown-wrapper").onclick=function(e){e.stopPropagation(),toggle_langs()};
+function $(a, doc = window.document) {
+  return doc.querySelector(a);
+}
+
+function $$(a, doc = window.document) {
+  return doc.querySelectorAll(a);
+}
+
+$("#site-nav .ham").onclick = function (e) {
+  e.stopPropagation();
+  toggle_menu();
+};
+
+$("body,html").onclick = function (e) {
+  cls = e.target.classList;
+  e.stopPropagation();
+  if (cls.contains("langs-dropdown-wrapper")) {
+    toggle_langs();
+  } else {
+    if (!cls.contains("search-input")) {
+      toggle_menu((hide = true));
+    }
+  }
+};
+
+menu_visible = false;
+function toggle_menu(hide = false) {
+  nav = $("#site-nav");
+  let sty = $(".vert", nav).style;
+  if (menu_visible) {
+    menu_visible = false;
+    sty["max-height"] = "0rem";
+    sty["filter"] = "blur(1rem)";
+    sty["overflow"] = "hidden";
+  } else if (!hide) {
+    menu_visible = true;
+    sty["max-height"] = "30rem";
+    sty["filter"] = "none";
+    sty["overflow"] = "visible";
+  }
+  toggle_langs(hide=true)
+}
+
+
+function toggle_langs(hide = false) {
+  langs = $$(".langs-dropdown-content")
+  for (k in Object.keys(langs)) {
+    if (hide) {
+      langs[k].classList.remove("show");
+    } else {
+      langs[k].classList.toggle("show");
+    }
+  }
+}
+
+$(".langs-dropdown-wrapper").onclick = function (e) {
+  e.stopPropagation();
+  toggle_langs();
+};
