@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  Search engines  ]]>
+  </title>
+  <link> https://www.unto.re/posts/search-engines/index.html </link>
+  <guid> https://www.unto.re/posts/search-engines/index.html </guid>
+  <description>
+    <![CDATA[  AMP pages, turbo pages, indexing...the good, the bad...  ]]>
+  </description>  
+    
+  <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Emacs  ]]>
   </title>
   <link> https://www.unto.re/posts/emacs/index.html </link>
