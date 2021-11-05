@@ -5,12 +5,8 @@ sitemap_priority = 1.0
 
 @@intro
 
-#### \icon{fa-clock} Latest posts
-~~~{{recent_posts 3}}~~~
-- [\icon{fa-hand-point-right} go to all posts...](/posts/)
-
 @@active-projects
-#### \icon{fa-star} Active projects
+#### \icon{fa-star} Some code
 - #### Julia packages
   - [LDJ](https://github.com/untoreh/LDJ.jl) -- ld-son structured data markup generator.
   - [Translator](https://github.com/untoreh/Translator.jl) -- Multilingual translation tool, for automatic translation of web pages using online translation services.
@@ -39,9 +35,14 @@ sitemap_priority = 1.0
 
 ---
 
+#### \icon{fa-clock} Latest posts
+~~~{{recent_posts 3}}~~~
+- [\icon{fa-hand-point-right} go to all posts...](/posts/)
+
 @@media
-- [\icon{fa-book} What I am reading or have read](/reads)
-- [\icon{fa-image} Photos of a couple trips or places](/photos)
+- [\icon{fa-book} Books, guides, articles, manuals, papers...](/reads)
+- [\icon{fa-tv} TV shows, movies, animes (shows)](/shows)
+- [\icon{fa-image} Photos and recordings...](/photos)
 @@
 
 ## \icon{fa-lightbulb} Weird or silly ideas for new projects

@@ -11,12 +11,6 @@ ENV["PIP3"] = joinpath(Conda.BINDIR, "pip")
 ENV["PYTHONPATH"] = "$(Conda.LIBDIR)/python$(py_v)"
 
 using Franklin; const fr = Franklin;
-fr.FOLDER_PATH[] = dirname(@__FILE__)
-fr.set_paths!()
-fr.def_GLOBAL_VARS!()
-fr.process_config()
-# fr.fd_setup()
-
 using LDJ: ldjfranklin; ldjfranklin(); using LDJ.LDJFranklin
 using Translator; Translator.franklinlangs(); using .FranklinLangs;
 using FranklinContent; FranklinContent.franklincontent_hfuncs();
@@ -24,7 +18,7 @@ FranklinContent.load_amp(); using .AMP
 FranklinContent.load_yandex(); using .Yandex
 FranklinContent.load_minify(); using .FranklinMinify
 FranklinContent.load_opg(); using .OPG
-
+FranklinContent.load_simkl(); using .Simkl
 
 function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     # set the global path
@@ -37,12 +31,12 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     # clear at the beginning
     (all || clear) && begin
         @assert site !== pwd() && islink(site)
-        display("Cleaning site directory $site...")
-        run(`bash -c "rm -r $(joinpath(site, "*"))"`)
+        display("Cleaning site directory $site  ...")
+        try run(`bash -c "rm -r $(joinpath(site, "*"))"`) catch end
     end
 
     (all || what === :opt) && begin
-        fr.optimize(prerender=true, minify=false, fail_on_warning=fail)
+        fr.optimize(prerender=true, minify=false)
         fr.def_GLOBAL_VARS!()
         fr.process_config()
     end

@@ -119,3 +119,12 @@
     font-size: 0.9rem;
     display: inline;
 }
+
+/* /shows */
+
+.shows_list h3 {
+    font-size: 1.5rem;
+}
+a.imdb {
+    padding: 0 0.5rem 0 0.5rem;
+}

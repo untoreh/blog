@@ -1,9 +1,6 @@
-- social publishing/omp graph
-- SE indexing
-  - yandex / turbo pages
+- social publishing
   
 # articles
-- emacs
 - prog languages round up
 - identify / philo
 - irrigation systems
