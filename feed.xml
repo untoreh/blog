@@ -23,6 +23,44 @@
 
 <item>
   <title>
+    <![CDATA[  is Julia a lisp?  ]]>
+  </title>
+  <link> https://www.unto.re/posts/is-julia-a-lisp/index.html </link>
+  <guid> https://www.unto.re/posts/is-julia-a-lisp/index.html </guid>
+  <description>
+    <![CDATA[  What defines a lisp? Can Julia be called a LISP?  ]]>
+  </description>  
+    
+  <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  My list of physical exercises  ]]>
+  </title>
+  <link> https://www.unto.re/posts/my-list-of-physical-exercises/index.html </link>
+  <guid> https://www.unto.re/posts/my-list-of-physical-exercises/index.html </guid>
+  <description>
+    <![CDATA[  When I feel creaky, I do these.  ]]>
+  </description>  
+    
+  <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  My TV shows watchlist  ]]>
   </title>
   <link> https://www.unto.re/shows/index.html </link>
@@ -31,7 +69,7 @@
     <![CDATA[  Shows that I have watched or am watching.  ]]>
   </description>  
     
-  <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
