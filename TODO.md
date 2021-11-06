@@ -7,3 +7,4 @@
 
 # backlog
 - add support for gemini protocol, but needs a self hosted server
+- switch IFTTT twitter updates with custom twitter bot

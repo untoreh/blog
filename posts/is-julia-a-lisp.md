@@ -22,6 +22,10 @@ Julia code can be represented using `:()` or `Expr(...)` notation. It can be tra
 Some people consider _S-Expression only syntax_ a requirement for a lisp language to be called such. The advantage of S-Exprs is that code is easier to parse and manipulate by other people, it is an indirect benefit, it is a simpler common ground that in turn gives the ability to write more _powerful code editing_ code. Julia has macros, but in some sense, they are less powerful than lisp macros because it is harder to manipulate M-Exprs.
 
 # Is Julia a LISP?
-I don't care. :)
+\del{I don't care.}
+
+\del{Who cares?} 
+
+Meh. :)
 
 [lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)

@@ -36,9 +36,12 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     end
 
     (all || what === :opt) && begin
+        isdefined(Main, :setup_franklin) && setup_franklin()
         fr.optimize(prerender=true, minify=false)
-        fr.def_GLOBAL_VARS!()
-        fr.process_config()
+        isdefined(Main, :setup_franklin) && setup_franklin()
+        # reset vars
+        # fr.def_GLOBAL_VARS!()
+        # fr.process_config()
     end
     (all || what === :trans) && begin
         display("Translating...")

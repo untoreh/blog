@@ -75,3 +75,4 @@ For instance:
 \newcommand{\imgl}[1]{~~~{{insert_img #1 left}}~~~}
 \newcommand{\imgr}[1]{~~~{{insert_img #1 right}}~~~}
 \newcommand{\imgc}[1]{~~~{{insert_img #1 none}}~~~}
+\newcommand{\del}[1]{~~~<del>#1</del>~~~}
