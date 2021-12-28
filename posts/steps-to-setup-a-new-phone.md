@@ -16,8 +16,8 @@ rss_description = "Follow the steps to de-bloat a stock android phone"
 - Magisk module uninstaller to remove modules causing bootloops from recovery
 - Maybe flash a custom kernel
 - Check microG self-test to see what needs to be configured (apk spoofing, unified nlp, etc)
-- Install xposed with magisk
+- Install (xposed/Riru-LSposed/) with magisk
 - Configure lucky patcher
 - Install markets: f-droid, aurora, aptoide
-- Replace apps: calendar->etar, messages->signal(session?), mail->deltachat(or nothing..), keyboard->anysoftkb, files->mixplorer, browser->bromite/firefox, youtube->newpipe, camera->open camera, music->vynil/phonograph, workspaces->shelter
+- Replace apps: calendar->etar, messages->signal(session?), mail->deltachat(or nothing..), keyboard->(anysoftkb/florisboard), files->(mixplorer/materialfiles), browser->bromite/firefox, youtube->newpipe, camera->open camera, music->vynil/phonograph, workspaces->shelter
 - Battery apps: betterbatterystats, stop battery charging (should not be needed), greenify
