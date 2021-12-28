@@ -23,6 +23,44 @@
 
 <item>
   <title>
+    <![CDATA[  Methods for accessing a remote desktop from an android tablet.  ]]>
+  </title>
+  <link> https://www.unto.re/posts/remote-desktop/index.html </link>
+  <guid> https://www.unto.re/posts/remote-desktop/index.html </guid>
+  <description>
+    <![CDATA[  Streaming qualities, inputs configuration and hotkeys overrides...  ]]>
+  </description>  
+    
+  <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Steps to setup a new phone  ]]>
+  </title>
+  <link> https://www.unto.re/posts/steps-to-setup-a-new-phone/index.html </link>
+  <guid> https://www.unto.re/posts/steps-to-setup-a-new-phone/index.html </guid>
+  <description>
+    <![CDATA[  Follow the steps to de-bloat a stock android phone  ]]>
+  </description>  
+    
+  <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  oral hygiene  ]]>
   </title>
   <link> https://www.unto.re/posts/oral-hygiene/index.html </link>
@@ -637,25 +675,6 @@
   <guid> https://www.unto.re/posts/copypaste-on-dns/index.html </guid>
   <description>
     <![CDATA[  Sharing text throught TXT records  ]]>
-  </description>  
-    
-  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Steps to setup a new phone  ]]>
-  </title>
-  <link> https://www.unto.re/posts/steps-to-setup-a-new-phone/index.html </link>
-  <guid> https://www.unto.re/posts/steps-to-setup-a-new-phone/index.html </guid>
-  <description>
-    <![CDATA[  Follow the steps to de-bloat a stock android phone  ]]>
   </description>  
     
   <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
