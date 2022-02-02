@@ -8,6 +8,8 @@ sitemap_priority = 1.0
 @@active-projects
 #### \icon{fa-star} Some code
 - #### Julia packages
+  - [Backtest](https://github.com/untoreh/Backtest.jl) -- Cryptocurrency trading utilities
+  - [Features](https://github.com/untoreh/Features.jl) -- Useful stuff for operations with arrays.
   - [LDJ](https://github.com/untoreh/LDJ.jl) -- ld-son structured data markup generator.
   - [Translator](https://github.com/untoreh/Translator.jl) -- Multilingual translation tool, for automatic translation of web pages using online translation services.
   - [FranklinContentPlugin](https://github.com/untoreh/FranklinContent.jl) -- Small framework for html code generation.

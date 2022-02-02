@@ -21,6 +21,6 @@ rss_description = "A list of correlation metrics"
 
 ## Others
 
-- quotient correlation (`(max(y, x) + max(x, y) - 2) / (max(y, x) * max(x, y) - 1)`)
+- quotient correlation (`(max(y/x) + max(x/y) - 2) / (max(y/x) * max(x/y) - 1)`)
 - Cohen (SO)
 - autocorrelation (`np.correlate`)
