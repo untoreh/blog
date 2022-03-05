@@ -3,6 +3,6 @@
 
 ((nil . ((magit-large-repo-set-p . t)
          (magit-commit-show-diff . nil)
-         (magit-large-repo-p . nil)
+         (magit-large-repo-p . t)
          (magit-refresh-buffers . nil)
          (enable-local-eval . t))))

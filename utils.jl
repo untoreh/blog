@@ -46,7 +46,7 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     (all || what === :trans) && begin
         display("Translating...")
         @time (FranklinLangs.translate_website();
-               FranklinLangs.sitemap_add_translations(;amp=true))
+               FranklinLangs.sitemap_add_translations(;amp=false))
     end
     # the search index also includes translations
     (all || what === :search) && begin
