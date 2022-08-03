@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  Why Windows is an unfixable mountain of bugs  ]]>
+  </title>
+  <link> https://www.unto.re/posts/windows-bugs/index.html </link>
+  <guid> https://www.unto.re/posts/windows-bugs/index.html </guid>
+  <description>
+    <![CDATA[  Windows &#40;11&#41; rant.  ]]>
+  </description>  
+    
+  <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Julia Backtesting framework  ]]>
   </title>
   <link> https://www.unto.re/posts/backtest/index.html </link>
