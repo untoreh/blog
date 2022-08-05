@@ -10,3 +10,4 @@ package-lock.json
 /__site.bak/
 /pyrightconfig.json
 /_libs/lunr/lunr_index.js
+/.log/

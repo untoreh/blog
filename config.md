@@ -10,7 +10,7 @@ The website_* must be defined for the RSS to work
 @def website_url = "https://www.unto.re"
 @def country = "IT"
 @def country_name = "italy"
-@def author_image = "/assets/appa.png"
+@def author_image = "/assets/appa.webp"
 @def logo = "/assets/appa-60px.png"
 @def avatar = "/assets/appa.png"
 @def email = "contact@unto.re"
@@ -19,7 +19,8 @@ The website_* must be defined for the RSS to work
 @def twitter_user = "@untoreh"
 @def lang = "English"
 @def lang_code = "en"
-@dev menu = ["/posts", "/media", "/reads", "/tag"]
+@def menu = ["/posts", "/media", "/reads", "/tag"]
+@def locale = "en_US"
 
 <!-- tag_page_path = "tags" -->
 

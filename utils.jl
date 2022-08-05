@@ -26,8 +26,8 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
 
     trg, src = FranklinLangs.get_languages()
     target_dirs = [code for (_, code) in trg if code !== src]
-    append!(target_dirs, ["posts", "tag", "reads", "_rss"])
-
+    blog_dirs = ["posts", "tag", "reads", "_rss", "photos", "about", "search", "shows", "media"]
+    append!(target_dirs, blog_dirs)
     # clear at the beginning
     (all || clear) && begin
         @assert site !== pwd() && islink(site)
@@ -39,14 +39,10 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
         isdefined(Main, :setup_franklin) && setup_franklin()
         fr.optimize(prerender=true, minify=false)
         isdefined(Main, :setup_franklin) && setup_franklin()
-        # reset vars
-        # fr.def_GLOBAL_VARS!()
-        # fr.process_config()
     end
     (all || what === :trans) && begin
         display("Translating...")
-        @time (FranklinLangs.translate_website();
-               FranklinLangs.sitemap_add_translations(;amp=false))
+        @time (FranklinLangs.translate_website(;blog_dirs);)
     end
     # the search index also includes translations
     (all || what === :search) && begin
@@ -69,7 +65,7 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     # minification at the end to minify every html page and asset
     (all || what === :minify) && begin
         display("Minification...")
-        @time FranklinMinify.minify_website()
+        @time FranklinMinify.minify_website(;keep_spaces_between_attributes=true)
     end
     if publish
         trg_dir = "/tmp/__site"

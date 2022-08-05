@@ -1,0 +1,39 @@
+{
+  "name": "untoreh_site",
+  "version": "1.0.0",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --allowed-hosts=wsl",
+    "build": "webpack && scripts/site.sh -s",
+    "serve-vite": "vite",
+    "build-vite": "vite build",
+    "preview-vite": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.8",
+    "babel-loader": "^8.2.3",
+    "critical-css-webpack-plugin": "^3.0.0",
+    "css-loader": "^6.6.0",
+    "esbuild": "^0.14.31",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "lighthouse": "^9.5.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-loader": "^6.2.1",
+    "rollup-plugin-critical": "^1.0.8",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@parcel/css-cli": "^1.12.2"
+  }
+}
