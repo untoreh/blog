@@ -1,0 +1,1 @@
+import i from"rollup-plugin-critical";export default{input:"index.js",output:{dir:"dist",format:"es"},plugins:[i({criticalUrl:"https://nystudio107.com/",criticalBase:"./",criticalPages:[{uri:"",template:"index"},{uri:"about",template:"about/index"}],criticalConfig:{}})]};
