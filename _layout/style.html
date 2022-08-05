@@ -1,1 +1,26 @@
-style_inline.html
+{{setdeploy}}
+{{ifdef DEPLOY}}
+<style>{{insert ../_css/bundle-crit.css}}</style>
+<link as="style" href="/css/bundle.css" rel="preload">
+<link href="/css/bundle.css" media="print" onload=
+"this.onload=null;this.removeAttribute('media');" rel="stylesheet">
+<noscript>
+<link href="/css/bundle.css" rel="stylesheet">
+</noscript>
+{{else}}
+<link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/menu.css">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="stylesheet" href="/css/lunr.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/animations.css">
+<link rel="stylesheet" href="/css/docco.css">
+<!-- <link rel="stylesheet" href="/css/flag-icon.min.css"> -->
+<link rel="stylesheet" href="/css/flags-sprite.css">
+{{end}}
+<link rel="icon" href="/assets/favicon.png" type="image/x-icon">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!--[if IE ]>
+<![endif]-->

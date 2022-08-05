@@ -24,6 +24,7 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     # set the global path
     site = fr.path(:site)
 
+    if publish ENV["DEPLOY"] = 1 end
     trg, src = FranklinLangs.get_languages()
     target_dirs = [code for (_, code) in trg if code !== src]
     blog_dirs = ["posts", "tag", "reads", "_rss", "photos", "about", "search", "shows", "media"]
@@ -91,6 +92,7 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     else
         srv_dir()
     end
+    if publish delete!(ENV, "DEPLOY") end
     nothing
 end
 
