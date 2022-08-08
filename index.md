@@ -1,6 +1,7 @@
 +++
 sitemap_changefreq = "weekly"
 sitemap_priority = 1.0
+rss_description = "Articles, contacts info and portofolio for @untoreh."
 +++
 
 @@intro

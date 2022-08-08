@@ -15,9 +15,9 @@ export default defineConfig({
       criticalUrl: 'http://localhost:8000',
       criticalBase: './',
       criticalPages: [
-        { uri: ''},
-        { uri: '/tag'},
-        { uri: '/posts'},
+        { uri: '' },
+        { uri: '/tag' },
+        { uri: '/posts' },
         { uri: '/tag/about' },
         { uri: '/posts/alpine' }
       ],
@@ -30,6 +30,11 @@ export default defineConfig({
         },
         ignore: {
           atrule: ['@font-face'],
+          rule: [/.*\/assets\/flags\.png.*/]
+        },
+        rebase: {
+          from: '/assets/flags.png',
+          to: '/assets/flags.png',
         },
         dimensions: [
           {
@@ -53,4 +58,13 @@ export default defineConfig({
       plugins: [autoprefixer()],
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // entryFileNames: `[name].js`,
+        // chunkFileNames: `[name].js`,
+        assetFileNames: `assets/[name].[ext]`
+      }
+    }
+  }
 });

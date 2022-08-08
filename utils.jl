@@ -20,6 +20,41 @@ FranklinContent.load_minify(); using .FranklinMinify
 FranklinContent.load_opg(); using .OPG
 FranklinContent.load_simkl(); using .Simkl
 
+function check_npm_deps()
+    pkgs = read(`npm list`) |> String
+    for p in ["cheerio", "node-summarizer", "highlight.js", "rollup-plugin-critical", "lunr"]
+        if !occursin(p, pkgs)
+            @warn "$p not install run `npm i -D $p` in project directory"
+        end
+    end
+    if run(`which vite`).exitcode != 0
+        @warn "Install vite `npm i -g vite` to run the critical css bundler."
+    end
+end
+
+function dopublish()
+    trg_dir = "/tmp/__site"
+    bak_dir = joinpath(fr.path(:folder), "__site.bak")
+    @assert !isnothing(Sys.which("git")) &&
+        !isnothing(Sys.which("fd")) &&
+        !isnothing(Sys.which("rsync"))
+    display("Publishing website...")
+    cd(fr.path(:folder))
+    cma = read(`git rev-parse --short HEAD`, String) |> chomp
+
+    cd(bak_dir)
+    run(`rsync -a $trg_dir/ $bak_dir/`)
+    run(pipeline(`fd "\.((?:css)|(?:html)|(?:js)|(?:xml))\$" ./`,
+                    `xargs git add -A`))
+    # occursin("branch is up to date", read(`git status`, String)) ||
+    try
+        run(`git commit -m "$cma"`)
+        run(`git push github-pages gh-pages`)
+    catch
+        throw("Branch clean?")
+    end
+end
+
 function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
     # set the global path
     site = fr.path(:site)
@@ -69,26 +104,7 @@ function pubup(what=nothing; all=false, clear=false, publish=false, fail=false)
         @time FranklinMinify.minify_website(;keep_spaces_between_attributes=true)
     end
     if publish
-        trg_dir = "/tmp/__site"
-        bak_dir = joinpath(fr.path(:folder), "__site.bak")
-        @assert !isnothing(Sys.which("git")) &&
-            !isnothing(Sys.which("fd")) &&
-            !isnothing(Sys.which("rsync"))
-        display("Publishing website...")
-        cd(fr.path(:folder))
-        cma = read(`git rev-parse --short HEAD`, String) |> chomp
-
-        cd(bak_dir)
-        run(`rsync -a $trg_dir/ $bak_dir/`)
-	    run(pipeline(`fd "\.((?:css)|(?:html)|(?:js)|(?:xml))\$" ./`,
-                     `xargs git add -A`))
-        # occursin("branch is up to date", read(`git status`, String)) ||
-        try
-            run(`git commit -m "$cma"`)
-            run(`git push github-pages gh-pages`)
-        catch
-            throw("Branch clean?")
-        end
+        dopublish()
     else
         srv_dir()
     end
