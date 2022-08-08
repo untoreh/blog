@@ -11,3 +11,4 @@ package-lock.json
 /pyrightconfig.json
 /_libs/lunr/lunr_index.js
 /.log/
+/dist/
