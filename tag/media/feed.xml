@@ -9,14 +9,14 @@
 
   <channel>
     <title>
-      <![CDATA[  {{fd2rss website_title}}  ]]>
+      <![CDATA[  untoreh&#39;s site  ]]>
     </title>
-    <link> {{website_url}} </link>
+    <link> https://www.unto.re </link>
     <description>
-      <![CDATA[  {{fd2rss website_description}}  ]]>
+      <![CDATA[  Articles, logs, infos, status and live updates are published here.  ]]>
     </description>
     <atom:link
-      href="{{fd_rss_feed_url}}"
+      href="https://www.unto.re/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
