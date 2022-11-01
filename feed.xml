@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  LLMs  ]]>
+  </title>
+  <link> https://www.unto.re/posts/LLMs/index.html </link>
+  <guid> https://www.unto.re/posts/LLMs/index.html </guid>
+  <description>
+    <![CDATA[  Why LLMs for text are so big?  ]]>
+  </description>  
+    
+  <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  On inflation  ]]>
   </title>
   <link> https://www.unto.re/posts/inflation/index.html </link>
@@ -32,6 +51,25 @@
   </description>  
     
   <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  untoreh&#39;s site  ]]>
+  </title>
+  <link> https://www.unto.re/index.html </link>
+  <guid> https://www.unto.re/index.html </guid>
+  <description>
+    <![CDATA[  Articles, contacts info and portofolio for @untoreh.  ]]>
+  </description>  
+    
+  <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -1001,25 +1039,6 @@
   </description>  
     
   <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  untoreh&#39;s site  ]]>
-  </title>
-  <link>  </link>
-  <guid>  </guid>
-  <description>
-    <![CDATA[  Articles, contacts info and portofolio for @untoreh.  ]]>
-  </description>  
-    
-  <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
