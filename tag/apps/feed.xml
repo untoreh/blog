@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  Building a content aggregator for fun and profits?  ]]>
+  </title>
+  <link> https://www.unto.re/posts/Content-Aggregator/index.html </link>
+  <guid> https://www.unto.re/posts/Content-Aggregator/index.html </guid>
+  <description>
+    <![CDATA[  A full app that scrapes, processes and presents content from the web...on the web.  ]]>
+  </description>  
+    
+  <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Methods for accessing a remote desktop from an android tablet.  ]]>
   </title>
   <link> https://www.unto.re/posts/remote-desktop/index.html </link>

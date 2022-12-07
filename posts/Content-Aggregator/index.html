@@ -1,0 +1,1651 @@
+<!doctype html>
+<html lang="en" prefix="og: https://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.unto.re/posts/Content-Aggregator">
+        <link href="https://www.unto.re/de/posts/Content-Aggregator" hreflang="de" rel="alternate"/><link href="https://www.unto.re/it/posts/Content-Aggregator" hreflang="it" rel="alternate"/><link href="https://www.unto.re/zh/posts/Content-Aggregator" hreflang="zh" rel="alternate"/><link href="https://www.unto.re/es/posts/Content-Aggregator" hreflang="es" rel="alternate"/><link href="https://www.unto.re/hi/posts/Content-Aggregator" hreflang="hi" rel="alternate"/><link href="https://www.unto.re/ar/posts/Content-Aggregator" hreflang="ar" rel="alternate"/><link href="https://www.unto.re/pt/posts/Content-Aggregator" hreflang="pt" rel="alternate"/><link href="https://www.unto.re/bn/posts/Content-Aggregator" hreflang="bn" rel="alternate"/><link href="https://www.unto.re/ru/posts/Content-Aggregator" hreflang="ru" rel="alternate"/><link href="https://www.unto.re/ja/posts/Content-Aggregator" hreflang="ja" rel="alternate"/><link href="https://www.unto.re/pa/posts/Content-Aggregator" hreflang="pa" rel="alternate"/><link href="https://www.unto.re/jw/posts/Content-Aggregator" hreflang="jw" rel="alternate"/><link href="https://www.unto.re/vi/posts/Content-Aggregator" hreflang="vi" rel="alternate"/><link href="https://www.unto.re/fr/posts/Content-Aggregator" hreflang="fr" rel="alternate"/><link href="https://www.unto.re/ur/posts/Content-Aggregator" hreflang="ur" rel="alternate"/><link href="https://www.unto.re/tr/posts/Content-Aggregator" hreflang="tr" rel="alternate"/><link href="https://www.unto.re/pl/posts/Content-Aggregator" hreflang="pl" rel="alternate"/><link href="https://www.unto.re/uk/posts/Content-Aggregator" hreflang="uk" rel="alternate"/><link href="https://www.unto.re/nl/posts/Content-Aggregator" hreflang="nl" rel="alternate"/><link href="https://www.unto.re/el/posts/Content-Aggregator" hreflang="el" rel="alternate"/><link href="https://www.unto.re/sv/posts/Content-Aggregator" hreflang="sv" rel="alternate"/><link href="https://www.unto.re/zu/posts/Content-Aggregator" hreflang="zu" rel="alternate"/><link href="https://www.unto.re/ro/posts/Content-Aggregator" hreflang="ro" rel="alternate"/><link href="https://www.unto.re/ms/posts/Content-Aggregator" hreflang="ms" rel="alternate"/><link href="https://www.unto.re/ko/posts/Content-Aggregator" hreflang="ko" rel="alternate"/><link href="https://www.unto.re/th/posts/Content-Aggregator" hreflang="th" rel="alternate"/><link href="https://www.unto.re/tl/posts/Content-Aggregator" hreflang="tl" rel="alternate"/>
+        <link rel="alternate" type="application/rss+xml" href="https://www.unto.re/feed.xml" title="untoreh's site">
+        <link rel="amphtml" href="https://www.unto.re/amp/posts/Content-Aggregator">
+        <meta property="og:title" content="Building a content aggregator for fun and profits?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.unto.re/posts/Content-Aggregator" />
+<meta property="og:image" content="https://www.unto.re/assets/appa.webp" />
+<meta property="og:description" content="A full app that scrapes, processes and presents content from the web...on the web." />
+<meta property="og:site_name" content="untoreh's site" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:creator" content="@untoreh"/>
+        <script type="application/ld+json" id="" class="">{"copyrightHolder":"untoreh","@id":"https://www.unto.re","url":"https://www.unto.re","copyrightYear":2022,"@context":"https://schema.org/","image":"/assets/appa.webp","@type":"WebSite"}</script>
+        <script type="application/ld+json" id="ldj-webpage" class="">{"audience":"cool people","url":"https://www.unto.re/posts/Content-Aggregator/index.html","mainContentOfPage":{"@type":"WebPageElement","cssSelector":".franklin-content"},"accessMode":["textual","visual"],"accessibilitySummary":"Visual elements are tentatively described.","description":"A full app that scrapes, processes and presents content from the web...on the web.","author":{"sameAs":["https://github.com/untoreh","https://twitter.com/untoreh"],"email":"contact@unto.re","name":"untoreh","@type":"https://schema.org/Person","image":"/assets/appa.webp"},"mentions":[],"@context":"https://schema.org","accessModeSufficient":{"itemListElement":["textual","visual"],"@type":"itemList"},"@type":"https://schema.org/WebPage","lastReviewed":"2022-12-07","dateCreated":"December 07, 2022","@id":"https://www.unto.re/posts/Content-Aggregator/index.html","dateModified":"2022-12-07","availableLanguage":[{"name":"English","@type":"Language"},{"name":"German","@type":"Language"},{"name":"Italian","@type":"Language"},{"name":"Mandarin Chinese","@type":"Language"},{"name":"Spanish","@type":"Language"},{"name":"Hindi","@type":"Language"},{"name":"Arabic","@type":"Language"},{"name":"Portuguese","@type":"Language"},{"name":"Bengali","@type":"Language"},{"name":"Russian","@type":"Language"},{"name":"Japanese","@type":"Language"},{"name":"Punjabi","@type":"Language"},{"name":"Javanese","@type":"Language"},{"name":"Vietnamese","@type":"Language"},{"name":"French","@type":"Language"},{"name":"Urdu","@type":"Language"},{"name":"Turkish","@type":"Language"},{"name":"Polish","@type":"Language"},{"name":"Ukranian","@type":"Language"},{"name":"Dutch","@type":"Language"},{"name":"Greek","@type":"Language"},{"name":"Swedish","@type":"Language"},{"name":"Zulu","@type":"Language"},{"name":"Romanian","@type":"Language"},{"name":"Malay","@type":"Language"},{"name":"Korean","@type":"Language"},{"name":"Thai","@type":"Language"},{"name":"Filipino","@type":"Language"}],"keywords":["apps","programming","software"],"creativeWorkStatus":"Published","publisher":{"url":"https://www.unto.re","sameAs":["https://github.com/untoreh","https://twitter.com/untoreh"],"contactPoint":{"contactType":"info","email":"contact@unto.re","@type":"ContactPoint","telephone":""},"logo":"/assets/appa-60px.png","name":"untoreh's site","@type":"Organization"},"datePublished":"2022-12-07","inLanguage":"English","image":"/assets/appa.webp","name":"","mainEntityOfPage":{"@id":"https://www.unto.re/posts/Content-Aggregator/index.html","@type":"Article"}}</script>
+        <script type="application/ld+json" id="ldj-breadcrumbs" class="">{"itemListElement":[{"position":1,"item":"https://www.unto.re","name":"Home","@type":"ListItem"},{"position":2,"item":"/posts/","name":"Posts List","@type":"ListItem"},{"position":3,"item":"https://www.unto.re/posts/Content-Aggregator","name":"Building a content aggregator for fun and profits?","@type":"ListItem"}],"@type":"BreadcrumbList"}</script>
+        
+        
+         <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+        
+
+<style>:root{--block-background:var(--accent2);--small:14px;--normal:19px;--text-color:hsv(0, 0%, 20%)}.franklin-content{position:relative;padding-left:12.5%;padding-right:12.5%;line-height:1.35em}@media (min-width:940px){.franklin-content{width:705px;margin-left:auto;margin-right:auto}}@media (max-width:480px){.franklin-content{padding-left:6%;padding-right:6%}}.franklin-content h2{font-size:22px}h2{text-align:left}.franklin-content h2{padding-bottom:.3em;border-bottom:1px solid #d3d3d3;margin-top:2em;margin-bottom:1em}.franklin-content h2 a{color:inherit}.franklin-content a{color:var(--alt2);text-decoration:none}body{counter-reset:eqnum}code{background-color:var(--block-background);padding:.1em .2em;border-radius:2px;font-size:var(--small);overflow:auto}@media (prefers-color-scheme:light){body{--accent:#3152ff;--accent2:#5a61ae;--accent3:#651b00;--alt:#ae6600;--alt2:#9e6c47;--alt3:#7f4200;--background-color:#ffebee;--foreground-color:#1c0005;--block-background:#423833;--red:#e42a2f;--yellow:#917329;--green:#29892d}}@media (prefers-color-scheme:dark){body{--accent:#72e200;--accent2:#add3a0;--accent3:#7a9eff;--alt:#8abeff;--alt2:#836bd1;--alt3:#a090de;--background-color:#001d49;--foreground-color:#dae2ff;--block-background:#011627;--red:#e42a2f;--yellow:#917329;--green:#29892d}}body{background:var(--background-color);font-style:var(--accent);font-family:Helvetica;padding:0 .5rem;line-height:2rem;color:var(--accent3);max-width:1280px;min-height:720px;margin:auto;min-width:320px}a{color:var(--accent)}a:visited{color:var(--accent2)}.franklin-content{color:var(--foreground-color)}.franklin-content .header-anchor{padding:.5rem!important;line-height:100%}.franklin-content a{outline-style:outset;outline-width:1px;padding:0 .1rem;margin:0 .1rem;outline-color:var(--alt2)}body>div>h1{text-align:center;color:var(--accent2)}body>div #page-description,body>div #title{text-align:center}.masthead__menu{height:4rem;line-height:4rem;padding:10px 0;position:relative}.site-title{float:left;font-weight:700;width:15rem;font-size:1.5rem;text-decoration:none;color:var(--accent)}.site-title:visited{color:var(--accent)}#site-nav{float:right;font-size:1.5rem;font-family:Courier New;font-weight:700;position:absolute;right:0}#site-nav .horiz ul{list-style-type:none;line-height:4rem;height:4rem;margin:0}#site-nav .horiz ul>li{padding:0 .5rem;box-shadow:.25rem -.025rem .05rem var(--alt)}#site-nav .horiz ul>li{float:left;border-top:0;border-bottom:0;border-left:0;border-radius:50% 25% 25% 50%}#site-nav ul>li>a,#site-nav ul>li>button{color:var(--alt);display:inline-block}#site-nav .menu-icons{position:relative;padding:0 .2rem}#site-nav{display:block;width:auto;height:auto}.author__avatar>img{width:4em;height:4em;border-radius:50%;-o-object-fit:cover;object-fit:cover;border-width:.1rem;border-color:var(--accent3);border-style:solid;box-shadow:.1rem .06rem var(--accent3),-.05rem -.025rem .2rem var(--accent3)}#site-nav a:link{text-decoration:none}#site-nav .ham,#site-nav .vert{display:none}.author__avatar{-o-object-fit:contain;object-fit:contain;float:left}.author__wrap>ul{float:left;height:inherit;margin:0;padding:0 10px}.author__wrap>ul>li{position:relative;float:left;list-style-type:none;font-size:1rem;padding:0 .2rem;text-align:center}ul>li.author__urls{font-size:2rem}ul>li.author__urls a:visited{color:var(--accent)}.author__wrap .author__avatar{float:left}.langs-dropdown-content{display:none;text-align:left}.langs-dropdown-content a{display:block}.menu-lang-btn:before{border-radius:25% 25% 25% 50%!important}.lang-link .flag{position:absolute;left:1rem;margin-top:.65rem}#site-nav .langs-dropdown-menu{left:1.5rem;position:relative;top:1rem}#site-nav .langs-dropdown-menu .lang-list{font-size:1rem;line-height:2rem;overflow-x:hidden;height:20rem;position:absolute;overflow-y:scroll;right:1rem;scrollbar-width:thin;border:solid;border-radius:25%;border-width:0 0 0 .25rem;padding-left:3rem}.lang-list{background-color:var(--background-color)}#site-nav ul>li>button{background:inherit;border:inherit;font-size:inherit;font-family:inherit;font-weight:inherit;padding:inherit;margin:inherit;list-style-type:inherit;line-height:inherit;height:inherit}.franklin-content{padding:0 0 2rem;z-index:0}.franklin-content{padding-top:1rem}.lunrSearchForm{margin-right:-.4rem;font-size:0;overflow:hidden}.lunrSearchForm .search-input{background:var(--background-color);color:var(--alt);border-width:.2rem;border:none;outline:0;border-radius:50% 25% 25% 50%;line-height:1.75rem;padding:.5rem 0 .5rem 2.25rem;width:7rem;position:relative;top:.5rem;font-family:Courier New;font-weight:700;font-size:1.5rem}.lunrSearchForm .search-button{color:var(--alt);background:0 0;border:none;font-size:1.5rem;padding:.2rem .2rem .2rem 0;position:absolute;top:1rem;left:.75rem;z-index:1}@media (min-width:680px) and (max-width:1300px){.lunrSearchForm .search-input{font-size:1rem;padding-left:2.75rem;width:4.5rem;border-radius:50% 100% 100% 50%}body{max-width:640px;min-height:320px}#site-nav{position:relative;z-index:1}#site-nav .ham{outline:0}#site-nav .ham,#site-nav .ham-icon{display:block;height:3rem;line-height:3rem;position:absolute;right:0;top:0;text-align:right;background:0 0;border:none;font-size:3rem;color:var(--accent)}#site-nav .horiz{display:none}#site-nav .vert{display:block;float:none;position:absolute;right:0;top:3rem;width:9rem;padding-left:1rem;max-height:0;overflow:hidden;filter:blur(1rem)}#site-nav .vert ul{margin:0;padding:10px 0}#site-nav .vert ul>li{width:100%;text-align:center;border-radius:25% 50% 50% 25%;padding:.5rem 1rem;box-shadow:-.25rem 0 .05rem var(--alt)}}@media (max-width:680px){.lang-link{height:3rem}.lunrSearchForm{display:block;width:28rem}.lunrSearch{position:absolute;top:-4rem;display:block;left:0;width:calc(2rem + 90%)}.lunrSearch .search-input{width:26rem}.masthead,.masthead__menu{display:block}.site-title{float:none;width:100%;display:block;text-align:center}.author__wrap{float:none;display:block;width:100%;height:4.4rem;text-align:center}.author__wrap ul{width:auto;float:none;padding:0;display:inline-block}#site-nav{float:none;padding:10px 0;position:relative;top:4rem}#site-nav ul li{float:none}.horiz{text-align:center}#site-nav ul{display:inline-block;padding:0}.masthead{height:14rem}}.lunrSearchForm{margin-top:1em}@media (max-width:480px){.lunrSearchForm .search-input{width:18rem;left:-4rem}.masthead{height:34rem}#site-nav{top:5rem}#site-nav .horiz ul{width:100%}#site-nav .horiz ul>li{width:calc(100% - 2rem);float:none}}@media (min-width:480px) and (max-width:680px){.masthead{height:20rem}}@media (max-width:680px){body{overflow-x:hidden}#site-nav{z-index:1}#site-nav .horiz ul>li{float:none;top:-4rem;position:relative;margin-top:1rem;margin-bottom:0}}@-webkit-keyframes chars{0%,1.8105942029%{content:"u"}1.8115942029%,3.6221884058%{content:"un"}3.6231884058%,5.4337826087%{content:"unt"}5.4347826087%,7.2453768116%{content:"unto"}7.2463768116%,9.0569710145%{content:"untor"}10.8685652174%,9.0579710145%{content:"untore"}10.8695652174%,12.6801594203%{content:"untoreh"}12.6811594203%,14.4917536232%{content:"untoreh'"}14.4927536232%,16.3033478261%{content:"untoreh's"}16.3043478261%,18.114942029%{content:"untoreh's "}18.115942029%,19.9265362319%{content:"untoreh's s"}19.9275362319%,21.7381304348%{content:"untoreh's si"}21.7391304348%,23.5497246377%{content:"untoreh's sit"}23.5507246377%,to{content:"untoreh's site"}}@keyframes chars{0%,1.8105942029%{content:"u"}1.8115942029%,3.6221884058%{content:"un"}3.6231884058%,5.4337826087%{content:"unt"}5.4347826087%,7.2453768116%{content:"unto"}7.2463768116%,9.0569710145%{content:"untor"}10.8685652174%,9.0579710145%{content:"untore"}10.8695652174%,12.6801594203%{content:"untoreh"}12.6811594203%,14.4917536232%{content:"untoreh'"}14.4927536232%,16.3033478261%{content:"untoreh's"}16.3043478261%,18.114942029%{content:"untoreh's "}18.115942029%,19.9265362319%{content:"untoreh's s"}19.9275362319%,21.7381304348%{content:"untoreh's si"}21.7391304348%,23.5497246377%{content:"untoreh's sit"}23.5507246377%,to{content:"untoreh's site"}}@-webkit-keyframes cursor{75%{border-color:transparent}}@keyframes cursor{75%{border-color:transparent}}.site-title{-webkit-backface-visibility:hidden;backface-visibility:hidden;font-size:1.5rem;font-family:VT323,monospace,sans-serif;color:var(--accent2);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.site-title:after{content:"\200b";position:relative;padding-right:.5em;border-right:.5em solid var(--accent);white-space:nowrap;-webkit-animation:5.52s linear 1s forwards chars,1s 3 cursor;animation:5.52s linear 1s forwards chars,1s 3 cursor}.franklin-content a{display:inline-block;vertical-align:middle;text-decoration:none;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px var(--alt2);position:relative;overflow:hidden}.franklin-content a:before{content:"";position:absolute;z-index:-1;left:51%;right:51%;bottom:0;background:var(--accent);height:4px}.hvr-outline-in{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px var(--alt2);position:relative}.horiz .hvr-outline-in:before{border-radius:50% 25% 25% 50%;right:-.25rem}.vert .hvr-outline-in:before{border-radius:25% 50% 50% 25%;left:-.25rem}.hvr-outline-in:before{content:"";position:absolute;border:var(--alt) solid .25rem;top:0;bottom:0;left:0;opacity:0}#site-nav .vert:before{background-color:var(--background-color);filter:blur(.25rem);content:"";height:100%;width:100%;position:absolute}.author__avatar{background-color:transparent;perspective:1000px}.masthead__menu ul li.author__avatar img{transform-style:preserve-3d}.flag{display:inline-block;position:relative;width:16px;height:11px;background:url(/assets/flags.png) no-repeat}.flag.flag-th{background-position:-16px -143px}.flag.flag-tr{background-position:-144px -143px}.flag.flag-fr{background-position:-80px -44px}.flag.flag-nl{background-position:-240px -99px}.flag.flag-ms{background-position:-16px -99px}.flag.flag-es{background-position:-224px -33px}.flag.flag-vn{background-position:-128px -154px}.flag.flag-za{background-position:-256px -154px}.flag.flag-ph{background-position:-144px -110px}.flag.flag-ru{background-position:-96px -121px}.flag.flag-pl{background-position:-176px -110px}.flag.flag-gb{background-position:-112px -44px}.flag.flag-ro{background-position:-64px -121px}.flag.flag-pt{background-position:-256px -110px}.flag.flag-in{background-position:-64px -66px}.flag.flag-kr{background-position:-80px -77px}.flag.flag-ua{background-position:-224px -143px}.flag.flag-jp{background-position:-224px -66px}.flag.flag-de{background-position:-32px -33px}.flag.flag-se{background-position:-208px -121px}.flag.flag-gr{background-position:-48px -55px}.flag.flag-id{background-position:-256px -55px}.flag.flag-pk{background-position:-160px -110px}.flag.flag-bd{background-position:-16px -11px}.flag.flag-it{background-position:-144px -66px}.flag.flag-sa{background-position:-128px -121px}.flag.flag-cn{background-position:-176px -22px}</style>
+<link as="style" href="/css/bundle.css" rel="preload">
+<link href="/css/bundle.css" media="print" onload=
+"this.onload=null;this.removeAttribute('media');" rel="stylesheet">
+<noscript>
+<link href="/css/bundle.css" rel="stylesheet">
+</noscript>
+
+<link rel="icon" href="/assets/favicon.png" type="image/x-icon">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!--[if IE ]>
+<![endif]-->
+
+        <title>Building a content aggregator for fun and profits?</title>
+        <meta name="description" content="A full app that scrapes, processes and presents content from the web...on the web."/>
+        <!-- {{insert lunr_include.html}} -->
+        <script src="/libs/load.js"></script>
+        <!-- end custom head snippets -->
+    </head>
+    <body class="">
+    <div class="masthead">
+  <div class="masthead__menu__inner-wrap">
+    <div class="masthead__menu">
+      <a title="untoreh's site" class="site-title" href="/"></a> <div class="author__wrap">
+    <script type="application/ld+json" id="" class="">{"sameAs":["https://github.com/untoreh","https://twitter.com/untoreh"],"email":"contact@unto.re","name":"untoreh","@type":"https://schema.org/Person","image":"/assets/appa.webp"}</script>
+    <ul>
+        <li onclick="toggleTheme()" class="author__avatar">
+        <img class="flip-front" src="/assets/appa.webp" alt=
+        "untoreh-light"></li><li class="author__urls social-icons">
+    <a title="Twitter link" href="https://twitter.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class=
+    "fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a title="GitHub link" href="https://github.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+    aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a title="email" href="mailto:contact@unto.re"><i class=
+    "fas fa-envelope"></i></a>
+</li>
+<li><script type="application/ld+json" id="" class="">{"potentialAction":{"query-input":"required maxlength=100 name=input","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":{"uri":"","scheme":"https","userinfo":"","host":"www.unto.re","port":"","path":"/search","query":"q=%7Binput%7D","fragment":""}}}</script></li>
+
+    </ul>
+</div>
+
+      <nav id="site-nav">
+        <div class="horiz">
+          <ul>
+    <li class="lunrSearch masthead__menu-item hvr-outline-in"><form class="lunrSearchForm" name="lunrSearchForm">
+<button title="Search Website" class="search-button" type="submit" value="Search" formaction="/search/index.html">
+    <i class= "fas fa-search menu-icons"></i></button>
+<input class="search-input" name="q" placeholder="Search&#8230;" type="text">
+</form>
+</li>
+    <li class="masthead__menu-item hvr-outline-in">
+        <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a>
+    </li>
+    <li class="masthead__menu-item hvr-outline-in">
+        <a href="/media/" title="Video and audio content from streaming websites."><i class="fas fa-tv menu-icons"></i>media</a>
+    </li>
+    <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language">
+        <button type="button" title="Languages Menu" class="langs-dropdown-wrapper">
+            <i class="fas fa-language menu-icons"></i> Lang
+            <div class="langs-dropdown-content langs-dropdown-menu">
+                <ul class="lang-list"><a class="lang-link lang-ar" href="/ar/posts/Content-Aggregator"><span class="flag flag-sa"></span>Arabic</a><a class="lang-link lang-bn" href="/bn/posts/Content-Aggregator"><span class="flag flag-bd"></span>Bengali</a><a class="lang-link lang-nl" href="/nl/posts/Content-Aggregator"><span class="flag flag-nl"></span>Dutch</a><a class="lang-link lang-en" href="/posts/Content-Aggregator"><span class="flag flag-gb"></span>English</a><a class="lang-link lang-tl" href="/tl/posts/Content-Aggregator"><span class="flag flag-ph"></span>Filipino</a><a class="lang-link lang-fr" href="/fr/posts/Content-Aggregator"><span class="flag flag-fr"></span>French</a><a class="lang-link lang-de" href="/de/posts/Content-Aggregator"><span class="flag flag-de"></span>German</a><a class="lang-link lang-el" href="/el/posts/Content-Aggregator"><span class="flag flag-gr"></span>Greek</a><a class="lang-link lang-hi" href="/hi/posts/Content-Aggregator"><span class="flag flag-in"></span>Hindi</a><a class="lang-link lang-it" href="/it/posts/Content-Aggregator"><span class="flag flag-it"></span>Italian</a><a class="lang-link lang-ja" href="/ja/posts/Content-Aggregator"><span class="flag flag-jp"></span>Japanese</a><a class="lang-link lang-jw" href="/jw/posts/Content-Aggregator"><span class="flag flag-id"></span>Javanese</a><a class="lang-link lang-ko" href="/ko/posts/Content-Aggregator"><span class="flag flag-kr"></span>Korean</a><a class="lang-link lang-ms" href="/ms/posts/Content-Aggregator"><span class="flag flag-ms"></span>Malay</a><a class="lang-link lang-zh" href="/zh/posts/Content-Aggregator"><span class="flag flag-cn"></span>Mandarin Chinese</a><a class="lang-link lang-pl" href="/pl/posts/Content-Aggregator"><span class="flag flag-pl"></span>Polish</a><a class="lang-link lang-pt" href="/pt/posts/Content-Aggregator"><span class="flag flag-pt"></span>Portuguese</a><a class="lang-link lang-pa" href="/pa/posts/Content-Aggregator"><span class="flag flag-in"></span>Punjabi</a><a class="lang-link lang-ro" href="/ro/posts/Content-Aggregator"><span class="flag flag-ro"></span>Romanian</a><a class="lang-link lang-ru" href="/ru/posts/Content-Aggregator"><span class="flag flag-ru"></span>Russian</a><a class="lang-link lang-es" href="/es/posts/Content-Aggregator"><span class="flag flag-es"></span>Spanish</a><a class="lang-link lang-sv" href="/sv/posts/Content-Aggregator"><span class="flag flag-se"></span>Swedish</a><a class="lang-link lang-th" href="/th/posts/Content-Aggregator"><span class="flag flag-th"></span>Thai</a><a class="lang-link lang-tr" href="/tr/posts/Content-Aggregator"><span class="flag flag-tr"></span>Turkish</a><a class="lang-link lang-uk" href="/uk/posts/Content-Aggregator"><span class="flag flag-ua"></span>Ukranian</a><a class="lang-link lang-ur" href="/ur/posts/Content-Aggregator"><span class="flag flag-pk"></span>Urdu</a><a class="lang-link lang-vi" href="/vi/posts/Content-Aggregator"><span class="flag flag-vn"></span>Vietnamese</a><a class="lang-link lang-zu" href="/zu/posts/Content-Aggregator"><span class="flag flag-za"></span>Zulu</a></ul>
+            </div>
+        </button>
+    </li>
+</ul>
+
+        </div><button type="button" name="Website Menu" class="ham"><i class=
+        "fas fa-bars ham-icon"></i></button>
+        <div class="vert">
+          <ul>
+    <li class="lunrSearch masthead__menu-item hvr-outline-in"><form class="lunrSearchForm" name="lunrSearchForm">
+<button title="Search Website" class="search-button" type="submit" value="Search" formaction="/search/index.html">
+    <i class= "fas fa-search menu-icons"></i></button>
+<input class="search-input" name="q" placeholder="Search&#8230;" type="text">
+</form>
+</li>
+    <li class="masthead__menu-item hvr-outline-in">
+        <a href="/posts/" title="All the articles that I have written"><i class="fas fa-pen menu-icons"></i>posts</a>
+    </li>
+    <li class="masthead__menu-item hvr-outline-in">
+        <a href="/media/" title="Video and audio content from streaming websites."><i class="fas fa-tv menu-icons"></i>media</a>
+    </li>
+    <li class="masthead__menu-item hvr-outline-in menu-lang-btn" title="Change website's language">
+        <button type="button" title="Languages Menu" class="langs-dropdown-wrapper">
+            <i class="fas fa-language menu-icons"></i> Lang
+            <div class="langs-dropdown-content langs-dropdown-menu">
+                <ul class="lang-list"><a class="lang-link lang-ar" href="/ar/posts/Content-Aggregator"><span class="flag flag-sa"></span>Arabic</a><a class="lang-link lang-bn" href="/bn/posts/Content-Aggregator"><span class="flag flag-bd"></span>Bengali</a><a class="lang-link lang-nl" href="/nl/posts/Content-Aggregator"><span class="flag flag-nl"></span>Dutch</a><a class="lang-link lang-en" href="/posts/Content-Aggregator"><span class="flag flag-gb"></span>English</a><a class="lang-link lang-tl" href="/tl/posts/Content-Aggregator"><span class="flag flag-ph"></span>Filipino</a><a class="lang-link lang-fr" href="/fr/posts/Content-Aggregator"><span class="flag flag-fr"></span>French</a><a class="lang-link lang-de" href="/de/posts/Content-Aggregator"><span class="flag flag-de"></span>German</a><a class="lang-link lang-el" href="/el/posts/Content-Aggregator"><span class="flag flag-gr"></span>Greek</a><a class="lang-link lang-hi" href="/hi/posts/Content-Aggregator"><span class="flag flag-in"></span>Hindi</a><a class="lang-link lang-it" href="/it/posts/Content-Aggregator"><span class="flag flag-it"></span>Italian</a><a class="lang-link lang-ja" href="/ja/posts/Content-Aggregator"><span class="flag flag-jp"></span>Japanese</a><a class="lang-link lang-jw" href="/jw/posts/Content-Aggregator"><span class="flag flag-id"></span>Javanese</a><a class="lang-link lang-ko" href="/ko/posts/Content-Aggregator"><span class="flag flag-kr"></span>Korean</a><a class="lang-link lang-ms" href="/ms/posts/Content-Aggregator"><span class="flag flag-ms"></span>Malay</a><a class="lang-link lang-zh" href="/zh/posts/Content-Aggregator"><span class="flag flag-cn"></span>Mandarin Chinese</a><a class="lang-link lang-pl" href="/pl/posts/Content-Aggregator"><span class="flag flag-pl"></span>Polish</a><a class="lang-link lang-pt" href="/pt/posts/Content-Aggregator"><span class="flag flag-pt"></span>Portuguese</a><a class="lang-link lang-pa" href="/pa/posts/Content-Aggregator"><span class="flag flag-in"></span>Punjabi</a><a class="lang-link lang-ro" href="/ro/posts/Content-Aggregator"><span class="flag flag-ro"></span>Romanian</a><a class="lang-link lang-ru" href="/ru/posts/Content-Aggregator"><span class="flag flag-ru"></span>Russian</a><a class="lang-link lang-es" href="/es/posts/Content-Aggregator"><span class="flag flag-es"></span>Spanish</a><a class="lang-link lang-sv" href="/sv/posts/Content-Aggregator"><span class="flag flag-se"></span>Swedish</a><a class="lang-link lang-th" href="/th/posts/Content-Aggregator"><span class="flag flag-th"></span>Thai</a><a class="lang-link lang-tr" href="/tr/posts/Content-Aggregator"><span class="flag flag-tr"></span>Turkish</a><a class="lang-link lang-uk" href="/uk/posts/Content-Aggregator"><span class="flag flag-ua"></span>Ukranian</a><a class="lang-link lang-ur" href="/ur/posts/Content-Aggregator"><span class="flag flag-pk"></span>Urdu</a><a class="lang-link lang-vi" href="/vi/posts/Content-Aggregator"><span class="flag flag-vn"></span>Vietnamese</a><a class="lang-link lang-zu" href="/zu/posts/Content-Aggregator"><span class="flag flag-za"></span>Zulu</a></ul>
+            </div>
+        </button>
+    </li>
+</ul>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+            <div>
+            <h1 id="title"><a href="/posts/Content-Aggregator">Building a content aggregator for fun and profits?</a></h1>
+            <blockquote id="page-description" style="font-style: italic;">
+                A full app that scrapes, processes and presents content from the web...on the web.
+            </blockquote>
+            </div>
+          
+
+
+    <!-- Content appended here -->
+<div class="franklin-content">
+<h1 id="why"><a href="#why" class="header-anchor">Why?</a></h1>
+<p><a href="https://en.wikipedia.org/wiki/Information_overload">Information overload</a>? It is kinda bad these days, a lot of low signal to noise sources of information, narrowing down your &quot;feeds&quot; such that you don&#39;t get overwhelmed is kinda hard. A tool that filters information and presents it in a format that is both easy and quick to digest would be very much useful. This is why I consider <em>content aggregation</em> an evergreen field for disruption. It is and will always be &#40;as long as the internet is free and there is free speech&#41; a good business opportunity. It is one of those instances where its all about the execution &#40;and none at all about the idea&#41;.</p>
+<h1 id="managing_expectations"><a href="#managing_expectations" class="header-anchor">Managing expectations</a></h1>
+<p>Having said that, my app in the end doesn&#39;t do any actual filtering. In fact it simply <em>aggregates</em> content from the web. This is because I didn&#39;t build users into it, and there is little incentive on doing filtering if it can&#39;t be tailored per user.</p>
+<h1 id="the_architecture"><a href="#the_architecture" class="header-anchor">The architecture</a></h1>
+<p>The diagram of the architecture: <img alt="content-aggregator-diagram"  src="/assets/posts/img/content-aggregator-diagram.png" style="float: none; padding: 0.5rem;  margin-left:auto; margin-right: auto; display: block; "> There are indeed many circles in it&#33;...you know...micro...services? The apps that I built are the &quot;scraper&quot; and the &quot;server&quot;, while the &quot;publisher&quot; is just a routine embedded in the server. The &quot;search&quot; and &quot;proxies&quot; are external tools that do their job. &quot;Frontend&quot; is nothing special, a mix of js and css bundled with webpack.</p>
+<p>Since there are different moving parts I will go according to the flow of the content, starting from when the content is seen for the first time.</p>
+<h1 id="the_scraper"><a href="#the_scraper" class="header-anchor">The Scraper</a></h1>
+<p>Scraping is done in...you guessed it, python. However no ad hoc &quot;scraping&quot; modules are used.</p>
+<h2 id="what_do_you_scrape"><a href="#what_do_you_scrape" class="header-anchor">What do you scrape?</a></h2>
+<p>Deciding what to scrape depends on the category of the content. We call categories &quot;topics&quot;. </p>
+<ul>
+<li><p>Every topic has a list of keywords. </p>
+</li>
+<li><p>The list of keywords if pulled from google adwords using their <a href="https://github.com/googleads/google-ads-python">python api</a></p>
+</li>
+<li><p>The keywords are queried on multiple search engines, in a round robin order periodically. If the instance has multiple topics, the topics with less available content are searched first. For performing the searches we rely on <a href="https://github.com/searxng/searxng">searx</a> with proxies. Searx is not exactly library friendly, since its primary use is for its frontend so it required digging through the correct process to initialize the module to perform queries. To speed things up with use the threadpool to perform multiple queries concurrently, we will use the threadpool frequently throughout the project.</p>
+</li>
+<li><p>Every keyword search generates a list of potential content sources &#40;The search engines results&#41; which are saved on storage for later processing.</p>
+</li>
+<li><p>When we want to find new content for a specific topic we first check if there are available sources, otherwise we generate new sources from the keyword list. <img alt="content-pipeline"  src="/assets/posts/img/content-pipeline.png" style="float: none; padding: 0.5rem;  margin-left:auto; margin-right: auto; display: block; "></p>
+</li>
+<li><p>Sources are processed through two libraries <a href="https://github.com/adbar/trafilatura">trafilatura</a> is the main one, if it fails we backup to <a href="https://github.com/goose3/goose3">goose</a>. We also try to find feeds for additional links &#40;which would be considered new sources&#41;. For feeds we use <a href="https://github.com/dfm/feedfinder2">feedfinder</a> but a simple parsing of the html for rss <code>link</code> tags would also suffice.</p>
+</li>
+<li><p>Our main content type is an <code>Article</code>, which from python side it&#39;s just a dict, from nim side with parse it as an object. Keys:</p>
+<ul>
+<li><p><code>title</code>: the header of the article</p>
+</li>
+<li><p><code>content</code>: the article itself. To determine what&#39;s a good article we go through different filtering steps:</p>
+<ul>
+<li><p>First we check if either trafilatura or goose have text and if it is long enough. Our minimum size is 300 words. If the size isn&#39;t matched, we discard the source &#40;return nothing&#41;.</p>
+</li>
+<li><p>Then we fetch the title, and sanitize it by removing urls and whitespaces</p>
+</li>
+<li><p>If the lang is foreign, we translate it back to english &#40;we normalize over english&#41; both content and title.</p>
+</li>
+<li><p>At this point we check for profanity using <a href="https://github.com/dimitrismistriotis/alt-profanity-check">profanity_check</a>. Not that profanity checking is english based to the previous translation is necessary. Otherwise we would need a profanity model for all languages.</p>
+</li>
+<li><p>After we have replaced bad words using profanity filter, we continue by sanitizing the content. We check if the article is relevant. There rules that we use are:</p>
+<ul>
+<li><p>The content must start with alphanumeric characters, otherwise there is a high change that it is garbage.</p>
+</li>
+<li><p>Both title and content can&#39;t be &quot;noise&quot;. Noise is defined by a regex that captures keywords like &quot;login&quot;, &quot;signup&quot;, &quot;access denied&quot;...etc.</p>
+</li>
+<li><p>At least one word in the title must be present in the body. Otherwise it is possible that parsing chose the wrong parts of the source page for content.</p>
+</li>
+</ul>
+</li>
+<li><p>If relevance tests have passed, as final step we clean the content against occurrences of too many brackets, white-space, repeated characters and special characters.</p>
+</li>
+<li><p>If cleaning hasn&#39;t deleted everything we continue processing the article.</p>
+</li>
+</ul>
+</li>
+<li><p><code>source</code>: the link pointing to the original source that we parsed</p>
+</li>
+<li><p><code>lang</code>: the language of the article, we use <a href="https://github.com/pemistahl/lingua-py">lingua</a> to detect the language</p>
+</li>
+<li><p><code>desc</code>: the summary, otherwise an excerpt from the content</p>
+</li>
+<li><p><code>author</code>: the author, otherwise the title of the homepage of the sourcelink</p>
+</li>
+<li><p><code>pubDate</code>: the publishing date of the article, or now</p>
+</li>
+<li><p><code>topic</code>: the topic to which this article belongs to</p>
+</li>
+<li><p><code>tags</code>: relevant keywords for an article, we use the fastest kw extraction lib, which is <a href="https://github.com/csurfer/rake-nltk">rake</a>, alternatives considered are <a href="https://github.com/kevinlu1248/pyate">pyate</a>&#40;combobasic&#41;, <a href="https://github.com/DerwenAI/pytextrank">textrank</a> and <a href="https://github.com/slanglab/phrasemachine">phrasemachine</a></p>
+</li>
+<li><p><code>imageTitle</code>: the alternate text for the image</p>
+</li>
+<li><p><code>imageOrigin</code>: if source parsing &#40;for images we use <a href="https://github.com/michaelhelmick/lassie">lassie</a>&#41; hasn&#39;t found an image, we query search engines for a relevant image, so imageOrigin points to the original page which hosted the image, otherwise it is equal to the source url. </p>
+</li>
+<li><p><code>imageUrl</code>:  the actual link to the image. We use a bloom filter check for duplicate images, because we don&#39;t like duplicates.</p>
+</li>
+<li><p><code>icon</code>: the favicon of the source link</p>
+</li>
+</ul>
+</li>
+<li><p>After we have processed a keyword, we save its found articles and feeds on storage. They will be used by the publsher.</p>
+</li>
+</ul>
+<p>Scraping happens continuously, it&#39;s a demon. The main loop pseudo code looks like this, and it is configured <em>per site</em>:</p>
+<ul>
+<li><p>sync proxies forever</p>
+</li>
+<li><p>for each topic sorted by unpublished &#40;articles&#41; count &#40;low to high&#41; do the following</p>
+<ul>
+<li><p>if minimum interval from last job passed, run a parse job for the topic. The interval increases the more unpublished articles we have for a topic, and is always 0 if we don&#39;t have any unpublished articles.</p>
+</li>
+<li><p>Do the same but for feeds &#40;that we collected from sources, if we have any&#41;</p>
+</li>
+<li><p>If the site is meant to create new topics, create one. &#40;This only makes sense if you don&#39;t decide the topics list at site creation.&#41;</p>
+</li>
+<li><p>Choose an article from the published ones and send a tweet &#40;we send 3 tweets per day, using <a href="https://github.com/bear/python-twitter">python-twitter</a>&#41;</p>
+</li>
+<li><p>Choose an article from the published ones and update a facebook page &#40;we do 1 update per day, using <a href="https://github.com/jgorset/facepy">facepy</a>&#41;</p>
+</li>
+</ul>
+<p>&#40;We also connected reddit, but reddit does not allow cross posting, so it was a wasted effort.&#41;</p>
+</li>
+</ul>
+<h1 id="publishing"><a href="#publishing" class="header-anchor">Publishing</a></h1>
+<p>Once we have content to publish, we have to decide what to publish and how often. I didn&#39;t come up with any tricks here, because as I mentioned previously choosing what to display is user dependent. So we just publish from <em>newest to oldest</em>, with the reasoning that something that we scraped more recently is more relevant, it is a <a href="https://en.wikipedia.org/wiki/Stack_&#40;abstract_data_type&#41;">LIFO</a> queue. Publishing although quite reliant on python tools, happens in nim, because it runs adjactently to the server, which is also in nim.</p>
+<h2 id="the_publishing_logic"><a href="#the_publishing_logic" class="header-anchor">The publishing logic</a></h2>
+<p>Publishing happens continuously, and like scraping has idle intervals, publishing does to, in an inversely to scraping. When we scrape, we slow down when we have a <em>long enough</em> cache of unpublished articles, with publishing we slow down when our cache starts to shrink too much. In this way, coupled with scraping, there should always be <em>some content</em> to be published <em>some time</em> in the future. The actual publishing logic:</p>
+<ul>
+<li><p>Fetch a batch of unpublished articles from the cache. &#40;We choose to publish 3 new articles per run.&#41;</p>
+</li>
+<li><p>Check if they are duplicates. Dup checking is done through locality sensitive hashing, leveraging a nim lib, <a href="https://github.com/Nim-NLP/minhash/">minhash</a>. LSH is quite CPU intensive &#40;you know...hashing&#41;, and requires its own thread, &#40;there are a couple other task that we handle that require their own threads&#41;.</p>
+</li>
+<li><p>Page rendering: this is not required, since the server handles queries on-the-fly, but rendering here is a form of pre-caching.</p>
+</li>
+<li><p>Page handling. Since we are dealing with a site we have to choose how many articles to display per page, and increment pages as we publish more articles. We choose to group articles in pages of ~10. The latest page are always less than 10 articles.</p>
+</li>
+<li><p>Save the state of the published articles, this means moving the articles from &quot;unpublished&quot; to &quot;published&quot; status, and the LSH database.</p>
+</li>
+<li><p>After publishing new articles we have to clear stale caches. We have to clear the homepage, the topic page and the sitemap and rss feed.</p>
+</li>
+</ul>
+<h1 id="serving"><a href="#serving" class="header-anchor">Serving</a></h1>
+<p>We setup jobs to both scrape a publish content, all that&#39;s left is serving it.</p>
+<h2 id="the_web_server"><a href="#the_web_server" class="header-anchor">The web server</a></h2>
+<p>After having <a href="https://github.com/dom96/jester">tried</a> <a href="https://github.com/dom96/httpbeast">different</a> <a href="https://github.com/olliNiinivaara/GuildenStern/">web</a> <a href="https://github.com/status-im/nim-chronos/blob/master/chronos/apps/http/httpserver.nim">servers</a>, because of different bugs I settled with <a href="https://github.com/bung87/scorper">scorper</a>.</p>
+<h2 id="handling_a_request"><a href="#handling_a_request" class="header-anchor">Handling a request</a></h2>
+<h3 id="the_router"><a href="#the_router" class="header-anchor">The router</a></h3>
+<p>We use nim <a href="https://nim-lang.github.io/fusion/src/fusion/matching.html">pattern matching implementation</a> to match a tuple of regex captures. This is the regex which is not RESTful at all:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">const</span>
+  rxend = <span class="hljs-string">&quot;(?=/+|(?=[?].*)|$)&quot;</span>
+  rxAmp = <span class="hljs-string">fmt&quot;(/+amp{rxend})&quot;</span>
+  rxLang = <span class="hljs-string">&quot;(/[a-z]{2}(?:-[A-Z]{2})?&quot;</span> &amp; <span class="hljs-string">fmt&quot;{rxend})&quot;</span> <span class="hljs-comment"># split to avoid formatting regex `{}` usage</span>
+  rxTopic = <span class="hljs-string">fmt&quot;(/+.*?{rxend})&quot;</span>
+  rxPage = <span class="hljs-string">fmt&quot;(/+(?:[0-9]+|s|g|feed\.xml|sitemap\.xml){rxend})&quot;</span>
+  rxArt = <span class="hljs-string">fmt&quot;(/+.*?{rxend})&quot;</span>
+  rxPath = <span class="hljs-string">fmt&quot;{rxAmp}?{rxLang}?{rxTopic}?{rxPage}?{rxArt}?&quot;</span></code></pre>
+<p><code>rxPath</code> shows all the possible nodes that a path can have. Then our routing looks like:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">let</span> capts = uriTuple(reqCtx.url.path)
+<span class="hljs-keyword">case</span> capts:
+  <span class="hljs-keyword">of</span> (topic: <span class="hljs-string">&quot;&quot;</span>): <span class="hljs-comment"># homepage...</span>
+  <span class="hljs-keyword">of</span> (topic: <span class="hljs-string">&quot;assets&quot;</span>): <span class="hljs-comment"># assets</span>
+  <span class="hljs-keyword">of</span> (topic: <span class="hljs-string">&quot;i&quot;</span>): <span class="hljs-comment"># images</span>
+  <span class="hljs-keyword">of</span> (topic: <span class="hljs-string">&quot;robots.txt&quot;</span>): <span class="hljs-comment"># robots.txt</span>
+  <span class="hljs-keyword">of</span> (page: <span class="hljs-string">&quot;sitemap.xml&quot;</span>): <span class="hljs-comment"># sitemap for topics</span>
+  <span class="hljs-keyword">of</span> (art: <span class="hljs-string">&quot;index.xml&quot;</span>): <span class="hljs-comment"># sitemap index for topic pages</span>
+  etc...</code></pre>
+<p>Its not pretty, but not relying on any particular router allowed me to swap underling web server without much fuss when testing. Is it performant? Unclear&#33; Haven&#39;t done any benchmarks comparing it to something else. However what smells is ofc the regex that can have bugs, and the fact that the ordering of the cases matters.</p>
+<blockquote>
+<p>Wait a minute...</p>
+</blockquote>
+<p>There is a bunch of stuff that we do on each request before actual page routing:</p>
+<p>initially we setup cleanup code &#40;with <code>defer:</code>&#41; which <em>should</em> ensure no leaks happen.</p>
+<pre><code class="nim hljs">defer:
+  <span class="hljs-comment"># <span class="hljs-doctag">FIXME:</span> is this cleanup required?</span>
+  <span class="hljs-keyword">var</span> futs: <span class="hljs-type">seq</span>[<span class="hljs-type">Future</span>[<span class="hljs-type">void</span>]]
+  <span class="hljs-keyword">let</span> resp =
+    <span class="hljs-keyword">if</span> ctx.response.issome: ctx.response.get
+    <span class="hljs-keyword">else</span>: <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> resp.isnil <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> resp.connection.isnil:
+    futs.add resp.connection.closeWait()
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> ctx.isnil:
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> ctx.connection.isnil:
+      futs.add ctx.connection.closeWait()
+    futs.add ctx.closeWait()
+  await allFutures(futs)</code></pre>
+<p>We check if the thread is initialized:</p>
+<pre><code class="nim hljs">initThread()</code></pre>
+<p>This should really only run once &#40;it sets a global bool after initialization to check&#41;, and could be done outside the request handler. But what is actually initialized? Well...quite a lot of stuff&#33; Basically we &#40;ab&#41;use global constants which require initialization, also some of this are not really thread related, since they initialize memory on the heap and is shared across thread</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">if</span> threadInitialized:
+  debug <span class="hljs-string">&quot;thread: already initialized&quot;</span>
+  <span class="hljs-keyword">return</span>
+debug <span class="hljs-string">&quot;thread: base&quot;</span>
+initThreadBase()
+debug <span class="hljs-string">&quot;thread: sonic&quot;</span>
+initSonic() <span class="hljs-comment"># Must be on top</span>
+debug <span class="hljs-string">&quot;thread: http&quot;</span>
+initHttp()
+debug <span class="hljs-string">&quot;thread: html&quot;</span>
+initHtml()
+debug <span class="hljs-string">&quot;thread: ldj&quot;</span>
+initLDJ()
+debug <span class="hljs-string">&quot;thread: feed&quot;</span>
+initFeed()
+debug <span class="hljs-string">&quot;thread: img&quot;</span>
+startImgFlow()
+debug <span class="hljs-string">&quot;thread: lsh&quot;</span>
+startLsh()
+debug <span class="hljs-string">&quot;thread: mimes&quot;</span>
+initMimes()
+<span class="hljs-comment"># ... and other stuff</span></code></pre>
+<p>Then we parse the parameters</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">var</span>
+  relpath = ctx.rawPath
+  page: <span class="hljs-type">string</span>
+  rqlocked: <span class="hljs-type">bool</span>
+relpath.removeSuffix(&#x27;/&#x27;)
+debug <span class="hljs-string">&quot;handling: {relpath:.120}&quot;</span>
+
+handleParams()</code></pre>
+<p>What do we use parameters for? The <code>ParamKey</code> enum type describes it:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">type</span>
+  <span class="hljs-type">ParamKey</span> = <span class="hljs-keyword">enum</span>
+    none,
+    q, p, <span class="hljs-comment"># sonic</span>
+    c, <span class="hljs-comment"># cache</span>
+    d, <span class="hljs-comment"># delete</span>
+    t,  <span class="hljs-comment"># translations</span>
+    u <span class="hljs-comment"># imgUrls</span></code></pre>
+<p>We do <em>microcaching</em> for requests so every request is cached according to the tuple <code>&#40;path, query, accetEncoding&#41;</code>, encoding is required because we can serve both &#40;non&#41;compressed bodies. A request context looks like this:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">let</span> reqCtx = reqCtxCache.lcheckOrPut(reqCacheKey):
+  <span class="hljs-keyword">let</span> reqCtx <span class="hljs-meta">{.gensym.}</span> = new(<span class="hljs-type">ReqContext</span>)
+  <span class="hljs-keyword">block</span>:
+    <span class="hljs-keyword">let</span> l = newAsyncLock()
+    checkNil(l):
+      reqCtx.lock = l
+  reqCtx.url = move url
+  reqCtx.params = params
+  reqCtx.file = reqCtx.url.path.fp
+  reqCtx.key = hash(reqCtx.file)
+  reqCtx.rq = initTable[<span class="hljs-type">ReqId</span>, <span class="hljs-type">HttpRequestRef</span>]()
+  new(reqCtx.respBody)
+  reqCtx</code></pre>
+<ul>
+<li><p>The <code>key</code> field is used to fetch the correct cached page &#40;body&#41; from <code>pageCache</code>. The lock is required to ensure that multiple requests happening at the same time don&#39;t duplicate rendering jobs &#40;if another request is already generating the page, wait for it to finish&#41;. Every base <code>HttpRequestRef</code> from the chronos httpserver is stored in the <code>rq</code> field. The <code>params</code> are already parsed from the previous <code>handleParams</code>.</p>
+</li>
+<li><p>We support content deletion through the <code>d</code> param, which allows us to nuke articles &#40;in case the filtering failed, but it should never be used in practice, just for debugging&#41; with a simple http get request. Who needs other http methods? Not me.</p>
+</li>
+<li><p>We support cache clear too. We can either delete the page, <code>c&#61;0</code> or all the pages <code>c&#61;1</code>. The annoying bits is that we have to check if the path is either an article, a page, an image or an assets, and purge the appropriate cache structure. There is some obvious logic duplication here with the router, but since this is done pre-routing, it has to be ad-hoc, handling only cases relevant for cache purging. It is done pre-routing because also the cache is served without routing, since if the request has already been generated, we can just reply with the body stored in the <code>respBody</code> field &#40;and <code>respHeaders</code>, <code>respCode</code>&#41;.</p>
+</li>
+<li><p>After handling cache operations, we parse the path.</p>
+</li>
+<li><p>After this there is another hijacking going on:</p>
+</li>
+</ul>
+<pre><code class="nim hljs"><span class="hljs-keyword">if</span> handleTranslation():
+  <span class="hljs-keyword">return</span></code></pre>
+<p>Why is this also done before routing? By default we serve partially translated pages. We are poor :&#40; and translations are based on free services, but we can&#39;t afford abysmal load times, so we run the translation deferred while we serve the page translated with only snippets that have been cached in our translations database.</p>
+<p>At this point there is the routing, wrapped in an exception such that if serving the correct page fails, we issue a <code>503</code>. Issuing a <code>503</code> implies that we tried to route a valid url but we couldn&#39;t generate a page. For invalid urls we issue a <code>301</code> redirect which implies that the url is not valid. We serve 11 different kind of urls:</p>
+<ul>
+<li><p>homepage: pulls articles from the most recent topics, pseudo randomly, we don&#39;t do any sorting based on popularity.</p>
+</li>
+<li><p>generic assets &#40;under <code>/assets/</code> path&#41;: are directly mapped to a dedicated directory</p>
+</li>
+<li><p>generic images &#40;under <code>/i/</code> pah&#41;: we proxy external images to generate sizes that fit our responsive website, when images are unavailable either a transparent pixel or image icon is served as default.</p>
+</li>
+<li><p>robots.txt file</p>
+</li>
+<li><p>sitemaps &#40;for homepage and topics and pages&#41;: The homepage hosts the sitemapindex pointing to all the topics sitemaps, the topics sitemaps points to all the pages of the topic, the pages sitemap points to all the articles of the page.</p>
+</li>
+<li><p>pwa manifest: the pwa manifest should allow the website to be installed as pwa &#40;but frankly haven&#39;t tested this&#41;</p>
+</li>
+<li><p>searches: The search leverages <a href="https://github.com/valeriansaliou/sonic">sonic</a> with the <a href="https://github.com/alongwy/pysonic">pysonic</a> bindings. </p>
+</li>
+<li><p>suggestions: Suggestions are also handled through sonic libraries. But they require </p>
+</li>
+<li><p>feeds: Like sitemaps we have different feeds for the homepage, and for the different topics, although no feeds for singular pages for obvious reasons.</p>
+</li>
+<li><p>topic pages: The page dedicated to each topics &#40;e.g. with path <code>domain.com/my-topic/</code>&#41; Pulls the latest articles published for the topic, which belong to an <em>unfinished</em> page.</p>
+</li>
+<li><p>articles pages: The article page shows the article title, description, source link, tags, published time &#40;in the footer&#41; and at the bottom we pull 3 related articles. The related articles are fetched using a search query on the article title or tags.</p>
+</li>
+</ul>
+<h2 id="about_the_rendering"><a href="#about_the_rendering" class="header-anchor">About the rendering</a></h2>
+<p>Page rendering is processed from nim side using <a href="https://github.com/karaxnim/karax">karax</a></p>
+<h3 id="general_page_layout"><a href="#general_page_layout" class="header-anchor">General page layout</a></h3>
+<p>The website is composed of a top fixed bar which shows:</p>
+<ul>
+<li><p>the homepage url, through the logo svg image.</p>
+</li>
+<li><p>the light/dark theme button</p>
+</li>
+<li><p>current url using the current path <em>crumbs</em> as link text</p>
+</li>
+<li><p>the most recent ~10 topics urls</p>
+</li>
+<li><p>The search bar &#40;with search button&#41;, where when typed suggestions pop up</p>
+</li>
+<li><p>the languages button, where when clicked, the list of languages floats up</p>
+</li>
+</ul>
+<p>Since it is a responsive design, when the viewport is smaller, the top bar only holds the search box while the rest appears in a togglable sidebar.</p>
+<ul>
+<li><p>The footer, holding links for the sitemap, rss, socials, legal</p>
+</li>
+<li><p>Ads at different locations are supported</p>
+</li>
+</ul>
+<h2 id="rss"><a href="#rss" class="header-anchor">RSS</a></h2>
+<p>This is an example function, shows what we do when a new post is published to update the feed:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> update*(tfeed: <span class="hljs-type">Feed</span>, topic: <span class="hljs-type">string</span>, newArts: <span class="hljs-type">seq</span>[<span class="hljs-type">Article</span>], dowrite = <span class="hljs-literal">false</span>) =
+    <span class="hljs-comment">## Load existing feed for given topic and update the feed (in-memory)</span>
+    <span class="hljs-comment">## with the new articles provided, it does not write to storage.</span>
+    checkNil tfeed
+    <span class="hljs-keyword">let</span>
+        chann = tfeed.findel(<span class="hljs-string">&quot;channel&quot;</span>)
+        itms = chann.drainChannel
+        arl = itms.len
+        narl = newArts.len
+
+    debug <span class="hljs-string">&quot;rss: newArts: {narl}, previous: {arl}&quot;</span>
+    <span class="hljs-keyword">let</span>
+        fill = <span class="hljs-type">RSS_N_ITEMS</span> - arl
+        rem = max(<span class="hljs-number">0</span>, narl - fill)
+        shrinked = <span class="hljs-keyword">if</span> (rem &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> arl &gt; <span class="hljs-number">0</span>):
+                       itms[<span class="hljs-number">0</span>..&lt;(max(<span class="hljs-number">0</span>, arl-rem))]
+                   <span class="hljs-keyword">else</span>: itms
+    debug <span class="hljs-string">&quot;rss: articles tail len {len(shrinked)}, newarts: {len(newArts)}&quot;</span>
+    assert shrinked.len + narl &lt;= <span class="hljs-type">RSS_N_ITEMS</span>, <span class="hljs-string">fmt&quot;shrinked: {shrinked.len}, newarticles: {narl}&quot;</span>
+    <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> newArts:
+        chann.add articleItem(a)
+    <span class="hljs-keyword">for</span> itm <span class="hljs-keyword">in</span> shrinked:
+        chann.add itm
+    <span class="hljs-keyword">if</span> dowrite:
+   
+        pageCache[][topic.feedKey] = tfeed.toXmlString</code></pre>
+<h2 id="sitemaps"><a href="#sitemaps" class="header-anchor">Sitemaps</a></h2>
+<p>This is the core of adding urls to sitemaps:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">template</span> addUrlToFeed(getLoc, getLocLang) =
+  <span class="hljs-keyword">if</span> unlikely(nEntries &gt; maxEntries):
+      warn <span class="hljs-string">&quot;Number of URLs for sitemap of topic: {topic} exceeds limit! {nEntries}/{maxEntries}&quot;</span>
+      <span class="hljs-keyword">break</span>
+  <span class="hljs-keyword">let</span>
+      url = newElement(<span class="hljs-string">&quot;url&quot;</span>)
+      loc = newElement(<span class="hljs-string">&quot;loc&quot;</span>)
+  loc.add getLoc().escape.newText
+  url.add loc
+  addLangs(url, getLocLang)
+  <span class="hljs-built_in">result</span>.add url
+
+<span class="hljs-keyword">proc</span> buildTopicPagesSitemap*(topic: <span class="hljs-type">string</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">XmlNode</span>] <span class="hljs-meta">{.async.}</span> =
+    initSitemapIndex()
+    await syncTopics()
+    <span class="hljs-keyword">var</span> nEntries = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">let</span> done = await topicDonePages(topic)
+    <span class="hljs-keyword">template</span> langUrl(lang): untyped <span class="hljs-meta">{.dirty.}</span> = $(<span class="hljs-type">WEBSITE_URL</span> / lang / topic / pages[n])
+    withPyLock:
+        <span class="hljs-comment"># add the most recent articles first (pages with higher idx)</span>
+        <span class="hljs-keyword">let</span> pages = pybi[].list(done.keys()).to(<span class="hljs-type">seq</span>[<span class="hljs-type">string</span>])
+        <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> countDown(pages.len - <span class="hljs-number">1</span>, <span class="hljs-number">0</span>):
+          <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> (await isEmptyPage(topic, pages[n].parseInt, <span class="hljs-literal">false</span>)):
+            <span class="hljs-keyword">discard</span> sitemapUrl(topic, pages[n]).sitemapEl
+
+<span class="hljs-keyword">template</span> addArticleToFeed() =
+  <span class="hljs-keyword">template</span> baseUrl(): untyped =
+    getArticleUrl(a, topic)
+
+  <span class="hljs-keyword">template</span> langUrl(lang): untyped =
+    getArticleUrl(a, topic, lang)
+
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> a.isValidArticlePy:
+      <span class="hljs-keyword">continue</span>
+
+  addUrlToFeed(baseUrl, langUrl)
+
+<span class="hljs-keyword">proc</span> buildTopicSitemap(topic: <span class="hljs-type">string</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">XmlNode</span>] <span class="hljs-meta">{.async.}</span> =
+    initUrlSet()
+    await syncTopics()
+    <span class="hljs-keyword">let</span> done = await topicDonePages(topic)
+    <span class="hljs-keyword">var</span> nEntries = <span class="hljs-number">0</span>
+    withPyLock:
+        <span class="hljs-comment"># add the most recent articles first (pages with higher idx)</span>
+        <span class="hljs-keyword">for</span> pagenum <span class="hljs-keyword">in</span> countDown(len(done) - <span class="hljs-number">1</span>, <span class="hljs-number">0</span>):
+            <span class="hljs-keyword">if</span> unlikely(nEntries &gt; maxEntries):
+                warn <span class="hljs-string">&quot;Number of URLs for sitemap of topic: {topic} exceeds limit! {nEntries}/{maxEntries}&quot;</span>
+                <span class="hljs-keyword">break</span>
+            checkTrue pagenum <span class="hljs-keyword">in</span> done, <span class="hljs-string">&quot;Mismatching number of pages&quot;</span>
+            <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> done[pagenum]:
+                addArticleToFeed()</code></pre>
+<h2 id="templates"><a href="#templates" class="header-anchor">Templates</a></h2>
+<p>We don&#39;t use a template engine since most of the rendering is done with karax, but for pages like ToS we use file templates, where we just replace a bunch of variables, like an <code>envsubst</code> command.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> pageFromTemplate*(tpl, lang, amp: <span class="hljs-type">string</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">string</span>] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">var</span> txt = await readfileAsync(<span class="hljs-type">ASSETS_PATH</span> / <span class="hljs-string">&quot;templates&quot;</span> / tpl &amp; <span class="hljs-string">&quot;.html&quot;</span>)
+  <span class="hljs-keyword">let</span> (vars, title, desc) =
+    <span class="hljs-keyword">case</span> tpl:
+      <span class="hljs-keyword">of</span> <span class="hljs-string">&quot;dmca&quot;</span>: (tplRep, <span class="hljs-string">&quot;DMCA&quot;</span>, <span class="hljs-string">fmt&quot;dmca compliance for {WEBSITE_DOMAIN}&quot;</span>)
+      <span class="hljs-keyword">of</span> <span class="hljs-string">&quot;tos&quot;</span>: (ppRep, <span class="hljs-string">&quot;Terms of Service&quot;</span>,
+          <span class="hljs-string">fmt&quot;Terms of Service for {WEBSITE_DOMAIN}&quot;</span>)
+      <span class="hljs-keyword">of</span> <span class="hljs-string">&quot;privacy-policy&quot;</span>: (ppRep, <span class="hljs-string">&quot;Privacy Policy&quot;</span>,
+          <span class="hljs-string">fmt&quot;Privacy Policy for {WEBSITE_DOMAIN}&quot;</span>)
+      <span class="hljs-keyword">else</span>: (tplRep, tpl, <span class="hljs-string">&quot;&quot;</span>)
+  txt = multiReplace(txt, vars)
+  <span class="hljs-keyword">let</span>
+    slug = slugify(title)
+    page = await buildPage(title = title, content = txt, wrap = <span class="hljs-literal">true</span>)
+  checkNil(page):
+    <span class="hljs-keyword">let</span> processed = await processPage(lang, amp, page, relpath = tpl)
+    checkNil(processed, <span class="hljs-string">fmt&quot;failed to process template {tpl}, {lang}, {amp}&quot;</span>):
+      <span class="hljs-keyword">return</span> processed.asHtml(minify_css = (amp == <span class="hljs-string">&quot;&quot;</span>))</code></pre>
+<h2 id="articles_pages"><a href="#articles_pages" class="header-anchor">Articles pages</a></h2>
+<p>When we render pages like home/topics and numbered pages we have to show a list of articles, this function is called in a loop for how many articles we want to show:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">import</span> htmlparser
+<span class="hljs-keyword">proc</span> articleEntry(ar: <span class="hljs-type">Article</span>, topic = <span class="hljs-string">&quot;&quot;</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">VNode</span>] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">if</span> ar.topic == <span class="hljs-string">&quot;&quot;</span> <span class="hljs-keyword">and</span> topic != <span class="hljs-string">&quot;&quot;</span>:
+    ar.topic = topic
+  <span class="hljs-keyword">let</span> relpath = getArticlePath(ar)
+  <span class="hljs-keyword">try</span>:
+    <span class="hljs-keyword">return</span> buildHtml(article(class = <span class="hljs-string">&quot;entry&quot;</span>)):
+      h2(class = <span class="hljs-string">&quot;entry-title&quot;</span>, id = ar.slug):
+        a(href = relpath):
+          text ar.title
+      tdiv(class = <span class="hljs-string">&quot;entry-info&quot;</span>):
+        span(class = <span class="hljs-string">&quot;entry-author&quot;</span>):
+          text ar.getAuthor &amp; <span class="hljs-string">&quot;, &quot;</span>
+        time(class = <span class="hljs-string">&quot;entry-date&quot;</span>, datetime = ($ar.pubDate)):
+          italic:
+            text format(ar.pubDate, <span class="hljs-string">&quot;dd/MMM&quot;</span>)
+      tdiv(class = <span class="hljs-string">&quot;entry-tags&quot;</span>):
+        <span class="hljs-keyword">if</span> ar.tags.len == <span class="hljs-number">0</span>:
+          span(class = <span class="hljs-string">&quot;entry-tag-name&quot;</span>):
+            a(href = (await nextAdsLink()), target = <span class="hljs-string">&quot;_blank&quot;</span>):
+              icon(<span class="hljs-string">&quot;i-mdi-tag&quot;</span>)
+              text <span class="hljs-string">&quot;none&quot;</span>
+        <span class="hljs-keyword">else</span>:
+          <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> ar.tags:
+            <span class="hljs-keyword">if</span> likely(t.isSomething):
+              span(class = <span class="hljs-string">&quot;entry-tag-name&quot;</span>):
+                a(href = (await nextAdsLink()), target = <span class="hljs-string">&quot;_blank&quot;</span>):
+                  icon(<span class="hljs-string">&quot;i-mdi-tag&quot;</span>)
+                  text t
+      buildImgUrl(ar)
+      tdiv(class = <span class="hljs-string">&quot;entry-content&quot;</span>):
+        verbatim(articleExcerpt(ar))
+        a(class = <span class="hljs-string">&quot;entry-more&quot;</span>, href = relpath):
+          text <span class="hljs-string">&quot;[continue]&quot;</span>
+      hr()
+  <span class="hljs-keyword">except</span> <span class="hljs-type">Exception</span> <span class="hljs-keyword">as</span> e:
+    logexc()
+    warn <span class="hljs-string">&quot;articles: entry creation failed.&quot;</span>
+    <span class="hljs-keyword">raise</span> e
+
+<span class="hljs-keyword">proc</span> buildShortPosts*(arts: <span class="hljs-type">seq</span>[<span class="hljs-type">Article</span>], topic = <span class="hljs-string">&quot;&quot;</span>): <span class="hljs-type">Future</span>[
+    <span class="hljs-type">string</span>] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> arts:
+    <span class="hljs-built_in">result</span>.add $(await articleEntry(a, topic))</code></pre>
+<p>Note how in some lines &quot;ads&quot; creep in X&#41;</p>
+<h2 id="topics_list"><a href="#topics_list" class="header-anchor">Topics list</a></h2>
+<p>In the top bar we show the topics list, this is what prints it:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> topicsList*(ucls: <span class="hljs-type">string</span>; icls: <span class="hljs-type">string</span>; small: <span class="hljs-keyword">static</span>[
+    <span class="hljs-type">bool</span>] = <span class="hljs-literal">true</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">VNode</span>] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-built_in">result</span> = newVNode(<span class="hljs-type">VNodeKind</span>.ul)
+  <span class="hljs-built_in">result</span>.setAttr(<span class="hljs-string">&quot;class&quot;</span>, ucls)
+  <span class="hljs-keyword">let</span> topics = await loadTopics(-<span class="hljs-type">MENU_TOPICS</span>) <span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> the sign is negative, we load the most recent N topics</span>
+  <span class="hljs-built_in">result</span>.add buildHtml(tdiv(class = <span class="hljs-string">&quot;topics-shadow&quot;</span>))
+  <span class="hljs-keyword">var</span> topic_slug, topic_name: <span class="hljs-type">string</span>
+  <span class="hljs-keyword">var</span> isEmpty: <span class="hljs-type">bool</span>
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..&lt;topics.len:
+    withPyLock:
+      (topic_slug, topic_name) = ($topics[i][<span class="hljs-number">0</span>], $topics[i][<span class="hljs-number">1</span>])
+      isEmpty = isEmptyTopic(topic_slug)
+    <span class="hljs-keyword">if</span> isEmpty:
+      <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">let</span> liNode = buildHtml(li(class = <span class="hljs-string">fmt&quot;{icls}&quot;</span>)):
+      <span class="hljs-comment"># tdiv(class = &quot;mdc-icon-button__ripple&quot;) # not used without material icons</span>
+      a(href = ($(<span class="hljs-type">WEBSITE_URL</span> / topic_slug)), title = topic_name,
+          class = <span class="hljs-string">&quot;mdc-ripple-button&quot;</span>):
+        tdiv(class = <span class="hljs-string">&quot;mdc-ripple-surface  mdc-ripple-upgraded&quot;</span>)
+        <span class="hljs-keyword">when</span> small:
+          <span class="hljs-comment"># only use the first letter</span>
+          text $topic_name.runeAt(<span class="hljs-number">0</span>).toUpper <span class="hljs-comment"># loadTopics iterator returns pyobjects</span>
+        <span class="hljs-keyword">else</span>:
+          text topic_name
+      <span class="hljs-keyword">when</span> small:
+        br()
+      <span class="hljs-keyword">else</span>:
+        span(class = <span class="hljs-string">&quot;separator&quot;</span>)
+    <span class="hljs-built_in">result</span>.add liNode</code></pre>
+<p>There are some smelly hard coded material design classes in here. Frankly google material design components suck.</p>
+<h2 id="post_footer"><a href="#post_footer" class="header-anchor">Post footer</a></h2>
+<p>The post footer appears at bottom right of an article page &#40;in ltr&#41; and it really only prints the published date.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> postFooter(pubdate: <span class="hljs-type">Time</span>): <span class="hljs-type">VNode</span> =
+  <span class="hljs-keyword">let</span> dt = inZone(pubdate, utc())
+  buildHtml(tdiv(class = <span class="hljs-string">&quot;post-footer&quot;</span>)):
+    time(datetime = ($dt)):
+      text <span class="hljs-string">&quot;Published date: &quot;</span>
+      italic:
+        text format(dt, <span class="hljs-string">&quot;dd MMM yyyy&quot;</span>)</code></pre>
+<h2 id="excerpts"><a href="#excerpts" class="header-anchor">Excerpts</a></h2>
+<p>When building article entries we might need excerpts if no summary is available.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> articleExcerpt(a: <span class="hljs-type">Article</span>): <span class="hljs-type">string</span> =
+  <span class="hljs-keyword">let</span> alen = len(a.content) - <span class="hljs-number">1</span>
+  <span class="hljs-keyword">let</span> maxlen = min(alen, <span class="hljs-type">ARTICLE_EXCERPT_SIZE</span>)
+  <span class="hljs-keyword">if</span> maxlen == alen:
+    <span class="hljs-keyword">return</span> a.content
+  <span class="hljs-keyword">else</span>:
+    <span class="hljs-keyword">let</span> runesize = runeLenAt(a.content, maxlen)
+    <span class="hljs-comment"># If article contains html tags, the excerpt might have broken html</span>
+    <span class="hljs-keyword">return</span> parseHtml(a.content[<span class="hljs-number">0</span>..maxlen+runesize]).innerText &amp; <span class="hljs-string">&quot;...&quot;</span></code></pre>
+<p>Wtf is <code>parseHtml</code> doing here? It is the case that we allow html inside article contents &#40;but only some tags&#41;, this is an option from the python module trafilatura, that we keep enabled because it can affects article format. We also have to be careful about chunking utf-8 strings...</p>
+<h2 id="minification"><a href="#minification" class="header-anchor">Minification</a></h2>
+<p>The last task after having built the karax <code>VNode</code> tree is to dump the bytes. The tree if prefixed with the html header, and optionally minified. </p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> asHtml*(data: <span class="hljs-type">string</span> ; minify: <span class="hljs-keyword">static</span>[<span class="hljs-type">bool</span>] = <span class="hljs-literal">true</span>; minify_css: <span class="hljs-type">bool</span> = <span class="hljs-literal">true</span>): <span class="hljs-type">string</span> =
+  <span class="hljs-keyword">let</span> html = <span class="hljs-string">&quot;&lt;!DOCTYPE html&gt;&quot;</span> &amp; <span class="hljs-string">&quot;\n&quot;</span> &amp; data
+  sdebug <span class="hljs-string">&quot;html: raw size {len(html)}&quot;</span>
+  <span class="hljs-built_in">result</span> = <span class="hljs-keyword">when</span> minify:
+             html.minifyHtml(minify_css = <span class="hljs-literal">false</span>,
+                             minify_js = <span class="hljs-literal">false</span>,
+                             keep_closing_tags = <span class="hljs-literal">true</span>,
+                             do_not_minify_doctype = <span class="hljs-literal">true</span>,
+                             keep_spaces_between_attributes = <span class="hljs-literal">true</span>,
+                             ensure_spec_compliant_unquoted_attribute_values = <span class="hljs-literal">true</span>)
+           <span class="hljs-keyword">else</span>:
+             html
+  sdebug <span class="hljs-string">&quot;html: minified size {len(result)}&quot;</span></code></pre>
+<p>The minification is handled by <a href="https://github.com/wilsonzlin/minify-html">minify-html</a> which we have bound using <a href="https://github.com/nim-lang/c2nim">c2nim</a>, the binding file contains:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> minify*(code: <span class="hljs-type">cstring</span>,
+             do_not_minify_doctype = <span class="hljs-literal">false</span>,
+             ensure_spec_compliant_unquoted_attribute_values = <span class="hljs-literal">false</span>,
+             keep_closing_tags = <span class="hljs-literal">true</span>,
+             keep_comments = <span class="hljs-literal">false</span>,
+             keep_html_and_head_opening_tags = <span class="hljs-literal">true</span>,
+             keep_spaces_between_attributes = <span class="hljs-literal">false</span>,
+             minify_css = <span class="hljs-literal">true</span>,
+             minify_js = <span class="hljs-literal">true</span>,
+             remove_bangs = <span class="hljs-literal">false</span>,
+             remove_processing_instructions = <span class="hljs-literal">true</span>): <span class="hljs-type">cstring</span> <span class="hljs-meta">{.importc: &quot;minify&quot;.}</span>
+
+<span class="hljs-keyword">proc</span> minifyHtml*(tree: <span class="hljs-type">VNode</span>): <span class="hljs-type">string</span> = $minify(($tree).<span class="hljs-type">cstring</span>)
+<span class="hljs-keyword">proc</span> minifyHtml*(data: <span class="hljs-type">string</span>): <span class="hljs-type">string</span> = $minify(data.<span class="hljs-type">cstring</span>)
+<span class="hljs-keyword">template</span> minifyHtml*(data: <span class="hljs-type">string</span>, args: <span class="hljs-type">varargs</span>[untyped]): <span class="hljs-type">string</span> =
+    $minify(data.<span class="hljs-type">cstring</span>, args)</code></pre>
+<p>But for building we have to provide the static libraries, adding this line in our <code>nim.cfg</code></p>
+<pre><code class="toml hljs">--passL:&quot;$PROJECT_DIR/src/rust/target/release/libminify_html_c.a&quot;</code></pre>
+<p>I mean...that&#39;s my path were I built the minify library which <em>btw</em> doesn&#39;t actually have an extern c function which nim can consume, so we had to write it ourselves.</p>
+<pre><code class="rust hljs"><span class="hljs-keyword">use</span> minify_html::{Cfg, minify <span class="hljs-keyword">as</span> minify_html_native};
+<span class="hljs-keyword">use</span> std::ffi::CStr;
+<span class="hljs-keyword">use</span> std::ffi::CString;
+<span class="hljs-keyword">use</span> std::os::raw::c_char;
+
+<span class="hljs-meta">#[no_mangle]</span>
+<span class="hljs-keyword">pub</span> <span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-keyword">fn</span> <span class="hljs-title function_">minify</span>(
+    code: *<span class="hljs-keyword">const</span> c_char,
+    do_not_minify_doctype: <span class="hljs-type">bool</span>,
+    ensure_spec_compliant_unquoted_attribute_values: <span class="hljs-type">bool</span>,
+    keep_closing_tags: <span class="hljs-type">bool</span>,
+    keep_comments: <span class="hljs-type">bool</span>,
+    keep_html_and_head_opening_tags: <span class="hljs-type">bool</span>,
+    keep_spaces_between_attributes: <span class="hljs-type">bool</span>,
+    minify_css: <span class="hljs-type">bool</span>,
+    minify_js: <span class="hljs-type">bool</span>,
+    remove_bangs: <span class="hljs-type">bool</span>,
+    remove_processing_instructions: <span class="hljs-type">bool</span>,
+) <span class="hljs-punctuation">-&gt;</span> *<span class="hljs-keyword">const</span> c_char {
+
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">code</span> = <span class="hljs-keyword">unsafe</span> { CStr::<span class="hljs-title function_ invoke__">from_ptr</span>(code) };
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">code_vec</span> = code.<span class="hljs-title function_ invoke__">to_bytes</span>();
+
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">cfg</span> = Cfg {
+        do_not_minify_doctype,
+        ensure_spec_compliant_unquoted_attribute_values,
+        keep_closing_tags,
+        keep_comments,
+        keep_html_and_head_opening_tags,
+        keep_spaces_between_attributes,
+        minify_css,
+        minify_js,
+        remove_bangs,
+        remove_processing_instructions,
+    };
+
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">minified</span> = <span class="hljs-title function_ invoke__">minify_html_native</span>(code_vec, &amp;cfg);
+
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">s</span> = <span class="hljs-keyword">unsafe</span> { CString::<span class="hljs-title function_ invoke__">from_vec_unchecked</span>(minified).<span class="hljs-title function_ invoke__">into_raw</span>() };
+    <span class="hljs-keyword">return</span> s;
+}</code></pre>
+<h1 id="nimpy_and_the_quest_for_crash_free_garbage_deletion"><a href="#nimpy_and_the_quest_for_crash_free_garbage_deletion" class="header-anchor">Nimpy and the quest for crash free garbage deletion</a></h1>
+<p><a href="https://github.com/yglukhov/nimpy/">Python bindings for nim</a> have to ofc free discard python objects. The problem is that we have to control when nim does GC. The nimpy library assumes the GIL is always locked &#40;it locks it at the beginning&#41;, to it is free to call to python whenever. But we unlock the gil in order to allow a python threadpool to run code while nim runs other stuff. If the python GIL was always locked by nim the threadpool would be idle most of time.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">when</span> defined(pyAsync):
+  <span class="hljs-keyword">type</span>
+    <span class="hljs-type">PyGilObj</span> = <span class="hljs-keyword">object</span>
+      lock: <span class="hljs-type">ThreadLock</span>
+      currentLockHolder: <span class="hljs-type">int</span>
+      state: <span class="hljs-type">PyGILState_STATE</span>
+    <span class="hljs-type">PyGil</span> = <span class="hljs-keyword">ptr</span> <span class="hljs-type">PyGilObj</span>
+
+  <span class="hljs-keyword">var</span> pyGil*: <span class="hljs-type">PyGil</span>
+  <span class="hljs-keyword">var</span> pyGilLock*: <span class="hljs-type">ThreadLock</span>
+  <span class="hljs-keyword">var</span> pyMainThread: <span class="hljs-type">PyThreadState</span>
+  <span class="hljs-keyword">proc</span> initPyGil*() =
+    assert <span class="hljs-type">PyGILState_Check</span>()
+    pyGil = create(<span class="hljs-type">PyGilObj</span>)
+    pyGil.currentLockHolder = getThreadID()
+    pyGil.lock = newThreadLock()
+    pyGilLock = pyGil.lock
+    pyMainThread = <span class="hljs-type">PyEval_SaveThread</span>()
+
+  <span class="hljs-keyword">proc</span> acquire*(gil: <span class="hljs-type">PyGil</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">void</span>] <span class="hljs-meta">{.async.}</span> =
+    await gil.lock.acquire
+    <span class="hljs-keyword">let</span> id = getThreadId()
+    gil.currentLockHolder = id
+    gil.state = <span class="hljs-type">Py_GILState_Ensure</span>()
+
+  <span class="hljs-keyword">proc</span> tryAcquire*(gil: <span class="hljs-type">PyGil</span>): <span class="hljs-type">bool</span> =
+    <span class="hljs-keyword">if</span> gil.lock.tryAcquire():
+      <span class="hljs-keyword">let</span> id = getThreadId()
+      gil.currentLockHolder = id
+      gil.state = <span class="hljs-type">Py_GILState_Ensure</span>()
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+
+  <span class="hljs-keyword">proc</span> release*(gil: <span class="hljs-type">PyGil</span>) <span class="hljs-meta">{.inline.}</span> =
+    doassert gil.currentLockHolder == getThreadId(), <span class="hljs-string">&quot;Can&#x27;t release gil lock from a different thread.&quot;</span>
+    doassert gilLocked()
+    <span class="hljs-type">Py_GILState_Release</span>(gil.state)
+    gil.lock.release</code></pre>
+<p>This allows how to execute python code holding the GIL, but only on the current thread. The implementation for acquiring/releasing the GIL on different nim threads requires calling different python C abi functions, because the GIL is a mutex. We then call python using this template:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">template</span> withPyLock*(code): untyped =
+  <span class="hljs-meta">{.locks: [pyGil].}</span>:
+    <span class="hljs-keyword">try</span>:
+      <span class="hljs-comment"># echo getThreadId(), &quot; -- &quot;, getCurrentProcessId(), &quot; -- &quot;, procName()</span>
+      await pygil.acquire()
+      code
+    <span class="hljs-keyword">except</span>:
+      <span class="hljs-keyword">raise</span> getCurrentException()
+    <span class="hljs-keyword">finally</span>:
+      <span class="hljs-comment"># echo getThreadId(), &quot; -- &quot;, getCurrentProcessId(),  &quot; -- unlocked&quot;</span>
+      pygil.release()</code></pre>
+<p>We make use of the nim locks and guards feature, to ensure python types are only accessed when the GIL is held. However this requires defining pyobjects with the guard:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">macro</span> pyObjPtr*(defs: <span class="hljs-type">varargs</span>[untyped]): untyped =
+  <span class="hljs-built_in">result</span> = newNimNode(nnkStmtList)
+  <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> defs:
+    <span class="hljs-keyword">let</span>
+      name = d[<span class="hljs-number">0</span>]
+      def = d[<span class="hljs-number">1</span>]
+    <span class="hljs-built_in">result</span>.add quote <span class="hljs-keyword">do</span>:
+      <span class="hljs-keyword">let</span> `name` <span class="hljs-meta">{.guard: pyGil.}</span> = create(<span class="hljs-type">PyObject</span>)
+      `name`[] = `def`</code></pre>
+<p>So I can do:</p>
+<pre><code class="nim hljs">pyObjPtr(myVar, pyimport(<span class="hljs-string">&quot;datetime&quot;</span>).datetime))</code></pre>
+<p>And whenever I call <code>myVar</code> which holds the datetime object, I have to wrap it like this:</p>
+<pre><code class="nim hljs">withPyLock():
+  myVar.fromunixtimestamp(<span class="hljs-number">1</span>)</code></pre>
+<p>Now we can lock the gil when we have to run the GC, overriding the nimpy <code>PyObject</code> destructor with this:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">var</span> garbage: <span class="hljs-type">seq</span>[<span class="hljs-type">PPyObject</span>]
+
+<span class="hljs-keyword">proc</span> `=destroy`*(p: <span class="hljs-keyword">var</span> <span class="hljs-type">PyObject</span>) =
+  <span class="hljs-keyword">if</span> pygil.tryAcquire:
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> p.rawPyObj.isnil:
+      decRef p.rawPyObj
+      p.rawPyObj = <span class="hljs-keyword">nil</span>
+    <span class="hljs-keyword">while</span> garbage.len &gt; <span class="hljs-number">1</span>:
+      <span class="hljs-keyword">var</span> pp = garbage.pop() <span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> Does this leak a pointer?</span>
+      <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> pp.isnil:
+        decRef pp
+      pp = <span class="hljs-keyword">nil</span>
+    pygil.release
+  <span class="hljs-keyword">else</span>:
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> p.rawPyObj.isnil:
+      garbage.add p.rawPyObj</code></pre>
+<p>The lock we use inside the destructor is not an <code>AsyncLock</code> as that would be too expensive, and we <em>don&#39;t</em> always lock, as that would cause stalls&#33; If we can&#39;t lock the gil, we delay the collection, and keep the raw python pointer around for when we will be able to clear it. Honestly I don&#39;t know if this causes other forms of issues, but it seems to work <em>well enough</em>.</p>
+<p>We have a nim module called <code>pyutils.nim</code> that does a bunch of nim&lt;&gt;python stuff, for example:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">from</span> utils <span class="hljs-keyword">import</span> withLocks
+<span class="hljs-keyword">proc</span> pyhasAttr*(o: <span class="hljs-type">PyObject</span>; a: <span class="hljs-type">string</span>): <span class="hljs-type">bool</span> <span class="hljs-meta">{.withLocks: [pyGil].}</span> = pybi[].hasattr(
+    o, a).to(<span class="hljs-type">bool</span>)
+
+<span class="hljs-keyword">proc</span> pyclass(py: <span class="hljs-type">PyObject</span>): <span class="hljs-type">PyObject</span> <span class="hljs-meta">{.inline, withLocks: [pyGil].}</span> =
+  pybi[].<span class="hljs-keyword">type</span>(py)
+
+<span class="hljs-keyword">proc</span> pytype*(py: <span class="hljs-type">PyObject</span>): <span class="hljs-type">string</span> =
+  py.pyclass.getattr(<span class="hljs-string">&quot;__name__&quot;</span>).to(<span class="hljs-type">string</span>)
+
+<span class="hljs-keyword">proc</span> pyisbool*(py: <span class="hljs-type">PyObject</span>): <span class="hljs-type">bool</span> <span class="hljs-meta">{.withLocks: [pyGil].}</span> =
+  <span class="hljs-keyword">return</span> pybi[].isinstance(py, <span class="hljs-type">PyBoolClass</span>[]).to(<span class="hljs-type">bool</span>)
+
+<span class="hljs-keyword">proc</span> pyisnone*(py: <span class="hljs-type">PyObject</span>): <span class="hljs-type">bool</span> <span class="hljs-meta">{.gcsafe, withLocks: [pyGil].}</span> =
+  <span class="hljs-keyword">return</span> py.isnil <span class="hljs-keyword">or</span> pybi[].isinstance(py, <span class="hljs-type">PyNoneClass</span>[]).to(<span class="hljs-type">bool</span>)</code></pre>
+<p>This one is used quite a lot:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> pyget*[T](py: <span class="hljs-type">PyObject</span>; k: <span class="hljs-type">string</span>; def: T = <span class="hljs-string">&quot;&quot;</span>): T =
+  <span class="hljs-keyword">try</span>:
+    <span class="hljs-keyword">let</span> v = py.callMethod(<span class="hljs-string">&quot;get&quot;</span>, k)
+    <span class="hljs-keyword">if</span> pyisnone(v):
+      <span class="hljs-keyword">return</span> def
+    <span class="hljs-keyword">else</span>:
+      <span class="hljs-keyword">return</span> v.to(T)
+  <span class="hljs-keyword">except</span>:
+    pyErrClear()
+    <span class="hljs-keyword">if</span> pyisnone(py):
+      <span class="hljs-keyword">return</span> def
+    <span class="hljs-keyword">else</span>:
+      <span class="hljs-keyword">return</span> py.to(T)</code></pre>
+<p>This one is used when we have scheduled a python job, and we want to wait for it to finish asynchronously:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> pywait*(j: <span class="hljs-type">PyObject</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">PyObject</span>] <span class="hljs-meta">{.async, gcsafe.}</span> =
+  <span class="hljs-keyword">var</span> rdy: <span class="hljs-type">bool</span>
+  <span class="hljs-keyword">var</span> res: <span class="hljs-type">PyObject</span>
+  <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>:
+    withPyLock:
+      checkNil(j)
+      rdy = j.callMethod(<span class="hljs-string">&quot;ready&quot;</span>).to(<span class="hljs-type">bool</span>)
+    <span class="hljs-keyword">if</span> rdy:
+      withPyLock:
+        checkNil(j)
+        res = j.callMethod(<span class="hljs-string">&quot;get&quot;</span>)
+      <span class="hljs-keyword">break</span>
+    await sleepAsync(<span class="hljs-number">250</span>.milliseconds)
+  withPyLock:
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">not</span> res.isnil) <span class="hljs-keyword">and</span> (<span class="hljs-keyword">not</span> pyisnone(res)) <span class="hljs-keyword">and</span> (<span class="hljs-keyword">not</span> pyErrOccurred()):
+      <span class="hljs-keyword">return</span> res
+    <span class="hljs-keyword">else</span>:
+      <span class="hljs-keyword">raise</span> newException(<span class="hljs-type">ValueError</span>, <span class="hljs-string">&quot;Python job failed.&quot;</span>)</code></pre>
+<p>Proper python async binding would require completing a nim async future from python at the end of the python scheduled job, which we don&#39;t do cuz we haven&#39;t looked deep enough into handling nim objects from python.</p>
+<h2 id="ampification"><a href="#ampification" class="header-anchor">Ampification</a></h2>
+<p>We support google amp, so we generate somewhat amp compliant amp pages. We don&#39;t aim for 1:1 support. In fact we nuke all the javascript we have and only serve html/css. Even then we have to be careful not adding custom attributes to html tags, or just custom html tags, amp is bad like that... For automatic amp page conversion we handle the <code>head</code> and the <code>body</code> tag differently.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> processHead(inHead: <span class="hljs-type">VNode</span>, outHead: <span class="hljs-type">VNode</span>, level = <span class="hljs-number">0</span>) <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">var</span> canonicalUnset = level == <span class="hljs-number">0</span>
+  debug <span class="hljs-string">&quot;iterating over {inHead.kind}&quot;</span>
+  <span class="hljs-keyword">for</span> el <span class="hljs-keyword">in</span> inHead.preorder(withStyles = <span class="hljs-literal">true</span>):
+    <span class="hljs-keyword">case</span> el.kind:
+      <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.text, skipNodes:
+        <span class="hljs-keyword">continue</span>
+      <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.style:
+        <span class="hljs-keyword">if</span> el.len &gt; <span class="hljs-number">0</span>:
+          el[<span class="hljs-number">0</span>].text.maybeStyle
+      <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.link:
+        <span class="hljs-keyword">if</span> canonicalUnset <span class="hljs-keyword">and</span> el.isLink(canonical):
+          outHead.add el
+          canonicalUnset = <span class="hljs-literal">false</span>
+        <span class="hljs-keyword">elif</span> el.isLink(stylesheet) <span class="hljs-keyword">and</span> (<span class="hljs-keyword">not</span> (<span class="hljs-string">&quot;flags-sprite&quot;</span> <span class="hljs-keyword">in</span> el.getattr(<span class="hljs-string">&quot;href&quot;</span>))):
+          await el.fetchStyle()
+        <span class="hljs-keyword">elif</span> el.isLink(preload) <span class="hljs-keyword">and</span> el.getattr(<span class="hljs-string">&quot;as&quot;</span>) == <span class="hljs-string">&quot;style&quot;</span>:
+          await el.fetchStyle()
+        <span class="hljs-keyword">else</span>:
+          outHead.add el
+      <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.script:
+        <span class="hljs-keyword">if</span> el.getAttr(<span class="hljs-string">&quot;type&quot;</span>) == $ldjson:
+          outHead.add el
+      <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.meta:
+        <span class="hljs-keyword">if</span> (el.getAttr(<span class="hljs-string">&quot;name&quot;</span>) == <span class="hljs-string">&quot;viewport&quot;</span>) <span class="hljs-keyword">or</span> (el.getAttr(<span class="hljs-string">&quot;charset&quot;</span>) != <span class="hljs-string">&quot;&quot;</span>):
+          <span class="hljs-keyword">continue</span>
+        <span class="hljs-keyword">else</span>:
+          outHead.add el
+      <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.verbatim:
+        <span class="hljs-keyword">let</span> data = el.toXmlNode
+        <span class="hljs-keyword">if</span> data.kind == xnElement:
+          <span class="hljs-keyword">if</span> data.tag == <span class="hljs-string">&quot;noscript&quot;</span>:
+            processNoScript()
+          <span class="hljs-keyword">elif</span> data.tag == <span class="hljs-string">&quot;script&quot;</span>:
+            <span class="hljs-keyword">continue</span>
+          <span class="hljs-keyword">elif</span> data.tag == <span class="hljs-string">&quot;style&quot;</span>:
+            <span class="hljs-keyword">if</span> data.len &gt; <span class="hljs-number">0</span>:
+              data[<span class="hljs-number">0</span>].text.maybeStyle
+          <span class="hljs-keyword">else</span>:
+            outHead.add el
+      <span class="hljs-keyword">of</span> <span class="hljs-type">VNodekind</span>.noscript:
+        processNoScript()
+      <span class="hljs-keyword">else</span>:
+        debug <span class="hljs-string">&quot;amphead: adding element {el.kind} to outHead.&quot;</span>
+        outHead.add el</code></pre>
+<p>All styles are merged into a single inline script, what&#39;s kept is <code>link</code> tags which are not style/jscript, like lang. Script tags for <code>ldljson</code>, <code>meta</code> tags. Verbatim handles nodes which are <em>literal</em>, we have to convert them in to <code>XmlNode</code> &#40;which means parsing&#41; and handle it correctly. Process body is similar, we keep some tags, remove others, rename others:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">template</span> process(el: <span class="hljs-type">VNode</span>, after: untyped): <span class="hljs-type">bool</span> =
+  <span class="hljs-keyword">var</span> isprocessed = <span class="hljs-literal">true</span>
+  <span class="hljs-keyword">case</span> el.kind:
+    <span class="hljs-keyword">of</span> skipNodes: <span class="hljs-keyword">discard</span>
+    <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.link:
+      <span class="hljs-keyword">if</span> el.isLink(stylesheet):
+        await el.fetchStyle()
+      <span class="hljs-keyword">else</span>:
+        outBody.add el
+    <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.style:
+      el.text.maybeStyle
+      el.text = <span class="hljs-string">&quot;&quot;</span>
+    <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.script:
+      <span class="hljs-keyword">if</span> el.getAttr(<span class="hljs-string">&quot;type&quot;</span>) == $ldjson:
+        outHead.add el
+      el.text = <span class="hljs-string">&quot;&quot;</span>
+    <span class="hljs-keyword">of</span> <span class="hljs-type">VNodeKind</span>.form:
+      el.setAttr(<span class="hljs-string">&quot;amp-form&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
+    <span class="hljs-keyword">else</span>:
+      isprocessed = <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">if</span> isprocessed:
+    after
+  isprocessed</code></pre>
+<p>The <code>form</code> tag is replaced with <code>amp-form</code>, amp has many of these tags...</p>
+<p>We have to ensure that the inline styles are within the correct length:</p>
+<pre><code class="nim hljs">styleStr = styleStr
+  <span class="hljs-comment"># .join(&quot;\n&quot;)</span>
+  <span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> the replacement should be ordered from most frequent to rarest</span>
+  <span class="hljs-comment"># # remove troublesome animations</span>
+  .replace(<span class="hljs-string">pre&quot;&quot;&quot;\s*?@(\-[a-zA-Z]+-)?keyframes\s+?.+?{\s*?.+?({.+?})+?\s*?}&quot;&quot;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
+  <span class="hljs-comment"># # remove !important hints</span>
+  .replace(<span class="hljs-string">pre&quot;&quot;&quot;!important&quot;&quot;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
+  <span class="hljs-comment"># remove charset since not allowed</span>
+  .replace(<span class="hljs-string">pre&quot;&quot;&quot;@charset\s+\&quot;</span>utf-<span class="hljs-number">8</span>\<span class="hljs-string">&quot;\s*;?/i&quot;</span><span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
+
+<span class="hljs-keyword">if</span> unlikely(styleStr.len &gt; <span class="hljs-type">CSS_MAX_SIZE</span>):
+  <span class="hljs-keyword">raise</span> newException(<span class="hljs-type">ValueError</span>, <span class="hljs-string">fmt&quot;Style size above limit for amp pages. {styleStr.len}&quot;</span>)</code></pre>
+<p>Our amp generation doesn&#39;t cover the full amp spec, but it works for our content &#40;through trial and error :S&#41;.</p>
+<h2 id="search"><a href="#search" class="header-anchor">Search</a></h2>
+<p>Whenever an article is published, it is ingested into the sonic database, the sonic database handles &quot;collections&quot;, &quot;buckets&quot; and &quot;objects&quot;; We define a collection as a website, so every website that wants to deploy the content aggregator has its own collection. We don&#39;t use <code>buckets</code>, although we could consider each topic a bucket that would narrow the search too much, so every site has just one bucket &quot;default&quot;, and each object of the bucket is an article &#40;which can be of different topics&#41;.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> push*(capts: <span class="hljs-type">UriCaptures</span>, content: <span class="hljs-type">string</span>) <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-comment">## Push the contents of an article page to the search database</span>
+  <span class="hljs-comment">## <span class="hljs-doctag">NOTE:</span> NOT thread safe</span>
+  <span class="hljs-keyword">var</span> ofs = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">while</span> ofs &lt;= content.len:
+    <span class="hljs-keyword">let</span> view = content[ofs..^<span class="hljs-number">1</span>]
+    <span class="hljs-keyword">let</span> key = join([capts.topic, capts.page, capts.art], <span class="hljs-string">&quot;/&quot;</span>)
+    <span class="hljs-keyword">let</span> cnt = runeSubStr(view, <span class="hljs-number">0</span>, min(view.len, bufsize - key.len))
+    ofs += cnt.len
+    <span class="hljs-keyword">if</span> cnt.len == <span class="hljs-number">0</span>:
+      <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">try</span>:
+      <span class="hljs-keyword">let</span> lang = await capts.lang.toISO3
+      <span class="hljs-keyword">var</span> pushed: <span class="hljs-type">bool</span>
+      <span class="hljs-keyword">var</span> j: <span class="hljs-type">PyObject</span>
+      withPyLock:
+        j = pySched[].apply(
+          pySonic[].push,
+          <span class="hljs-type">WEBSITE_DOMAIN</span>,
+          <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> Should we restrict search to `capts.topic`?</span>
+          key,
+          cnt,
+          lang = <span class="hljs-keyword">if</span> capts.lang != <span class="hljs-string">&quot;en&quot;</span>: lang <span class="hljs-keyword">else</span>: <span class="hljs-string">&quot;&quot;</span>
+          )
+      j = await j.pywait()
+      withPyLock:
+        pushed = <span class="hljs-keyword">not</span> pyisnone(j) <span class="hljs-keyword">and</span> j.to(<span class="hljs-type">bool</span>)
+      <span class="hljs-keyword">when</span> <span class="hljs-keyword">not</span> defined(release):
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> pushed:
+          capts.addToBackLog()
+          <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">except</span> <span class="hljs-type">Exception</span>:
+      logexc()
+      debug <span class="hljs-string">&quot;sonic: couldn&#x27;t push content, \n {capts} \n {key} \n {cnt}&quot;</span>
+      <span class="hljs-keyword">when</span> <span class="hljs-keyword">not</span> defined(release):
+        capts.addToBackLog()
+        <span class="hljs-keyword">block</span>:
+          <span class="hljs-keyword">var</span> f: <span class="hljs-type">File</span>
+          <span class="hljs-keyword">try</span>:
+            await pushLock[].acquire
+            f = open(<span class="hljs-string">&quot;/tmp/sonic_debug.log&quot;</span>, fmWrite)
+            write(f, cnt)
+          <span class="hljs-keyword">finally</span>:
+            pushLock[].release
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> f.isnil:
+              f.close()
+      <span class="hljs-keyword">break</span></code></pre>
+<p>When pushing content into sonic we have to split the data in chunks, which max length is known upon connection. Ingesting data seems to be buggy sometimes, as it appears to not be able to handle some specific characters. In case the sonic server breaks somehow, we also have a function to reingest all the content:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> pushAllSonic*() <span class="hljs-meta">{.async.}</span> =
+  await syncTopics()
+  <span class="hljs-keyword">var</span> total, c, pagenum: <span class="hljs-type">int</span>
+  <span class="hljs-keyword">let</span> pushLog = await readPushLog()
+  <span class="hljs-keyword">if</span> pushLog.len == <span class="hljs-number">0</span>:
+    withPyLock:
+      <span class="hljs-keyword">discard</span> pySonic[].flush(<span class="hljs-type">WEBSITE_DOMAIN</span>)
+  defer:
+    withPyLock:
+      <span class="hljs-keyword">discard</span> pySonic[].consolidate()
+  <span class="hljs-keyword">for</span> (topic, state) <span class="hljs-keyword">in</span> topicsCache:
+    <span class="hljs-keyword">if</span> topic <span class="hljs-keyword">notin</span> pushLog:
+      pushLog[topic] = %<span class="hljs-number">0</span>
+    await pygil.acquire
+    defer: pygil.release
+    <span class="hljs-keyword">let</span> done = state.group[][<span class="hljs-string">&quot;done&quot;</span>]
+    <span class="hljs-keyword">for</span> page <span class="hljs-keyword">in</span> done:
+      pagenum = ($page).parseint
+      c = len(done[page])
+      <span class="hljs-keyword">if</span> pushLog[topic].to(<span class="hljs-type">int</span>) &gt;= pagenum:
+        <span class="hljs-keyword">continue</span>
+      <span class="hljs-keyword">var</span> futs: <span class="hljs-type">seq</span>[<span class="hljs-type">Future</span>[<span class="hljs-type">void</span>]]
+      <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..&lt;c:
+        <span class="hljs-keyword">let</span> ar = done[page][n]
+        <span class="hljs-keyword">if</span> ar.isValidArticlePy:
+          <span class="hljs-keyword">var</span> relpath = getArticlePath(ar, topic)
+          relpath.removeSuffix(<span class="hljs-string">&quot;/&quot;</span>)
+          <span class="hljs-keyword">let</span>
+            capts = uriTuple(relpath)
+            content = ar.pyget(<span class="hljs-string">&quot;content&quot;</span>).sanitize
+          echo <span class="hljs-string">&quot;pushing &quot;</span>, relpath
+          futs.add push(capts, content)
+          total.inc
+      pygil.release
+      await allFutures(futs)
+      pushLog[topic] = %pagenum
+      await writePushLog(pushLog)
+      await pygil.acquire
+  info <span class="hljs-string">&quot;Indexed search for {WEBSITE_DOMAIN} with {total} objects.&quot;</span></code></pre>
+<h2 id="translation"><a href="#translation" class="header-anchor">Translation</a></h2>
+<p>Translation is quite a messy story. I am at my 4th &#40;&#33;&#41; implementation of a translation wrapper, after having written in php, go and <a href="https://github.com/untoreh/Translator.jl">julia</a>, this is also written in nim. The php/go variants are a little bit rotten nowadays, while the julia variant is actively used for this blog. However to achieve low delay for the web server, the way translation is implemented in julia is not well fit for real time servicing &#40;it translates static files&#41;, and anyway adding julia as a dependency once we already have python would be to big of a requirement.</p>
+<p>So I had to implement a new translation module in nim. In truth, the initial nim translation module looked a lot like the julia implementation, where we were translating static files <sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup>. Afterwards, when the web server started shaping up, I switching it to translate the karax nodes on demand. This allows to translate each web page just in time for the request.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">template</span> translateVbtm(node: <span class="hljs-type">VNode</span>, q: <span class="hljs-type">QueueDom</span>) =
+  assert node.kind == <span class="hljs-type">VNodeKind</span>.verbatim
+  <span class="hljs-keyword">let</span> tree = ($node).parseHtml() <span class="hljs-comment"># <span class="hljs-doctag">FIXME:</span> this should be a conversion, but the conversion doesn&#x27;t preserve whitespace??</span>
+  <span class="hljs-keyword">if</span> tree.kind == xnElement <span class="hljs-keyword">and</span> tree.tag == <span class="hljs-string">&quot;document&quot;</span>:
+    tree.tag = <span class="hljs-string">&quot;div&quot;</span>
+  takeOverFields(tree.toVNode, node)
+  translateIter(node, vbtm = <span class="hljs-literal">false</span>)
+
+<span class="hljs-keyword">template</span> translateIter(otree; vbtm: <span class="hljs-keyword">static</span>[<span class="hljs-type">bool</span>] = <span class="hljs-literal">true</span>) =
+  <span class="hljs-keyword">for</span> el <span class="hljs-keyword">in</span> otree.preorder():
+    <span class="hljs-keyword">case</span> el.kind:
+      <span class="hljs-keyword">of</span> vdom.<span class="hljs-type">VNodeKind</span>.text:
+        <span class="hljs-keyword">if</span> el.text.isEmptyOrWhitespace:
+          <span class="hljs-keyword">continue</span>
+        <span class="hljs-keyword">if</span> isTranslatable(el):
+          translate(q.<span class="hljs-keyword">addr</span>, el, srv)
+      <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">let</span> t = el.kind
+        <span class="hljs-keyword">if</span> t <span class="hljs-keyword">in</span> tformsTags:
+          getTForms(dom)[t](el, file_path, url_path, pair)
+        <span class="hljs-keyword">if</span> t == <span class="hljs-type">VNodeKind</span>.a:
+          <span class="hljs-keyword">if</span> el.hasAttr(<span class="hljs-string">&quot;href&quot;</span>):
+            rewriteUrl(el, rewrite_path, hostname)
+        <span class="hljs-keyword">if</span> t == <span class="hljs-type">VNodeKind</span>.verbatim:
+          <span class="hljs-keyword">when</span> vbtm:
+            debug <span class="hljs-string">&quot;dom: translating verbatim&quot;</span>, <span class="hljs-literal">false</span>
+            translateVbtm(el, q)
+        <span class="hljs-keyword">else</span>:
+          <span class="hljs-keyword">if</span>(el.hasAttr(<span class="hljs-string">&quot;alt&quot;</span>) <span class="hljs-keyword">and</span> el.isTranslatable(<span class="hljs-string">&quot;alt&quot;</span>)) <span class="hljs-keyword">or</span>
+            (el.hasAttr(<span class="hljs-string">&quot;title&quot;</span>) <span class="hljs-keyword">and</span> el.isTranslatable(<span class="hljs-string">&quot;title&quot;</span>)):
+            translate(q.<span class="hljs-keyword">addr</span>, el, srv)</code></pre>
+<p>Above is the main iteration loop <code>translateIter</code>:</p>
+<ul>
+<li><p><code>getTforms</code> maps functions to html tags, allowing to perform mutations on case by case basis.</p>
+</li>
+<li><p><code>rewriteUrl</code> inserts the lang path &#40;.e.g <code>/en/</code>&#41; in the url path.</p>
+</li>
+<li><p><code>translateVbtm</code> handle verbatim nodes which require parsing.</p>
+</li>
+</ul>
+<p>Translation is applied to all text nodes and to the <code>alt</code> and <code>title</code> attributes.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> translate*[T](q: <span class="hljs-keyword">ptr</span>[<span class="hljs-type">QueueXml</span> | <span class="hljs-type">QueueDom</span>], el: T, srv: service) =
+  <span class="hljs-keyword">if</span> q.isnil:
+    warn <span class="hljs-string">&quot;translate: queue can&#x27;t be nil&quot;</span>
+    <span class="hljs-keyword">return</span>
+  <span class="hljs-keyword">let</span> (success, length) = setFromDB(q[].pair, el)
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> success:
+    <span class="hljs-keyword">if</span> length &gt; q[].bufsize:
+      debug <span class="hljs-string">&quot;Translating element singularly since it is big&quot;</span>
+      elUpdate(q[], el, srv)
+    <span class="hljs-keyword">else</span>:
+      <span class="hljs-keyword">if</span> reachedBufSize(length, q[]):
+        q[].push()
+      q[].bucket.add(el)
+      q[].sz += length
+
+<span class="hljs-keyword">proc</span> translate*[T](q: <span class="hljs-keyword">ptr</span>[<span class="hljs-type">QueueXml</span> | <span class="hljs-type">QueueDom</span>], el: T, srv: service,
+    finish: <span class="hljs-type">bool</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">bool</span>] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">if</span> finish:
+    <span class="hljs-keyword">if</span> q.isnil:
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">let</span> (success, _) = setFromDB(q[].pair, el)
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> success:
+      addJob(@[el], q[], el.getText)
+      debug <span class="hljs-string">&quot;translate: waiting for pair: {q[].pair}&quot;</span>
+      await doTrans()
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-keyword">proc</span> translate*(q: <span class="hljs-keyword">ptr</span>[<span class="hljs-type">QueueXml</span> | <span class="hljs-type">QueueDom</span>], srv: service,
+    finish: <span class="hljs-type">bool</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">bool</span>] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">if</span> finish <span class="hljs-keyword">and</span> q[].sz &gt; <span class="hljs-number">0</span>:
+    q[].push()
+    await doTrans()
+    saveToDB(force = <span class="hljs-literal">true</span>)
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span></code></pre>
+<p>Because we have to translate each text node separately &#40;otherwise we can&#39;t render back the html&#41; every node translation is a separated job. Since jobs can query translation services of the net, they have to be done asynchronously. We do splitting and merging of translation queries to spare api calls, but the internals of the translation engine are not important to know. The only thing to note is that initially I was using a <a href="https://github.com/nidhaloff/deep-translator">python wrapper</a> &#40;which I still use for translating scraped content&#41; because self managing wrappers for external apis is a pain, but then switched to self wrapped google and yandex translation service in nim, because python become a considerable bottleneck when handling many concurrent translations.</p>
+<table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">In fact originally the content aggregator was supposed to just generate static files for <code>caddy</code> to serve, but because the amount of pages to generate &#40;which is a matrix of n_lang&#40;20&#41; x amp&#40;2&#41; x page&#41;, lazy rendering was the better option.</td>
+    </tr>
+</table>
+
+<h2 id="stats"><a href="#stats" class="header-anchor">Stats</a></h2>
+<p>Topic and article pages are tracked for hit counts.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> updateHits*(capts: <span class="hljs-type">UriCaptures</span>) =
+  <span class="hljs-keyword">let</span> ak = join([capts.topic, capts.art])
+  <span class="hljs-keyword">let</span> tk = capts.topic
+  <span class="hljs-keyword">var</span>
+    artCount: <span class="hljs-type">int32</span> = statsDB[ak]
+    topicCount: <span class="hljs-type">int32</span> = statsDB[tk]
+  artCount += <span class="hljs-number">1</span>
+  topicCount += <span class="hljs-number">1</span>
+  statsDB[ak] = artCount
+  statsDB[tk] = topicCount</code></pre>
+<p>We use hit counts to cleanup pages with a low count periodically.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> deleteLowTrafficArts*(topic: <span class="hljs-type">string</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">void</span>] <span class="hljs-meta">{.gcsafe, async.}</span> =
+  <span class="hljs-keyword">let</span> now = getTime()
+  <span class="hljs-keyword">var</span>
+    pagenum: <span class="hljs-type">int</span>
+    pagesToReset: <span class="hljs-type">seq</span>[<span class="hljs-type">int</span>]
+    pubTime: <span class="hljs-type">Time</span>
+    pubTimeTs: <span class="hljs-type">int</span>
+  <span class="hljs-keyword">var</span> capts = mUriCaptures()
+  capts.topic = topic
+  <span class="hljs-keyword">for</span> (art, _) <span class="hljs-keyword">in</span> (await publishedArticles[<span class="hljs-type">string</span>](topic, <span class="hljs-string">&quot;&quot;</span>)):
+    withPyLock:
+      <span class="hljs-keyword">if</span> pyisnone(art):
+        <span class="hljs-keyword">continue</span>
+      capts.art = pyget[<span class="hljs-type">string</span>](art, <span class="hljs-string">&quot;slug&quot;</span>)
+      pagenum = pyget(art, <span class="hljs-string">&quot;page&quot;</span>, <span class="hljs-number">0</span>)
+    capts.page = pagenum.intToStr
+    <span class="hljs-keyword">try</span>:
+      withPyLock:
+        pubTimeTs = pyget(art, <span class="hljs-string">&quot;pubTime&quot;</span>, <span class="hljs-number">0</span>)
+      pubTime = fromUnix(pubTimeTs)
+    <span class="hljs-keyword">except</span>:
+      pubTime = default(<span class="hljs-type">Time</span>)
+    <span class="hljs-keyword">if</span> pubTime == default(<span class="hljs-type">Time</span>):
+      <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> (pagenum <span class="hljs-keyword">in</span> pagesToReset):
+        debug <span class="hljs-string">&quot;tasks: resetting pubTime for page {pagenum}&quot;</span>
+        pagesToReset.add pagenum
+    <span class="hljs-comment"># article is old enough</span>
+    <span class="hljs-keyword">elif</span> inSeconds(now - pubTime) &gt; cfg.<span class="hljs-type">CLEANUP_AGE</span>:
+      <span class="hljs-keyword">let</span> hits = topic.getHits(capts.art)
+      <span class="hljs-comment"># article has low hit count</span>
+      <span class="hljs-keyword">if</span> hits &lt; cfg.<span class="hljs-type">CLEANUP_HITS</span>:
+        await deleteArt(capts)
+  <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> pagesToReset:
+    withPyLock:
+      <span class="hljs-keyword">discard</span> site[].update_pubtime(topic, n)</code></pre>
+<h2 id="databases"><a href="#databases" class="header-anchor">Databases</a></h2>
+<p>We use <code>libmdbx</code> through <a href="https://github.com/snej/nimdbx">this lib</a>. Probably is overkill, and using leveldb would have sufficed. We have a type <code>LRUTrans</code> where the initial idea was to setup the database as an LRU cache, but it was considerably slower. The implementation can be found <a href="https://github.com/untoreh/lrudbx/blob/main/lrudbx.nim">here</a></p>
+<pre><code class="nim hljs"><span class="hljs-keyword">type</span>
+    <span class="hljs-type">CollectionNotNil</span> = <span class="hljs-keyword">ptr</span> <span class="hljs-type">Collection</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">nil</span>
+    <span class="hljs-type">LRUTransObj</span> = <span class="hljs-keyword">object</span>
+        db: nimdbx.<span class="hljs-type">Database</span>.<span class="hljs-type">Database</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">nil</span>
+        coll: <span class="hljs-type">CollectionNotNil</span>
+        zstd_c: <span class="hljs-keyword">ptr</span> <span class="hljs-type">ZSTD_CCtx</span>
+        zstd_d: <span class="hljs-keyword">ptr</span> <span class="hljs-type">ZSTD_DCtx</span>
+    <span class="hljs-type">LRUTrans</span>* = <span class="hljs-keyword">ptr</span> <span class="hljs-type">LRUTransObj</span>
+
+<span class="hljs-keyword">proc</span> getImpl(t: <span class="hljs-type">LRUTrans</span>, k: <span class="hljs-type">int64</span>, throw: <span class="hljs-keyword">static</span> <span class="hljs-type">bool</span>): <span class="hljs-type">string</span> =
+    withLock(tLock):
+        <span class="hljs-keyword">var</span> o: <span class="hljs-type">seq</span>[byte]
+        t.coll.inSnapshot <span class="hljs-keyword">do</span> (cs: <span class="hljs-type">CollectionSnapshot</span>):
+            <span class="hljs-comment"># debug &quot;nimdbx: looking for key {k}, {v}&quot;</span>
+            o.add cs[k.asData].asByteSeq
+        <span class="hljs-keyword">if</span> len(o) &gt; <span class="hljs-number">0</span>:
+            <span class="hljs-built_in">result</span> = <span class="hljs-keyword">cast</span>[<span class="hljs-type">string</span>](decompress(t.zstd_d, o))
+            <span class="hljs-comment"># debug &quot;nimdbx: got key {k}, with {o.len} bytes&quot;</span>
+        <span class="hljs-keyword">elif</span> throw:
+            <span class="hljs-keyword">raise</span> newException(<span class="hljs-type">KeyError</span>, <span class="hljs-string">&quot;nimdbx: key not found&quot;</span>)
+
+<span class="hljs-keyword">proc</span> getImpl[T: <span class="hljs-keyword">not</span> <span class="hljs-type">int64</span>](t: <span class="hljs-type">LRUTrans</span>, k: T, throw: <span class="hljs-keyword">static</span> <span class="hljs-type">bool</span>): <span class="hljs-type">string</span> =
+    getImpl(t, hash(k).<span class="hljs-type">int64</span>, throw)
+
+
+<span class="hljs-keyword">proc</span> `[]`*[T](t: <span class="hljs-type">LRUTrans</span>, k: T): <span class="hljs-type">auto</span> = t.getImpl(k, <span class="hljs-literal">false</span>)
+<span class="hljs-keyword">proc</span> `get`*[K](t: <span class="hljs-type">LRUTrans</span>, k: K): <span class="hljs-type">auto</span> = t.getImpl(k, <span class="hljs-literal">true</span>)
+
+<span class="hljs-keyword">proc</span> `[]=`*(t: <span class="hljs-type">LRUTrans</span>, k: <span class="hljs-type">int64</span>, v: <span class="hljs-type">string</span>) <span class="hljs-meta">{.gcsafe.}</span> =
+    <span class="hljs-keyword">var</span> o: <span class="hljs-type">seq</span>[byte]
+    <span class="hljs-keyword">if</span> likely(v.len != <span class="hljs-number">0</span>):
+      o = compress(t.zstd_c, v, cfg.<span class="hljs-type">ZSTD_COMPRESSION_LEVEL</span>)
+    withLock(tLock):
+        logall <span class="hljs-string">&quot;nimdbx: saving key {k}&quot;</span>
+        t.coll.inTransaction <span class="hljs-keyword">do</span> (ct: <span class="hljs-type">CollectionTransaction</span>):
+            <span class="hljs-meta">{.cast(gcsafe).}</span>:
+                ct[k] = o
+            ct.commit()
+        logall <span class="hljs-string">&quot;nimdbx: commited key {k}&quot;</span>
+
+<span class="hljs-keyword">proc</span> `[]=`*[K: <span class="hljs-keyword">not</span> <span class="hljs-type">int64</span>](t: <span class="hljs-type">LRUTrans</span>, k: K, v: <span class="hljs-type">string</span>) = t[hash(k).<span class="hljs-type">int64</span>] = v</code></pre>
+<p>This type is used for four separate databases:</p>
+<ul>
+<li><p>translations</p>
+</li>
+<li><p>page cache</p>
+</li>
+<li><p>images cache</p>
+</li>
+<li><p>stats</p>
+</li>
+</ul>
+<p>The database type is implemented with getters and setters then do automatic de/compression on read/write. For this reason it shouldn&#39;t be used for images...but alas... There are also a bunch of small micro caches:</p>
+<ul>
+<li><p>vbtm: for parsed &#40;verbatim&#41; content</p>
+</li>
+<li><p>search: for search queries</p>
+</li>
+<li><p>feeds: for topic feeds VNodes</p>
+</li>
+<li><p>rxcache: for regex, because compile time static regexes are not yet standardized &#40;also because there are multiple regex libraries in nim&#41;</p>
+</li>
+</ul>
+<p>These are implemented as <a href="https://github.com/jackhftang/lrucache.nim">lru caches</a><sup id="fnref:2"><a href="#fndef:2" class="fnref">[2]</a></sup>, more precisely as &quot;locked&quot; lru caches, where every get and set operation is wrapped around a &#40;thread&#41;lock. This locks can&#39;t cause stalls with the async runtime because the lock is acquired and released without any yield statement, so they are atomic in that sense, however they are still useful since we make use of threads for different tasks.</p>
+<table class="fndef" id="fndef:2">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:2">[2]</a></td>
+        <td class="fndef-content">However <a href="https://github.com/status-im/nim-stew/blob/master/stew/keyed_queue.nim">nim stew</a> has a simpler implementation for lru cache which I would have used if found sooner.</td>
+    </tr>
+</table>
+
+<h1 id="background_jobs"><a href="#background_jobs" class="header-anchor">Background Jobs</a></h1>
+<p>A couple tasks that we use are CPU hungry, so we use a different thread for them:</p>
+<ul>
+<li><p>lsh: locality sensitive hashing does a lot of computation </p>
+</li>
+<li><p>images: Image resizing requires decoding/encoding images so it is costly</p>
+</li>
+</ul>
+<p>Two more threads are used to update the assets files list and the ads, although not cpu hungry, a thread is required to avoid stalls caused by the file watcher.</p>
+<p>We also have async long running tasks for:</p>
+<ul>
+<li><p>translations</p>
+</li>
+<li><p>http requests</p>
+</li>
+</ul>
+<p>Lsh, images, translation and http requests jobs are handled using a producer/consumer setup. Except that we don&#39;t use channels, because channels block and we don&#39;t have an async implementation of them that is also threadsafe. We used an async implementation of <a href="https://github.com/mashingan/nim-etc/blob/master/sharedseq.nim">this</a><sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup>. And an async table, which is like an event bus</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">type</span>
+  <span class="hljs-type">AsyncTableObj</span>[K, V] = <span class="hljs-keyword">object</span>
+    lock: <span class="hljs-type">ThreadLock</span>
+    waiters: <span class="hljs-type">Table</span>[K, <span class="hljs-type">seq</span>[<span class="hljs-keyword">ptr</span> <span class="hljs-type">Future</span>[V]]]
+    table: <span class="hljs-type">Table</span>[K, V]
+  <span class="hljs-type">AsyncTable</span>*[K, V] = <span class="hljs-keyword">ptr</span> <span class="hljs-type">AsyncTableObj</span>[K, V]
+
+<span class="hljs-keyword">proc</span> pop*[K, V](t: <span class="hljs-type">AsyncTable</span>[K, V], k: K): <span class="hljs-type">Future</span>[V] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">var</span> popped = <span class="hljs-literal">false</span>
+  withLock(t.lock):
+    <span class="hljs-keyword">if</span> k <span class="hljs-keyword">in</span> t.table:
+      popped = t.table.pop(k, <span class="hljs-built_in">result</span>)
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> popped:
+    <span class="hljs-keyword">if</span> k <span class="hljs-keyword">notin</span> t.waiters:
+      t.waiters[k] = newSeq[<span class="hljs-keyword">ptr</span> <span class="hljs-type">Future</span>[V]]()
+    <span class="hljs-keyword">var</span> fut = newFuture[V](<span class="hljs-string">&quot;AsyncTable.pop&quot;</span>)
+    t.waiters[k].add fut.<span class="hljs-keyword">addr</span>
+    <span class="hljs-built_in">result</span> = await fut
+
+<span class="hljs-keyword">proc</span> put*[K, V](t: <span class="hljs-type">AsyncTable</span>[K, V], k: K, v: V) <span class="hljs-meta">{.async.}</span> =
+  withLock(t.lock):
+    <span class="hljs-keyword">if</span> k <span class="hljs-keyword">in</span> t.waiters:
+      <span class="hljs-keyword">var</span> ws: <span class="hljs-type">seq</span>[<span class="hljs-keyword">ptr</span> <span class="hljs-type">Future</span>[V]]
+      doassert t.waiters.pop(k, ws)
+      <span class="hljs-keyword">while</span> ws.len &gt; <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">let</span> w = ws.pop()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> w.isnil <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> w[].isnil <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> w[].finished:
+          w[].complete(v)
+    <span class="hljs-keyword">else</span>:
+      t.table[k] = v</code></pre>
+<p>The nim server also handles three async tasks:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">type</span>
+  <span class="hljs-type">TaskKind</span> = <span class="hljs-keyword">enum</span> pub, cleanup, mem
+
+<span class="hljs-keyword">proc</span> scheduleTasks(): <span class="hljs-type">TaskTable</span> =
+  <span class="hljs-keyword">template</span> addTask(t) =
+    <span class="hljs-keyword">let</span> fut = (selectTask t)()
+    <span class="hljs-built_in">result</span>[t] = fut
+  <span class="hljs-comment"># Publishes new articles for one topic every x seconds</span>
+  addTask pub
+  <span class="hljs-comment"># cleanup task for deleting low traffic articles</span>
+  addTask cleanup
+  <span class="hljs-comment"># quit when max memory usage reached</span>
+  addTask mem</code></pre>
+<p>The task that monitors mem usage is nice to have, to avoid OOM issues between the containerized process and docker, because docker &#40;or the kernel&#41; doesn&#39;t kill the process immediately, and in this period of time the server can become unresponsive, so it is better to restart manually immediately.</p>
+<table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">although wrapping a plain channel in async routines is probably better...alas</td>
+    </tr>
+</table>
+
+<h1 id="images"><a href="#images" class="header-anchor">Images</a></h1>
+<p>We leverage <a href="https://github.com/imazen/imageflow/releases">imageflow</a> to resize and cache images locally. The bindings are simple, but the process is a little bit involved. With <code>getImg</code> we fetch the image data from remote url:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> getImg*(src: <span class="hljs-type">string</span>, kind: <span class="hljs-type">Source</span>): <span class="hljs-type">Future</span>[<span class="hljs-type">string</span>] <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">case</span> kind:
+    <span class="hljs-keyword">of</span> urlsrc:
+      (await get(src.parseUri, decode = <span class="hljs-literal">false</span>, proxied = <span class="hljs-literal">false</span>)).body
+    <span class="hljs-keyword">elif</span> fileExists(src):
+      await readFileAsync(src)
+    <span class="hljs-keyword">else</span>:
+      <span class="hljs-string">&quot;&quot;</span></code></pre>
+<p>Then we have to add it to an imageflow context:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> addImg*(img: <span class="hljs-type">string</span>): <span class="hljs-type">bool</span> =
+  <span class="hljs-comment">## a lock should be held here throughout the `processImg` call.</span>
+  <span class="hljs-keyword">if</span> img == <span class="hljs-string">&quot;&quot;</span>: <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+  reset(ctx)
+  doassert ctx.check
+  <span class="hljs-keyword">let</span> a = imageflow_context_add_input_buffer(
+    ctx.p,
+    inputIoId,
+    <span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> The image is held in cache, but it might be collected</span>
+    <span class="hljs-keyword">cast</span>[<span class="hljs-keyword">ptr</span> <span class="hljs-type">uint8</span>](img[<span class="hljs-number">0</span>].unsafeAddr),
+    img.len.csize_t,
+    imageflow_lifetime_lifetime_outlives_context)
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> a:
+    doassert ctx.check
+    cmdStr[<span class="hljs-string">&quot;decode&quot;</span>] = %inputIoId
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span></code></pre>
+<p>If the image can&#39;t be added, it means imageflow failed to recognized the data as a valid image. After we have sent the data, we have to send a query to the context, then read the response, and get the output:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> doProcessImg(input: <span class="hljs-type">string</span>, mtd = execMethod): (<span class="hljs-type">string</span>, <span class="hljs-type">string</span>) =
+  setCmd(input)
+  <span class="hljs-keyword">let</span> c = $cmd
+  <span class="hljs-comment"># debug &quot;{hash(c)} - {c}&quot;</span>
+  <span class="hljs-keyword">let</span> json_res = imageflow_context_send_json(
+      ctx.p,
+      mtd,
+      <span class="hljs-keyword">cast</span>[<span class="hljs-keyword">ptr</span> <span class="hljs-type">uint8</span>](c[<span class="hljs-number">0</span>].unsafeAddr),
+      c.len.csize_t
+    )
+  <span class="hljs-keyword">discard</span> imageflow_json_response_read(ctx.p, json_res,
+                                       status.<span class="hljs-keyword">addr</span>,
+                                       resPtr,
+                                       resLen)
+  defer: doassert imageflow_json_response_destroy(ctx.p, json_res)
+
+  <span class="hljs-keyword">var</span> mime: <span class="hljs-type">string</span>
+  <span class="hljs-keyword">if</span> status != <span class="hljs-number">200</span>:
+    <span class="hljs-keyword">let</span> msg = resPtr[].toString(resLen[].<span class="hljs-type">int</span>)
+    debug <span class="hljs-string">&quot;imageflow: conversion failed {msg}&quot;</span>
+    doassert ctx.check
+  <span class="hljs-keyword">else</span>:
+    mime = getMime()
+  <span class="hljs-keyword">discard</span> imageflow_context_get_output_buffer_by_id(
+      ctx.p,
+      outputIoId,
+      outputBuffer,
+      outputBufferLen)
+  doassert ctx.check
+  <span class="hljs-built_in">result</span> = (outputBuffer[].toString(outputBufferLen[].<span class="hljs-type">int</span>), mime)</code></pre>
+<p>We get the mime type from the response, that will be forwarded in the response of the web server. From the server side the translation from url path to image flow is handled like this:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> processImgData(q: <span class="hljs-keyword">ptr</span> <span class="hljs-type">ImgQuery</span>) <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-comment"># push img to imageflow context</span>
+  initImageFlow() <span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> this initializes thread vars</span>
+  <span class="hljs-keyword">var</span> acquired, submitted: <span class="hljs-type">bool</span>
+  <span class="hljs-keyword">let</span> data = (await q.url.rawImg)
+  defer:
+    <span class="hljs-keyword">if</span> acquired: imgLock[].release
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> submitted:
+      imgOut[q] = <span class="hljs-literal">true</span>
+  <span class="hljs-keyword">if</span> data.len &gt; <span class="hljs-number">0</span>:
+    <span class="hljs-keyword">try</span>:
+      await imgLock[].acquire
+      acquired = <span class="hljs-literal">true</span>
+      <span class="hljs-keyword">if</span> addImg(data):
+        <span class="hljs-keyword">let</span> query = <span class="hljs-string">fmt&quot;width={q.width}&amp;height={q.height}&amp;mode=max&amp;format=webp&quot;</span>
+        logall <span class="hljs-string">&quot;ifl server: serving image hash: {hash(await q.url.rawImg)}, size: {q.width}x{q.height}&quot;</span>
+        <span class="hljs-comment"># process and send back</span>
+        (q.processed.data, q.processed.mime) = processImg(query)
+        imgOut[q] = <span class="hljs-literal">true</span>
+        submitted = <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">except</span> <span class="hljs-type">Exception</span>:
+      <span class="hljs-keyword">discard</span></code></pre>
+<p>The image url is sent as a parameters, in zstd compressed form. The compression shortens the urls &#40;most of the times&#41;. This is also how I found a bug in google chrome, where it couldn&#39;t handle urls where the query had url-encoded compressed data. Firefox was fine instead.</p>
+<h2 id="ld-json"><a href="#ld-json" class="header-anchor">LD-JSON</a></h2>
+<p>We add to each webpage ldjson scripts .</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> jwebpage(id, title, url, mtime, selector, description: <span class="hljs-type">auto</span>, keywords: <span class="hljs-type">seq</span>[<span class="hljs-type">string</span>], name = <span class="hljs-string">&quot;&quot;</span>, headline = <span class="hljs-string">&quot;&quot;</span>,
+            image = <span class="hljs-string">&quot;&quot;</span>, entity = <span class="hljs-string">&quot;Article&quot;</span>, status = <span class="hljs-string">&quot;Published&quot;</span>, lang = <span class="hljs-string">&quot;english&quot;</span>, mentions: <span class="hljs-type">seq</span>[
+            <span class="hljs-type">string</span>] = (@[]), access_mode = (@[<span class="hljs-string">&quot;textual&quot;</span>, <span class="hljs-string">&quot;visual&quot;</span>]), access_sufficient: <span class="hljs-type">seq</span>[
+            <span class="hljs-type">string</span>] = @[], access_summary = <span class="hljs-string">&quot;&quot;</span>, created = <span class="hljs-string">&quot;&quot;</span>, published = <span class="hljs-string">&quot;&quot;</span>,
+            props = default(<span class="hljs-type">JsonNode</span>)): <span class="hljs-type">JsonNode</span> =
+    <span class="hljs-keyword">let</span>
+        d_mtime = coerce(mtime, <span class="hljs-string">&quot;&quot;</span>)
+        s_created = created.toIsoDate
+        description = coerce(description, to = title)
+        prd = (v: <span class="hljs-type">seq</span>[<span class="hljs-type">string</span>]) =&gt; v.len == <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">let</span> data = %*{
+        <span class="hljs-string">&quot;@context&quot;</span>: <span class="hljs-string">&quot;https://schema.org&quot;</span>,
+        <span class="hljs-string">&quot;@type&quot;</span>: <span class="hljs-string">&quot;https://schema.org/WebPage&quot;</span>,
+        <span class="hljs-string">&quot;@id&quot;</span>: id,
+        <span class="hljs-string">&quot;url&quot;</span>: url,
+        <span class="hljs-string">&quot;lastReviewed&quot;</span>: coerce(mtime, <span class="hljs-string">&quot;&quot;</span>),
+        <span class="hljs-string">&quot;mainEntityOfPage&quot;</span>: {
+            <span class="hljs-string">&quot;@type&quot;</span>: entity,
+            <span class="hljs-string">&quot;@id&quot;</span>: url
+        },
+        <span class="hljs-string">&quot;mainContentOfPage&quot;</span>:
+        {
+            <span class="hljs-string">&quot;@type&quot;</span>: <span class="hljs-string">&quot;WebPageElement&quot;</span>, <span class="hljs-string">&quot;cssSelector&quot;</span>: selector},
+        <span class="hljs-string">&quot;accessMode&quot;</span>: access_mode,
+        <span class="hljs-string">&quot;accessModeSufficient&quot;</span>: {
+            <span class="hljs-string">&quot;@type&quot;</span>: <span class="hljs-string">&quot;itemList&quot;</span>,
+            <span class="hljs-string">&quot;itemListElement&quot;</span>: coercf(access_sufficient, prd, to = access_mode),
+        },
+        <span class="hljs-string">&quot;creativeWorkStatus&quot;</span>: status,
+        <span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> datePublished should always be provided</span>
+        <span class="hljs-string">&quot;datePublished&quot;</span>: ensure_time(d_mtime.toIsoDate, s_created),
+        <span class="hljs-string">&quot;dateModified&quot;</span>: d_mtime,
+        <span class="hljs-string">&quot;dateCreated&quot;</span>: coerce(s_created, to = d_mtime),
+        <span class="hljs-string">&quot;name&quot;</span>: coerce(name, to = title),
+        <span class="hljs-string">&quot;description&quot;</span>: coerce(description, <span class="hljs-string">&quot;&quot;</span>),
+        <span class="hljs-string">&quot;keywords&quot;</span>: coerce(keywords, to = (@[]))
+    }
+    setArgs data, %*{<span class="hljs-string">&quot;inLanguage&quot;</span>: lang, <span class="hljs-string">&quot;accessibilitySummary&quot;</span>: access_summary,
+                    <span class="hljs-string">&quot;headline&quot;</span>: coerce(headline, to = description), <span class="hljs-string">&quot;image&quot;</span>: image,
+                    <span class="hljs-string">&quot;mentions&quot;</span>: mentions}
+    setProps
+    data</code></pre>
+<p>And for translated pages:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> translation*(src_url, trg_url, lang, title, mtime, selector, description: <span class="hljs-type">auto</span>, keywords: <span class="hljs-type">seq</span>[<span class="hljs-type">string</span>],
+                     image = <span class="hljs-string">&quot;&quot;</span>, headline = <span class="hljs-string">&quot;&quot;</span>, props = default(<span class="hljs-type">JsonNode</span>),
+                     translator_name = <span class="hljs-string">&quot;Google&quot;</span>, translator_url = <span class="hljs-string">&quot;https://translate.google.com/&quot;</span>): <span class="hljs-type">auto</span> =
+    <span class="hljs-comment">## file path must be relative to the project directory, assumes the published website is under &#x27;__site/&#x27;</span>
+    <span class="hljs-comment"># id, title, url, mtime, selector, description: auto, keywords: seq[string], name = &quot;&quot;, headline = &quot;&quot;,</span>
+    <span class="hljs-keyword">let</span> data = jwebpage(id = trg_url, title, url = trg_url, mtime, selector, description,
+                            keywords = keywords, image = image, headline = headline, lang = lang, props = props)
+    data[<span class="hljs-string">&quot;translator&quot;</span>] = %*{<span class="hljs-string">&quot;@type&quot;</span>: <span class="hljs-string">&quot;https://schema.org/Organization&quot;</span>,
+                             <span class="hljs-string">&quot;name&quot;</span>: translator_name,
+                             <span class="hljs-string">&quot;url&quot;</span>: translator_url}
+    data[<span class="hljs-string">&quot;translationOfWork&quot;</span>] = %*{<span class="hljs-string">&quot;@id&quot;</span>: src_url}
+    data</code></pre>
+<h2 id="opengraph"><a href="#opengraph" class="header-anchor">Opengraph</a></h2>
+<p>Same as ldjson, we also provide opengraph meta tags:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">proc</span> opgBasic(title, tp, url, image: <span class="hljs-type">string</span>, prefix = <span class="hljs-string">&quot;&quot;</span>): <span class="hljs-type">seq</span>[<span class="hljs-type">XmlNode</span>] =
+  <span class="hljs-keyword">if</span> prefix != <span class="hljs-string">&quot;&quot;</span>:
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">fmt&quot;{prefix}:title&quot;</span>, title)
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">fmt&quot;{prefix}:type&quot;</span>, tp)
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">fmt&quot;{prefix}:url&quot;</span>, url)
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">fmt&quot;{prefix}:image&quot;</span>, image)
+  <span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;title&quot;</span>, image)
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;type&quot;</span>, image)
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;url&quot;</span>, image)
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;image&quot;</span>, image)
+
+<span class="hljs-keyword">proc</span> opgTags(title, tp, url,
+             image: <span class="hljs-type">string</span>,
+             description = <span class="hljs-string">&quot;&quot;</span>,
+             siteName = <span class="hljs-string">&quot;&quot;</span>,
+             locale = <span class="hljs-string">&quot;&quot;</span>,
+             audio = <span class="hljs-string">&quot;&quot;</span>,
+             video = <span class="hljs-string">&quot;&quot;</span>,
+             determiner = <span class="hljs-string">&quot;&quot;</span>,
+             prefix = <span class="hljs-string">&quot;&quot;</span>): <span class="hljs-type">seq</span>[<span class="hljs-type">XmlNode</span>] <span class="hljs-meta">{.gcsafe.}</span> =
+  <span class="hljs-comment">## Generates an HTML String containing opengraph meta result for one item.</span>
+  <span class="hljs-keyword">var</span> <span class="hljs-built_in">result</span> = opgBasic(title, tp, url, image, prefix)
+  <span class="hljs-built_in">result</span>.add opgOptional(description, siteName, locale, audio, video, determiner)
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">result</span>
+
+<span class="hljs-keyword">proc</span> opgPage*(a: <span class="hljs-type">Article</span>): <span class="hljs-type">seq</span>[<span class="hljs-type">XmlNode</span>] =
+  <span class="hljs-keyword">let</span> locale = <span class="hljs-keyword">static</span>(<span class="hljs-type">DEFAULT_LOCALE</span>)
+  <span class="hljs-keyword">let</span>
+    tp = <span class="hljs-keyword">static</span>(<span class="hljs-string">&quot;article&quot;</span>)
+    url = getArticleUrl(a)
+    siteName = <span class="hljs-keyword">static</span>(<span class="hljs-type">WEBSITE_TITLE</span>)
+  <span class="hljs-built_in">result</span> = opgTags(a.title, tp, url, a.imageUrl, a.desc, siteName, locale, prefix = <span class="hljs-string">&quot;article&quot;</span>)
+  <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> a.tags:
+    <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;article:tag&quot;</span>, t)
+  <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;article:author&quot;</span>, a.author)
+  <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;article:published_time&quot;</span>, $a.pubTime)
+  <span class="hljs-built_in">result</span>.add metaTag(<span class="hljs-string">&quot;article:section&quot;</span>, a.desc)
+  <span class="hljs-comment"># result.add metaTag(&quot;article:modified_time&quot;, a.pubTime)</span>
+  <span class="hljs-comment"># result.add metaTag(&quot;article:expiration_time&quot;, a.pubTime)</span>
+  <span class="hljs-built_in">result</span>.add twitterMeta(<span class="hljs-string">&quot;card&quot;</span>, <span class="hljs-string">&quot;summary&quot;</span>)
+  <span class="hljs-built_in">result</span>.add twitterMeta(<span class="hljs-string">&quot;creator&quot;</span>, twitterUrl[])</code></pre>
+<p>Nim macros and templates come in handy when dealing with all this boilerplate heavy code.</p>
+<h2 id="server_side_http_requests"><a href="#server_side_http_requests" class="header-anchor">Server side http requests</a></h2>
+<p>There is another task, that handles all the http requests &#40;to fetch images, scripts, etc&#41; from the web server side. We use the chronos httpclient:</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">const</span> proxiedFlags = {<span class="hljs-type">NoVerifyHost</span>, <span class="hljs-type">NoVerifyServerName</span>, <span class="hljs-type">NewConnectionAlways</span>}
+<span class="hljs-keyword">const</span> sessionFlags = {<span class="hljs-type">NoVerifyHost</span>, <span class="hljs-type">NoVerifyServerName</span>, <span class="hljs-type">NoInet6Resolution</span>}
+<span class="hljs-keyword">proc</span> requestTask(q: sink <span class="hljs-keyword">ptr</span> <span class="hljs-type">Request</span>) <span class="hljs-meta">{.async.}</span> =
+  <span class="hljs-keyword">var</span> trial = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">var</span>
+    sess: <span class="hljs-type">HttpSessionRef</span>
+    req: <span class="hljs-type">HttpClientRequestRef</span>
+    resp: <span class="hljs-type">HttpClientResponseRef</span>
+    cleanup: <span class="hljs-type">seq</span>[<span class="hljs-type">Future</span>[<span class="hljs-type">void</span>]]
+  <span class="hljs-keyword">while</span> trial &lt; q[].retries:
+    <span class="hljs-keyword">try</span>:
+      trial.inc
+      sess = new(<span class="hljs-type">HttpSessionRef</span>,
+                proxyTimeout = <span class="hljs-number">10</span>.seconds.<span class="hljs-keyword">div</span>(<span class="hljs-number">3</span>),
+                headersTimeout = <span class="hljs-number">10</span>.seconds.<span class="hljs-keyword">div</span>(<span class="hljs-number">2</span>),
+                connectTimeout = <span class="hljs-number">10</span>.seconds,
+                proxy = <span class="hljs-keyword">if</span> q[].proxied: selectProxy(trial) <span class="hljs-keyword">else</span>: <span class="hljs-string">&quot;&quot;</span>,
+                flags = <span class="hljs-keyword">if</span> q[].proxied: proxiedFlags <span class="hljs-keyword">else</span>: sessionFlags
+      )
+      req = new(<span class="hljs-type">HttpClientRequestRef</span>,
+                sess,
+                sess.getAddress(q[].url).get,
+                q[].meth,
+                headers = q[].headers.toHeaderTuple,
+                body = q[].body.tobytes,
+        )
+      resp = await req.fetch(followRedirects = q[].redir, raw = <span class="hljs-literal">true</span>)
+      checkNil(resp):
+        defer:
+          cleanup.add resp.closeWait()
+          resp = <span class="hljs-keyword">nil</span>
+        q.response.code = httpcore.<span class="hljs-type">HttpCode</span>(resp.status)
+        checkNil(resp.connection):
+          q.response.body = bytesToString (await resp.getBodyBytes)
+          q.response.headers = newHttpHeaders(<span class="hljs-keyword">cast</span>[<span class="hljs-type">seq</span>[(<span class="hljs-type">string</span>, <span class="hljs-type">string</span>)]](
+              resp.headers.toList))
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">except</span>:
+      cdebug():
+        logexc()
+        debug <span class="hljs-string">&quot;cronhttp: request failed&quot;</span>
+    <span class="hljs-keyword">finally</span>:
+      <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> req.isnil:
+        cleanup.add req.closeWait()
+      <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> resp.isnil:
+        cleanup.add resp.closeWait()
+      <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sess.isnil:
+        cleanup.add sess.closeWait()
+  httpOut[q] = <span class="hljs-literal">true</span>
+  await allFutures(cleanup)</code></pre>
+<p>I had to add <a href="https://github.com/untoreh/nim-chronos/tree/update">support for https and socks5 proxies</a> to the httpclient to be able to use translations effectively.</p>
+<h1 id="config"><a href="#config" class="header-anchor">Config</a></h1>
+<p>You might have noticed capitalized variables throughout the code. All of these are config variables, that are defined in a file, which can be customized per website.</p>
+<pre><code class="nim hljs"><span class="hljs-keyword">const</span>
+  <span class="hljs-type">BASE_URL</span>* = <span class="hljs-type">Uri</span>()
+  <span class="hljs-type">SITE_PATH</span>* = <span class="hljs-type">PROJECT_PATH</span> / <span class="hljs-string">&quot;site&quot;</span>
+  <span class="hljs-type">SITE_ASSETS_PATH</span>* = <span class="hljs-type">BASE_URL</span> / <span class="hljs-string">&quot;assets&quot;</span> / <span class="hljs-type">WEBSITE_NAME</span>
+  <span class="hljs-type">SITE_ASSETS_DIR</span>* = <span class="hljs-type">SITE_PATH</span> / <span class="hljs-string">&quot;assets&quot;</span> / <span class="hljs-type">WEBSITE_NAME</span>
+  <span class="hljs-type">DATA_PATH</span>* = <span class="hljs-type">PROJECT_PATH</span> / <span class="hljs-string">&quot;data&quot;</span>
+  <span class="hljs-type">DATA_ASSETS_PATH</span>* = <span class="hljs-type">DATA_PATH</span> / <span class="hljs-string">&quot;assets&quot;</span> / <span class="hljs-type">WEBSITE_NAME</span>
+  <span class="hljs-type">DATA_ADS_PATH</span>* = <span class="hljs-type">DATA_PATH</span> / <span class="hljs-string">&quot;ads&quot;</span> / <span class="hljs-type">WEBSITE_NAME</span>
+  <span class="hljs-type">ASSETS_PATH</span>* = <span class="hljs-type">PROJECT_PATH</span> / <span class="hljs-string">&quot;src&quot;</span> / <span class="hljs-string">&quot;assets&quot;</span>
+  <span class="hljs-type">DEFAULT_IMAGE</span>* = <span class="hljs-type">ASSETS_PATH</span> / <span class="hljs-string">&quot;empty.png&quot;</span>
+  <span class="hljs-type">DEFAULT_IMAGE_MIME</span>* = <span class="hljs-string">&quot;image/png&quot;</span>
+  <span class="hljs-type">CSS_BUN_URL</span>* = $(<span class="hljs-type">SITE_ASSETS_PATH</span> / <span class="hljs-string">&quot;bundle.css&quot;</span>)
+  <span class="hljs-type">CSS_CRIT_PATH</span>* = <span class="hljs-type">SITE_ASSETS_DIR</span> / <span class="hljs-string">&quot;bundle-crit.css&quot;</span>
+  <span class="hljs-type">JS_REL_URL</span>* = $(<span class="hljs-type">SITE_ASSETS_PATH</span> / <span class="hljs-string">&quot;bundle.js&quot;</span>)
+  <span class="hljs-type">LOGO_PATH</span>* = <span class="hljs-type">BASE_URL</span> / <span class="hljs-string">&quot;assets&quot;</span> / <span class="hljs-string">&quot;logo&quot;</span> / <span class="hljs-type">WEBSITE_NAME</span>
+  <span class="hljs-type">LOGO_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo.svg&quot;</span>)
+  <span class="hljs-type">LOGO_SMALL_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo-small.svg&quot;</span>)
+  <span class="hljs-type">LOGO_ICON_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo-icon.svg&quot;</span>)
+  <span class="hljs-type">LOGO_DARK_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo-dark.svg&quot;</span>)
+  <span class="hljs-type">LOGO_DARK_SMALL_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo-small-dark.svg&quot;</span>)
+  <span class="hljs-type">LOGO_DARK_ICON_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo-icon-dark.svg&quot;</span>)
+  <span class="hljs-type">FAVICON_PNG_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo-icon.png&quot;</span>)
+  <span class="hljs-type">FAVICON_SVG_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;logo-icon.svg&quot;</span>)
+  <span class="hljs-type">APPLE_PNG180_URL</span>* = $(<span class="hljs-type">LOGO_PATH</span> / <span class="hljs-string">&quot;apple-touch-icon.png&quot;</span>)
+  <span class="hljs-type">MAX_DIR_FILES</span>* = <span class="hljs-number">10</span>
+<span class="hljs-comment"># ...</span></code></pre>
+<h1 id="conclusion"><a href="#conclusion" class="header-anchor">Conclusion</a></h1>
+<p>There are a bunch of things that I have not mentioned, since the devil is in the details...however this is rough tour of the whole code base which amounts to:</p>
+<ul>
+<li><p>~12k lines of nim</p>
+</li>
+<li><p>~400 lines of js</p>
+</li>
+<li><p>~1000 lines of scss</p>
+</li>
+<li><p>~3500 lines of python</p>
+</li>
+<li><p>74 lines of rust &#40;for bindings :P&#41;</p>
+</li>
+</ul>
+<p>What would I do differently? </p>
+<ul>
+<li><p>Probably rewrite the whole thing in rust, nim currently doesn&#39;t handle memory safety nicely, and the amount of time I had to rely on gdb to fix crashes was too much, and I haven&#39;t even managed to fix all of them. It is a big problem when half the ecosystem relies on GC and the other half on ORC &#40;or not even orc and just ARC&#41;. Mixing async and threads is also painful and async stacktraces are a nightmare, &#40;although I don&#39;t know if rust is any better in this regard.&#41;</p>
+</li>
+<li><p>Target a <a href="https://en.wikipedia.org/wiki/Progressive_web_app">PWA</a> from the getgo. The project had quite a troublesome start. In the beginning it was supposed to be static pages served by a webserver, then it became a webserver itself. Interactivity came as an afterthought, so it become just a mix of rendered html plus js/css. This made me too lax on the API, which came out without any structure whatsoever &#40;completely <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">unRESTFUL</a>&#41;. In the rewrite I would use a ui framework, either <a href="https://preactjs.com/">preact</a> which has full AMP support, or <a href="https://www.solidjs.com/">solidjs</a>.</p>
+</li>
+<li><p>Add more ad-hoc parsers for popular platforms. Plain article parsing doesn&#39;t work to well &#40;or at all&#41; when the most popular platforms nowadays offer very little content, and lots of videos and images, scraping therefore must be more targeted to rich media instead of just text, if this is not accounted for when planning the scraper architecture, the content and information that the APP will serve will be unbalanced.</p>
+</li>
+</ul>
+<div id="post-tags-list">
+Post Tags:
+<span class="post-tag"><a href="https://www.unto.re/tag/apps" style=""> apps </a>, </span>
+<span class="post-tag"><a href="https://www.unto.re/tag/programming" style=""> programming </a>, </span>
+<span class="post-tag"><a href="https://www.unto.re/tag/software" style=""> software </a></span></div>
+<div class="page-foot">
+    
+    <div class="copyright">
+        December 07, 2022
+    </div>
+        <script src="https://utteranc.es/client.js"
+        repo="untoreh/untoreh.github.io"
+        issue-term="pathname"
+        label="Comment"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+    
+</div>
+</div><div class="page__footer">
+    <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-copyright">
+            © untoreh - Powered by <a href=
+                                                     "https://github.com/tlienart/Franklin.jl">Franklin</a>
+        </div>
+        <div class="page__footer-links">
+            -
+            <ul>
+                <li> <a href="/sitemap.xml">Sitemap</a> </li>
+                |
+                <li> <a href="/tag">Tags</a> </li>
+                |
+                <li> <a href="https://www.unto.re/tag/feed.xml">RSS</a></li>
+            </ul>
+        </div>
+        <ul class="author__wrap">
+            <li class="author__urls social-icons">
+    <a title="Twitter link" href="https://twitter.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class=
+    "fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a title="GitHub link" href="https://github.com/untoreh" rel=
+    "nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+    aria-hidden="true"></i></a>
+</li>
+<li class="author__urls social-icons">
+    <a title="email" href="mailto:contact@unto.re"><i class=
+    "fas fa-envelope"></i></a>
+</li>
+<li><script type="application/ld+json" id="" class="">{"potentialAction":{"query-input":"required maxlength=100 name=input","actionStatus":"https://schema.org/PotentialActionStatus","query":"required","@type":"SearchAction","target":{"uri":"","scheme":"https","userinfo":"","host":"www.unto.re","port":"","path":"/search","query":"q=%7Binput%7D","fragment":""}}}</script></li>
+
+        </ul>
+    </footer>
+</div>
+<!-- ensure font-awesome script has "fa" id for parsing purposes -->
+<script id="fa" defer src=
+            "https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity=
+            "sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+        crossorigin="anonymous"></script>
+
+ 
+
+ 
+
+<script src="/libs/colors.js"></script>
+<script src="/libs/menu.js"></script>
+<script defer src="/libs/lunr/lunr.min.js"></script>
+</body>
+</html>
