@@ -23,15 +23,15 @@
 
 <item>
   <title>
-    <![CDATA[  hosting network  ]]>
+    <![CDATA[  copypaste on dns  ]]>
   </title>
-  <link> https://www.unto.re/posts/hosting-network/index.html </link>
-  <guid> https://www.unto.re/posts/hosting-network/index.html </guid>
+  <link> https://www.unto.re/posts/copypaste-on-dns/index.html </link>
+  <guid> https://www.unto.re/posts/copypaste-on-dns/index.html </guid>
   <description>
-    <![CDATA[  A social network for hosting services  ]]>
+    <![CDATA[  Sharing text throught TXT records  ]]>
   </description>  
     
-  <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -50,7 +50,7 @@
     <![CDATA[  A layer based setup for winetricks recipes  ]]>
   </description>  
     
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -69,7 +69,26 @@
     <![CDATA[  Ponds to share news  ]]>
   </description>  
     
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  hosting network  ]]>
+  </title>
+  <link> https://www.unto.re/posts/hosting-network/index.html </link>
+  <guid> https://www.unto.re/posts/hosting-network/index.html </guid>
+  <description>
+    <![CDATA[  A social network for hosting services  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -88,7 +107,7 @@
     <![CDATA[  How to learn games quickly?  ]]>
   </description>  
     
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -107,7 +126,7 @@
     <![CDATA[  What if there was a way to give legs to ideas?  ]]>
   </description>  
     
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -126,83 +145,7 @@
     <![CDATA[  An smartphone keyboard interface for swiping with thumbs  ]]>
   </description>  
     
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  power of the crowd  ]]>
-  </title>
-  <link> https://www.unto.re/posts/power-of-the-crowd/index.html </link>
-  <guid> https://www.unto.re/posts/power-of-the-crowd/index.html </guid>
-  <description>
-    <![CDATA[  Apps powered by crowd sourcing  ]]>
-  </description>  
-    
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Store your web activity  ]]>
-  </title>
-  <link> https://www.unto.re/posts/user-data/index.html </link>
-  <guid> https://www.unto.re/posts/user-data/index.html </guid>
-  <description>
-    <![CDATA[  Don&#39;t leave your thoughts on platforms you don&#39;t own  ]]>
-  </description>  
-    
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Is progress blind?  ]]>
-  </title>
-  <link> https://www.unto.re/posts/progress/index.html </link>
-  <guid> https://www.unto.re/posts/progress/index.html </guid>
-  <description>
-    <![CDATA[  What can we do to steer progress in the right direction?  ]]>
-  </description>  
-    
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  copypaste on dns  ]]>
-  </title>
-  <link> https://www.unto.re/posts/copypaste-on-dns/index.html </link>
-  <guid> https://www.unto.re/posts/copypaste-on-dns/index.html </guid>
-  <description>
-    <![CDATA[  Sharing text throught TXT records  ]]>
-  </description>  
-    
-  <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -221,7 +164,45 @@
     <![CDATA[  A place to share and log dreams  ]]>
   </description>  
     
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  power of the crowd  ]]>
+  </title>
+  <link> https://www.unto.re/posts/power-of-the-crowd/index.html </link>
+  <guid> https://www.unto.re/posts/power-of-the-crowd/index.html </guid>
+  <description>
+    <![CDATA[  Apps powered by crowd sourcing  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Store your web activity  ]]>
+  </title>
+  <link> https://www.unto.re/posts/user-data/index.html </link>
+  <guid> https://www.unto.re/posts/user-data/index.html </guid>
+  <description>
+    <![CDATA[  Don&#39;t leave your thoughts on platforms you don&#39;t own  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -240,7 +221,26 @@
     <![CDATA[  How much is too much?  ]]>
   </description>  
     
-  <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Is progress blind?  ]]>
+  </title>
+  <link> https://www.unto.re/posts/progress/index.html </link>
+  <guid> https://www.unto.re/posts/progress/index.html </guid>
+  <description>
+    <![CDATA[  What can we do to steer progress in the right direction?  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

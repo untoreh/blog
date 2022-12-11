@@ -23,44 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  On inflation  ]]>
-  </title>
-  <link> https://www.unto.re/posts/inflation/index.html </link>
-  <guid> https://www.unto.re/posts/inflation/index.html </guid>
-  <description>
-    <![CDATA[  What causes inflation in capitalistic markets.  ]]>
-  </description>  
-    
-  <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  English translation of a bad book  ]]>
-  </title>
-  <link> https://www.unto.re/posts/dep-f-facchinei/index.html </link>
-  <guid> https://www.unto.re/posts/dep-f-facchinei/index.html </guid>
-  <description>
-    <![CDATA[  Some infos about an unfinished translation of a review about a famous manuscript.  ]]>
-  </description>  
-    
-  <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  My Shows Setup  ]]>
   </title>
   <link> https://www.unto.re/posts/my-shows-setup/index.html </link>
@@ -69,45 +31,7 @@
     <![CDATA[  Mostly how I deal with animes and tv shows..  ]]>
   </description>  
     
-  <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Search engines  ]]>
-  </title>
-  <link> https://www.unto.re/posts/search-engines/index.html </link>
-  <guid> https://www.unto.re/posts/search-engines/index.html </guid>
-  <description>
-    <![CDATA[  AMP pages, turbo pages, indexing...the good, the bad...  ]]>
-  </description>  
-    
-  <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>untoreh</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Wine and olive oil markets  ]]>
-  </title>
-  <link> https://www.unto.re/posts/wine-oil-markets/index.html </link>
-  <guid> https://www.unto.re/posts/wine-oil-markets/index.html </guid>
-  <description>
-    <![CDATA[  EU Wine markets suck, olive oil markets..kind of  ]]>
-  </description>  
-    
-  <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -126,7 +50,83 @@
     <![CDATA[  Using containers, what and why  ]]>
   </description>  
     
-  <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  On inflation  ]]>
+  </title>
+  <link> https://www.unto.re/posts/inflation/index.html </link>
+  <guid> https://www.unto.re/posts/inflation/index.html </guid>
+  <description>
+    <![CDATA[  What causes inflation in capitalistic markets.  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Wine and olive oil markets  ]]>
+  </title>
+  <link> https://www.unto.re/posts/wine-oil-markets/index.html </link>
+  <guid> https://www.unto.re/posts/wine-oil-markets/index.html </guid>
+  <description>
+    <![CDATA[  EU Wine markets suck, olive oil markets..kind of  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Search engines  ]]>
+  </title>
+  <link> https://www.unto.re/posts/search-engines/index.html </link>
+  <guid> https://www.unto.re/posts/search-engines/index.html </guid>
+  <description>
+    <![CDATA[  AMP pages, turbo pages, indexing...the good, the bad...  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  English translation of a bad book  ]]>
+  </title>
+  <link> https://www.unto.re/posts/dep-f-facchinei/index.html </link>
+  <guid> https://www.unto.re/posts/dep-f-facchinei/index.html </guid>
+  <description>
+    <![CDATA[  Some infos about an unfinished translation of a review about a famous manuscript.  ]]>
+  </description>  
+    
+  <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
