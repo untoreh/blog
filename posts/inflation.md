@@ -22,32 +22,32 @@ What happens after you have gone into a period of loss? You want to make up for 
 After you have raised prices to re-establish profits...why lower them?
 
 
-```
+```sh
 inertia + profits == Inflation
 ```
 
 
 
-## But wait...there's more!
+> ...But wait...there's more!
 
 # Supply chain domino
 Raising prices is *not* a point in time. Raising prices from one actor in the supply chain causes domino effects, every downstream node has to either bear the costs or push them to the lower node[^1], until the final node (the consumer). To not be confounded with __pervasive__ scenarios, like an energy price increase, which affects all the nodes at the same time.
 
-```
+```sh
 sum(loss(node) for node in source..consumer) == Inflation
 ```
 
 # Self full-filling prophecies
 Expectation of inflation begets inflation. If the media talks about "possible" inflation, it will happen, as everyone will try to _prepare for it_ in advance by...raising prices and makre more profits.
 
-```
+```sh
 loss(t+1) -> Inflation(t)
 ```
 
 # The mob
 What happens when a group of people increases the price of goods? other participants might do the same by peer effect. _Spontaneous cartels_ are born! Not really created by anyone, just by external forces, are only possible to dismantle by other equally strong external forces.
 
-```
+```sh
 (profits(b) + 1 -> profits(B - {b}) + 1 for every b in B) -> inflation(B)
 ```
 
