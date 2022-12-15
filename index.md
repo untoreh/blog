@@ -6,18 +6,14 @@ rss_description = "Articles, contacts info and portofolio for @untoreh."
 
 @@intro
 
-@@active-projects
-#### \icon{fa-star} Some code
-- #### Julia packages
-  - [Backtest](https://github.com/untoreh/Backtest.jl) -- Cryptocurrency trading utilities
-  - [Features](https://github.com/untoreh/Features.jl) -- Useful stuff for operations with arrays.
-  - [LDJ](https://github.com/untoreh/LDJ.jl) -- ld-son structured data markup generator.
-  - [Translator](https://github.com/untoreh/Translator.jl) -- Multilingual translation tool, for automatic translation of web pages using online translation services.
-  - [FranklinContentPlugin](https://github.com/untoreh/FranklinContent.jl) -- Small framework for html code generation.
-- #### Emacs packages
-  - [gcbal](https://github.com/untoreh/gcbal.el) -- Tune garbage collection threshold automatically.
-- #### Others
-  - [Pine](https://github.com/untoreh/pine) -- Minimalistic alpine OS distribution for servers.
+#### \icon{fa-clock} Latest posts
+~~~{{recent_posts 3}}~~~
+- [\icon{fa-hand-point-right} go to all posts...](/posts/)
+
+@@media
+- [\icon{fa-book} Books, guides, articles, manuals, papers...](/reads)
+- [\icon{fa-tv} TV shows, movies, animes (shows)](/shows)
+- [\icon{fa-image} Photos and recordings...](/photos)
 @@
 
 #### \icon{fa-address-book} Contact Links:
@@ -38,17 +34,24 @@ rss_description = "Articles, contacts info and portofolio for @untoreh."
 
 ---
 
-#### \icon{fa-clock} Latest posts
-~~~{{recent_posts 3}}~~~
-- [\icon{fa-hand-point-right} go to all posts...](/posts/)
-
-@@media
-- [\icon{fa-book} Books, guides, articles, manuals, papers...](/reads)
-- [\icon{fa-tv} TV shows, movies, animes (shows)](/shows)
-- [\icon{fa-image} Photos and recordings...](/photos)
+@@active-projects
+#### \icon{fa-star} Some code
+- #### Julia packages
+  - [Backtest](https://github.com/untoreh/Backtest.jl) -- Cryptocurrency trading utilities
+  - [Features](https://github.com/untoreh/Features.jl) -- Useful stuff for operations with arrays.
+  - [LDJ](https://github.com/untoreh/LDJ.jl) -- ld-son structured data markup generator.
+  - [Translator](https://github.com/untoreh/Translator.jl) -- Multilingual translation tool, for automatic translation of web pages using online translation services.
+  - [FranklinContentPlugin](https://github.com/untoreh/FranklinContent.jl) -- Small framework for html code generation.
+- #### Emacs packages
+  - [gcbal](https://github.com/untoreh/gcbal.el) -- Tune garbage collection threshold automatically.
+- #### Others
+  - [Pine](https://github.com/untoreh/pine) -- Minimalistic alpine OS distribution for servers.
 @@
 
+
+
 ## \icon{fa-lightbulb} Weird or silly ideas for new projects
+
 ~~~
 {{taglist_desc lightbulbs}}
 ~~~
