@@ -27,7 +27,7 @@
 </url>
 <url>
     <loc>https://www.unto.re/index.html</loc>
-    <lastmod>2022-12-11</lastmod>
+    <lastmod>2022-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 </url>
@@ -340,6 +340,12 @@
 <url>
     <loc>https://www.unto.re/posts/types-of-3D-platformers/index.html</loc>
     <lastmod>2022-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.unto.re/posts/we-list-on-the-same-rock/index.html</loc>
+    <lastmod>2022-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>

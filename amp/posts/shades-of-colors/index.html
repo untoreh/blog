@@ -3,22 +3,24 @@
                 <span class=hljs-attr>get</span>: <span class=hljs-keyword>function</span>(<span class=hljs-params>elem</span>) {
                         <span class=hljs-keyword>if</span> (elem.<span class=hljs-property>currentStyle</span>)
                                 <span class=hljs-keyword>var</span> bg = elem.<span class=hljs-property>currentStyle</span>[<span class=hljs-string>"backgroundColor"</span>];
-                        <span class=hljs-keyword>else</span><span class=hljs-keyword>if</span> (<span class="hljs-variable language_">window</span>.<span class=hljs-property>getComputedStyle</span>)
+                        <span class=hljs-keyword>else</span> <span class=hljs-keyword>if</span> (<span class="hljs-variable language_">window</span>.<span class=hljs-property>getComputedStyle</span>)
                                 <span class=hljs-keyword>var</span> bg = <span class="hljs-variable language_">document</span>.<span class=hljs-property>defaultView</span>.<span class="hljs-title function_">getComputedStyle</span>(elem,
                                         <span class=hljs-literal>null</span>).<span class="hljs-title function_">getPropertyValue</span>(<span class=hljs-string>"background-color"</span>);
                         <span class=hljs-keyword>if</span> (bg.<span class="hljs-title function_">search</span>(<span class=hljs-string>"rgb"</span>) == -<span class=hljs-number>1</span>)
                                 <span class=hljs-keyword>return</span> bg;
                         <span class=hljs-keyword>else</span> {
                                 bg = bg.<span class="hljs-title function_">match</span>(<span class=hljs-regexp>/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/</span>);
-                                <span class=hljs-keyword>function</span><span class="hljs-title function_">hex</span>(<span class=hljs-params>x</span>) {
+                                <span class=hljs-keyword>function</span> <span class="hljs-title function_">hex</span>(<span class=hljs-params>x</span>) {
                                         <span class=hljs-keyword>return</span> (<span class=hljs-string>"0"</span> + <span class=hljs-built_in>parseInt</span>(x).<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>)).<span class="hljs-title function_">slice</span>(-<span class=hljs-number>2</span>);
                                 }
-                                <span class=hljs-keyword>return</span><span class="hljs-title function_">hex</span>(bg[<span class=hljs-number>1</span>]) + <span class="hljs-title function_">hex</span>(bg[<span class=hljs-number>2</span>]) + <span class="hljs-title function_">hex</span>(bg[<span class=hljs-number>3</span>]);
+                                <span class=hljs-keyword>return</span> <span class="hljs-title function_">hex</span>(bg[<span class=hljs-number>1</span>]) + <span class="hljs-title function_">hex</span>(bg[<span class=hljs-number>2</span>]) + <span class="hljs-title function_">hex</span>(bg[<span class=hljs-number>3</span>]);
                         }
                 }
         }
 
-        <span class=hljs-comment>//function to make colors brighter or darker</span><span class=hljs-keyword>function</span><span class="hljs-title function_">shadeColor</span>(<span class=hljs-params>color, porcent</span>) {
+        <span class=hljs-comment>//function to make colors brighter or darker</span>
+
+        <span class=hljs-keyword>function</span> <span class="hljs-title function_">shadeColor</span>(<span class=hljs-params>color, porcent</span>) {
 
                 <span class=hljs-keyword>var</span> R = <span class=hljs-built_in>parseInt</span>(color.<span class="hljs-title function_">substring</span>(<span class=hljs-number>1</span>,<span class=hljs-number>3</span>),<span class=hljs-number>16</span>)
                 <span class=hljs-keyword>var</span> G = <span class=hljs-built_in>parseInt</span>(color.<span class="hljs-title function_">substring</span>(<span class=hljs-number>3</span>,<span class=hljs-number>5</span>),<span class=hljs-number>16</span>)
@@ -32,11 +34,11 @@
                 G = (G<<span class=hljs-number>255</span>)?<span class=hljs-attr>G</span>:<span class=hljs-number>255</span>;
                 B = (B<<span class=hljs-number>255</span>)?<span class=hljs-attr>B</span>:<span class=hljs-number>255</span>;
 
-                <span class=hljs-keyword>var</span><span class="hljs-variable constant_">RR</span> = ((R.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>).<span class=hljs-property>length</span>==<span class=hljs-number>1</span>)?<span class=hljs-string>"0"</span>+R.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>):R.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>));
-                <span class=hljs-keyword>var</span><span class="hljs-variable constant_">GG</span> = ((G.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>).<span class=hljs-property>length</span>==<span class=hljs-number>1</span>)?<span class=hljs-string>"0"</span>+G.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>):G.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>));
-                <span class=hljs-keyword>var</span><span class="hljs-variable constant_">BB</span> = ((B.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>).<span class=hljs-property>length</span>==<span class=hljs-number>1</span>)?<span class=hljs-string>"0"</span>+B.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>):B.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>));
+                <span class=hljs-keyword>var</span> <span class="hljs-variable constant_">RR</span> = ((R.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>).<span class=hljs-property>length</span>==<span class=hljs-number>1</span>)?<span class=hljs-string>"0"</span>+R.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>):R.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>));
+                <span class=hljs-keyword>var</span> <span class="hljs-variable constant_">GG</span> = ((G.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>).<span class=hljs-property>length</span>==<span class=hljs-number>1</span>)?<span class=hljs-string>"0"</span>+G.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>):G.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>));
+                <span class=hljs-keyword>var</span> <span class="hljs-variable constant_">BB</span> = ((B.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>).<span class=hljs-property>length</span>==<span class=hljs-number>1</span>)?<span class=hljs-string>"0"</span>+B.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>):B.<span class="hljs-title function_">toString</span>(<span class=hljs-number>16</span>));
 
-                <span class=hljs-keyword>return</span><span class=hljs-string>"#"</span>+<span class="hljs-variable constant_">RR</span>+<span class="hljs-variable constant_">GG</span>+<span class="hljs-variable constant_">BB</span>;
+                <span class=hljs-keyword>return</span> <span class=hljs-string>"#"</span>+<span class="hljs-variable constant_">RR</span>+<span class="hljs-variable constant_">GG</span>+<span class="hljs-variable constant_">BB</span>;
         }
 
         <span class=hljs-keyword>function</span>(<span class=hljs-params></span>){
