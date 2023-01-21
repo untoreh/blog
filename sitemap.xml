@@ -27,7 +27,7 @@
 </url>
 <url>
     <loc>https://www.unto.re/index.html</loc>
-    <lastmod>2023-01-14</lastmod>
+    <lastmod>2022-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 </url>
@@ -94,6 +94,12 @@
 <url>
     <loc>https://www.unto.re/posts/grapes-for-winetricks/index.html</loc>
     <lastmod>2022-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.unto.re/posts/julia-lispisms/index.html</loc>
+    <lastmod>2023-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>

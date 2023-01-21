@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  Julia lispisms  ]]>
+  </title>
+  <link> https://www.unto.re/posts/julia-lispisms/index.html </link>
+  <guid> https://www.unto.re/posts/julia-lispisms/index.html </guid>
+  <description>
+    <![CDATA[  Things that I find confusing about julia syntax  ]]>
+  </description>  
+    
+  <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  shell scripting  ]]>
   </title>
   <link> https://www.unto.re/posts/shell-scripting/index.html </link>
