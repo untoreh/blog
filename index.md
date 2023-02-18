@@ -28,12 +28,6 @@ rss_description = "Articles, contacts info and portofolio for @untoreh."
 
 @@
 
-~~~
-{{insert_bio}}
-~~~
-
----
-
 @@active-projects
 #### \icon{fa-star} Some code
 - #### Julia packages
