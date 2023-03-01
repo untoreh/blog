@@ -40,7 +40,7 @@ The goal of infiltration is to _restructure_ the plant xylem to work around path
 
 ## Third approach, grafting
 Roots and foliage are always in balance. When one grows, the other follows. 
-- You can try to change the genetic material of the foliage with something more vigorous. You are betting that the higher metabolism of a more vigorous cultivar can induce renown root growth.
+- You can try to change the genetic material of the foliage with something more vigorous. You are betting that the higher metabolism of a more vigorous cultivar can induce renewed root growth.
 - Another approach is too apply a rootstock to...the roots? Roots between different trees can merge together to form synergistic sub-terrean networks, but you don't need to reach for other trees. You can try to apply rootstocks from more vigorous cultivar directly to the stump (by digging a little like you did for applying fertilizer), aid yourself with root hormones used to stimulate rooting from plants cuttings.
 Results depend on how vigorous the cultivar (and the applied rootstocks) are, in general at least 3 years.
 
