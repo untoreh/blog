@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  My programming languages  ]]>
+  </title>
+  <link> https://www.unto.re/posts/my-programming-languages/index.html </link>
+  <guid> https://www.unto.re/posts/my-programming-languages/index.html </guid>
+  <description>
+    <![CDATA[  My programming languages of choice  ]]>
+  </description>  
+    
+  <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>untoreh</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Julia lispisms  ]]>
   </title>
   <link> https://www.unto.re/posts/julia-lispisms/index.html </link>

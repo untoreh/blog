@@ -27,7 +27,7 @@
 </url>
 <url>
     <loc>https://www.unto.re/index.html</loc>
-    <lastmod>2023-03-01</lastmod>
+    <lastmod>2023-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 </url>
@@ -370,6 +370,12 @@
 <url>
     <loc>https://www.unto.re/posts/olive-trees/index.html</loc>
     <lastmod>2022-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.unto.re/posts/my-programming-languages/index.html</loc>
+    <lastmod>2023-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
